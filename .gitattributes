@@ -1,0 +1,4 @@
+﻿*.yml text eol=lf
+*.yaml text eol=lf
+*.gui text eol=lf
+*.dds binary
