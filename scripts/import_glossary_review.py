@@ -84,6 +84,24 @@ CONTEXTUAL_RULES = {
         ("宿敵", "指遊戲中被指定為 rival 的國家、角色或勢力"),
         ("競爭對手", "指一般競爭關係，且未被指定為遊戲 rival"),
     ],
+    "Bahan": [
+        ("八幡", "指日本文化或宗教相關的八幡概念"),
+        ("八幡貿易", "指文本中的 Bahan Trade，即以海盜劫掠為主的貿易活動"),
+    ],
+    "Mary": [
+        ("瑪利亞", "指基督教或聖經語境中的耶穌之母"),
+        ("瑪莉", "指一般西式人名，且語境採用此譯名"),
+        ("瑪麗", "指一般西式人名，且語境採用此譯名"),
+    ],
+    "Norman": [
+        ("諾曼", "作形容詞，修飾諾曼文化、制度或事物"),
+        ("諾曼人", "指諾曼人或諾曼族群"),
+        ("諾曼語", "指諾曼語言"),
+    ],
+    "Patriarchy": [
+        ("牧首區", "指東正教等宗教體系中的牧首管轄區或宗教組織"),
+        ("父權制", "指一般政治、社會或家庭制度中的 patriarchy"),
+    ],
 }
 
 
@@ -155,6 +173,9 @@ def importable_items(
             contextual_items.append(item)
             continue
         if status not in {"todo", "ai"}:
+            if resolved_only:
+                # Keep malformed or user-entered statuses for manual repair.
+                continue
             raise ValueError(f"Unsupported status for {item.get('term')}: {status}")
         if status == "todo" and translation.lower() in CONTROL_VALUES:
             raise ValueError(

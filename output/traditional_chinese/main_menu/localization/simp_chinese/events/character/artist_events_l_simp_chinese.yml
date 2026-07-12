@@ -1,0 +1,283 @@
+l_simp_chinese:
+ 
+ artist_events.1.title: "[target_character.GetNameWithNoTooltip]的神學著作"
+ artist_events.1.desc: "[target_character.GetName]以[target_character.GetHerHis]說故事的技巧聞名，近來開始涉足禮拜儀式與神學著作，將神聖與喜劇、諷刺交織在一起。這些作品雖對[ROOT.GetCountry.GetGovernment.GetEstateName('clergy_estate')]在我國社會中的地位尖酸刻薄，卻也激起了一波[ROOT.GetCountry.GetGovernment.GetEstateName('peasants_estate')]對文化與書寫藝術的興趣。受到我方受影響的[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('clergy_estate')]鼓動，壓力與日俱增，要求我們將[target_character.GetNameWithNoTooltip]逐出[ROOT.GetCountry.GetGovernment.GetCourtTitle]，以免招致[ROOT.GetCountry.GetReligion.GetGodName]之怒。"
+ artist_events.1.a: "藝術與創作之中，一切皆可被容許。"
+ artist_events.1.b: "授予[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('clergy_estate')]審查[target_character.GetHerHis]著作的權利。"
+ artist_events.1.c: "我們的[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('clergy_estate')]說得沒錯，砍下[target_character.GetHerHis]的頭！"
+ artist_events.1.d: "我們不會被放蕩之人嚇倒，無論是[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('clergy_estate')]或其他人皆然！"
+
+ artist_events.2.title: "[target_character.GetNameWithNoTooltip]的拙劣技藝"
+ artist_events.2.desc: "戲劇面前觀眾哄堂大笑？歡樂劇作之前卻滿是淚水與尖叫？沒有人能像[target_character.GetName]這樣把失敗演繹得如此成功！的確，[target_character.GetHerHis]透過娛樂羞辱他人的本領無人能及。[target_character.GetHerHis|U]最新作品本意是歌頌我國偉大的人民，最後卻成了辛辣的反擊，細數我們的缺點與最慘痛的失敗！"
+ artist_events.2.a: "真是個徹頭徹尾的蠢貨！"
+ artist_events.2.b: "讓我們資助[target_character.GetShortNameWithNoTooltip]改進技藝！"
+ artist_events.2.c: "劊子手將協助[target_character.GetShortNameWithNoTooltip]完成最後一場演出！"
+
+ artist_events.3.title: "[target_character.GetNameWithNoTooltip]的贊助"
+ artist_events.3.desc: "我方[ROOT.GetCountry.GetGovernment.GetCourtTitle]中一位熱切的藝術家[target_character.GetName]，向我們的顧問尋求贊助，表示願意依照我們認為合適的任何主題改寫文學作品。作為交換，我們必須支付一筆適中的款項作為[target_character.GetHerHis]服務報酬。據說[target_character.GetNameWithNoTooltip]技藝多才多藝，其成果很可能連我方最具文化素養與藝術品味的人士都會滿意。"
+ artist_events.3.a: "運用[target_character.GetHerHis]技藝來讚頌我方的科學進步！"
+ artist_events.3.b: "我國人民的韌性與堅毅必須受到讚揚。"
+ artist_events.3.c: "寫一封奉承信給我國[ROOT.GetCountry.GetFlavorRank]內顯赫的派系人物。"
+ artist_events.3.d: "讚頌我方文化紐帶的卓越與精緻。"
+ artist_events.3.e: "滾開，你這卑劣的乞丐！"
+
+ artist_events.4.title: "異議之聲"
+ artist_events.4.desc: "數日以來，藝術界的愛好者與顯赫人物一直要求我們資助[target_character.GetName]的事業。雖然將我們辛苦賺來的錢投入藝術是一項高尚之舉，但我們也必須留意那些可能影響國家前進方向的聲音，因為他們未必總是正確。"
+ artist_events.4.a: "好吧，我們會資助[target_character.GetShortNameWithNoTooltip]想創作的任何東西。"
+ artist_events.4.b: "抱怨？要不要嚐嚐鞭子的滋味？"
+ artist_events.4.c: "連我們的[ROOT.GetCountry.GetGovernment.GetRulerTitle]都需要[target_character.GetNameWithNoTooltip]的才華！"
+
+ artist_events.5.title: "新興藝術的擁護者"
+ artist_events.5.desc: "我國人民以擅長精緻藝術聞名，尤其是與書寫相關的藝術，將我們的名聲與社會足跡刻入史書之頁。鮮少有人能達到[target_character.GetName]這般聲望，筆下技藝傳奇非凡，打動成千上萬的我國人民。[target_character.GetHerHis|U]最新作品讚揚了我們近期的歷史與高貴本性，是獻給先祖的頌歌，也是留給後代的知識傳承。"
+ artist_events.5.a: "能活在這個時代，何其幸運！"
+ artist_events.5.tt: "居住在我方[capital|e]所屬[province|e]的所有[pops|e]將獲得[ShowNamedValue('pop_satisfaction_weak_bonus')|+=2%][pop_satisfaction|e]"
+ artist_events.5.b: "[target_character.GetHerHis|U]的藝術會賣個好價錢。"
+
+ artist_events.6.title: "[target_character.GetNameWithNoTooltip]的牆上藝術"
+ artist_events.6.desc: "創作藝術所涉及的眾多色彩，對[target_character.GetName]這樣的畫家而言不過是第二天性。[target_character.GetHerHis|U]筆觸為人民帶來喜悅，使貧富、健康與病弱之人齊聚一堂，驚嘆於[target_location.GetName]中心周遭所留下的藝術景象。近來，我們收到越來越多請求，希望進一步資助這種新藝術風格，修築更多牆面供[target_character.GetNameWithNoTooltip]美化。"
+ artist_event.6.a: "言語無法訴說之事，藝術將會表達！"
+ artist.events.6.b: "我們有更值得花錢的事。"
+
+ artist_events.7.title: "過火的玩笑"
+ artist_events.7.desc: "據說幽默是我方[ROOT.GetCountry.GetGovernment.GetCourtTitle]中的常客，小丑與喜劇演員在歡慶場合總能讓我方顯貴笑聲不斷。然而，即便是玩笑有時也會走得太遠，[target_character.GetName]的情況正是如此；最近放縱[target_character.GetHerselfHimself]在宮殿牆上畫下猥褻圖像，矛頭直指我方[ROOT.GetCountry.GetGovernment.GetRulerTitle]與顯赫官僚。除非懲罰肇事者，否則這種下流展示必定會削弱我們的威望。"
+ artist_events.7.a: "或許這是我們無法理解的精妙玩笑？"
+ artist_events.7.b: "這個玩笑會讓[target_character.GetNameWithNoTooltip]付出慘痛代價！"
+
+ artist_events.8.title: "使容貌不朽"
+ artist_events.8.desc: "古往今來，任何領袖人物的聲望都與其在各類藝術作品中的形象息息相關。繪畫、壁畫與故事將延續我方最傑出人物的遺產。為推進此事，我們可以委託我方最優秀且最能幹的畫家之一[target_character.GetName]創作一件藝術品。"
+ artist_events.8.a: "名留史冊聽起來確實不錯。"
+ artist_events.8.b: "更好的是，把它獻給人民！"
+ artist_events.8.c: "這些錢只屬於我們，也只能屬於我們！"
+
+ artist_events.9.title: "意外的侮辱"
+ artist_events.9.desc: "為了以拙劣的方式打動我國社會中的顯赫人物，[target_character.GetName]主導了一項努力，描繪一幅以各階層領袖為主角的精緻場景。然而，由於[target_character.GetHerHis]無能，這幅畫被視為一篇旨在嘲笑眾多權勢人物外貌的攻擊之作，導致我方威望以滑稽的方式受損。"
+ artist_events.9.a: "我們該對如此無能的表現感到佩服嗎？"
+
+ artist_events.10.title: "[target_character.GetNameWithNoTooltip]的人脈"
+ artist_events.10.desc: "在藝術界，凡是有頭有臉的人都在談論[target_character.GetName]之名。憑藉創作精緻而輝煌藝術的強大動力與人脈，[target_character.GetNameWithNoTooltip]魅力深厚。因此，[target_character.GetNameWithNoTooltip]最近向我們提出建議，希望贊助另一位畫家[connection_character.GetName]。"
+ country_event.10.a: "當然，毫無疑問！"
+ country_event.10.b: "這筆錢我們另有更好的用途。"
+
+ artist_events.11.title: "小心頭頂！"
+ artist_events.11.desc: "[ROOT.GetCountry.GetCapital.GetName]確實是一座充滿生氣與喧囂的繁忙中心。平民百姓不斷在田野中勞作，穿梭於眾多市場，或閒聊打發時間。然而，我們近來資助本地雕塑家的嘗試，卻導致事故數量日益增加。的確，許多人民回報了落石與大理石碎片墜落的事件，因為雕塑家們全然無視安全，幾近瘋狂地日夜不停工作。"
+ artist_events.11.a: "我們為造成不便致歉。"
+ artist_events.11.b: "藝術就是犧牲。"
+
+ artist_events.12.title: "文化展示"
+ artist_events.12.desc: "石材常呈現出奇妙形貌，以其潔白姿態裝點我們的廳堂。作為權力與宏偉的頌歌，鮮少有其他[ROOT.GetCountry.GetGovernment.GetAdjective]血脈會如此迷戀雕琢精良的雕像或半身像所展現的蒼白卓越。我們的經驗與對能幹之人的任用，促使許多人開始從事提升我方地位、展示我方對最精緻藝術熱愛的作品。"
+ artist_events.12.a: "資助這項事業！"
+ artist_events.12.b: "這筆錢花在別處更好。"
+ artist_events.12.c: "我們期待的絕不會低於一件傑作。"
+
+ artist_events.13.title: "[target_character.GetNameWithNoTooltip]的退休"
+ artist_events.13.desc: "多年來，[target_character.GetName]之名為位於[ROOT.GetCountry.GetCapital.GetName]的我方[ROOT.GetCountry.GetGovernment.GetCourtTitle]帶來巨大威望與對最精緻藝術的品味。在[target_character.GetHerHis]職涯暮年，我們決定讓[target_character.GetHerHim]獲得良好的退休生活，提供充足金錢與自由，去追尋新的冒險。"
+ artist_events.13.a: "我們永遠感謝你的服務！"
+ artist_events.13.tt: "[target_character.GetName]將從我方服務中退休，在我國鄉間郊野過著平靜而孤獨的生活"
+
+ artist_events.14.title: "災難性的正統性宣傳"
+ artist_events.14.desc: "我們近期試圖使對鄰國的侵略性正當化，卻遭遇了阻礙。可以說，透過[target_character.GetName]所建立的藝術作品來為我方征服辯護的拙劣嘗試極其無效，結果導致我方與邊境國家的關係惡化。"
+ artist_events.14.a: "[target_character.GetNameWithNoTooltip]，你這蠢貨！"
+
+ artist_events.15.title: "雕塑藝術部門"
+ artist_events.15.desc: "位於美麗的[ROOT.GetCountry.GetCapital.GetRank.GetName][ROOT.GetCountry.GetCapital.GetName]的我方藝術學院，近來開設了一個新部門，展示大理石、木材與黏土上的各類藝術作品。我方最顯赫的雕塑家之一[target_character.GetName]，捐出了大量作品，供這個新部門的廳堂展示。"
+ artist_events.15.a: "多麼令人讚嘆的展示！"
+
+ artist_events.16.title: "音樂的未來"
+ artist_events.16.desc: "我們的廳堂始終向藝術致敬，在我方[ROOT.GetCountry.GetGovernment.GetCourtTitle]中任用許多能幹之人。[target_character.GetName]因[target_character.GetHerHis]年輕與譜寫壯麗曲調的技藝而脫穎而出。毫無疑問，[target_character.GetSheHe]將在未來多年深刻影響我們的輝煌與威望。"
+ artist_events.16.a: "我們將滿懷興趣地關注你的職涯！"
+
+ artist_events.17.title: "噪音廳堂"
+ artist_events.17.desc: "日復一日，我們的廳堂都充斥著尖叫、拙劣彈奏的和弦，以及走音歌聲交織而成的可怕混合聲。有人或許會以為我們正在對囚犯施以最痛苦的折磨，但真相遠比這更加可怕。[target_character.GetName]正在創作[target_character.GetHerHis]最新作品，不幸的是……"
+ artist_events.17.a: "讓這蠢貨安靜！"
+ artist_events.17.b: "美，存在於聽者之耳。"
+ artist_events.17.c: "我們已經受夠[target_character.GetNameWithNoTooltip]了！"
+
+ artist_events.18.title: "[target_character.GetNameWithNoTooltip]的音樂革新"
+ artist_events.18.desc: "[target_character.GetName]近期發表的作品，在我國社會內整個藝術界激起層層漣漪。新曲調、樂器的融合，以及對新聲音的嫻熟運用，催生了新一代的文化傳統與旋律。"
+ artist_events.18.a: "[ROOT.GetCountry.Custom('common_string_positive')]"
+
+ artist_events.19.title: "音樂決鬥"
+ artist_events.19.desc: "過去幾週，我方[ROOT.GetCountry.GetGovernment.GetCourtTitle]成了兩位作曲家之間的戰場。兩人各自以機智與樂譜為武器，試圖勝過對方。雖然[target_good_composer.GetName]是更優秀且已站穩腳跟的藝術家，[target_bad_composer.GetName]卻毫不放棄，不斷糾纏[ROOT.GetCountry.GetGovernment.GetCourtTitle]，要求將[target_bad_composer.GetHerHis]作品與[target_bad_composer.GetHerHis]同僚的作品相比。"
+ artist_events.19.a: "[target_good_composer.GetNameWithNoTooltip]顯然更勝一籌。"
+ artist_events.19.b: "讓我們改為讚揚[target_bad_composer.GetNameWithNoTooltip]的努力。"
+ artist_events.19.c: "這一切都不值得我們理會。"
+
+ artist_events.20.title: "精緻藝術的成長"
+ artist_events.20.desc: "我們宏偉的廳堂是偉大藝術作品的源泉，令世人艷羨。近期由[target_character.GetName]創作的一系列音樂劇吸引了眾多觀眾，曲調彼此無縫交融，形成一段與我方威望與地位相稱的旋律。"
+ artist_events.20.a: "[target_character.GetNameWithNoTooltip]的職涯前景可期！"
+
+ artist_events.21.title: "城市生活"
+ artist_events.21.desc: "我方[ROOT.GetCountry.GetFlavorRank]各地城市中心的發展，為我國社會帶來許多益處。然而，隨著這股新的集權浪潮而來的，也有生活在高度城市化環境中的缺點。[target_location.GetName]最初由[target_character.GetName]領導的行會設計，如今卻變成一個噩夢般擁擠且極其可怕的居住地。"
+ artist_events.21.a: "[ROOT.GetCountry.Custom('common_string_negative')]"
+ artist_events.21.tt: "[target_location.GetName]中所有我方[pops|e]將失去[ShowNamedValue('pop_satisfaction_extreme_penalty')|+=2%][pop_satisfaction|e]"
+
+ artist_events.22.title: "現代化城市中心"
+ artist_events.22.desc: "我國領土內許多聚落都以美麗且新近建成的建築裝點。其中，[target_location.GetName]最近開始吸引許多遠方來客，這要歸功於[target_character.GetName]的建築作品；其規劃與設計為[target_location.GetNameWithNoTooltip]帶來了迫切需要的改善。"
+ artist_events.22.a: "[ROOT.GetCountry.Custom('common_string_positive')]"
+
+ artist_events.23.title: "[ShowInstitutionNameWithNoTooltip('renaissance')|U]藝術的綻放"
+ artist_events.23.desc: "透過思想與革新的奇妙交流，新的藝術風格、建築運動與文化現象被引入我國社會。因此，我方一位建築師[target_blooming_artist.GetName]請求我們考慮贊助一種新的建築設計風格，並將其應用於[ROOT.GetCountry.GetCapital.GetName]新近建成的建築。"
+ artist_events.23.a: "好主意。"
+ artist_events.23.b: "我們不這麼認為。"
+
+ artist_events.24.title: "數字中的錯誤"
+ artist_events.24.desc: "我方建材供應商信誓旦旦表示，他們是依照[target_character.GetName]的指示，收到命令派出多支裝滿鐵、大理石、石材與黏土的商隊。看來這項命令並無必要，但商人堅稱，依照他們的行會契約，[ROOT.GetCountry.GetGovernment.GetCourtTitle]必須補償材料與旅費。"
+ artist_events.24.a: "[ROOT.GetCountry.Custom('common_string_negative')]"
+ artist_events.24.b: "這不是該由我們糾正的錯誤。"
+
+ artist_events.25.title: "學習之母"
+ artist_events.25.desc: "日復一日，[target_character.GetName]工坊中的燈火始終亮著。不知疲倦地嘗試改善[target_character.GetHerHis]技術，一次又一次反覆改進[target_character.GetHerHis]設計。雖然[target_character.GetSheHe]或許不是最能幹的建築師，但[target_character.GetNameWithNoTooltip]確實正在努力，並且只會隨著時間推移而進步。"
+ artist_events.25.a: "[target_character.GetHerHis|U]對進步的渴望應成為我們所有人的榜樣！"
+ country_events.25.tt: "[target_character.GetName]可能獲得一項新的#G 正面#![trait|e]"
+
+ artist_events.26.title: "激烈辯論"
+ artist_events.26.desc: "提高音量與大聲爭辯，在我方[ROOT.GetCountry.GetGovernment.GetCourtTitle]中並不少見。當我們試圖接待各種在藝術與理論領域中有地位的人士時，必須預期這些知識分子之間會產生相當程度的摩擦。然而，近期圍繞天性、教養與人類心智的辯論，使[target_character.GetName]幾乎變得野性難馴，在宮殿花園中憤怒踱步，指著女僕或各類請願者向他們提出咄咄逼人的問題，挑戰他們辯論。"
+ artist_events.26.a: "我們不該淪落至此。"
+ artist_events.26.b: "這不過是我方活躍文化與對知性藝術熱愛的象徵！"
+ artist_events.26.tt: "[target_character.GetName]的好辯行為，不過是我方相較於未開化鄰國與對手更具知性優越的象徵"
+
+ artist_events.27.title: "[target_character.GetNameWithNoTooltip]出版著作"
+ artist_events.27.desc: "一系列圍繞來世與我們在此世時光的作品已經出版，署名為[target_character.GetName]。一如既往地令人印象深刻，[target_character.GetHerHis]作品旨在透過神學視角解釋人生最深層的問題。隨著時間推移，這些著作必定會催生更加完善的後續版本。"
+ artist_events.27.a: "讀起來頗有意思。"
+ 
+ artist_events.28.title: "招致神怒"
+ artist_events.28.desc: "像[target_character.GetName]這樣的哲學家，其作品往往走在傲慢與異端之間的細線上。思索人生最深層的問題並仔細審視神聖本質，是多數人所畏懼的任務。因此，[target_character.GetNameWithNoTooltip]近期的疑問與研究，似乎在我方[ROOT.GetCountry.GetGovernment.GetEstateName('clergy_estate')]內的權威人士中引起了相當大的反應。"
+ artist_events.28.a: "噢，不。"
+ artist_events.28.b: "他們看不出[target_character.GetNameWithNoTooltip]作品背後的才智！"
+
+ artist_events.29.title: "[target_location.GetNameWithNoTooltip]抵制哲學教導"
+ artist_events.29.desc: "根據[target_character.GetName]所言，挑戰信仰並提出尖銳問題，正是良好且知性生活的本質與典範。然而，[target_character.GetHerHis]近期出版物激怒了居住在[target_location.GetName]的人民，因為他們認為[target_character.GetHerHis]作品無異於傲慢。"
+ artist_events.29.a: "他們只是無法理解。"
+
+ artist_events.30.title: "極具知性的[ROOT.GetCountry.GetGovernment.GetCourtTitle]"
+ artist_events.30.desc: "我方[ROOT.GetCountry.GetGovernment.GetAdjective]居所因其輝煌氣象而聞名，充滿活躍藝術家，也洋溢著富庶與財富。藝術家、哲學家及更多人物來到門前，只為有機會展示技藝、賺取名聲與財富，並追求在史書中使自己的名字不朽。"
+ artist_events.30.a: "位於[ROOT.GetCountry.GetCapital.GetNameWithNoTooltip]的我方[ROOT.GetCountry.GetGovernment.GetCourtTitle]正是革新的發源地！"
+
+ artist_events.31.title: "[target_character.GetNameWithNoTooltip]的聖像畫"
+ artist_events.31.desc: "光線以如此角度照在肖像上，使前景中的聖人幾乎栩栩如生，長袍與光環閃耀著明亮色彩。[target_character.GetName]的藝術與技藝透過畫布展露無遺，頌揚我方信仰中眾多神聖人物。"
+ artist_events.31.a: "[target_character.GetNameWithNoTooltip]的作品是一份祝福。"
+
+ artist_events.32.title: "在[target_location.GetNameWithNoTooltip]展示新聖像畫"
+ artist_events.32.desc: "信仰與藝術作品在我方境內擁有相當大的影響力與力量。因此，當[target_character.GetName]揭示[target_character.GetHerHis]新一系列聖像時，位於[target_location.GetName]的[ROOT.GetCountry.GetReligion.GetAdjective]信仰民眾見到如此非凡之美，無不歡欣鼓舞。"
+ artist_events.32.a: "這不過是我方藝術才智與深厚信仰力量的象徵。"
+ artist_events.32.tt: "[target_location.GetName]中所有[ROOT.GetCountry.GetReligion.GetAdjective][pops|e]將獲得[ShowNamedValue('pop_satisfaction_weak_bonus')|+=2%][pop_satisfaction|e]"
+
+ artist_events.33.title: "委託錯誤的人"
+ artist_events.33.desc: "我方[ROOT.GetCountry.GetGovernment.GetEstateName('clergy_estate')]中的富裕成員，近期委託[target_character.GetName]創作一系列聖像。儘管作品完成得稍早，他們卻極其高調地抱怨，只要看一眼聖像畫家的作品，就能看出其中缺乏關懷、專業與技藝。他們在我國社會的宗教事務中擁有巨大影響力，其憤怒可能帶來無法預見的後果。"
+ artist_events.33.a: "我們可以代他們承擔聖像畫家的費用。"
+ artist_events.33.b: "這不過是[ROOT.GetCountry.GetReligion.GetGodName]計畫的一部分，我們何以干涉？"
+
+ artist_events.34.title: "文化與宗教"
+ artist_events.34.desc: "[target_character.GetName]近期的一系列作品，以精緻而專業的色彩、姿態與新繪畫技法運用吸引了大眾。毫無疑問，這場精彩的藝術展示不過是我方優越文化與宗教信念的副產物。對方所要求的，只是讓我們進一步贊助藝術創作，以換取我方名聲的威望與引人入勝的聖像展示。"
+ artist_events.34.a: "我們樂於贊助[target_character.GetNameWithNoTooltip]！"
+ artist_events.34.b: "我們不在乎這種無聊消遣。"
+
+ artist_events.35.title: "所有閃耀之物"
+ artist_events.35.desc: "[target_character.GetName]以[target_character.GetHerHis]業餘的方式試圖捕捉我方眾聖人的神聖本質，卻製作出一系列比例與面容極不自然、還穿戴著最刺眼且令人不安金色的拙劣聖像。它們難看到許多[ROOT.GetCountry.GetGovernment.GetEstateName('peasants_estate')]都朝藝術家與那些藝術品投擲各種水果，真是令人尷尬的景象。"
+ artist_events.35.a: "真令人尷尬！"
+
+ artist_events.36.title: "磨練技藝"
+ artist_events.36.desc: "有相當一段時間，[target_character.GetName]一直在打聽是否能獲得潛在贊助，以幫助提升[target_character.GetHerHis]冶金技藝。根據[target_character.GetHerHim]所言，在[target_location.GetName]接受一系列金屬鍛造課程，將大大有助於發展鍛造工藝。我方許多顧問都相當願意贊助[target_character.GetShortNameWithNoTooltip]所投入的這項求知事業。"
+ artist_events.36.a: "很好，資助[target_character.GetHerHis]學習！"
+ artist_events.36.b: "[ROOT.GetCountry.Custom('common_string_nothing_we_can_do')]"
+ based_on_same_culture_highest_lit_pop_tt: "獲得的[artistic_skill|e]取決於與[artist|e]同[culture|e]的[pops|e]平均[literacy|e]，目前為[target_pop.GetName]"
+ based_on_country_average_literacy_tt: "獲得的[artistic_skill|e]取決於我方[country|e]的平均[literacy|e]"
+
+ artist_events.37.title: "[target_character.GetShortNameWithNoTooltip]提出改進建議"
+ artist_events.37.desc: "[target_character.GetName]最近提出一項詳盡計畫，希望進一步提升[target_location.GetName]的[target_material.GetName]產量。在[target_character.GetHerHis]監督下，預計該地點在[target_character.GetHerHis]停留期間，原料開採量將大幅提高。然而，[target_character.GetSheHe]將無法在我方[ROOT.GetCountry.GetGovernment.GetCourtTitle]中按需為我們創作藝術。"
+ artist_events.37.a: "這是個好主意。"
+ artist_events.37.b: "[target_character.GetHerHis|U]技藝會用在別處。"
+ artist_busy_tt: "當[target_character.GetNameWithNoTooltip]在[target_location.GetNameWithNoTooltip]工作以改善[raw_material|e]生產時，我們將#R 無法#!從[target_character.GetHerHim]處[ShowCharacterInteractionName('commission_art')]"
+
+ artist_events.38.title: "駕馭礦山"
+ artist_events.38.desc: "我方[ROOT.GetCountry.GetFlavorRank]幸運地擁有數座價值極高的礦山，其中蘊藏高品質金屬。我方一名名為[target_character.GetName]的金屬工匠藝術家提出，可以運用[target_character.GetHerHis]技藝，在[target_character.GetHerHis]監督下以精心打造的金屬改善我方基礎設施或採礦技術。"
+ artist_events.38.a: "[target_character.GetHerHis|U]工作將補強我方攻勢。"
+ artist_events.38.b: "設法改善我方基礎設施。"
+ artist_events.38.c: "讓我們的學者與藝術家研究並學習這些技術。"
+ depends_on_prosp_artist_skill_and_control_tt: "獲得的[development|e]取決於[locations|e]的[control|e]與[prosperity|e]，以及[artist|e]的技藝"
+
+ artist_events.39.title: "震耳欲聾的進步之聲"
+ artist_events.39.desc: "[target_character.GetName]因[target_character.GetHerHis]無休止的敲打聲而惡名昭彰，從黎明到黃昏不停鍛造。雖然[target_character.GetHerHis]作品品質無可否認，但持續不斷的噪音已讓廷臣、顧問，甚至當地動物都心煩意亂。\n\n抱怨從無眠之夜到詩歌朗誦被打斷不一而足。[target_character_2.GetName]要求將這位金屬工匠遷走或令其安靜，並主張[target_character_2.GetHerHis]活動太過重要，不能受其干擾。"
+ artist_events.39.a: "[target_character_2.GetShortNameWithNoTooltip]必須學會欣賞藝術！"
+ artist_events.39.b: "[ROOT.GetCountry.GetCapital.GetNameWithNoTooltip]裡沒有人能聽見自己的想法。"
+
+ artist_events.40.title: "重金屬"
+ artist_events.40.desc: "在明火前耗費數小時，將仍在壓具下炙熱的各種金屬塑形，屬於能幹金屬工匠的諸多職責之一；然而體力勞動只是整個過程的一半，即便它是最艱苦的部分。每在鍛爐中工作一小時，就必須花時間完善流程。這正是[target_character.GetName]的生活，其在[target_character.GetHerHis]工藝上日漸睿智且經驗豐富。鍛爐如地獄般的環境，不適合意志脆弱之人。\n\n因此，[target_character.GetShortNameWithNoTooltip]最近請求資金聘請[target_character_2.GetName]作為助手，以協助分擔[target_character.GetHerHis]眾多計畫的負擔，也讓一名弟子承繼[target_character.GetHerHis]工藝並從[target_character.GetHerHis]智慧中學習。這項投資將大大有益於我方威望，並幫助知識代代相傳。"
+ artist_events.40.a: "這是一項好投資。"
+ artist_events.40.b: "[target_character.GetShortNameWithNoTooltip]該停止抱怨。"
+ strain_harder_at_the_forge_tt: "工作的勞累將損害[target_character.GetShortNameWithNoTooltip]的預期壽命"
+
+ artist_events.41.title: "為不幸者辯護"
+ artist_events.41.desc: "關於[ROOT.GetCountry.GetGovernment.GetEstateName('peasants_estate')]受剝削的文學作品，過去數月一直在[ROOT.GetCountry.GetCapital.GetName]流傳，在[ROOT.GetCountry.GetGovernment.GetEstateName('nobles_estate')]與不幸者之間散播不滿與不穩定。我方一些顧問聲稱，這些挑釁性著作正是[target_character.GetName]的作品，其人生經歷使其對[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('nobles_estate')]懷有惡毒仇恨。這被廣泛視為對我方[ROOT.GetCountry.GetFlavorRank]的威脅，進而也是對[target_character_2.GetName][target_character_2.GetHerselfHimself]的威脅。"
+ artist_events.41.a: "讓[target_character.GetHerHim]繼續寫作。"
+ artist_events.41.b: "讓[target_character.GetHerHim]閉嘴。"
+
+ artist_events.42.title: "[target_character.GetNameWithNoTooltip]支持政策變更"
+ artist_events.42.desc: "我國政府的內部運作相當複雜，也常留下腐敗與遊說滋長的空間。對我們權力的最新挑戰不是別人，正是[target_character.GetName]。根據[target_character.GetHerHis]說辭，[target_character_2.GetName]正積極損害我方法律體系的穩定與效率。為了顯然要扭轉這些損害，[target_character.GetShortNameWithNoTooltip]建議實施「[target_policy.GetName]」。然而很明顯，[target_estate.GetName]正透過[target_character.GetHerHim]發聲，就像操縱一具傀儡。"
+ artist_events.42.a: "[target_character_2.GetShortNameWithNoTooltip]的律法凝視將擊潰腐敗。"
+ artist_events.42.b: "我們不能冒著激怒[target_character.GetShortNameWithNoTooltip]及[target_character.GetHerHis]支持者的風險。"
+ artist_events.42.c: "[target_character.GetSheHe|U]忘了[target_character.GetHerHis]本分。"
+ depends_on_change_policy_cost_tt: "支付的[stability|e]大幅取決於目前在[law|e]中變更[policy|e]的[costs|e]"
+ target_character_will_never_dare_again_tt: "[target_character_2.GetShortName]的知識與演說能力讓反對者毫無立足之地，因此[target_character.GetShortName]再也不敢嘗試這種卑劣舉動"
+
+ artist_events.43.title: "守序善良"
+ artist_events.43.desc: "我國社會長久以來受到對藝術的支持與堅實法律基礎所塑造。[target_character.GetName]以[target_character.GetHerHis]雄辯演說與法學領域的文學成就聞名，作為偉大的法學家，在藝術領域開創了一個進步的偉大時代。因此，我們必須思考如何善用這份才華，任用[target_character.GetHerHim]以最大化我方所獲得的威望與正統性。"
+ artist_events.43.a: "[target_character.GetSheHe|U]是我方健全體制的光輝典範。"
+ artist_events.43.b: "將[target_character.GetHerHis]服務專用於政府。"
+ jurist_busy_tt: "[target_character.GetShortName]將在我方政府中任職#Y 5#!年，被動提高我方[cabinet_efficiency|e]與[tax_efficiency|e]#G +10%#!\n當[target_character.GetSheHe]任職期間，我們將#R 無法#!從[target_character.GetHerHim]處[ShowCharacterInteractionName('commission_art')]。"
+
+ artist_events.44.title: "仁慈的負擔"
+ artist_events.44.desc: "我方法律公正地治理整個[ROOT.GetCountry.GetFlavorRank]。即便面對那些試圖推翻我們進步並摧毀我們的人，法學也不懷偏見地伸出仁慈之手。\n\n[target_rebel.GetName]及其支持者的情況正是如此。[target_character.GetName]對法律保護的深思熟慮，已幫助許多人遠離叛亂傾向，使我們有機會按照自己的想法影響他們。"
+ artist_events.44.a: "善牧會歡迎迷失的羊歸來。"
+ artist_events.44.b: "抓住機會，將我們的文化強加於他們！"
+ every_supporter_pop_gains_20_satisfaction_tt: "支持[ROOT.GetRebel.GetName][rebellion|e]的每個[pop|e]將獲得[ShowNamedValue('pop_satisfaction_extreme_bonus')|+=2%][pop_satisfaction|e]"
+
+ artist_events.45.title: "愉快的法律巧合"
+ artist_events.45.desc: "看來[target_character.GetName]最近在法庭上代表[target_estate.GetName]的顯赫成員，並為他們爭取到有利結果。作為回報，他們向我方國庫慷慨捐贈。雖然這筆金錢收益必定會進一步增加我方財富，但我方顧問迫不及待地提出無數方法，好好投資這筆新得之財。"
+ artist_events.45.a: "我們感謝他們的贈禮！"
+ artist_events.45.b: "投資這筆錢以增強[target_character.GetShortNameWithNoTooltip]的能力。"
+
+ artist_events.46.title: "意外的噴嚏"
+ artist_events.46.desc: "當[target_artist.GetName]正在努力完成[target_artist.GetHerHis]委託作品時，[target_artist.GetHerHis]一名助手前來向[target_artist.GetHerHim]呈上最新一批[ShowGoodsName('pepper')]。不幸的是，黑胡椒會讓人打噴嚏，而這突如其來的爆發使[target_artist.GetNameWithNoTooltip]把墨水灑得到處都是。[target_artist.GetHerHis|U]作品已被隨機的斑點與污痕無可挽回地毀壞，先前精心描繪的所有線條都失去了應有形狀，恐怕別無選擇，只能從頭開始。"
+ artist_events.46.a: "我們將提供[target_artist.GetNameWithNoTooltip]額外材料。"
+ artist_events.46.b: "這種事不能再發生，移除[target_artist.GetHerHim]周遭所有[ShowGoodsNameWithNoTooltip('pepper')]。"
+ artist_events.46.c: "其實，[target_artist.GetNameWithNoTooltip]聲稱[target_artist.GetSheHe]能利用它繼續創作。"
+
+ artist_events.47.title: "調皮的貓科動物"
+ artist_events.47.desc: "[target_artist.GetName]一直被視為一位成熟的[target_artist.GetArtistType.GetName]，[target_artist.GetHerHis]作品也受到普羅大眾讚揚。然而，[target_artist.GetHerHis]作品之一[target_art.GetName]卻成了[ROOT.GetCountry.GetGovernment.GetCourtTitle]中的主要話題，因為一些細心研究該作品的學生發現其上有幾處特殊墨漬。顯然，一隻貓踩過墨水後又走上作品，將爪印永久留在了這件作品上。\n\n這在[ROOT.GetCountry.GetGovernment.GetCourtTitle]引發了一場最為奇特的辯論，[cat_lovers.GetName]讚賞這隻貓科動物的無畏，而[cat_haters.GetName]則哀嘆這件作品如今已徹底毀壞。"
+ artist_events.47.a: "正如[cat_haters.GetNameWithNoTooltip]所說，這隻貓毀了它。"
+ artist_events.47.b: "這並未減損作品，甚至賦予它更多歷史。"
+ artist_events.47.c: "很明顯，[target_art.GetNameWithNoTooltip]必須被替換。"
+
+ artist_events.48.title: "不敬的[target_artist.GetArtistType.GetNameWithNoTooltip]"
+ artist_events.48.desc: "雖然[ROOT.GetCountry.GetReligion.GetName]明確不鼓勵對人物與動物進行藝術描繪，以避免偶像崇拜，但它們並未被明文禁止。藝術家常透過書法構圖本身來暗示圖像概念，而非明確繪製圖像，藉此避免描繪形象。這不只一次引起[ROOT.GetCountry.GetGovernment.GetEstateName('clergy_estate')]中最狂熱者的側目。然而，有些界線絕不能跨越。\n\n[target_artist.GetName]的作品讓[target_artist.GetHerHim]得到的已不只是側目而已，因為[target_artist.GetHerHis]作品喚起了極其鮮明的圖像，不僅有人與動物，甚至包括神聖先知、使者，以及穆罕默德本人，願他平安。這激起了大多數[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('clergy_estate')]的憤怒，他們要求嚴厲譴責。"
+ artist_events.48.a: "禁止[target_artist.GetNameWithNoTooltip]再次創作這類圖像。"
+ artist_events.48.b: "它們並未造成實際傷害。"
+ artist_events.48.c: "[target_artist.GetNameWithNoTooltip]不再受[ROOT.GetCountry.GetNameWithNoTooltip]歡迎。"
+ artist_events.48.d: "我們絕不容許異端的滑坡！"
+
+ artist_events.49.title: "糟糕的字跡"
+ artist_events.49.desc: "[target_artist.GetName]稱[target_artist.GetHerselfHimself]是一位自豪的[target_artist.GetArtistType.GetName]。然而現實是，[target_artist.GetHerHis]字跡糟糕透頂，以致[ROOT.GetCountry.GetGovernment.GetCourtTitle]中許多人連[target_artist.GetSheHe]所寫的一個字都看不懂。[target_artist.GetHerHis|U]作品往往招來的不是仰慕的目光，而是更多困惑的表情與扭曲的臉孔；對此[target_artist.GetSheHe]似乎完全渾然不覺，反而把[target_artist.GetHerselfHimself]想像成一位因[target_artist.GetHerHis]作品太過先進而不被理解的藝術家。"
+ artist_events.49.a: "是時候面對現實了。"
+ artist_events.49.b: "平民無法理解真正的藝術。"
+
+ artist_events.50.title: "金色墨水"
+ artist_events.50.desc: "[target_artist.GetName]表面上似乎對[target_artist.GetHerHis]在[target_art.GetName]中的作品相當滿意，但實際上[target_artist.GetSheHe]內心對其感到失望。現在，[target_artist.GetSheHe]帶著一個改善作品的想法來到[ROOT.GetCountry.GetGovernment.GetCourtTitle]。[target_artist.GetSheHe|U]聲稱，如果我們提供[target_artist.GetHerHim]一些[ShowGoodsName('goods_gold')]，[target_artist.GetSheHe]或許能以特殊的墨水與金粉混合物重新描摹線條，大幅提升作品之美。"
+ artist_events.50.a: "胡說，它現在就是一件好作品。"
+ artist_events.50.b: "讓我們給[target_artist.GetHerHim]一些[ShowGoodsNameWithNoTooltip('goods_gold')]。"
+
+ artist_events.51.title: "新的書法風格"
+ artist_events.51.desc: "毫無疑問，[target_artist.GetName]是一位著名的[target_artist.GetArtistType.GetName]。[target_artist.GetHerHis|U]文字向來令人讚嘆，但似乎[target_artist.GetSheHe]還想走得更遠。在[target_artist.GetHerHis]書房中，[target_artist.GetSheHe]開始使用一種新的書寫風格，並且[target_artist.GetSheHe]聲稱，若能妥善推廣與傳播，它或許會成為新的標準。"
+ artist_events.51.a: "鼓勵推廣這種新風格。"
+ artist_events.51.b: "我們已有標準，不需要新的。"
+
+ artist_events.52.title: "書寫冥想"
+ artist_events.52.desc: "[target_artist.GetName]總是勤奮工作，但[target_artist.GetHerHis]技巧已使[target_artist.GetHerHim]引起某個特定群體的興趣。[ROOT.GetCountry.GetGovernment.GetEstateName('clergy_estate')]中有些人認為，[target_artist.GetHerHis]沉默而專注的工作方式是一種動態冥想，並希望在其他[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('clergy_estate')]中推廣它，作為幫助追隨佛陀之道的另一種方法。"
+ artist_events.52.a: "這確實是一項非常靈性的活動。"
+ artist_events.52.b: "這只是創造美麗藝術的方法，僅此而已。"
+
+ 
+ artist_events.53.title: "師傅與學徒"
+ artist_events.53.desc: "在任何藝術事業中，總有兩種人：師傅與學徒，而學徒的目標終將是超越師傅。為此，[target_apprentice.GetName]來到[ROOT.GetCountry.GetGovernment.GetCourtTitle]面前，對[target_apprentice.GetHerHis]自身能力感到不滿。[target_apprentice.GetSheHe|U]請求我們允許[target_apprentice.GetHerHim]拜入[target_artist.GetName]門下，因為後者是更負盛名且技藝更高超的[target_artist.GetArtistType.GetName]。這顯然能幫助[target_apprentice.GetHerHim]提升[target_artist.GetHerHis]能力，但也必定會使[target_artist.GetNameWithNoTooltip]無法履行[target_artist.GetHerHis]其他職責。"
+ artist_events.53.a: "允許[target_apprentice.GetHerHim]拜師學藝。"
+ artist_events.53.b: "[target_artist.GetNameWithNoTooltip]的技藝太過寶貴，不該用於這種學徒訓練。"

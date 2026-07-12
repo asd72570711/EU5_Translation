@@ -1,0 +1,155 @@
+l_simp_chinese:
+ italian_renaissance_culture.1.title: "挑戰$FLO_ADJ$[ShowGoodsNameWithNoTooltip('wool')]"
+ italian_renaissance_culture.1.desc: "雖然[ShowLocationName('florence')]的貿易行會長期主宰[ShowRegionName('italy_region')]的[ShowGoodsName('wool')]貿易，但近來[ROOT.GetCountry.GetAdjective][ShowGoodsNameWithNoTooltip('wool')]生產擴張，使[ROOT.GetCountry.GetGovernment.GetEstateName('burghers_estate')]愈發相信[ROOT.GetCountry.GetNameWithNoTooltip]或許能挑戰$FLO_ADJ$商人對市場的壟斷。\n\n若[ROOT.GetCountry.GetGovernment.GetCourtTitle]提供足夠資金，[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('burghers_estate')]中有些人願意建立新的貿易行會，以支援日益壯大的[ROOT.GetCountry.GetAdjectiveWithNoTooltip][ShowGoodsNameWithNoTooltip('wool')]產業。然而，[ROOT.GetCountry.GetGovernment.GetCourtTitle]中也有人主張讓[ROOT.GetCountry.GetGovernment.GetEstateName('peasants_estate')]繼續保有[ShowGoodsNameWithNoTooltip('wool')]生產的自主權。"
+ italian_renaissance_culture.1.a: "將[ShowGoodsNameWithNoTooltip('wool')]行會的建立交給[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('burghers_estate')]。"
+ italian_renaissance_culture.1.b: "維護[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('peasants_estate')]對[ShowGoodsNameWithNoTooltip('wool')]生產的自主權。"
+ ita_culture_rival_wool_guild_locations.tt: "我們在[ShowRegionName('italy_region')]擁有的所有[ShowGoodsNameWithNoTooltip('wool')][locations|e]都將獲得[ShowModifier('italian_culture_rival_wool_trade')]，持續60年，且若尚未達到最高等級，將擴建#G +1.00#!"
+
+ italian_renaissance_culture.2.title: "鄉村人口凋零"
+ italian_renaissance_culture.2.desc: "自[ShowSituationName('black_death')]席捲我國土地以來，[ROOT.GetCountry.GetName]許多鄉村地區人口嚴重減少。雖然[target_location.GetName]也受到[ShowSituationNameWithNoTooltip('black_death')]重創，但許多倖存者希望遷往該地，以重新取得因瘟疫而無法獲得的關鍵資源。\n\n雖然[ROOT.GetCountry.GetGovernment.GetCourtTitle]中有人認為這是進一步都市化並重建[target_location.GetNameWithNoTooltip]的機會，但允許[ROOT.GetCountry.GetGovernment.GetEstateName('peasants_estate')]放棄[ROOT.GetCountry.GetNameWithNoTooltip]各地許多核心鄉村地區，可能導致嚴重後果。"
+ italian_renaissance_culture.2.a: "進一步鼓勵遷往[target_location.GetNameWithNoTooltip]。"
+ italian_renaissance_culture.2.b: "向鄉村發放援助，以減緩遷徙。"
+
+ italian_renaissance_culture.3.title: "重新發現古代[ShowCultureNameWithNoTooltip('greek_culture')]思想"
+ italian_renaissance_culture.3.desc: "自[ShowAgeName('age_2_renaissance')]理念傳遍[ShowRegionName('italy_region')]以來，[ShowCultureGroupName('italian_group')]學者對取得並翻譯古代[ShowCultureName('greek_culture')]文獻的興趣日益增加。為了將[ROOT.GetCountry.GetNameWithNoTooltip]打造為[ShowRegionNameWithNoTooltip('italy_region')]最重要的國家之一，[ROOT.GetCountry.GetGovernment.GetCourtTitle]中的許多顧問敦促[target_character.GetName]支持重新取得這些古代作品。"
+ italian_renaissance_culture.3.a: "鼓勵重新發現這些藝術！"
+ italian_renaissance_culture.3.b: "提供國家的全力贊助。"
+ italian_renaissance_culture.3.c: "堅守我們的傳統。"
+ encourage_humanist_thought_for_rewards_tt: "鼓勵轉向[ShowSocietyDirectionName('humanist')]，將進一步為[ROOT.GetCountry.GetCapital.GetName]成為[ShowSocietyDirectionNameWithNoTooltip('humanist')]思想主要中心開啟機會"
+
+ italian_renaissance_culture.4.title: "[target_location.GetNameWithNoTooltip]，人文主義中心"
+ italian_renaissance_culture.4.desc: "自[ShowAgeName('age_2_renaissance')]理念席捲[ShowRegionName('italy_region')]以來，從$BYZ_ADJ$記錄中取得的各種手稿被翻譯，古代[ShowCultureName('greek_culture')]文獻也重新被發現。這些古代文本的重現，使[ShowRegionNameWithNoTooltip('italy_region')]各地許多哲學家產生劇烈轉變，激發出人文主義的新道路。在[ROOT.GetCountry.GetAdjective][ROOT.GetCountry.GetGovernment.GetCourtTitle]大力支持下，[target_location.GetName]已成為整個[ShowRegionNameWithNoTooltip('italy_region')]首屈一指的[ShowSocietyDirectionName('humanist')]學術中心之一，眾多學者也定居於這座[target_location.GetRank.GetName]。隨著[ShowAgeName('age_2_renaissance')]理念持續傳播，[target_location.GetNameWithNoTooltip]無疑將繼續成為其背後的重要力量。"
+ italian_renaissance_culture.4.a: "[target_location.GetNameWithNoTooltip]將成為[ShowRegionNameWithNoTooltip('italy_region')]的[ShowSocietyDirectionNameWithNoTooltip('humanist')]思想燈塔。"
+ italian_renaissance_culture.4.b: "限制[ShowSocietyDirectionNameWithNoTooltip('humanist')]思想的擴散。"
+
+ italian_renaissance_culture.5.title: "新興藝術家吸引[ROOT.GetCountry.GetGovernment.GetCourtTitle]注意"
+ italian_renaissance_culture.5.desc: "隨著[ShowAgeName('age_2_renaissance')]在[ShowRegionName('italy_region')]催生許多重要新藝術家，[ROOT.GetCountry.GetGovernment.GetCourtTitle]中有人注意到[target_artist.GetName]，其在[ROOT.GetCountry.GetCapital.GetName]已引起相當關注。[target_character.GetName]身邊一些親近顧問敦促[target_character.GetHimHer]贊助[target_artist.GetNameWithNoTooltip]，因為假以時日，[target_artist.GetHeShe]或許會成長為[ShowRegionNameWithNoTooltip('italy_region')]最具才華的藝術家之一。"
+ italian_renaissance_culture.5.a: "聘請[target_artist.GetHimHer]進入[ROOT.GetCountry.GetGovernment.GetCourtTitle]！"
+ italian_renaissance_culture.5.b: "我們不需要[target_artist.GetHisHer]服務。"
+
+ italian_renaissance_culture.6.title: "[ShowSocietyDirectionNameWithNoTooltip('humanist')]思想自[target_location.GetNameWithNoTooltip]傳播"
+ italian_renaissance_culture.6.desc: "來自[target_location.GetNameWithNoTooltip]、宣揚[ShowSocietyDirectionName('humanist')]思想的著名學者已定居於[ROOT.GetCountry.GetCapital.GetName]，希望將新翻譯的古代[ShowCultureName('greek_culture')]文獻傳播給當地民眾。雖然[ROOT.GetCountry.GetGovernment.GetCourtTitle]中有人對譯文感興趣，但也有人敦促遏止[ShowSocietyDirectionNameWithNoTooltip('humanist')]思想，以避免潛在不穩。"
+ italian_renaissance_culture.6.a: "允許學者傳播翻譯文獻。"
+ italian_renaissance_culture.6.b: "限制翻譯文獻的傳播。"
+
+ italian_renaissance_culture.7.title: "新藝術的贊助"
+ italian_renaissance_culture.7.desc: "[ShowSituationName('black_death')]之後，許多[ROOT.GetCountry.GetGovernment.GetEstateName('burghers_estate')]的貿易環境變得代價高昂，貨物更難長距離運輸，基本必需品需求也增加。然而，[ShowAgeName('age_2_renaissance')]的傳播，使[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('burghers_estate')]中許多人轉而贊助新藝術，而不再只專注於貿易。\n\n藝術贊助已證明是[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('burghers_estate')]有價值的投資，因此有人敦促[ROOT.GetCountry.GetGovernment.GetCourtTitle]進一步支持這些新藝術的成長。"
+ italian_renaissance_culture.7.a: "贊助這些新藝術的成長。"
+ italian_renaissance_culture.7.b: "改將收入分配至國庫。"
+
+ italian_renaissance_culture.8.title: "[ROOT.GetCountry.GetCapital.GetNameWithNoTooltip]的著名傭兵隊長"
+ italian_renaissance_culture.8.desc: "消息傳到[ROOT.GetCountry.GetGovernment.GetCourtTitle]，著名傭兵隊長[target_character_2.GetNameWithNoTooltip]已抵達[ROOT.GetCountry.GetCapital.GetName]。在贏得數場軍事勝利後，[target_character_2.GetNameWithNoTooltip]的到來引發[ROOT.GetCountry.GetGovernment.GetCourtTitle]討論，是否應在[target_character_2.GetHeShe]停留於[ROOT.GetCountry.GetCapital.GetNameWithNoTooltip]期間聘用[target_character_2.GetHisHer]，因為若戰火波及[ROOT.GetCountry.GetName]，[target_character_2.GetHisHer]的戰鬥技巧可能至關重要。"
+ italian_renaissance_culture.8.a: "聘請[target_character_2.GetNameWithNoTooltip]以確保[ROOT.GetCountry.GetNameWithNoTooltip]安全。"
+ italian_renaissance_culture.8.b: "我們不需要[target_character_2.GetHisHer]戰爭專長。"
+
+ italian_renaissance_culture.9.title: "[ROOT.GetCountry.GetNameWithNoTooltip]影響力增長吸引傭兵隊長"
+ italian_renaissance_culture.9.desc: "隨著[ROOT.GetCountry.GetAdjective]在[ShowRegionName('italy_region')]的影響力擴大，許多傭兵隊長麾下的僱傭軍團接觸[ROOT.GetCountry.GetGovernment.GetCourtTitle]，希望獲得雇用。雖然[ROOT.GetCountry.GetGovernment.GetCourtTitle]中有人支持聘用他們，因為[ROOT.GetCountry.GetNameWithNoTooltip]的擴張使募兵更加昂貴，但也有人擔心這些傭兵隊長純粹出於投機，試圖透過使我們過度依賴其士兵，讓自己變得不可或缺。"
+ italian_renaissance_culture.9.a: "設法討好並雇用這些傭兵隊長。"
+ italian_renaissance_culture.9.b: "我們不能冒欠下這些軍團人情的風險。"
+
+ italian_renaissance_culture.10.title: "[condottieri_company.GetNameWithNoTooltip]要求更多報酬"
+ italian_renaissance_culture.10.desc: "著名傭兵隊長[condottieri_company.GetName]已向[ROOT.GetCountry.GetAdjective][ROOT.GetCountry.GetGovernment.GetCourtTitle]正式要求提高報酬，認為國家並未充分獎賞他們的才能。\n\n雖然[condottieri_company.GetNameWithNoTooltip]不太可能公然背棄與[ROOT.GetCountry.GetNameWithNoTooltip]的協議，但拒絕滿足其要求，可能使該軍團變得不那麼可靠。"
+ italian_renaissance_culture.10.a: "安撫[condottieri_company.GetNameWithNoTooltip]的要求。"
+ italian_renaissance_culture.10.b: "拒絕向[condottieri_company.GetNameWithNoTooltip]提供額外報酬。"
+
+ italian_renaissance_culture.11.title: "$FLO_ADJ$文化傳播"
+ italian_renaissance_culture.11.desc: "雖然[ROOT.GetCountry.GetCapital.GetName]是一座有影響力的[ROOT.GetCountry.GetCapital.GetRank.GetName]，但它顯然仍遜於著名的[ShowLocationName('florence')]；後者已成長為[ShowRegionNameWithNoTooltip('italy_region')]的主導[ShowLocationRankName('city')]。\n\n為了提升[ROOT.GetCountry.GetCapital.GetNameWithNoTooltip]的威望，[ROOT.GetCountry.GetGovernment.GetCourtTitle]中有人建議我們採納[ShowLocationNameWithNoTooltip('florence')]新文化建築的某些元素。"
+ italian_renaissance_culture.11.a: "採納$FLO_ADJ$文化的部分元素。"
+ italian_renaissance_culture.11.b: "維護[ROOT.GetCountry.GetCapital.GetNameWithNoTooltip]獨特的文化。"
+
+ italian_renaissance_culture.12.title: "振興[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('peasants_estate')]"
+ italian_renaissance_culture.12.desc: "雖然[ROOT.GetCountry.GetName]的所有社會階層都受到[ShowSituationName('black_death')]影響，但受創最深的莫過於[ROOT.GetCountry.GetGovernment.GetEstateName('peasants_estate')]。此後多年，[ROOT.GetCountry.GetGovernment.GetEstateName('burghers_estate')]中許多人投資[ShowAgeName('age_2_renaissance')]藝術，帶動[ROOT.GetCountry.GetAdjectiveWithNoTooltip]精英的文化重生；然而，許多[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('peasants_estate')]仍深受[ShowSituationNameWithNoTooltip('black_death')]後果所苦。\n\n為了幫助重創的[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('peasants_estate')]復興，[ROOT.GetCountry.GetGovernment.GetCourtTitle]中一些同情的聲音建議削減藝術贊助，將資金用於協助他們恢復。"
+ italian_renaissance_culture.12.a: "我們對藝術的贊助將繼續不受阻礙。"
+ italian_renaissance_culture.12.b: "將資金轉用於援助衰弱的[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('peasants_estate')]。"
+
+ italian_renaissance_culture.13.title: "[target_artist.GetNameWithNoTooltip]翻譯古代[ShowCultureNameWithNoTooltip('greek_culture')]手稿"
+ italian_renaissance_culture.13.desc: "[target_artist.GetName]完成的一份古代[ShowCultureName('greek_culture')]手稿譯本吸引了[ROOT.GetCountry.GetName]各地學者的注意，許多人渴望取得這份譯作。然而，有些人將其視為提升[ROOT.GetCountry.GetAdjectiveWithNoTooltip]威望的機會，敦促[target_character.GetName]支持將這份譯本傳播至[ShowContinentName('europe')]各地。"
+ italian_renaissance_culture.13.a: "讚揚[target_artist.GetNameWithNoTooltip]在[target_artist.GetHisHer]翻譯上的成果！"
+ italian_renaissance_culture.13.b: "將[target_artist.GetHisHer]作品廣為傳播！"
+ italian_renaissance_culture.13.c: "將其限制在[ROOT.GetCountry.GetGovernment.GetCourtTitle]內。"
+
+ italian_renaissance_culture.14.title: "[target_artist.GetNameWithNoTooltip]的才能打動[ROOT.GetCountry.GetGovernment.GetCourtTitle]"
+ italian_renaissance_culture.14.desc: "自從獲得[ROOT.GetCountry.GetGovernment.GetCourtTitle]贊助以來，[target_artist.GetName]已證明自己是[target_character.GetName]的寶貴資產；[target_artist.GetHisHer]才能也獲得上層人士讚譽。從高階[ROOT.GetCountry.GetGovernment.GetEstateName('nobles_estate')]成員到有影響力的[ROOT.GetCountry.GetGovernment.GetEstateName('burghers_estate')]，[target_artist.GetNameWithNoTooltip]的存在皆能被感受到，並大大有助於[target_character.GetNameWithNoTooltip]的影響力。"
+ italian_renaissance_culture.14.a: "[target_artist.GetHisHer|U]作品極大豐富了[ROOT.GetCountry.GetGovernment.GetCourtTitle]！"
+
+ italian_renaissance_culture.15.title: "聲名日隆的[ShowArtistTypeName('architect')]"
+ italian_renaissance_culture.15.desc: "[target_artist.GetName]已在[ROOT.GetCountry.GetCapital.GetName]完成數項建築工程，使[target_artist.GetHisHer]聲名傳遍[ROOT.GetCountry.GetName]，並吸引[ROOT.GetCountry.GetGovernment.GetEstateName('burghers_estate')]中許多顯赫家族的贊助。[ROOT.GetCountry.GetGovernment.GetCourtTitle]中有人認為我們應雇用[target_artist.GetHimHer]，因為[target_artist.GetHeShe]運用[target_artist.GetHerHis]古典建築技法，或許能成為規劃[ROOT.GetCountry.GetCapital.GetNameWithNoTooltip]建築重生的關鍵催化者。"
+ italian_renaissance_culture.15.a: "讓我們向[target_artist.GetHimHer]提供國家贊助。"
+ italian_renaissance_culture.15.b: "我們無意推動建築工程。"
+
+ italian_renaissance_culture.16.title: "[target_artist.GetNameWithNoTooltip]請求額外[ROOT.GetCountry.GetGovernment.GetCourtTitle]資源"
+ italian_renaissance_culture.16.desc: "在創作一件受古典藝術啟發的作品途中，[target_artist.GetName]請求[ROOT.GetCountry.GetGovernment.GetCourtTitle]向[target_artist.GetHimHer]提供額外資源。[target_artist.GetHeShe]表示這項事業比預想中更加艱鉅，並承諾為[target_artist.GetHisHer]計畫提供的額外資金必定物有所值，且將為[ROOT.GetCountry.GetGovernment.GetCourtTitle]帶來文化聲望。"
+ italian_renaissance_culture.16.a: "提供[target_artist.GetHimHer]所需的額外資源，讓[target_artist.GetHeShe]完成計畫。"
+ italian_renaissance_culture.16.b: "我們負擔不起。"
+
+ italian_renaissance_culture.17.title: "[target_rival.GetNameWithNoTooltip]中不滿的[target_rival_artist.GetArtistType.GetNameWithNoTooltip]"
+ italian_renaissance_culture.17.desc: "雖然[target_rival_artist.GetName]受雇於我們的宿敵[target_rival.GetName]，但[target_rival_artist.GetHeShe]憑藉[target_rival_artist.GetHisHer]作品在[ShowRegionName('italy_region')]各地獲得一定聲名。然而，最近有流言稱[target_rival_artist.GetHeShe]對[target_rival.GetNameWithNoTooltip]提供的贊助感到不滿。\n\n[ROOT.GetCountry.GetGovernment.GetCourtTitle]中有人認為，這既是削弱[target_rival.GetNameWithNoTooltip]影響力、又能取得著名[target_rival_artist.GetArtistType.GetName]服務的機會，因此敦促我們與[target_rival_artist.GetNameWithNoTooltip]達成秘密協議，希望[target_rival_artist.GetHeShe]加入我們的[ROOT.GetCountry.GetGovernment.GetCourtTitle]。"
+ italian_renaissance_culture.17.a: "迅速雇用[target_rival_artist.GetNameWithNoTooltip]！"
+ italian_renaissance_culture.17.b: "我們不敢雇用任何與[target_rival.GetNameWithNoTooltip]有牽連的藝術家。"
+
+ italian_renaissance_culture.18.title: "[target_artist.GetNameWithNoTooltip]與油畫藝術"
+ italian_renaissance_culture.18.desc: "雖然$FLA_ADJ$藝術家已創作出獨特的油畫，但這項技法的知識長期侷限於低地國。近日，[target_artist.GetName]從低地國返回[ROOT.GetCountry.GetCapital.GetName]，希望培養一套獨特的[ShowCultureGroupName('italian_group')]油畫傳統。\n\n[ROOT.GetCountry.GetGovernment.GetEstateName('nobles_estate')]中許多人有意協助[target_artist.GetHimHer]在[ShowRegionName('italy_region')]發展這項傳統，因而敦促[target_character.GetName]給予[target_artist.GetHimHer]贊助。"
+ italian_renaissance_culture.18.a: "[target_artist.GetHisHer|U]獨特藝術形式值得贊助！"
+ italian_renaissance_culture.18.b: "我們對[target_artist.GetHisHer]繪畫形式不感興趣。"
+
+ italian_renaissance_culture.19.title: "來自[ShowLocationNameWithNoTooltip('florence')]的[target_artist.GetNameWithNoTooltip]"
+ italian_renaissance_culture.19.desc: "[target_artist.GetName]憑藉[target_artist.GetHisHer]在[ShowLocationName('florence')]的作品獲得區域聲譽，並已抵達[ROOT.GetCountry.GetCapital.GetName]，為[ROOT.GetCountry.GetGovernment.GetEstateName('nobles_estate')]成員承接一些委託。然而，[target_artist.GetHisHer]出現在[ROOT.GetCountry.GetCapital.GetNameWithNoTooltip]，也吸引了[ROOT.GetCountry.GetGovernment.GetEstateName('burghers_estate')]注意；他們對[target_artist.GetHisHer]作品表現出極大興趣，並請求[ROOT.GetCountry.GetGovernment.GetCourtTitle]委託[target_artist.GetHimHer]，希望延長[target_artist.GetHisHer]在[ROOT.GetCountry.GetCapital.GetNameWithNoTooltip]的停留。\n\n話雖如此，身為來自[ShowLocationNameWithNoTooltip('florence')]的著名[ShowArtistTypeName('philosopher')]，[target_artist.GetNameWithNoTooltip]將期待超出[ROOT.GetCountry.GetGovernment.GetCourtTitle]通常提供的資源。"
+ italian_renaissance_culture.19.a: "雖然昂貴，但[target_artist.GetHisHer]經驗值得歡迎。"
+ italian_renaissance_culture.19.b: "[target_artist.GetShortNameWithNoTooltip]對[ROOT.GetCountry.GetGovernment.GetCourtTitle]而言太昂貴了。"
+
+ italian_renaissance_culture.20.title: "[target_country.GetLongNameWithNoTooltip]請求[target_artist.GetNameWithNoTooltip]"
+ italian_renaissance_culture.20.desc: "隨著[target_artist.GetName]的聲名傳出[ShowRegionName('italy_region')]之外，[target_country.GetLongName]的[target_country.GetGovernment.GetCourtTitle]已聯絡[ROOT.GetCountry.GetName]，希望取得[target_artist.GetNameWithNoTooltip]的服務。受到[target_artist.GetNameWithNoTooltip]作品傳聞打動，若[ROOT.GetCountry.GetNameWithNoTooltip]願意允許[target_artist.GetNameWithNoTooltip]定居於[target_country.GetNameWithNoTooltip]，則[target_country.GetAdjectiveWithNoTooltip][target_country.GetGovernment.GetCourtTitle]願意支付可觀金額。"
+ italian_renaissance_culture.20.a: "接受[target_country.GetAdjectiveWithNoTooltip]金錢，以換取[target_artist.GetShortNameWithNoTooltip]。"
+ italian_renaissance_culture.20.b: "我們將保留對[target_artist.GetShortNameWithNoTooltip]的獨家贊助。"
+
+ italian_renaissance_culture.21.title: "[ShowAgeNameWithNoTooltip('age_2_renaissance')]藝術贊助過於昂貴"
+ italian_renaissance_culture.21.desc: "雖然[ROOT.GetCountry.GetName]對[ShowAgeName('age_2_renaissance')]新藝術提供了廣泛贊助，但長期而言，這項贊助已對國家造成損害。若不採取行動，[ROOT.GetCountry.GetAdjectiveWithNoTooltip]國庫如今可能面臨財政危機；但[ROOT.GetCountry.GetGovernment.GetCourtTitle]中仍有人相信，持續贊助終將在長遠上有所回報。"
+ italian_renaissance_culture.21.a: "減少國家對藝術的贊助，以保全國庫。"
+ italian_renaissance_culture.21.b: "我們必須繼續贊助藝術！"
+
+ italian_renaissance_culture.22.title: "[target_location.GetNameWithNoTooltip]，[ShowAgeNameWithNoTooltip('age_2_renaissance')]藝術與文化中心"
+ italian_renaissance_culture.22.desc: "雖然這對[ROOT.GetCountry.GetLongName]而言已證明是一項重大的財政事業，但[target_location.GetName]已成長為[ShowRegionName('italy_region')]，甚至整個[ShowContinentName('europe')]的重要[ShowAgeName('age_2_renaissance')]藝術中心之一。[ShowContinentNameWithNoTooltip('europe')]各地的著名藝術家與學者都渴望造訪這座[target_location.GetRank.GetName]，許多人也傳述[target_location.GetNameWithNoTooltip]如何因這個時代而改變。"
+ italian_renaissance_culture.22.a: "[target_location.GetNameWithNoTooltip]將在未來數世紀作為藝術與文化中心閃耀！"
+ italian_renaissance_culture.22.b: "利用[target_location.GetNameWithNoTooltip]新近獲得的聲望來提升我們的威望"
+
+ italian_renaissance_culture.23.title: "[ShowWorkOfArtNameWithNoTooltip('boccaccio_on_the_fates_of_famous_men')]"
+ italian_renaissance_culture.23.desc: "[target_artist.GetName]是[ShowAgeName('age_2_renaissance')]的領軍人物之一，已完成又一件令人印象深刻的作品。這部題為[ShowWorkOfArtName('boccaccio_on_the_fates_of_famous_men')]的作品，涵蓋聖經與古典時代的許多顯赫人物，以及過去一世紀的關鍵人物。這是一部相當精美的收藏——若[ROOT.GetCountry.GetGovernment.GetCourtTitle]願意割愛，[target_artist.GetLastNameWithNoTooltip]的作品很可能能換得一筆可觀金額。"
+ italian_renaissance_culture.23.a: "一部奇妙的歷史人物集。"
+ italian_renaissance_culture.23.b: "以高價將[target_artist.GetHisHer]作品提供給[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('burghers_estate')]。"
+
+ italian_renaissance_culture.24.title: "[ShowWorkOfArtNameWithNoTooltip('boccaccio_the_decameron')]"
+ italian_renaissance_culture.24.desc: "在親眼見證[ShowSituationName('black_death')]的恐怖後，[target_artist.GetName]受到啟發，完成了[ShowWorkOfArtName('boccaccio_the_decameron')]，並吸引[ROOT.GetCountry.GetName]的[ROOT.GetCountry.GetGovernment.GetEstateName('nobles_estate')]高度關注。故事設定於[ShowLocationName('florence')]，描寫十名$FLO_ADJ$人士逃往鄉間躲避瘟疫。[ROOT.GetCountry.GetGovernment.GetCourtTitle]中有人認為，我們應努力將[target_artist.GetLastNameWithNoTooltip]的作品廣為流傳。"
+ italian_renaissance_culture.24.a: "引人入勝的故事集！我們應傳播[target_artist.GetHisHer]作品。"
+ italian_renaissance_culture.24.b: "將該作品的所有權提供給[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('nobles_estate')]。"
+
+ italian_renaissance_culture.25.title: "[ShowWorkOfArtNameWithNoTooltip('boccaccio_concerning_famous_women')]"
+ italian_renaissance_culture.25.desc: "與[target_artist.GetHisHer]先前作品[ShowWorkOfArtName('boccaccio_on_the_fates_of_famous_men')]相似，[target_artist.GetName]又出版了一卷關於歷史名人的作品，只是這次聚焦於傑出女性。[ROOT.GetCountry.GetGovernment.GetCourtTitle]中許多人都對[target_artist.GetLastNameWithNoTooltip]對這些人物展現的興趣感到驚訝，但如同[target_artist.GetHisHer]許多過往作品，[ShowWorkOfArtName('boccaccio_concerning_famous_women')]若我們財政短缺，無疑也會是一件有價值的作品。"
+ italian_renaissance_culture.25.a: "它將留在[ROOT.GetCountry.GetGovernment.GetCourtTitle]中，成為珍貴作品。"
+ italian_renaissance_culture.25.b: "舉辦[ROOT.GetCountry.GetGovernment.GetCourtTitle]拍賣，出售這部[ShowWorkOfArtTypeNameWithNoTooltip('chronicle')]。"
+
+ italian_renaissance_culture.26.title: "[target_character_2.GetNameWithNoTooltip]的崛起"
+ italian_renaissance_culture.26.desc: "[target_character_2.GetName]已在[ShowLocationName('florence')]發揮影響力一段時間，證明自己既有能力，又能傳播[ShowAgeName('age_2_renaissance')][ShowSocietyDirectionName('humanist')]思想。由於[target_character_2.GetNameWithNoTooltip]已獲得[ROOT.GetCountry.GetGovernment.GetCourtTitle]成員的讚揚與喝采，有人建議[target_character.GetName]授予[target_character_2.GetNameWithNoTooltip]在[ROOT.GetCountry.GetGovernment.GetCabinetTitle]中的特殊職位。"
+ italian_renaissance_culture.26.a: "給予[target_character_2.GetHimHer]在[ROOT.GetCountry.GetGovernment.GetCourtTitle]中的角色。"
+ italian_renaissance_culture.26.b: "[target_character_2.GetHeShe]會成為[ROOT.GetCountry.GetGovernment.GetCabinetTitle]中優秀的[ROOT.GetCountry.GetGovernment.GetCabinetMemberTitle]。"
+ italian_renaissance_culture.26.c: "不要授予[target_character_2.GetHimHer]任何特殊特權。"
+
+ italian_renaissance_culture.27.title: "[target_artist.GetNameWithNoTooltip]"
+ italian_renaissance_culture.27.desc: "雖然[target_artist.GetHeShe]過去幾年已在[ShowRegionName('italy_region')]獲得認可，但[target_artist.GetName]最近居住於[ROOT.GetCountry.GetCapital.GetName]，使其在[ROOT.GetCountry.GetCapital.GetRank.GetName]中廣受讚譽，富裕人口中也有許多人接受[target_artist.GetHisHer]獨特的世俗教育。雖然部分[ROOT.GetCountry.GetGovernment.GetEstateName('clergy_estate')]對[target_artist.GetHisHer]教學方式表示不滿，但也有人敦促[target_character.GetName]給予[target_artist.GetNameWithNoTooltip]在[ROOT.GetCountry.GetName]的完整居留權。"
+ italian_renaissance_culture.27.a: "聘請[target_artist.GetHimHer]！"
+ italian_renaissance_culture.27.b: "[target_artist.GetHisHer|U]理念太過激進。"
+
+ italian_renaissance_culture.28.title: "歡樂之家創立"
+ italian_renaissance_culture.28.desc: "自獲准完全居留於[ROOT.GetCountry.GetName]以來，[target_artist.GetName]已將[target_artist.GetHisHer]教學帶給[target_location.GetName]中的許多人。由於[target_artist.GetHisHer]在[target_location.GetNameWithNoTooltip]的聲名與影響力，[target_artist.GetNameWithNoTooltip]如今向[ROOT.GetCountry.GetGovernment.GetCourtTitle]尋求財政援助，以建立一所新學校——#italic 歡樂之家#!。\n\n雖然這會是一項昂貴事業，但[target_location.GetNameWithNoTooltip]的一座新[ShowBuildingTypeNameWithNoTooltip('art_school')]將提高[ROOT.GetCountry.GetAdjectiveWithNoTooltip]在整個[ShowRegionName('italy_region')]的威望。"
+ italian_renaissance_culture.28.a: "委託創立[ShowBuildingTypeNameWithNoTooltip('art_school')]！"
+ italian_renaissance_culture.28.b: "主張將歡樂之家改建為一座新的[ShowBuildingTypeNameWithNoTooltip('university')]。"
+ italian_renaissance_culture.28.c: "我們沒有資金推動此計畫。"
+
+ italian_renaissance_culture.29.title: "[target_artist.GetNameWithNoTooltip]"
+ italian_renaissance_culture.29.desc: "作為[target_artist_2.GetName]的一名傑出學生，[target_artist.GetName]已建立起[ShowRegionName('italy_region')]頂尖學者之一的聲譽，並特別擅長翻譯古代[ShowCultureName('greek_culture')]手稿。如今[target_artist.GetNameWithNoTooltip]已抵達[ROOT.GetCountry.GetCapital.GetName]，[target_artist.GetSheHe]表達了希望獲得[ROOT.GetCountry.GetAdjective][ROOT.GetCountry.GetGovernment.GetCourtTitle]贊助的興趣，以繼續研究近期發現的[ShowCultureNameWithNoTooltip('greek_culture')]手稿。"
+ italian_renaissance_culture.29.a: "聘請[target_artist.GetHimHer]！"
+ italian_renaissance_culture.29.b: "我們不想贊助[target_artist.GetHisHer]作品！"
+
+ italian_renaissance_culture.30.title: "[target_artist.GetNameWithNoTooltip]"
+ italian_renaissance_culture.30.desc: "雖然油畫在[ShowRegionName('italy_region')]的傳播仍大多處於初期，但[ShowArtistTypeName('painter')][target_artist.GetName]已證明自己是其中最嫻熟的實踐者之一，[target_artist.GetHisHer]許多畫作也已成為各[ShowCultureGroupName('italian_group')]宮廷珍視的藏品。\n\n許多[ROOT.GetCountry.GetGovernment.GetEstateName('nobles_estate')]與[ROOT.GetCountry.GetGovernment.GetEstateName('burghers_estate')]敦促[target_character.GetName]提供贊助，以[target_artist.GetHisHer]獨特畫作裝點[ROOT.GetCountry.GetGovernment.GetCourtTitle]。"
+ italian_renaissance_culture.30.a: "[target_artist.GetHisHer|U]畫作將提升[ROOT.GetCountry.GetGovernment.GetCourtTitle]的威望。"
+ italian_renaissance_culture.30.b: "我們負擔不起贊助[target_artist.GetHimHer]。"

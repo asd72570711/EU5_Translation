@@ -194,6 +194,10 @@ def normalize_candidate(term: str) -> str | None:
     while parts and parts[-1].lower() in TRAILING_CONNECTORS:
         parts.pop()
     term = " ".join(parts)
+    # Treat a leading article as a surface-form variant for review purposes.
+    # The canonical term still matches both "Wakō" and "The Wakō" later.
+    if len(parts) > 1 and parts[0].lower() == "the":
+        term = " ".join(parts[1:])
     if len(term) < 3 or term in IGNORE_TERMS:
         return None
     return term
@@ -312,7 +316,7 @@ def existing_review_items(path: Path) -> dict[str, dict[str, Any]]:
         return {}
     data = json.loads(path.read_text(encoding="utf-8"))
     return {
-        item["term"]: item
+        normalize_candidate(item["term"]) or item["term"]: item
         for item in data.get("items", [])
         if isinstance(item, dict) and item.get("term")
     }

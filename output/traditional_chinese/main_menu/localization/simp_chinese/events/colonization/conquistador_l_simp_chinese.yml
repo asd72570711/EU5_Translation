@@ -1,0 +1,16 @@
+l_simp_chinese:
+ conquistador.1.title: "征服[SCOPE.sLocation('target_location').GetNameWithNoTooltip]"
+ conquistador.1.desc: "我們的征服者已抵達[SCOPE.sLocation('target_location').GetName]，準備擴展我們的影響力。"
+ conquistador.1.a: "看看我們能找到什麼！"
+
+ conquistador.10.title: "征服[ROOT.GetLocation.GetNameWithNoTooltip]"
+ conquistador.10.desc: "我們如今取得了更多領土，充實了自身，使[ROOT.GetLocation.GetOwner.GetDiplomacy.GetOverlord.GetLongName]獲得巨大威望，也將榮耀獻給[former_overlord.GetReligion.GetGodName]！"
+ conquistador.10.a: "還有更多財富等著我們！"
+ conquistador.10.b: "我們需要支援來管理此地！"
+ 
+ 
+ conquistador.11.title: "[conquistador_country.GetGovernment.GetRuler.GetNameWithNoTooltip]殖民地"
+ conquistador.11.desc: "[conquistador_country.GetLongName]正請求我們協助，使其成為我們的正式屬國，並成為殖民國家！"
+ conquistador.11.a: "這是個絕佳的解決方案！"
+ conquistador.11.b: "那是他們的問題。"
+ #

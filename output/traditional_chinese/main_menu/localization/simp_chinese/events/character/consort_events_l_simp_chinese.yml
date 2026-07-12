@@ -1,0 +1,123 @@
+l_simp_chinese:
+ consort_events.1.title: "婚姻提議"
+ consort_events.1.desc: "[ROOT.GetCountry.GetFlavorRank]的強大家族們帶著幾分不安，看著[target_ruler.GetName]任由歲月從[target_ruler.GetHerHim]身旁流逝，卻始終沒有尋找婚配對象。如今，這種不安已轉為公然的憂慮，因為儘管[ROOT.GetCountry.GetFlavorRank]缺乏明確的繼承脈絡，我們的[ROOT.GetCountry.GetGovernment.GetRulerTitle]似乎既無意尋找配偶，也未見[target_ruler.GetHeSheFormal]對送到[target_ruler.GetHerHim]面前的提議表現出多少興趣。\n\n事情如今已發展到宮廷期望[ROOT.GetCountry.GetGovernment.GetRulerTitle]接受桌上某項提議的地步。若遲遲無法確保繼承，整個國家都將陷入危險。幸運的是，來自[origin_of_queens_family.GetName]最古老且最負盛名的家族之一——[target_consort.GetDynasty.GetName]，已提出將其一名女兒嫁予我們，並附上一筆豐厚嫁妝。"
+ consort_events.1.a: "接受提議。"
+ consort_events.1.a.tt: "接受這項提議，即代表我們的新配偶家族未來可以期待獲得某些恩惠。"
+ consort_events.1.b: "[target_ruler.GetNameWithNoTooltip]必須為更好的提議保留[target_ruler.GetHerselfHimself]。"
+
+ consort_events.2.title: "[target_consort.GetDynasty.GetNameWithNoTooltip]家族"
+ consort_events.2.desc: "隨著[target_ruler.GetName]與[target_consort.GetName]結合，我們不只獲得了一位配偶，也在[ROOT.GetCountry.GetFlavorRank]中獲得了一位新的盟友。[target_consort.GetDynasty.GetName]是一個古老且富有影響力的家族，而他們位於[origin_of_queens_family.GetName]的家族席位，正是[ROOT.GetCountry.GetFlavorRank]的一顆明珠。\n\n當然，友誼必須雙向維繫；[target_consort.GetName]將被期待為[target_consort.GetHerHis]親族發聲，而我們的[ROOT.GetCountry.GetGovernment.GetRulerTitle]也將被期待慎重考量這些建議。"
+ consort_events.2.a: "願友誼長存！"
+
+ consort_events.3.title: "殷切期待"
+ consort_events.3.desc: "政治婚姻既是家族之間的結合，也是相互支持的契約。[target_consort.GetDynasty.GetName]家族期待[ROOT.GetCountry.GetGovernment.GetRulerTitle]會聽取[ROOT.GetCountry.GetGovernment.GetConsortTitle]的建議，並積極照顧他們與[target_ruler.GetName]雙方的利益。"
+ consort_events.3.a: "為了我們親愛的[ROOT.GetCountry.GetGovernment.GetConsortTitle]，一切都可以。"
+ consort_events.3.b: "抱歉，沒有特別恩惠。"
+ consort_events.3.b.tt: "這將導致[target_consort.GetDynasty.GetName]在地方層面的合作減少，而他們未來也會記恨我們。"
+
+ consort_events.4.title: "婚姻之樂"
+ consort_events.4.desc: "[ROOT.GetCountry.GetGovernment.GetConsortTitle]當然本身就是[target_consort.GetHerHis]伴侶與良好顧問。然而，除此角色之外，我們的[ROOT.GetCountry.GetGovernment.GetConsortTitle]也代表[ROOT.GetCountry.GetFlavorRank]面向[target_consort.GetDynasty.GetName]家族，反之亦然。有時，這樣的安排並非沒有益處。\n\n今日，[target_consort.GetName]似乎十分高興地宣布，[target_consort.GetHerHis]家族已決定向[ROOT.GetCountry.GetGovernment.GetRulerTitle]，以及[target_ruler.GetName]與[target_consort.GetNameWithNoTooltip]的結合表達支持。"
+ consort_events.4.a: "願這段結合為你我雙方帶來益處。"
+ consort_events.4.b: "我們必須避免欠下[target_consort.GetDynasty.GetNameWithNoTooltip]家族的人情債。"
+
+ consort_events.6.title: "愛與被愛"
+ consort_events.6.desc: "一場[ROOT.GetCountry.GetGovernment.GetAdjective]婚姻很少是出於愛情。相反地，它是不容浪費的外交機會。同樣重要的是，未來的[ROOT.GetCountry.GetGovernment.GetConsortTitle]必須具備相稱的地位；若對方是外國人，則更有利於避免擾亂內部政治平衡。\n\n然而，即便是[ROOT.GetCountry.GetGovernment.GetRulerTitle]也可能墜入愛河。一旦如此，所有這些考量似乎都會煙消雲散——至少從[target_ruler.GetHerHis]的角度來看是如此。\n\n來自[ROOT.GetCountry.GetCapital.GetProvince.GetName]省的一名本地人吸引了[target_ruler.GetName]的目光。[target_ruler.GetSheHe|U]似乎已全然且無可自拔地深陷愛戀，並因此比以往更加快樂。雖然我們的[ROOT.GetCountry.GetGovernment.GetEstateName('nobles_estate')]與顧問們對此不甚滿意，但[target_ruler.GetNameWithNoTooltip]與[target_ruler.GetHerHis]摯愛之間的結合，在國內[ROOT.GetCountry.GetGovernment.GetEstateName('peasants_estate')]之中獲得了強烈支持。"
+ consort_events.6.a: "讓[ROOT.GetCountry.GetGovernment.GetRulerTitle]遂[target_ruler.GetHerHis]心願吧。"
+ consort_events.6.b: "和出身卑微者結婚？絕對不行！"
+
+ consort_events.51.title: "家族紐帶"
+ consort_events.51.desc: "過去幾日，我們一直款待來自[origin_country_of_consort.GetName]的[origin_country_of_consort.GetGovernment.GetAdjective]宮廷賓客，那裡曾是[ROOT.GetCountry.GetGovernment.GetConsortTitle]的家鄉。與家人共度了整整一週的狩獵、宴飲與閒談後，他們終於準備返回[origin_country_of_consort.GetCapital.GetName]。他們向我們保證，自己度過了一段美好時光，並堅持[ROOT.GetCountry.GetGovernment.GetAdjective]家族一定要盡快前往[origin_country_of_consort.GetCapital.GetNameWithNoTooltip]拜訪。他們必定會告訴故鄉所有人，[target_consort.GetName]在此比以往任何時候都更加幸福。"
+ consort_events.51.a: "這就是親族的意義。"
+ we_are_kin: "我們是親族"
+
+ consort_events.52.title: "[ROOT.GetCountry.GetGovernment.GetAdjective|U]的異端"
+ consort_events.52.desc: "當[target_ruler.GetName]宣布[target_ruler.GetHerHis]將與[target_consort.GetName]成婚時，[ROOT.GetCountry.GetLongName]的人民十分欣喜。當時，關於[target_consort.GetHerHis]出身，或[target_consort.GetHerHis]在[origin_country_of_consort.GetCapital.GetName]的成長背景，並沒有多少人多說什麼。對[ROOT.GetCountry.GetNameWithNoTooltip]大多數平民而言，[ROOT.GetCountry.GetGovernment.GetAdjective]家族自成一類，他們並不在乎這些細節。然而，最近開始流傳的謠言，卻把這些問題推到了台前……有人說，[ROOT.GetCountry.GetGovernment.GetConsortTitle]拒絕放棄[target_consort.GetHerHis]舊有的[origin_country_of_consort.GetReligion.GetAdjective]信仰。雖然人民或許能理解與外國人結婚的必要性，但若要由異端者統治，他們就不太可能如此順從。"
+ consort_events.52.a: "他們怎敢如此？"
+
+ consort_events.54.title: "[ROOT.GetCountry.GetGovernment.GetConsortTitle]的才能"
+ consort_events.54.desc: "自從[target_consort.GetName]抵達宮廷以來，[target_consort.GetSheHe]便對[ROOT.GetCountry.GetName]的行政事務產生了濃厚興趣。如今，[ROOT.GetCountry.GetGovernment.GetConsortTitle]在城堡人員與運作相關事務上，已成為某種權威，不僅受到[ROOT.GetCountry.GetGovernment.GetRulerTitle][target_ruler.GetHerselfHimself]信任，也普遍受到[ROOT.GetCountry.GetGovernment.GetEstateName('nobles_estate')]信任。[ROOT.GetCountry.GetFlavorRank]鮮少見過如此高效之人。"
+ consort_events.54.a: "[target_consort.GetShortNameWithNoTooltip]真是福分。"
+ consort_events.54.b: "世上需要更多像[target_consort.GetShortNameWithNoTooltip]這樣的人。"
+ consort_events.54.c: "我們永遠用得上更多戰略家。"
+ consort_events.54.d: "[target_consort.GetShortNameWithNoTooltip]真是不可多得的人才。"
+
+ consort_events.56.title: "危急之時"
+ consort_events.56.desc: "我們高貴[ROOT.GetCountry.GetGovernment.GetRulerTitle]的王朝[target_ruler.GetDynasty.GetName]，無疑是一個強大的王朝。他們透過[target_ruler.GetName]統治我國，並將在未來許多年繼續如此；但即便偉大者，有時也需要援手。所幸，[target_ruler.GetDynasty.GetNameWithNoTooltip]家族與其他強權建立了牢固聯繫，例如[marriage_partner.GetName]的[target_foreign_ruler.GetName]所屬的[target_foreign_ruler.GetDynasty.GetName]家族。[target_foreign_ruler.GetHerHis|U]仁慈的[target_foreign_consort.GetWifeHusband][target_foreign_consort.GetName]，正是我們[ROOT.GetCountry.GetGovernment.GetAdjective]家族的[target_foreign_consort.GetDaughterSon]，也是一位寶貴的聯絡人。或許我們該詢問[target_foreign_consort.GetHimHerFormal]，看看[target_foreign_consort.GetSheHe]能否影響[target_foreign_consort.GetHerHis][target_foreign_ruler.GetWifeHusband]向我們伸出援手？"
+ consort_events.56.a: "我們的金庫正變得令人憂心地空虛。"
+ consort_events.56.a.tt: "寄信給[marriage_partner.GetName]的[target_foreign_consort.GetName]，向[target_foreign_consort.GetHerHim]請求金錢援助"
+ consort_events.56.f: "我們不需要來自[marriage_partner.GetNameWithNoTooltip]或[target_foreign_ruler.GetDynasty.GetNameWithNoTooltip]家族的任何幫助！"
+
+ consort_events.57.title: "有難之友"
+ consort_events.57.desc: "我們顯赫[ROOT.GetCountry.GetGovernment.GetRulerTitle]的[ROOT.GetCountry.GetGovernment.GetConsortTitle][target_foreign_consort.GetName]，最近帶來了一項來自[target_foreign_consort.GetHerHis]家族，也就是[target_origin_country.GetName]的[target_foreign_consort.GetDynasty.GetName]家族的請求。看來[target_ruler.GetName]急需金錢，並詢問我們這些「[target_ruler.GetHerHis]最可信賴的朋友」是否能以任何方式出力。[target_ruler.GetHerHis|U]信中充滿了對我國偉大經濟的讚美。"
+ consort_events.57.a: "我們當然能為[target_origin_country.GetAdjectiveWithNoTooltip]朋友勻出一些錢幣。"
+ grateful_for_aid: "感謝援助"
+ consort_events.57.f: "那我們能得到什麼回報？不，絕不！"
+ denied_aid: "拒絕援助"
+ outrageous_demands: "荒謬要求"
+
+ consort_events.58.title: "援手"
+ consort_events.58.desc: "終於，我們收到了親愛的[target_foreign_consort.GetName]對我們請求[target_foreign_consort.GetHerHis][target_foreign_ruler.GetWifeHusband]一事的回覆。最尊貴的[target_foreign_ruler.GetName]已決定答應！回信隨附滿載黃金的箱籠，足以填補我們逐漸空虛的國庫。我們應立即向慷慨的[marriage_partner.GetGovernment.GetRulerTitle]寄出感謝信。願[target_foreign_ruler.GetSheHe]長久統治！"
+ consort_events.58.a: "我們一直知道[target_foreign_ruler.GetHerHim]是我們的朋友。"
+
+ consort_events.59.title: "破碎的承諾"
+ consort_events.59.desc: "當我們將[target_foreign_consort.GetName]嫁給[marriage_partner.GetAdjective][marriage_partner.GetGovernment.GetRulerTitle]時，我們以為兩國之間已建立了牢固紐帶。雖然我們絕不會玷污自己在這筆交易中的責任，但[target_foreign_ruler.GetName]顯然毫無這種顧慮。\n\n[target_foreign_consort.GetShortNameWithNoTooltip]的回信今日送達。不僅[target_foreign_ruler.GetShortNameWithNoTooltip]拒絕了我們的請求，[target_foreign_ruler.GetHeSheFormal]竟還有臉斥責我們提出了「荒謬要求！」"
+ consort_events.59.a: "這份冒犯不會被遺忘。"
+
+ consort_events.61.title: "[ROOT.GetCountry.GetGovernment.GetAdjective|U]影響"
+ consort_events.61.desc: "隨著[target_ruler.GetName]與[target_ruler.GetHerHis][target_consort.GetWifeHusband][target_consort.GetName]成婚，[ROOT.GetCountry.GetName]的人民對一切與[target_consort.GetHerHim]相關之事愈發喜愛。雖然文化交流本是意料之中，尤其考量到[ROOT.GetCountry.GetGovernment.GetConsortTitle]頗受歡迎，但我們的顧問仍驚恐地報告，某個省分正在發生宗教轉變。看來我們[ROOT.GetCountry.GetGovernment.GetConsortTitle]的影響甚至滲入了臣民的崇拜方式；[origin_religion.GetAdjective]信徒的言語已使相當數量的我國人民改宗……\n\n面對質問時，[target_consort.GetNameWithNoTooltip]只是聳了聳肩，辯稱[target_consort.GetSheHe]早已接受[ROOT.GetCountry.GetReligion.GetAdjective]信仰，而[ROOT.GetCountry.GetGovernment.GetRulerTitle]也應該知道這一點。"
+ consort_events.61.a: "[target_consort.GetSheHe|U]必須公開譴責[origin_religion.GetNameWithNoTooltip]！"
+ consort_events.61.b: "那就這樣吧。"
+
+ consort_events.101.title: "[ROOT.GetCountry.GetGovernment.GetConsortTitle]的野心"
+ consort_events.101.desc: "[target_consort.GetName]對[ROOT.GetCountry.GetGovernment.GetHeir.GetName]毫無好感，這已不是新聞。自[target_consort.GetHeSheFormal]抵達宮廷以來，兩人之間的摩擦便顯而易見，而自從[ROOT.GetCountry.GetGovernment.GetConsortTitle]第一個孩子出生後，情況更是日益惡化。當然，[target_consort.GetSheHe]更希望看到[target_consort.GetHerHis]自己的後代登上王座。相當長一段時間以來，[target_consort.GetSheHe]一直暗中牽線，說服——或賄賂——合適的人選，並盡[target_consort.GetHerHis]所能培養[target_consort.GetHerHis]的孩子。然而，直到昨日，[target_consort.GetSheHe]才親自面對我們的[ROOT.GetCountry.GetGovernment.GetRulerTitle]，要求是時候任命新的[ROOT.GetCountry.GetGovernment.GetHeirTitle]了。"
+ consort_events.101.a: "[target_consort.GetNameWithNoTooltip]的孩子是合法選擇，毫無疑問。"
+ consort_events.101.b: "[target_consort.GetSheHe]怎敢質疑[ROOT.GetCountry.GetGovernment.GetHeir.GetNameWithNoTooltip]對王位的宣稱？"
+
+ consort_events.102.title: "偏心寵愛"
+ consort_events.102.desc: "人們說，父母對孩子的愛沒有極限，但顯然有些愛比其他愛更加深厚。雖然[target_ruler.GetName]確實喜愛[ROOT.GetCountry.GetGovernment.GetHeir.GetName]，但人人都知道，[ROOT.GetCountry.GetGovernment.GetHeir.GetHerHis][favorite_child.GetSisterBrother]在[target_ruler.GetName]心中佔據著更重要的位置。[ROOT.GetCountry.GetGovernment.GetRulerTitle]溺愛[favorite_child.GetHerHim]，並確保[favorite_child.GetSheHe]接受最好的教育。如今，[target_consort.GetName]正試圖說服[ROOT.GetCountry.GetGovernment.GetRulerTitle]，讓[favorite_child.GetName]成為[ROOT.GetCountry.GetName]新的[ROOT.GetCountry.GetGovernment.GetHeirTitle]。"
+ consort_events.102.a: "這不是個壞主意。[favorite_child.GetNameWithNoTooltip]格外聰慧。"
+ consort_events.102.b: "$consort_events.101.b$"
+
+ consort_events.104.title: "有其[target_consort.GetMotherFather|U]，必有其[target_heir.GetDaughterSon|U]"
+ consort_events.104.desc: "多年以來，我們高貴的[target_consort.GetName]一次又一次以[target_consort.GetHerHis]卓越知識與技能令我們印象深刻。[target_consort.GetSheHe]顯然是一位受過教育的[target_consort.GetWomanMan]，而[target_consort.GetHerHis]對學習的興趣，也在[target_consort.GetHerHis][target_heir.GetDaughterSon][target_heir.GetName]心中播下了種子。果然，蘋果不會落在離樹太遠的地方。"
+ consort_events.104.a: "[target_consort.GetShortNameWithNoTooltip]將指導[target_heir.GetShortNameWithNoTooltip]了解我國行政的方方面面。"
+ consort_events.104.b: "[target_consort.GetShortNameWithNoTooltip]將教導[target_heir.GetShortNameWithNoTooltip]政治的精微之處。"
+ consort_events.104.c: "在[target_consort.GetShortNameWithNoTooltip]的幫助下，[target_heir.GetShortNameWithNoTooltip]將成為偉大的將軍。"
+
+ consort_events.303.title: "[target_consort.GetNameWithNoTooltip]的外交手腕"
+ consort_events.303.desc: "在[origin_of_consort.GetName]成長時，[target_consort.GetName]喜歡研究人。[target_consort.GetHeSheFormal|U]經常把預測[target_consort.GetHerHim]周遭之人的行動當成遊戲，發現這不僅有趣，也隨著歲月流逝逐漸成為一項值得保留的有用習慣。幸運的是，遷至[ROOT.GetCountry.GetName]的[ROOT.GetCountry.GetGovernment.GetAdjective]宮廷，並未使[target_consort.GetHerHim]放棄[target_consort.GetHerHis]對陰謀的天賦。若說有何不同，[target_consort.GetSheHe]反而得到了大量練習——在我們最近幾次與外國外交官談判時，這些技能已證明對評議會極其寶貴。"
+ consort_events.303.a: "[ROOT.GetCountry.Custom('common_string_positive')]"
+
+ consort_events.304.title: "[target_consort.GetNameWithNoTooltip]的行政理念"
+ consort_events.304.desc: "結合堅定的道德準則，[target_consort.GetName]始終具有秩序感。由[target_consort.GetHerHim]作出的決定值得信賴，無論是關於政治議題的建議，還是友好談話中的提案皆然。[ROOT.GetCountry.GetGovernment.GetConsortTitle]能雄辯地表達[target_consort.GetHerHis]想法，這讓[target_consort.GetHerHim]即使在[target_consort.GetHerHis]早年於[origin_of_consort.GetName]時，也獲得了一些欽佩。然而，最重要的是，[ROOT.GetCountry.GetGovernment.GetConsortTitle]的言語帶有誠實，使宮廷中即使最頑固的成員，也會留意[target_consort.GetSheHe]提出的任何建議。"
+ consort_events.304.a: "[ROOT.GetCountry.Custom('common_string_positive')]"
+
+ consort_events.305.title: "[target_consort.GetNameWithNoTooltip]的軍事理念"
+ consort_events.305.desc: "[target_consort.GetName|U]正證明自己是一位無畏的[target_consort.GetWomanMan]。[target_consort.GetHeSheFormal]常被看見在士兵訓練時研究其技巧，有時甚至[target_consort.GetHerselfHimself]親自走近訓練場。雖然起初有人對與[ROOT.GetCountry.GetGovernment.GetAdjective][ROOT.GetCountry.GetGovernment.GetConsortTitle]近身交手有所遲疑，但也有人好奇[target_consort.GetSheHe]或許隨[target_consort.GetHerHim]從[target_consort.GetHerHis]在[origin_of_consort.GetName]的生活中帶來了哪些本領。雖然對某些人而言這令人驚訝，但[target_consort.GetNameWithNoTooltip]能在戰鬥中應付[target_consort.GetHerselfHimself]的名聲並非毫無根據。此外，[ROOT.GetCountry.GetGovernment.GetConsortTitle]的存在似乎也對部隊產生了鼓舞作用。"
+ consort_events.305.a: "[ROOT.GetCountry.Custom('common_string_positive')]"
+
+ consort_events.306.title: "共同興趣"
+ consort_events.306.desc: "[target_ruler.GetName|U]以擅長組織而聞名。確保[ROOT.GetCountry.GetName]的人民與行政體系都遵守法律，同時更新並調整制度以適應我們所處的時代，對[ROOT.GetCountry.GetGovernment.GetRulerTitle]而言極具吸引力。想像一下，當[target_ruler.GetHerHis]意識到[target_ruler.GetHerHis][target_consort.GetWifeHusband]共享許多這些興趣時，會有多麼喜悅！\n\n對[target_ruler.GetHerHim]而言，與[target_consort.GetName]交談就如同任何評議會會議般令人振奮。[target_consort.GetSheHe|U]也以微笑回應這些討論，同樣享受與[target_consort.GetHerHis][target_ruler.GetWifeHusband]藉由這些事務建立聯繫。"
+ consort_events.306.a: "這兩人真是天作之合。"
+
+ consort_events.309.title: "繼承的成功"
+ consort_events.309.desc: "自[target_char.GetHerHis]配偶去世以來，[target_char.GetName]在[target_char.GetHerHis]的位置上愈發自在，既是年幼[ROOT.GetCountry.GetGovernment.GetHeirTitle]的監護人，也是[ROOT.GetCountry.GetName]的[ROOT.GetCountry.GetGovernment.GetAdjective][ROOT.GetCountry.GetGovernment.GetActiveRegentTitle]。對一般大眾而言，顯而易見的是，這種局面只是暫時的，也只是眾人等待年幼[target_char_heir.GetName]即位期間的政治必要。然而，有傳聞稱另有一些人物參與祕密會議，討論年幼[ROOT.GetCountry.GetGovernment.GetHeirTitle]的潛力，或其缺乏潛力。他們主張，讓[target_char_heir.GetShortNameWithNoTooltip]統治無異於讓一個流著口水的蠢人掌權，並將威脅整個國家；而在他們眼中，[ROOT.GetCountry.GetGovernment.GetConsortTitle]無疑是更好的選擇。\n\n雖然[ROOT.GetCountry.GetGovernment.GetConsortTitle][target_char.GetHerselfHimself]肯定察覺了這些狡黠勢力，但尚未對這個高度敏感的議題表態。"
+ consort_events.309.a: "這真是有趣的時代……"
+ consort_events.309.a.tt: "[ROOT.GetCountry.GetGovernment.GetConsortTitle]將與[target_char.GetHerHis]最親近的評議會討論這些想法"
+ consort_events.309.b: "何等叛逆！我們不會再容許這些想法。"
+ consort_events.309.b.tt: "煽動者不會受到鼓勵。"
+
+ consort_events.310.title: "權力轉移"
+ consort_events.310.desc: "[target_char.GetName]運用[target_char.GetHerHis]最親近顧問的建議，同時考驗[target_char.GetHerHis]的魅力，巧妙地操縱了相當多宮廷成員，使他們達成共識：[target_heir.GetName]，這位[ROOT.GetCountry.GetGovernment.GetAdjective][ROOT.GetCountry.GetGovernment.GetHeirTitle]與下一位統治者，是個心智薄弱的蠢人，不配繼承[target_heir.GetHerHis]遺產。然而，這個問題有個簡單的解決方法……\n\n在又一場為迎合掌權[ROOT.GetCountry.GetGovernment.GetEstateName('nobles_estate')]而舉辦的奢華宴會上，[target_char.GetShortNameWithNoTooltip]與[target_char.GetHerHis]爪牙成功讓一種想法流行起來：將年幼的[target_heir.GetShortNameWithNoTooltip]鎖在[target_heir.GetHerHis]房間裡。有人主張，些許隔離能讓這孩子專注於[target_heir.GetHerHis]教育。年幼的[ROOT.GetCountry.GetGovernment.GetHeirTitle]或許也會淡出公眾視野，這對[target_heir.GetHerHim]而言固然不幸，但對[ROOT.GetCountry.GetName]終究是好事。"
+ consort_events.310.a: "就這麼辦。"
+ consort_events.310.b: "其實，也許[target_heir.GetSheHe]終究值得一次機會。"
+
+ consort_events.311.title: "人民的[ROOT.GetCountry.GetGovernment.GetConsortTitle|U]"
+ consort_events.311.desc: "我們已清楚看出，[target_char.GetName]是一位有著金子般心靈的[target_char.GetWomanMan]。[target_char.GetHeSheFormal|U]總是盡[target_char.GetHerHis]所能取悅[target_char.GetHerHis][target_ruler.GetWifeHusband][target_ruler.GetName]，並以無與倫比的善意對待[target_char.GetHerHis]朋友。在最近一次前往[poor_province.GetName]的旅途中，[target_char.GetShortNameWithNoTooltip]以[target_char.GetHerHis]親眼看見了當地最貧困[ROOT.GetCountry.GetGovernment.GetEstateName('peasants_estate')]的苦難。自那以後，[target_char.GetSheHe]便一直在起草計畫，援助[target_char.GetHerHis]最貧困的臣民。然而，若要讓這些想法成真，[target_char.GetShortNameWithNoTooltip]需要從國庫中取得一些資金。"
+ consort_events.311.a: "人民由我們照看。[target_char.GetSheHe|U]會得到我們支持。"
+ consort_events.311.b: "我們有更重要的事要處理。"
+
+ consort_events.313.title: "生命的奇蹟"
+ consort_events.313.desc: "在這些戰爭與死亡的黑暗日子裡，新開端的提醒能撫慰我國人民的痛苦。我們偉大的[target_ruler.GetName]與[target_ruler.GetHerHis]高貴[target_char.GetWifeHusband][target_char.GetName]又蒙福得一子。嬰兒的到來為這對[ROOT.GetCountry.GetGovernment.GetAdjective]伴侶帶來新的希望與活力，也延伸至他們的宮廷與臣民。許多人夢想這個孩子將在更好、更光明的未來中成長，而所有戰鬥最終也將因此值得。"
+ consort_events.313.a: "願[target_ruler.GetShortNameWithNoTooltip]、[target_char.GetShortNameWithNoTooltip]與他們的新生兒蒙福！"
+ consort_events.313.a.tt: "[target_ruler.GetName]新生嬰兒的誕生，使[ROOT.GetName]的人民重新振作。"

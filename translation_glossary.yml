@@ -354,7 +354,6 @@ fixed:
   Honnō-ji: "本能寺"
   Horatio Nelson: "霍雷肖·納爾遜"
   Hormuz: "荷姆茲"
-  Host: "主機"
   Hostile Actions: "敵對行動"
   Hot Join: "即時加入"
   Houston: "休士頓"
@@ -948,6 +947,62 @@ fixed:
   Zoroastrian: "祆教"
   Überlingen: "于伯林根"
 
+  Advisor: "顧問"
+  Central Asia: "中亞"
+  Danse Macabre: "死亡之舞"
+  Dār al-Islām: "伊斯蘭世界"
+  India: "印度"
+  Islām: "伊斯蘭"
+  Julius Caesar: "尤利烏斯·凱撒"
+  Mecca: "麥加"
+  Middle East: "中東"
+  Nepotism: "裙帶關係"
+  Palace Coup: "宮廷政變"
+  Policy: "政策"
+  Ruling Dynasty: "統治家族"
+  Tangier: "丹吉爾"
+  The Administrative Ideas: "行政理念"
+  The Military Ideas: "軍事理念"
+  Rihla: "《里哈拉》"
+  Colonies: "殖民地"
+  Textile Manufactory: "紡織工場"
+  Tobacco: "菸草"
+  Colonial Nation: "殖民國家"
+
+  Bible: "聖經"
+  Cha-no-Yu: "茶之湯"
+  Condottieri: "傭兵隊長"
+  Condottiero: "傭兵隊長"
+  Egalité: "平等"
+  Fraternité: "博愛"
+  Galen: "加倫"
+  Golden Age: "黃金時代"
+  Harlequin: "哈爾利奎"
+  Kabuki: "歌舞伎"
+  Lacquerware: "漆器"
+  Liturgical Language: "禮儀語言"
+  Low Countries: "低地國"
+  O-Ie Sōdō: "御家騷動"
+  Pirate Stronghold: "海盜據點"
+  Plato: "柏拉圖"
+  Religion Group: "宗教組"
+  Rhōmaîoi: "羅馬人"
+  Roman Empire: "羅馬帝國"
+  Saint Luke: "聖路加"
+  Sake: "清酒"
+  The Chrysobull: "金璽詔書"
+  The Way of Tea: "茶道"
+  The Za: "座"
+  Theotokos: "天主之母"
+  Ukiyo-e: "浮世繪"
+  Wakō: "倭寇"
+
+  Cambro-Norman: "威爾斯諾曼"
+  Casa Gioiosa: "歡樂之家"
+  Kephalē: "凱法利"
+  Mourning Wars: "哀悼戰爭"
+  Pantalone: "潘塔隆"
+
 aliases:
   Asante:
     zh: "阿散蒂"
@@ -1135,6 +1190,8 @@ contextual:
         when: "指政治、階層或外交關係中的可用人情資源"
       - zh: "恩惠"
         when: "指一般敘事中的個人恩惠或情分"
+      - zh: "寵信"
+        when: "指君主、統治者或權力人物給予的偏愛與信任"
 
   Favors:
     default: "人情"
@@ -1221,6 +1278,16 @@ contextual:
         when: "指人或族群"
       - zh: "希臘語"
         when: "指語言"
+
+  Host:
+    default: "主機"
+    senses:
+      - zh: "主機"
+        when: "指多人遊戲、連線遊戲或建立遊戲房間的 host"
+      - zh: "主持人"
+        when: "指主持活動、節目或聚會的人"
+      - zh: "主持"
+        when: "作動詞，指主持活動、節目、聚會或遊戲房間"
 
   Herculean:
     default: "海克力斯般"
@@ -1571,3 +1638,44 @@ contextual:
         when: "指人或族群"
       - zh: "威爾斯語"
         when: "指語言"
+
+  Moroccan:
+    default: "摩洛哥"
+    senses:
+      - zh: "摩洛哥"
+        when: "作形容詞，修飾地區、文化、勢力或事物"
+      - zh: "摩洛哥人"
+        when: "指人或族群"
+
+  Bahan:
+    default: "八幡"
+    senses:
+      - zh: "八幡"
+        when: "指日本文化或宗教相關的八幡概念"
+      - zh: "八幡貿易"
+        when: "指文本中的 Bahan Trade，即以海盜劫掠為主的貿易活動"
+  Mary:
+    default: "瑪利亞"
+    senses:
+      - zh: "瑪利亞"
+        when: "指基督教或聖經語境中的耶穌之母"
+      - zh: "瑪莉"
+        when: "指一般西式人名，且語境採用此譯名"
+      - zh: "瑪麗"
+        when: "指一般西式人名，且語境採用此譯名"
+  Patriarchy:
+    default: "牧首區"
+    senses:
+      - zh: "牧首區"
+        when: "指東正教等宗教體系中的牧首管轄區或宗教組織"
+      - zh: "父權制"
+        when: "指一般政治、社會或家庭制度中的 patriarchy"
+  Norman:
+    default: "諾曼"
+    senses:
+      - zh: "諾曼"
+        when: "作形容詞，修飾諾曼文化、制度或事物"
+      - zh: "諾曼人"
+        when: "指諾曼人或諾曼族群"
+      - zh: "諾曼語"
+        when: "指諾曼語言"

@@ -1,0 +1,61 @@
+l_simp_chinese:
+ colonial_charter.1.title: "[SCOPE.sLocation('new_colony').GetNameWithNoTooltip]公司"
+ colonial_charter.1.desc: "我國周遭仍有尚未被任何對手宣稱的領土。我們擴張王權所屬土地的雄心，已在人民之間化為民族熱忱，而一家新的私人公司也已成立，意圖將定居者帶往[SCOPE.sLocation('new_colony').GetName]的土地，為榮耀、黃金、[ROOT.GetCountry.GetGovernment.GetRulerTitle]與他們的公司宣稱該地。若我們允許他們擴張，他們將為該省帶來大量定居者，並迅速擴張[ROOT.GetCountry.GetAdjective]在該區域的影響力。"
+ colonial_charter.1.a: "這對我們只會有好處。別管他們。"
+ colonial_charter.1.b: "向他們收取額外費用！"
+ 
+ colonial_charter.3.title: "移民浪潮"
+ colonial_charter.3.desc: "我們的一處殖民地[target.GetName]迎來了一波尋求在殖民地發跡的移民潮。它很快就會成為一座自給自足的城市，為我國帶來大量財富。"
+ colonial_charter.3.a: "很高興見到這種情況。"
+
+ colonial_charter.4.title: "殖民災難"
+ colonial_charter.4.desc: "我們的一處殖民地遭遇了災難。許多定居者死亡，更多人則返回家鄉。這是一場災難，我們甚至可能失去殖民地。"
+ colonial_charter.4.a: "這也是沒辦法的事。"
+ colonial_charter.4.b: "不遺餘力援助殖民地。"
+
+
+ colonial_charter.5.title: "與原住民的友誼"
+ colonial_charter.5.desc: "我們的殖民者成功與原住民接觸，並與他們達成了諒解。這項協議使[SCOPE.sColonialCharter('target').GetName]得以擁有更大的成長空間，而不致激怒原住民。"
+ colonial_charter.5.a: "這值得感恩！"
+ 
+ colonial_charter.6.title: "引入適婚女性"
+ colonial_charter.6.desc: "開拓殖民地很大程度上是男人的地方，但隨著殖民地發展，我們希望少依靠移民，多依靠兒童出生來成長。負責[SCOPE.sColonialCharter('target').GetName]的殖民公司已安排一批適婚女性——多半是寡婦——前往殖民地，以確保家庭能夠建立。"
+ colonial_charter.6.a: "[ROOT.GetCountry.Custom('common_string_positive')]"
+ 
+ colonial_charter.7.title: "鼓勵恩科米恩達制度"
+ colonial_charter.7.desc: "原住民人口問題對我們至關重要。我們必須確保受我們照管的原住民免受敵對鄰人侵害，得到適當教化，並實踐真正信仰。我們的計畫是將這項義務交由殖民者負責，每位殖民者都將獲得一定數量的原住民，由其教導與保護。這顯然不是人們會無償從事的工作，因此原住民將以若干天的勞役作為回報提供給我們的殖民者。"
+ colonial_charter.7.a: "這是絕佳的發展！"
+ STATIC_MODIFIER_NAME_encomienda_system: "恩科米恩達制度"
+ STATIC_MODIFIER_DESC_encomienda_system: "恩科米恩達制度讓每位殖民者負責教導並保護一定數量的原住民，而作為回報，原住民將為我們的殖民者提供若干天的勞役。"
+ 
+ colonial_charter.8.title: "福音傳教團"
+ colonial_charter.8.desc: "出於行善之心，信仰之士一直在[SCOPE.sLocation('missionary_location').GetName]人口之間傳播真正信仰。我們對那裡傳教事業的投資確實得到了回報。"
+ colonial_charter.8.a: "傳播福音"
+ 
+ colonial_charter.9.title: "殖民地陷入困境！"
+ colonial_charter.9.desc: "我們的殖民努力過於分散。其中一處殖民地遇上麻煩，因為食物變得難以取得。許多人已經死亡，還有更多人離開殖民地返回家鄉。"
+ colonial_charter.9.a: "[ROOT.GetCountry.Custom('common_string_negative')]"
+ colonial_charter.9.b: "我們必須幫助他們！"
+ 
+ colonial_charter.10.title: "收成不佳"
+ colonial_charter.10.desc: "[SCOPE.sColonialCharter('target').GetName]接連遭遇收成不佳，導致糧食短缺。殖民地對新移民的吸引力正在下降，其他人也正在離開並返回家鄉。這正損害殖民地的前景。"
+ colonial_charter.10.a: "我們不能拋棄他們。"
+ colonial_charter.10.b: "他們可以自行應付。"
+
+
+ #
+ colonial_charter.100.title: "[SCOPE.sProvince('target').GetNameWithNoTooltip]殖民地"
+ colonial_charter.100.desc: "我們為殖民[SCOPE.sProvince('target').GetName]而創立的特許地如今已完成其使命，並成為一個功能完整的殖民地。現在我們需要決定要如何處理這片領土！"
+ colonial_charter.100.a: "建立新的殖民屬國。"
+ colonial_charter.100.b: "讓它加入[SCOPE.sCountry('first_neighboring_country').GetNameWithNoTooltip]。"
+ colonial_charter.100.c: "讓它加入[SCOPE.sCountry('second_neighboring_country').GetNameWithNoTooltip]。"
+ colonial_charter.100.d: "暫時讓它作為[ROOT.GetCountry.GetNameWithNoTooltip]的一部分！"
+ colonial_charter.100.e: "為何不在殖民地展開新生活呢？"
+ colonial_charter.100.f: "讓它加入[SCOPE.sCountry('regional_subject').GetNameWithNoTooltip]。"
+ colonial_charter.100.g: "讓它加入[SCOPE.sCountry('scope_adjacent_area_subject').GetNameWithNoTooltip]。"
+ colonial_charter.100.h: "讓它加入[SCOPE.sCountry('scope_area_subject').GetNameWithNoTooltip]。"
+ colonial_charter.100.e.tt: "#R 切換為新的殖民屬國遊玩。#!"
+
+ colonial_charter.200.title: "[target.GetNameWithNoTooltip]失敗的殖民地"
+ colonial_charter.200.desc: "我們為殖民[target.GetNameWithNoTooltip]而創立的特許地已徹底失敗；[attacker.GetLongName]更加成功，擊退了我們所有嘗試！"
+ colonial_charter.200.a: "這是一場災難！"

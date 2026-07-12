@@ -177,7 +177,26 @@ def ordered_text_present(needle: str, haystack: str) -> bool:
     return bool(characters)
 
 
-def punctuation_issues(key: str, value: str) -> list[dict[str, str]]:
+def excerpt(text: str, needle: str = "", radius: int = 120) -> str:
+    """Keep reports readable while retaining the relevant local context."""
+    if len(text) <= radius * 2:
+        return text
+    position = text.find(needle) if needle else -1
+    if position < 0:
+        return text[: radius * 2] + "..."
+    start = max(0, position - radius)
+    end = min(len(text), position + len(needle) + radius)
+    prefix = "..." if start else ""
+    suffix = "..." if end < len(text) else ""
+    return prefix + text[start:end] + suffix
+
+
+def punctuation_issues(
+    key: str,
+    source_value: str,
+    output_value: str,
+) -> list[dict[str, str]]:
+    value = output_value
     plain = mask_protected(value)
     issues: list[dict[str, str]] = []
     if "／" in plain:
@@ -185,6 +204,8 @@ def punctuation_issues(key: str, value: str) -> list[dict[str, str]]:
             {
                 "type": "style_warning",
                 "key": key,
+                "source": excerpt(source_value, "／"),
+                "output": excerpt(output_value, "／"),
                 "message": "使用了全形斜線／；專案規則要求半形斜線 /",
             }
         )
@@ -193,6 +214,8 @@ def punctuation_issues(key: str, value: str) -> list[dict[str, str]]:
             {
                 "type": "style_warning",
                 "key": key,
+                "source": excerpt(source_value, "/"),
+                "output": excerpt(output_value, "/"),
                 "message": "placeholder 或 script token 與斜線之間可能有多餘空格",
             }
         )
@@ -206,6 +229,11 @@ def punctuation_issues(key: str, value: str) -> list[dict[str, str]]:
                 {
                     "type": "punctuation_review",
                     "key": key,
+                    "source": excerpt(
+                        source_value,
+                        {"——": "-", "‑": "-", "／": "/"}.get(symbol, symbol),
+                    ),
+                    "output": excerpt(output_value, symbol),
                     "symbol": symbol,
                     "message": message,
                 }
@@ -307,19 +335,28 @@ def run(source_path: Path, output_path: Path, glossary: Path) -> dict:
                 }
             )
 
-        issues.extend(punctuation_issues(key, unescape(output[key])))
+        issues.extend(
+            punctuation_issues(
+                key,
+                unescape(source[key]),
+                unescape(output[key]),
+            )
+        )
 
     for term in sorted(contextual, key=str.casefold):
         keys = [key for key, value in source.items() if term_in_text(term, mask_protected(value))]
         if keys:
-            issues.append(
-                {
-                    "type": "contextual_review",
-                    "term": term,
-                    "keys": keys,
-                    "message": "請依來源 key 與上下文人工確認 contextual 譯法",
-                }
-            )
+            for key in keys:
+                issues.append(
+                    {
+                        "type": "contextual_review",
+                        "term": term,
+                        "key": key,
+                        "source": excerpt(source[key], term),
+                        "output": excerpt(output.get(key, "")),
+                        "message": "請依來源 key 與上下文人工確認 contextual 譯法",
+                    }
+                )
 
     issues.extend(glossary_mismatches(source, output, glossary))
     counts: dict[str, int] = {}
@@ -391,7 +428,11 @@ def run_recursive(source_root: Path, output_root: Path, glossary: Path) -> dict:
             "by_type": counts,
         },
         "files": reports,
-        "issues": issues,
+        # Recursive reports keep full issue details under each file. Do not
+        # repeat the same issue list at the directory level.
+        "directory_issues": [
+            issue for issue in issues if issue.get("type") in {"missing_file", "extra_file"}
+        ],
     }
 
 
