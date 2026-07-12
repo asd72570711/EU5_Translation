@@ -1,0 +1,163 @@
+l_simp_chinese:
+
+#Fate of the Phoenix
+ fate_of_the_phoenix: "鳳凰的命運"
+ fate_of_the_phoenix_desc: "近幾個世紀以來，我們光榮的[GetCountry('BYZ').GetFlavorRank]逐漸衰敗。無休止的內鬥、內部動盪，以及持續中的[ShowSituationName('rise_of_the_ottomans')]，都預示著我們與人民的末日；與此同時，[GetCountry('SER').GetName]和[GetCountry('BUL').GetName]正蠶食我們的北方邊境。我們必須憑藉純粹的力量與堅毅，在為時已晚前終結腐敗，恢復王權的威信……"
+ remember_no_turk_tt: "除了我方之外，任何[capital|e]位於[ShowRegionName('anatolia_region')]的其他[country|e]，若擁有超過#Y 100#!個包含其[subjects|e]在內的[locations|e]，且屬於[ShowCultureName('turkish_culture')]或[ShowCultureName('turkoman_culture')]，或採用[ShowGovernmentReformName('anatolian_beylik')][government_reform|e]，均不符合條件"
+
+#Fate of the Phoenix Events (to be moved)
+
+ fate_of_the_phoenix.1.title: "鳳凰的命運"
+ fate_of_the_phoenix.1.desc_a: "曾幾何時，[ShowLocationName('constantinople')]的城牆標誌著世界的中心。法律、信仰與帝國秩序從那裡流出，真正承襲自$ROM$本身的遺產。如今，那份傳承沉重地壓在我們身上。\n\n多年的陰謀、空洞的勝利與日漸崩解的權威，讓[ROOT.GetCountry.GetFlavorRank]的精神日益衰弱，雖然名號尚未改變。邊境之外，新興勢力以耐心與貪婪聚集；邊境之內，古老的官署則因疏於維護而腐朽。我們的人民值得更好的道路，以匹配光榮祖先的壯麗與富足！"
+ fate_of_the_phoenix.1.desc_b: "我們收到來自[ShowLocationName('constantinople')]的消息。古老的帝國首都似乎陷入困境，其權威在不和與衰敗的重壓下逐漸崩解。數代以來，[target_location.GetRank.GetName]的命運塑造了[ShowRegionName('balkan_region')]的[ShowReligionGroupAdjective('christian')]土地秩序，以信仰連結我們的歷史；雙方的劍彼此制衡，至少大多時候如此。\n\n如今，隨著它的掌控力減弱，曾經支配我們邊境的平衡變得疲憊而不確定。我們有影響力的家族中，有人敦促謹慎，警告如此支柱的倒塌將動搖所有共享其禮儀者。其他人則更直截了當地指出：昔日的保障正在消逝，曾由傳統解決的事情，很快可能將由武力決定。在這個不安的時代，我們選擇的道路將遠遠超出自身[ROOT.GetCountry.GetFlavorRank]的範圍，持續迴響下去。"
+ fate_of_the_phoenix.1.desc_c: "帝國的衰弱很少會以莊嚴儀式宣告。接連展現的軟弱、無力守護邊境，以及[GetCountry('BYZ').GetLongName]聲望的喪失，都代表他們的陽光時代正走向僵硬而突然的終結。因此，西方的局勢不再要求我們敬畏或謹慎——只需要算計。我們將吞食他們的殘骸，取代他們的位置，登上巔峰。"
+ fate_of_the_phoenix.1.a: "希望尚未消逝。"
+ fate_of_the_phoenix.1.b: "變革是殘酷的情婦……"
+ fop_parameters_a_tt: "這場災害的結果將決定我們的命運。在這段動盪時期，我們將透過[disaster|e]面板取得獨特的[actions|e]"
+ fop_parameters_b_tt: "若我們成功扭轉衰敗，終結[disaster|e]，此舉或許會在史書中掀起波瀾，為我們的人民迎來第二個黃金時代"
+ fop_paramenters_bul_tur_ser_tt: "在[GetCountry('BYZ').GetLongName]經歷[ShowDisasterName('fate_of_the_phoenix')][disaster|e]期間，我們將有機會利用他們的弱點"
+
+ fate_of_the_phoenix.2.title: "收復[target_location.GetName]！"
+ fate_of_the_phoenix.2.desc: "[ROOT.GetCountry.GetFlavorRank]的旗幟再次飄揚於[target_location.GetName]上空。這座重要的愛琴海港口曾長期遭[ShowCultureName('turkish_culture')]軍閥、海盜與敵對勢力爭奪，如今重回[ROOT.GetCountry.GetAdjective]手中。它的港口與市場飽經摧殘，卻仍充滿希望。我們選擇如何恢復這些新領地，將影響我們在東方海域數代人的存在。"
+ fate_of_the_phoenix.2.a: "重建港口。"
+ fate_of_the_phoenix.2.b: "改為恢復市場與倉庫。"
+ building_set_to_max_level_tt: "[building|e]將提升至最高等級"
+
+ fate_of_the_phoenix.3.title: "$fate_of_the_phoenix.2.title$"
+ fate_of_the_phoenix.3.desc: "[target_location.GetName]曾是皇帝的避難所，也是1204年災難後帝國延續的所在地，如今已回到我們的統治之下。[ROOT.GetCountry.GetFlavorRank]曾從這些城牆中流亡求存、守護法律，並保存其普世統治的主張。它的復原不只是領土上的收穫，更是對[ROOT.GetCountry.GetFlavorRank]今後道路的重新審視。"
+
+ fate_of_the_phoenix.3.a: "[ROOT.GetCountry.GetGovernment.GetRulerOrRegent.GetNameWithNoTooltip]將親自監督這項工程！"
+ fate_of_the_phoenix.3.b: "光榮帝國再起的象徵！"
+ fate_of_the_phoenix.3.c: "是時候恢復[ShowRegionNameWithNoTooltip('anatolia_region')]的行政體系了！"
+
+ fate_of_the_phoenix.4.title: "$fate_of_the_phoenix.2.title$"
+ fate_of_the_phoenix.4.desc: "[target_location.GetName]曾是[GetCountry('TUR').GetAdjective]勢力的搖籃，如今已落入帝國軍隊之手。貝伊國曾從這個[target_location.GetRank.GetName]汲取力量、野心與貢賦。它的陷落向[ShowRegionName('anatolia_region')]各地發出明確訊息：潮流已經逆轉，[ROOT.GetCountry.GetFlavorRank]不再只能防守。"
+ fate_of_the_phoenix.4.a: "我們是[ShowRegionNameWithNoTooltip('anatolia_region')]的主人！"
+ unlocks_demand_beylik_tribute_disaster_action_tt: "在這場[disaster|e]持續期間，解鎖[ShowGenericActionName('demand_beylik_tribute')][action|e]"
+
+ fate_of_the_phoenix.5.title: "擊敗[loser.GetNameWithNoTooltip]"
+ fate_of_the_phoenix.5.desc: "交戰中的貝伊國造成的日益動盪，最終促成了[loser.GetLongName]的崛起。憑藉力量與出色的外交，他們成為我們[ROOT.GetCountry.GetFlavorRank]獨立的持續威脅。然而，近期對他們的勝利提醒了我們：我們是$ROM$的先驅，儘管身處動盪時代，仍如獅子般戰鬥。讓這一刻成為轉捩點，開啟消除往昔衰敗的新時代！"
+ fate_of_the_phoenix.5.a: "潮流正在轉向！"
+ high_legitimacy_grants_extra_benefits_tt: "在#Y 30#!年內，維持超過#Y 50#![legitimacy|e]將大幅提升我們對[locations|e]的[assimilation|e]與[integration|e]"
+
+ fate_of_the_phoenix.6.title: "[target_province.GetNameWithNoTooltip]抗拒我們的權威"
+ fate_of_the_phoenix.6.desc: "[target_province.GetName]拒絕在這段動盪時期合作。若他們的自治要求未獲滿足，公開叛亂可能接踵而至。我們的顧問敦促讓步，但此時屈服只會進一步侵蝕[ROOT.GetCountry.GetFlavorRank]的權威。"
+ fate_of_the_phoenix.6.a: "鳳凰不會在意無聊的抱怨。"
+ fate_of_the_phoenix.6.b: "也許[target_character.GetShortNameWithNoTooltip]能處理這件事？"
+ fate_of_the_phoenix.6.c: "我們應該傾聽人民的聲音！"
+ target_character_goes_to_target_province_to_restore_order_tt: "[target_character.GetName]將監督[target_province.GetName]的秩序恢復工作。[target_character.GetSheHe|U]將在#Y 2#!年內無法任職"
+
+ fate_of_the_phoenix.7.title: "[target_country.GetNameWithNoTooltip]的弱點"
+ fate_of_the_phoenix.7.desc: "[target_country.GetName]顯露出明顯的弱點，而我們的鄰近位置帶來難得的機會。若要提出我們的宣稱，就必須盡快行動，以免[target_character.GetName]恢復秩序與力量。"
+ fate_of_the_phoenix.7.a: "屬於我們的時刻到了。"
+ fate_of_the_phoenix.7.b: "必須維持權力平衡！"
+ we_may_have_another_chance_soon_tt: "#italic 未來我們或許還有機會取得這些宣稱……#!"
+
+ fate_of_the_phoenix.8.title: "[actor.GetNameWithNoTooltip]的戰爭"
+ fate_of_the_phoenix.8.desc: "[actor.GetName]目前正與那些被他們宣稱為真信仰之敵者交戰。作為[GetInternationalOrganizationType('autocephalous_patriarchate').GetNameWithNoTooltip]的成員，他們現在要求我們與其並肩作戰，共同對抗這個所謂的共同敵人。若我們拒絕，他們便威脅要將我們逐出牧首區；這不僅是嚴重的精神侮辱，也會對兩國關係投下長久陰影。"
+ fate_of_the_phoenix.8.a: "開戰！"
+ fate_of_the_phoenix.8.b: "這不值得我們浪費時間。"
+
+ fate_of_the_phoenix.9.title: "[target_army.GetNameWithNoTooltip]中的逃兵"
+ fate_of_the_phoenix.9.desc: "來自[target_army.GetName]的報告令人深感不安。在[target_character.GetName]指揮下，士氣已經崩潰，逃兵數量持續增加。這些失敗讓我們的[ROOT.GetCountry.GetFlavorRank]蒙羞，也使敵人更加膽大妄為。"
+ fate_of_the_phoenix.9.a: "懦夫！全都是懦夫！"
+ target_army_suffers_losses_tt: "[target_army.GetName]因逃兵損失#R [ROOT.GetVariable('visual_strength_loss_variable').GetValue|V2]%#![strength|e]"
+
+ fate_of_the_phoenix.10.title: "忠誠戰略家的崛起"
+ fate_of_the_phoenix.10.desc: "數十年來，[target_character.GetName]一直出色地服役，擔任[target_unit.GetName]的指揮官。憑藉忠誠與一次次的勝利，[target_character.GetSheHe]已成為士兵心中的象徵，在不確定的時代體現了紀律與決心。"
+ fate_of_the_phoenix.10.a: "[target_character.GetShortNameWithNoTooltip]將帶領我們走向勝利！"
+ major_victories_enhance_stats_tt: "若[target_character.GetName]贏得重要[battles|e]，[target_character.GetHerHis][abilities|e]可能提升" 
+ 
+ fate_of_the_phoenix.11.title: "[target_character.GetNameWithNoTooltip]取得重大勝利"
+ fate_of_the_phoenix.11.desc: "我們的[target_unit.GetName]在[target_location.GetName]擊敗了由[target_losing_country.GetName]率領的軍隊，取得重大勝利。勝利的消息迅速傳開，重新喚起人們對鳳凰仍然不滅的信心。[target_character.GetShortName]正逐漸成為傳奇人物，走上[target_character.GetHerHis]的傳奇之路。"
+ fate_of_the_phoenix.11.a: "願[target_character.GetSheHe]永遠帶領我們的軍隊！"
+
+ fate_of_the_phoenix.12.title: "[target_character.GetNameWithNoTooltip]遭遇敗北"
+ fate_of_the_phoenix.12.desc: "真是充滿腐臭凶兆的黑暗日子！[target_character.GetName]在[target_location.GetName]慘敗於[target_character_2.GetName]指揮的軍隊。損失十分慘重，對手必定會密切關注我們進一步的衰弱跡象。這是否代表潮流正在轉而對我們不利？我們在努力贏得這場持續中的戰爭時，仍盼望最好的結果。"
+ fate_of_the_phoenix.12.a: "可恥的表現！"
+
+ fate_of_the_phoenix.13.title: "[target_character.GetNameWithNoTooltip]的行政改革"
+ fate_of_the_phoenix.13.desc: "這一刻或許會成為[ROOT.GetCountry.GetFlavorRank]的決定性時刻。我們長久忍受著衰敗，內部不和、外國蠶食與權威逐漸流失，沉重地壓在人民身上。透過新的內閣倡議，我們終於可以整頓混亂、恢復機構紀律，讓國家治理重新找回目標。\n\n這些改革需要決心與犧牲，因為衰敗的習慣根深蒂固，抵抗也不可避免。然而，只要我們全心投入，這些措施或許能遏止[ROOT.GetCountry.GetFlavorRank]長久的退縮，為復興奠定基礎，避免猶豫將我們推向更嚴重的分裂與無足輕重。"
+ fate_of_the_phoenix.13.a: "光榮太陽的回歸需要犧牲。"
+ enable_unlock_spread_philhellenism_and_encourage_latin_militarism_tt: "在[ShowDisasterName('fate_of_the_phoenix')][disaster|e]持續期間，我們將解鎖[ShowCabinetActionName('spread_philhellenism')]與[ShowCabinetActionName('encourage_latin_militarism')][cabinet_actions|e]\n\n若我們以勝利結束這場災害，將永久取得這些內閣行動#Y#!"
+ 
+ fate_of_the_phoenix.14.title: "鳳凰復興"
+ fate_of_the_phoenix.14.desc: "曾經失去的領土已被收復，衰敗時代即將結束。[ROOT.GetCountry.GetName]已恢復為真正的[ROOT.GetCountry.GetFlavorRank]，準備再次面對敵人。如今，[ShowLocationName('rome')]正等待著我們。"
+ fate_of_the_phoenix.14.a: "在我們的監督下，不會再有大理石[ROOT.GetCountry.GetGovernment.GetRulerTitle]！"
+ maintain_cabinet_actions_tt: "我們透過[disaster|e]取得勝利的復興，讓我們得以繼續使用[ShowCabinetActionName('spread_philhellenism')]與[ShowCabinetActionName('encourage_latin_militarism')][cabinet_actions|e]"
+ because_we_made_military_reforms_tt: "由於我們透過[ShowGenericActionName('reform_imperial_armies')][action|e]實施了一項或多項軍事改革："
+ num_of_reforms_desc: "改革數量"
+ unlock_allelengyon_bureaucracy_kephalai_bureaucracy_tt: "解鎖$allelengyon_bureaucracy$與$kephalai_bureaucracy$[bureaucracies|e]"
+ unlock_kritai_katholikoi_reformed_extra_effect: "[ShowGovernmentReformName('kritai_katholikoi_reformed')][government_reform|e]的[ShowModifierTypeName('country_cabinet_efficiency')]效果將永久生效"
+ italian_wars_empowerment_if_latin_tt: "若我們在即將到來的[GetSituationByKey('italian_wars').GetName][situation|e]中率領[GetUniqueInternationalOrganization('foreign_league_balkan').GetName]，[ShowCultureGroupName('italian_group')][countries|e]可能更容易加入我們的聯盟，具體取決於我們的[ShowSocietyDirectionName('latinization')]"
+
+ fate_of_the_phoenix.15.title: "衰敗時代"
+ fate_of_the_phoenix.15.desc: "儘管我們付出了努力，近期失去的土地仍無法收復。鄰近貝伊國重新崛起，加上[ShowRegionName('balkan_region')]邊境之外的敵對勢力，讓逆轉局勢變得不可能。漫長的衰敗仍在持續，[ROOT.GetCountry.GetFlavorRank]的未來籠罩在不確定之中。"
+ fate_of_the_phoenix.15.a: "我們的未來籠罩在陰影與不確定之中。"
+ no_longer_access_to_the_cabinet_actions_tt: "我們將不再能使用[ShowCabinetActionName('spread_philhellenism')]與[ShowCabinetActionName('encourage_latin_militarism')][cabinet_actions|e]"
+ 
+ fate_of_the_phoenix.16.title: "[actor.GetNameWithNoTooltip]請求捐款"
+ fate_of_the_phoenix.16.desc: "我們收到消息，得知動盪正吞噬[actor.GetName]。作為最後手段，他們派遣使節懇求金錢援助。作為回報，他們承諾開放[actor.GetFlavorRank]，讓我們的規範與習俗得以傳播。這種舉動相當罕見，或許正說明[actor.GetCapital.GetName]的情勢有多麼危急。"
+ fate_of_the_phoenix.16.a: "應提供一點象徵性的援助。"
+ fate_of_the_phoenix.16.b: "我們必須支援抵禦[ShowRegionNameWithNoTooltip('anatolia_region')]大軍的盾牌。"
+ fate_of_the_phoenix.16.c: "不給異端一枚硬幣！"
+ no_money_for_byz_tt: "我們不會向病弱的[actor.GetName]提供援助"
+
+ fate_of_the_phoenix.17.title: "[actor.GetNameWithNoTooltip]提供貿易特權"
+ fate_of_the_phoenix.17.desc: "我們已經在[ShowLocationName('constantinople')]經商，但如今[actor.GetName]向我們提出一項提議：供應艦隊所需的建材，以換取其首都各市場的優惠特權。"
+ fate_of_the_phoenix.17.a: "[target_country.GetGovernment.GetRulerOrRegent.GetShortNameWithNoTooltip]是商人，就該做生意！"
+ fate_of_the_phoenix.17.b: "算了吧。"
+ selected_republic_may_donate_ships_to_our_cause_tt: "選定的$merchant_republic$可能捐贈槳帆船[ships|e]與[sailors|e]，以換取[ShowLocationName('constantinople')]的[merchant_power|e]"
+ byzantines_left_fend_themselves_tt: "[actor.GetLongName]將被留下自生自滅"
+ latin_merchant_privileges_key: "$italian_group$商人特權"
+
+ fate_of_the_phoenix.18.title: "[target_character.GetNameWithNoTooltip]抵達[ROOT.GetCountry.GetCapital.GetNameWithNoTooltip]"
+ fate_of_the_phoenix.18.desc: "[target_character.GetName]受我們在[target_country.GetName]的可信朋友推薦，從[target_location.GetRank.GetName]的[target_location.GetName]抵達，帶來[target_culture.GetName]土地聞名的技藝與學識，並將[target_character.GetHerHim]的技藝帶到此地。[target_character.GetSheHe]在外國宮廷歷練，並受到半島方法的鍛鍊，如今為我們的[ROOT.GetCountry.GetFlavorRank]效力，這是一項善意而溫暖的舉動。\n\n這樣的到來不僅帶來實際利益，也加深了我們與[ShowCultureGroupName('italian_group')]同胞之間的聯繫；[target_character.GetHerHis]知識與創意持續塑造著王公與皇帝的事務。"
+ fate_of_the_phoenix.18.a: "我們會密切關注[target_character.GetHerHis]的仕途！"
+
+ fate_of_the_phoenix.19.title: "[actor.GetNameWithNoTooltip]要求貢賦"
+ fate_of_the_phoenix.19.desc: "隨著[ShowLocationName('bursa')]落入[actor.GetName]手中，[target_character_1.GetName]的權威重新恢復且無人挑戰。使節從[target_location_1.GetName]抵達，帶來的是要求而非客套。他們宣稱貢賦是我們所謂異教習俗的代價，言語中更藏著未明說的武力威脅。無論是金錢、鮮血，還是反抗，我們都必須作出回應，而後果將遠遠超出邊境。"
+ fate_of_the_phoenix.19.a: "我們別無選擇，只能交出錢財。"
+ fate_of_the_phoenix.19.b: "改為送他們健壯的男子。"
+ fate_of_the_phoenix.19.c: "他們什麼也得不到！"
+
+ fate_of_the_phoenix.20.title: "改革[actor.GetAdjectiveWithNoTooltip]軍事"
+ fate_of_the_phoenix.20.desc_a: "多年的疏忽與財政壓力，讓[ROOT.GetCountry.GetFlavorRank]的軍隊無力應對前方的考驗。在[target_character.GetName]的權威下，我們可以頒布新規章，恢復紀律、重組指揮，並重振曾讓[ROOT.GetCountry.GetCapital.GetName]的軍隊威震各地與邊疆的傳統。雖然代價高昂，這些改革或許仍能阻止軍事力量長期衰敗。"
+ fate_of_the_phoenix.20.desc_b: "長久以來，海洋既是[ROOT.GetCountry.GetFlavorRank]的盾牌，也是生命線；然而我們的艦隊如今受到過時做法與日益衰退的專業能力拖累。在[target_character.GetName]的名義下，我們可以更新海軍指揮、改善訓練，並使維繫海上力量的機構現代化。若能成功，[ROOT.GetCountry.GetAdjective]海軍或許能再次保衛海岸與商業，抵禦所有對手。"
+ fate_of_the_phoenix.20.a: "對抗衰敗的必要一步。"
+ fate_of_the_phoenix.20.b: "也許還不到時候。"
+ reformation_of_the_school_of_admirals_better_stats_tt: "只要此[modifier|e]生效，使用[ShowGenericActionName('train_admiral')][action|e]時，就會獲得整體[abilities|e]更高的[characters|e]"
+ better_stats_because_reformation_of_the_school_of_admirals_modifier_tt: "這名[admiral|e]的[abilities|e]因[ShowModifier('reformation_of_the_school_of_admirals_modifier')][modifier|e]生效而獲得#G +10#!提升"
+ because_we_reformed_our_navy_in_DHE_desc: "由於我們在$flavor_byz.15.title$[event|e]中改革了[navy|e]"
+ target_character_total_abilities: "[target_character.GetName]的[abilities|e]"
+ 
+# Actions for Fate of the Phoenix Disaster
+
+ selected_country_will_send_us_engineer_character_tt: "選定的[country|e]將派遣一名最優秀的[characters|e]給我們"
+ target_country_forced_to_give_tribute_tt: "選定的[country|e]可能被說服向我們提供[gold|e]或[manpower|e]"
+ at_war_with_heathens_or_heretics_tt: "我們目前正率領一場[war|e]，與一個不信奉[actor.GetReligion.GetName]的[country|e]交戰"
+ selected_country_may_join_every_ongoing_war_against_heathen_and_heretics_tt: "選定的[country|e]可能加入我們正在進行的[wars|e]，其[war_leaders|e]必須是[heathens|e]或[heretics|e]"
+ pops_in_capital_province_convert_catholic_tt: "首都[actor.GetCapital.GetProvince.GetName]中信奉[actor.GetReligion.GetName]的部分[pops|e]將改信[ShowReligionName('catholic')]"
+ fate_of_phoenix_actions_price: "$fate_of_the_phoenix$行動花費"
+
+ request_papal_donation: "請求$PAP_ADJ$捐款"
+ request_papal_donation_desc: "[actor.GetFlavorRank]陷入困境、金庫空虛之際，我們可以派遣使節前往$PAP$，以[ShowReligionGroupName('christian')]之名請求援助。雖然這類請求很少能不付出代價，但他們的金錢或許能讓我們在危急時刻爭取時間。"
+ grant_latin_merchants_privileges: "授予[ShowCultureGroupNameWithNoTooltip('italian_group')]商人特權"
+ grant_latin_merchants_privileges_desc: "透過向[ShowCultureGroupName('italian_group')]商業共和國授予特殊權利，我們希望復興貿易並取得海軍支援。這些讓步或許能強化[actor.GetCapital.GetName]的商業，卻也可能加深外國對[actor.GetCapital.GetRank.GetName]的影響。"
+ grant_latin_merchants_privileges_tooltip: "[ShowRegionName('italy_region')]內採用[ShowGovernmentReformName('merchant_republic')]的任何[country|e]都不是附庸，也不是我們的宿敵"
+ accept_catholic_delegation: "接受[ShowReligionAdjectiveWithNoTooltip('catholic')]使團"
+ accept_catholic_delegation_desc: "[GetUniqueInternationalOrganization('catholic_church').GetName]的代表可以受邀前往[actor.GetCapital.GetName]，帶來團結的話語與對妥協的無聲期待。根據許多顧問的說法，接待這些代表或許能改善我們與[ShowReligionAdjective('catholic')]世界的關係，但此類舉動也會造成國內緊張。"
+ attract_italian_engineer: "吸引[ShowCultureGroupNameWithNoTooltip('italian_group')]工程師"
+ attract_italian_engineer_desc: "我們正在尋找知名的[ShowCultureGroupName('italian_group')]工程師，以改善防禦工事與軍事工程。他們的專業能為古老問題帶來現代解決方案，但或許要付出受西方方法與影響束縛的代價。"
+ demand_beylik_tribute: "要求貝伊國進貢"
+ demand_beylik_tribute_desc: "隨著我們在[ShowRegionName('anatolia_region')]重申權威，我們或許能再次迫使鄰近的貝伊國承認[actor.GetAdjective]的至高地位。現在徵收貢賦，便能削弱未來的對手，恢復人們對[actor.GetFlavorRank]力量的信心。"
+ summon_patriarchate_member: "召集宗主教區成員"
+ summon_patriarchate_member_desc: "身為[GetInternationalOrganizationType('autocephalous_patriarchate').GetNameWithNoTooltip]的領袖，我們可以召集其他[ShowReligionAdjective('orthodox')]領袖，對抗信仰之敵。這類請求仰賴共同信念而非義務，或許仍能號召戰士為我們而戰。"
+ reform_imperial_armies: "改革[GetCountry('BYZ').GetAdjectiveWithNoTooltip]軍事"
+ reform_imperial_armies_desc: "[actor.GetFlavorRank]的武裝力量經歷數十年疏忽與臨時應變，已經飽受摧殘。全面改革將帶來全新的紀律與結構，但也需要穩定、白銀，以及改變根深蒂固習慣的意志。"
+ patronize_orthodox_monastery: "資助$orthodox_monastery$"
+ patronize_orthodox_monastery_desc: "透過資助當地的[ShowBuildingTypeName('orthodox_monastery')]，我們重申自身的虔誠，並強化當地宗教生活。這樣的慷慨必定能改善當地生活品質，提醒信徒[actor.GetLongName]仍是正信的守護者。"
+ reform_armed_forces_tt: "我們將能改革[army|e]或[navy|e]，消除過去數世紀留下的衰敗"
+ has_not_completed_all_six_reforms_tt: "我們尚未完成全部#Y 6#!項可用改革"
+ patronize_orth_monastery_tt: "選定的[location|e]將獲得[ShowModifier('patronize_orthodox_monastery_modifier')][modifier|e]，而我們許多信奉[ShowReligionAdjective('orthodox')]的[pops|e]將獲得[ShowNamedValue('pop_satisfaction_mild_bonus')|+=2%][pop_satisfaction|e]"
+

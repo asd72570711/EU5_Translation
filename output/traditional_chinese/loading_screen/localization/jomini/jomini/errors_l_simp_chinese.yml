@@ -1,0 +1,3 @@
+l_simp_chinese:
+ FILE_WRITE_ERROR: "無法建立存檔"
+ FILE_WRITE_ERROR_DESC: "遊戲無法建立存檔。可能原因：\n‑ 磁碟空間不足\n‑ 檔案權限問題\n‑ 防毒或勒索軟體防護軟體\n‑ 遊戲檔案毀損\n‑ 已安裝的模組造成問題"

@@ -1,5 +1,8 @@
 ﻿work/cache/
 work/reports/
+work/glossary_review/
+work/translations/
+__pycache__/
 *.tmp
 *.bak
 *.log

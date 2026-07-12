@@ -1,0 +1,38 @@
+l_simp_chinese:
+
+#Fate of the Phoenix DLC
+ assign_despot: "任命為$STATIC_MODIFIER_NAME_despot_modifier$"
+ assign_despot_concept: "[character|e]"
+ assign_despot_act: "$assign_despot$"
+ assign_despot_desc: "任命一名[character|e]擔任$STATIC_MODIFIER_NAME_despot_modifier$，效果如下：\n[ShowModifierEffect('despot_modifier')]"
+ assign_despot_desc_specific: "任命一名[character|e]擔任$STATIC_MODIFIER_NAME_despot_modifier$，使其獲得[ShowModifier('despot_modifier')][modifier|e]。"
+ assign_despot_past: "[SCOPE.sCharacter('recipient').GetName]已獲任命為[ShowModifier('despot_modifier')]"
+ assign_despot_act_past: "[SCOPE.sCharacter('recipient').GetName]已獲任命為[ShowModifier('despot_modifier')]"
+
+ compose_strategikon: "撰寫戰略書"
+ compose_strategikon_concept: "[character|e]"
+ compose_strategikon_act: "$compose_strategikon$"
+ compose_strategikon_desc: "我方[ruler|e]將把個人的軍事專長投注於選定的戰爭主題。這些知識必能提升我方實力，並彰顯聞名的尚武能力。"
+ compose_strategikon_desc_specific: "我方[ruler|e]將依其撰寫內容獲得合適的[character_modifier|e]。"
+ compose_strategikon_past: "已撰寫戰略書"
+ compose_strategikon_act_past: "[SCOPE.sCharacter('recipient').GetName]已撰寫戰略書，並在[SCOPE.sCharacter('recipient').GetHerHis]統治期間獲得強大的[modifier|e]。"
+ has_not_composed_strategikon_tt: "我方[ruler|e]一生中尚未撰寫戰略書"
+ actor_ruler_total_abilities: "[actor.GetGovernment.GetRulerOrRegent.GetName][total_ability|e]"
+
+ castrate_character: "閹割"
+ castrate_character_concept: "[character|e]"
+ castrate_character_act: "$castrate_character$"
+ castrate_character_desc: "下令閹割我方宮廷中的一名[character|e]。此懲罰將永久留下印記，並使目標失去生育子嗣的能力。"
+ castrate_character_desc_specific: "下令閹割一名[character|e]，使其獲得[ShowTraitName('castrated')]狀態。"
+ castrate_character_past: "[SCOPE.sCharacter('recipient').GetName]已奉帝國之命遭閹割"
+ castrate_character_act_past: "[SCOPE.sCharacter('recipient').GetName]已奉帝國之命遭閹割"
+
+ blind_character: "弄瞎"
+ blind_character_concept: "[character|e]"
+ blind_character_act: "$blind_character$"
+ blind_character_desc: "下令弄瞎我方宮廷中的一名[character|e]。這項古老刑罰使目標無法統率軍隊，並削弱其政治地位。"
+ blind_character_desc_specific: "下令弄瞎一名[character|e]，使其獲得[ShowTraitName('blind')]狀態。"
+ blind_character_past: "[SCOPE.sCharacter('recipient').GetName]已奉帝國之命遭弄瞎"
+ blind_character_act_past: "[SCOPE.sCharacter('recipient').GetName]已奉帝國之命遭弄瞎"
+ blind_pretender_removed_tt: "[SCOPE.sCharacter('recipient').GetName]失去[SCOPE.sCharacter('recipient').GetHerHis]王位宣稱，因為失明的繼承人無法統治"
+ blind_new_pretender_emerges_tt: "陰謀集團轉而支持新的宣稱者：[SCOPE.sCharacter('new_pretender_scope').GetName]"

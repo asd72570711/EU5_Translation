@@ -1,0 +1,5 @@
+l_simp_chinese:
+
+#Fate of the Phoenix DLC
+ pronoia: "普羅尼亞"
+ pronoia_desc: "普羅尼亞是[GetCountry('BYZ').GetName]行政體系的重要組成部分，最初是臨時任命的財政徵收官。然而，時勢變遷也迫使其職責隨之改變。如今，普羅尼亞已轉為世襲職位，既提供軍事援助，也從領地徵收金錢，持續作為皇帝意志的延伸。"

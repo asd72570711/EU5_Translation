@@ -1,0 +1,32 @@
+l_simp_chinese:
+
+ contact_patriarch_of_constantinople: "聯繫君士坦丁堡宗主教"
+ contact_patriarch_of_constantinople_desc: "派遣墨蘭頓攜帶我方信仰告白前往君士坦丁堡，開啟與[ShowReligionAdjective('orthodox')]牧首區的對話管道。"
+
+ reformation.17.title: "[GetCharacter('reformer_philip_melanchton').GetLastNameWithNoTooltip]致君士坦丁堡的信"
+ reformation.17.desc: "我國首席神學家[melanchthon.GetName]提出一項大膽方針：派遣使者攜帶我方信仰告白前往君士坦丁堡宗主教處。儘管[ShowReligionAdjective('orthodox')]與[ShowReligionAdjective('lutheran')]信仰在許多議題上仍有分歧，兩者皆反對教宗至上權。或許宗主教會歡迎同樣反對羅馬的同道前來示好。"
+ reformation.17.a: "派遣[GetCharacter('reformer_philip_melanchton').GetLastNameWithNoTooltip]攜帶我方信仰告白出使。"
+ reformation.17.b: "現在不是提出這類示好的時機。"
+ reformation.17.historical_info: "腓力·墨蘭頓（1497–1560）是路德最親密的合作者，也是《奧格斯堡信條》（1530）的作者；他對東方教會深感興趣，視其為對抗羅馬的潛在盟友。他與希臘學者的通信為日後路德宗向君士坦丁堡示好的嘗試奠定基礎。1573年，圖賓根的神學家將《奧格斯堡信條》的希臘文譯本送交宗主教耶利米亞斯二世，由此開啟宗教改革時代路德宗與東正教間最持久的神學交流之一。"
+
+ reformation.18.title: "路德宗改革者來信"
+ reformation.18.desc: "來自[lutheran_country.GetLongName]的代表團已抵達君士坦丁堡，帶來一部神學論著——其信仰告白。這些[ShowReligionAdjective('lutheran')]改革者似乎希望與我方牧首區展開對話，並以雙方皆反對羅馬主教為由。不過，他們的意圖是真誠還是自利，尚待觀察。"
+ reformation.18.a: "與這些改革者審慎展開神學對話。"
+ reformation.18.b: "他們是異端。將其逐出。"
+ reformation.18.historical_info: "即使鄂圖曼於1453年征服君士坦丁堡後，君士坦丁堡普世牧首區仍持續對東正教徒行使精神權威。宗主教耶利米亞斯二世（在位1572–1595）以神學素養聞名，並認真回覆圖賓根神學家的來信，在1576至1581年間撰成三封詳盡答覆。他拒絕路德宗關於稱義、自由意志與和子句的教義，但承認其探究的誠意；這種立場使他的回覆不同於單純的駁斥。"
+
+ reformation.19.title: "宗主教對此表示興趣"
+ reformation.19.desc: "宗主教以審慎的好奇回覆我方使者來訪。雖未達成教義協議，這次交流已在君士坦丁堡與我國國教之間開啟管道，是促進[ShowReligionAdjective('lutheran')]與[ShowReligionAdjective('orthodox')]基督教世界相互理解的一小步，卻意義深遠。"
+ reformation.19.a: "再窄的橋也勝過沒有橋。"
+ reformation.19.historical_info: "圖賓根通信被視為早期普世教會對話的里程碑。宗主教耶利米亞斯二世的三封回覆（1576、1579、1581）認真處理路德宗神學，卻仍拒絕其核心主張。他以詳盡的教父論證回應唯信稱義、自由意志與和子句等問題，展現鄂圖曼統治下牧首區的思想活力。雙方都仔細保存了這些通信。"
+
+ reformation.20.title: "宗主教拒絕代表團"
+ reformation.20.desc: "我方代表團在君士坦丁堡受到冷遇。宗主教將我方信仰告白斥為另一種異端，並草草遣返使者。這提醒我們，[ShowReligionName('lutheran')]無論對羅馬或君士坦丁堡而言，皆獨立於外。"
+ reformation.20.a: "我方信仰不需要任何牧首區認可。"
+ reformation.20.historical_info: "圖賓根通信最終未能達成教義協議：宗主教耶利米亞斯二世的三封回覆（1576、1579、1581）拒絕路德宗對唯信稱義、唯獨聖經與和子句的立場，堅稱東正教不能接受其視為創新的主張。路德宗人士最終認為繼續通信不會有結果，並於1581年結束交流。"
+
+ reformation.21.title: "一位東正教學者抵達"
+ reformation.21.desc: "我方與君士坦丁堡的通信帶來意外成果。一名[ShowReligionAdjective('orthodox')]學者[orthodox_scholar.GetName]抵達我方宮廷，希望延續我方使者開啟的神學交流。此次來訪十分微妙——過於熱情的接待可能激怒我方教士，若加以拒絕，則可能破壞在君士坦丁堡累積的善意。"
+ reformation.21.a: "安排長期的學術交流。"
+ reformation.21.b: "誠懇致謝，但拒絕進一步交流。"
+ reformation.21.historical_info: "雖然圖賓根通信未能促成教義合一，卻在雙方引發顯著的學術興趣。希臘東正教知識分子更熟悉路德宗神學，而路德宗學者也更深入了解教父與東方基督教傳統。這場跨教派交流促成更廣泛的歐洲人文主義，將古希臘基督教視為獨立於羅馬之外的資源。"

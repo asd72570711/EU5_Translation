@@ -1,0 +1,9 @@
+l_simp_chinese:
+ MOD_BACKEND_NOT_AVAILABLE_STEAM: "Steam工作坊無法使用。無法上傳或更新模組。請確認Steam用戶端正在執行且你可以連上網際網路，然後重新啟動遊戲。"
+ MOD_NAME_INVALID_SIZE: "名稱長度必須介於3到60個字元之間。"
+ MOD_PATH_EMPTY: "請輸入要建立模組stub的路徑，或要從中上傳模組的路徑。"
+ MOD_PATH_INVALID: "模組路徑包含非法字元。"
+ MOD_DESCRIPTION_EMPTY: "請輸入簡短描述。"
+ MOD_PLAYSET_IS_AUTOMATICALLY_SORTED_ENABLED: "此播放集中的模組會依模組依賴關係自動重新排序。"
+ MOD_PLAYSET_IS_AUTOMATICALLY_SORTED_DISABLED: "此播放集中的模組載入順序由手動管理，不會自動重新排序。"
+ MOD_PLAYSET_IS_AUTOMATICALLY_SORTED_BUTTON: "自動載入順序"

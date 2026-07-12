@@ -1,0 +1,12 @@
+l_simp_chinese:
+
+ opinion_dignitaries_of_hermes: "荷米斯顯貴"
+ dignitaries_of_hermes_antagonism: "$opinion_dignitaries_of_hermes$"
+ 
+ trust_lent_icon: "出借聖像"
+ trust_returned_icon: "歸還聖像"
+ trust_refused_icon_return: "拒絕歸還聖像"
+ opinion_lent_icon: "出借聖像"
+ opinion_refused_icon: "拒絕出借聖像"
+ opinion_returned_icon: "歸還聖像"
+ opinion_refused_icon_return: "拒絕歸還聖像"

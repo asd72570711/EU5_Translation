@@ -1,0 +1,417 @@
+import argparse
+import json
+import re
+import sys
+from collections import Counter
+from pathlib import Path
+
+
+ENTRY_RE = re.compile(r'^\s*([^#\s][^:]*):\s*(?:\d+\s+)?"((?:\\.|[^"\\])*)"')
+HEADER_RE = re.compile(r'^\s*l_[a-z_]+:\s*$')
+TOKEN_PATTERNS = {
+    "placeholder": re.compile(r"\$[^$]+\$"),
+    "scripted_localization": re.compile(r"\[[^\]]+\]"),
+    "brace_variable": re.compile(r"\{[^}]+\}"),
+    "percent_token": re.compile(r"%[A-Za-z0-9_]+"),
+    "escape": re.compile(r"\\[nrt\\\"]"),
+    "color_or_tag": re.compile(r"<[^>]+>"),
+    "formatting_tag": re.compile(r"#!|#[A-Za-z_]+"),
+    "icon_token": re.compile(r"@[A-Za-z0-9_]+!"),
+}
+CHINESE_RE = re.compile(r"[\u3400-\u9fff]")
+LINK_RE = re.compile(r"\[Link\('([^']*)',\s*'([^']*)',\s*'([^']*)'\)\]")
+
+
+def read_text(path: Path) -> str:
+    return path.read_text(encoding="utf-8-sig")
+
+
+def parse_localization(path: Path) -> dict[str, str]:
+    entries: dict[str, str] = {}
+    for line_number, line in enumerate(read_text(path).splitlines(), 1):
+        if HEADER_RE.match(line):
+            continue
+        match = ENTRY_RE.match(line)
+        if match:
+            entries[match.group(1).strip()] = match.group(2)
+    return entries
+
+
+def unescape(value: str) -> str:
+    return value.replace('\\"', '"').replace('\\\\', '\\')
+
+
+def protected_tokens(value: str) -> dict[str, list[str]]:
+    script_value = normalize_link_tokens(value)
+    return {
+        name: pattern.findall(script_value if name == "scripted_localization" else value)
+        for name, pattern in TOKEN_PATTERNS.items()
+    }
+
+
+def normalize_link_tokens(value: str) -> str:
+    def replace(match: re.Match[str]) -> str:
+        first, second, display = match.groups()
+        signature, _ = link_display_parts(display)
+        if signature or first == "hints":
+            return f"[Link('{first}','{second}','{signature or '__display_text__'}')]"
+        return match.group(0)
+
+    return LINK_RE.sub(replace, value)
+
+
+def link_display_parts(display: str) -> tuple[str, str]:
+    token_pattern = re.compile(r"\$[^$]+\$|@[A-Za-z0-9_]+!")
+    matches = list(token_pattern.finditer(display))
+    if not matches:
+        if re.search(r"\s|>", display):
+            return "__display_text__", display
+        return "", ""
+    signature = " ".join(match.group(0) for match in matches)
+    visible = token_pattern.sub(" ", display).strip()
+    return signature, visible
+
+
+def mask_protected(value: str) -> str:
+    def keep_link_display(match: re.Match[str]) -> str:
+        display = match.group(3)
+        signature, visible = link_display_parts(display)
+        return visible if signature or match.group(1) == "hints" else " "
+
+    masked = LINK_RE.sub(keep_link_display, value)
+    for pattern in TOKEN_PATTERNS.values():
+        masked = pattern.sub(lambda match: " " * len(match.group(0)), masked)
+    return masked
+
+
+def yaml_scalar_entries(path: Path) -> dict[str, str]:
+    entries: dict[str, str] = {}
+    section = None
+    for line in read_text(path).splitlines():
+        if line and not line.startswith(" "):
+            section = line.rstrip(":")
+            continue
+        if section in {"fixed", "game_terms"}:
+            match = re.match(r'^  (?! )([^:#][^:]*):\s*"([^"]*)"', line)
+            if match:
+                entries[match.group(1).strip()] = match.group(2)
+    return entries
+
+
+def aliases(path: Path) -> dict[str, str]:
+    result: dict[str, str] = {}
+    lines = read_text(path).splitlines()
+    in_aliases = False
+    term = None
+    translation = None
+    variants: list[str] = []
+
+    def flush() -> None:
+        if term and translation:
+            for name in [term, *variants]:
+                result[name] = translation
+
+    for line in lines:
+        if line == "aliases:":
+            flush()
+            in_aliases = True
+            term = None
+            translation = None
+            variants = []
+            continue
+        if in_aliases and line and not line.startswith(" "):
+            flush()
+            in_aliases = False
+            continue
+        if not in_aliases:
+            continue
+        match = re.match(r"^  (?! )([^:#][^:]*):\s*$", line)
+        if match:
+            flush()
+            term = match.group(1).strip()
+            translation = None
+            variants = []
+            continue
+        match = re.match(r'^    zh:\s*"([^"]*)"', line)
+        if match:
+            translation = match.group(1)
+            continue
+        match = re.match(r"^      -\s+(.+?)\s*$", line)
+        if match and term:
+            variants.append(match.group(1).strip())
+    flush()
+    return result
+
+
+def contextual_terms(path: Path) -> set[str]:
+    terms: set[str] = set()
+    lines = read_text(path).splitlines()
+    in_contextual = False
+    for line in lines:
+        if line == "contextual:":
+            in_contextual = True
+            continue
+        if in_contextual and line and not line.startswith(" "):
+            break
+        if in_contextual:
+            match = re.match(r"^  (?! )([^:#][^:]*):", line)
+            if match:
+                terms.add(match.group(1).strip())
+    return terms
+
+
+def term_in_text(term: str, text: str) -> bool:
+    if " " in term:
+        return term in text
+    return re.search(r"(?<![A-Za-z])" + re.escape(term) + r"(?![A-Za-z])", text) is not None
+
+
+def ordered_text_present(needle: str, haystack: str) -> bool:
+    characters = [char for char in needle if not char.isspace()]
+    position = 0
+    for char in characters:
+        position = haystack.find(char, position)
+        if position < 0:
+            return False
+        position += 1
+    return bool(characters)
+
+
+def punctuation_issues(key: str, value: str) -> list[dict[str, str]]:
+    plain = mask_protected(value)
+    issues: list[dict[str, str]] = []
+    if "／" in plain:
+        issues.append(
+            {
+                "type": "style_warning",
+                "key": key,
+                "message": "使用了全形斜線／；專案規則要求半形斜線 /",
+            }
+        )
+    if re.search(r"(?:\]|\$|@)\s+/|/\s+(?:\[|\$|@)", plain):
+        issues.append(
+            {
+                "type": "style_warning",
+                "key": key,
+                "message": "placeholder 或 script token 與斜線之間可能有多餘空格",
+            }
+        )
+    for symbol, message in (
+        ("-", "普通連字號，請確認是否為英文複合詞或原文必要符號"),
+        ("‑", "不斷行連字號，請確認是否用於複合人名、地名或避免換行"),
+        ("——", "中文破折號，請確認是否用於標題或分類分隔"),
+    ):
+        if symbol in plain:
+            issues.append(
+                {
+                    "type": "punctuation_review",
+                    "key": key,
+                    "symbol": symbol,
+                    "message": message,
+                }
+            )
+    return issues
+
+
+def glossary_mismatches(
+    source: dict[str, str],
+    output: dict[str, str],
+    glossary: Path,
+) -> list[dict[str, str]]:
+    fixed = yaml_scalar_entries(glossary)
+    fixed.update(aliases(glossary))
+    contextual = contextual_terms(glossary)
+    issues: list[dict[str, str]] = []
+    for key, source_value in source.items():
+        translated = output.get(key, "")
+        for term, expected in fixed.items():
+            source_plain = mask_protected(source_value)
+            translated_plain = mask_protected(translated)
+            if not expected or not term_in_text(term, source_plain):
+                continue
+            longer_term_used = any(
+                longer != term
+                and len(longer) > len(term)
+                and term_in_text(longer, source_plain)
+                for longer in fixed
+            )
+            if longer_term_used or term in contextual:
+                continue
+            if expected not in translated_plain and not ordered_text_present(expected, translated_plain):
+                issues.append(
+                    {
+                        "type": "glossary_mismatch",
+                        "key": key,
+                        "term": term,
+                        "expected": expected,
+                        "actual": translated,
+                    }
+                )
+    return issues
+
+
+def run(source_path: Path, output_path: Path, glossary: Path) -> dict:
+    source = parse_localization(source_path)
+    output = parse_localization(output_path)
+    issues: list[dict[str, str]] = []
+    contextual = contextual_terms(glossary)
+
+    source_header = next((line.strip() for line in read_text(source_path).splitlines() if line.strip()), "")
+    output_header = next((line.strip() for line in read_text(output_path).splitlines() if line.strip()), "")
+    if source_header != "l_english:":
+        issues.append({"type": "format_error", "message": "來源檔 header 不是 l_english:"})
+    if output_header != "l_simp_chinese:":
+        issues.append({"type": "format_error", "message": "輸出檔 header 不是 l_simp_chinese:"})
+    if source_path.name.endswith("_l_english.yml") and not output_path.name.endswith("_l_simp_chinese.yml"):
+        issues.append({"type": "format_error", "message": "輸出檔 suffix 不是 _l_simp_chinese.yml"})
+
+    source_order = list(source)
+    output_order = list(output)
+    if source_order != output_order:
+        issues.append({"type": "key_order_warning", "message": "source 與 output 的 key 順序不同"})
+
+    for key in sorted(set(source) - set(output)):
+        issues.append({"type": "missing_key", "key": key})
+    for key in sorted(set(output) - set(source)):
+        issues.append({"type": "extra_key", "key": key})
+
+    for key in sorted(set(source) & set(output)):
+        source_tokens = protected_tokens(unescape(source[key]))
+        output_tokens = protected_tokens(unescape(output[key]))
+        for token_type in TOKEN_PATTERNS:
+            if Counter(source_tokens[token_type]) != Counter(output_tokens[token_type]):
+                issues.append(
+                    {
+                        "type": "token_mismatch",
+                        "key": key,
+                        "token_type": token_type,
+                        "source": source_tokens[token_type],
+                        "output": output_tokens[token_type],
+                    }
+                )
+        value = mask_protected(unescape(output[key]))
+        if re.search(r"\(\s*[^)]*\)", value) and CHINESE_RE.search(value):
+            issues.append(
+                {
+                    "type": "style_warning",
+                    "key": key,
+                    "message": "中文值仍含半形括號，請確認是否屬於必要語法",
+                }
+            )
+        if re.search(r"[\u3400-\u9fff]\s+(?:\$|\[|@)", value):
+            issues.append(
+                {
+                    "type": "style_warning",
+                    "key": key,
+                    "message": "中文與 placeholder／script token 之間可能有多餘空格",
+                }
+            )
+
+        issues.extend(punctuation_issues(key, unescape(output[key])))
+
+    for term in sorted(contextual, key=str.casefold):
+        keys = [key for key, value in source.items() if term_in_text(term, mask_protected(value))]
+        if keys:
+            issues.append(
+                {
+                    "type": "contextual_review",
+                    "term": term,
+                    "keys": keys,
+                    "message": "請依來源 key 與上下文人工確認 contextual 譯法",
+                }
+            )
+
+    issues.extend(glossary_mismatches(source, output, glossary))
+    counts: dict[str, int] = {}
+    for issue in issues:
+        counts[issue["type"]] = counts.get(issue["type"], 0) + 1
+    return {
+        "source_file": str(source_path),
+        "output_file": str(output_path),
+        "summary": {
+            "source_keys": len(source),
+            "output_keys": len(output),
+            "issues": len(issues),
+            "by_type": counts,
+        },
+        "issues": issues,
+    }
+
+
+def output_relative_path(source_relative: Path) -> Path:
+    name = source_relative.name
+    if name.endswith("_l_english.yml"):
+        name = name[: -len("_l_english.yml")] + "_l_simp_chinese.yml"
+    return source_relative.with_name(name)
+
+
+def run_recursive(source_root: Path, output_root: Path, glossary: Path) -> dict:
+    source_files = sorted(source_root.rglob("*.yml"))
+    output_files = sorted(output_root.rglob("*.yml")) if output_root.exists() else []
+    expected_output_names = {output_relative_path(path.relative_to(source_root)) for path in source_files}
+    actual_output_names = {path.relative_to(output_root) for path in output_files}
+    reports: list[dict] = []
+    issues: list[dict] = []
+
+    for source_path in source_files:
+        relative = source_path.relative_to(source_root)
+        output_path = output_root / output_relative_path(relative)
+        if not output_path.exists():
+            issues.append(
+                {
+                    "type": "missing_file",
+                    "source_file": str(source_path),
+                    "expected_output": str(output_path),
+                }
+            )
+            continue
+        report = run(source_path, output_path, glossary)
+        reports.append(report)
+        issues.extend(report["issues"])
+
+    for relative in sorted(actual_output_names - expected_output_names):
+        issues.append(
+            {
+                "type": "extra_file",
+                "output_file": str(output_root / relative),
+            }
+        )
+
+    counts: dict[str, int] = {}
+    for issue in issues:
+        counts[issue["type"]] = counts.get(issue["type"], 0) + 1
+    return {
+        "source_directory": str(source_root),
+        "output_directory": str(output_root),
+        "summary": {
+            "source_files": len(source_files),
+            "output_files": len(output_files),
+            "files_checked": len(reports),
+            "issues": len(issues),
+            "by_type": counts,
+        },
+        "files": reports,
+        "issues": issues,
+    }
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--source", required=True, type=Path)
+    parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--glossary", default="translation_glossary.yml", type=Path)
+    parser.add_argument("--report", default="work/reports/translation_qa.json", type=Path)
+    args = parser.parse_args()
+    sys.stdout.reconfigure(encoding="utf-8")
+    if args.source.is_dir():
+        report = run_recursive(args.source, args.output, args.glossary)
+    else:
+        report = run(args.source, args.output, args.glossary)
+    args.report.parent.mkdir(parents=True, exist_ok=True)
+    args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps(report["summary"], ensure_ascii=False, indent=2))
+    print(f"wrote: {args.report}")
+
+
+if __name__ == "__main__":
+    main()
