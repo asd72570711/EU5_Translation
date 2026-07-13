@@ -1,0 +1,19 @@
+l_simp_chinese:
+ diplomatic_annex.1.title: "兼併[target.GetNameWithNoTooltip]"
+ diplomatic_annex.1.desc: "我們對[target.GetLongName]的整合已耗費相當時日，但如今[target.GetCapital.GetName]已成為[ROOT.GetCountry.GetAdjective][target.GetCapital.GetRank.GetNameWithNoTooltip]，它將能發揮全部潛力，並使我國更加繁榮。\n\n不過，仍有其他國家並不欣賞我們這番領土擴張。"
+ diplomatic_annex.1.a: "讓他們憎恨吧，只要他們畏懼！"
+ every_subject_hates_us_tt: "我們的[subjects|e]對[ROOT.GetCountry.GetLongName]的[opinion|e]改變[ShowBiasValue('opinion_annexed_other_subject')|+=0]"
+ every_annex_target_neighbor_hates_us_tt: "[target.GetName]的每個相鄰[country|e]對[ROOT.GetCountry.GetLongName]的[opinion|e]改變[ShowBiasValue('opinion_annexed_neighbor')|+=0]"
+
+ opinion_annexed_neighbor: "兼併鄰國"
+ opinion_annexed_other_subject: "兼併另一個[subject|e]"
+
+ historical_rival_events.1.title: "[rivalling_country.GetAdjectiveWithNoTooltip]-[target_country.GetAdjectiveWithNoTooltip]宿敵關係"
+ historical_rival_events.1.desc: "多年的衝突、對立與敵意競爭，使[rivalling_country.GetLongName]不可避免地對[target_country.GetName]形成了長久怨恨。唯有時間能證明，[rivalling_country.GetAdjectiveWithNoTooltip]-[target_country.GetAdjectiveWithNoTooltip]關係究竟會逐漸修復，還是在戰場上進一步惡化……"
+ historical_rival_events.1.a: "以眼還眼，以牙還牙！"
+ historical_rival_events.1.b: "令人遺憾的發展……"
+
+ historical_rival_events.2.title: "[rivalling_country.GetAdjectiveWithNoTooltip]-[target_country.GetAdjectiveWithNoTooltip]宿敵關係終結"
+ historical_rival_events.2.desc: "許多年前，[rivalling_country.GetAdjective]與[target_country.GetAdjective]統治者之間只能以侮辱和威脅彼此交流，而各自的國家也在戰場、市場、使館以及諸如此類的場所衝突不斷。然而到了今日，這些衝突已失去意義，[rivalling_country.GetNameWithNoTooltip]也放下了昔日對我們的怨恨。"
+ historical_rival_events.2.a: "是時候向前看了。"
+ historical_rival_events.2.b: "永不遺忘，永不寬恕。"

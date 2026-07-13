@@ -382,9 +382,22 @@ def output_relative_path(source_relative: Path) -> Path:
     return source_relative.with_name(name)
 
 
-def run_recursive(source_root: Path, output_root: Path, glossary: Path) -> dict:
-    source_files = sorted(source_root.rglob("*.yml"))
-    output_files = sorted(output_root.rglob("*.yml")) if output_root.exists() else []
+def run_recursive(
+    source_root: Path,
+    output_root: Path,
+    glossary: Path,
+    filename_pattern: re.Pattern[str] | None = None,
+) -> dict:
+    source_files = [
+        path
+        for path in sorted(source_root.rglob("*.yml"))
+        if filename_pattern is None or filename_pattern.search(path.name)
+    ]
+    output_files = [
+        path
+        for path in sorted(output_root.rglob("*.yml"))
+        if filename_pattern is None or filename_pattern.search(path.name)
+    ] if output_root.exists() else []
     expected_output_names = {output_relative_path(path.relative_to(source_root)) for path in source_files}
     actual_output_names = {path.relative_to(output_root) for path in output_files}
     reports: list[dict] = []
@@ -442,10 +455,15 @@ def main() -> None:
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--glossary", default="translation_glossary.yml", type=Path)
     parser.add_argument("--report", default="work/reports/translation_qa.json", type=Path)
+    parser.add_argument(
+        "--filename-regex",
+        help="Only check files whose basename matches this regular expression",
+    )
     args = parser.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
     if args.source.is_dir():
-        report = run_recursive(args.source, args.output, args.glossary)
+        filename_pattern = re.compile(args.filename_regex, re.IGNORECASE) if args.filename_regex else None
+        report = run_recursive(args.source, args.output, args.glossary, filename_pattern)
     else:
         report = run(args.source, args.output, args.glossary)
     args.report.parent.mkdir(parents=True, exist_ok=True)

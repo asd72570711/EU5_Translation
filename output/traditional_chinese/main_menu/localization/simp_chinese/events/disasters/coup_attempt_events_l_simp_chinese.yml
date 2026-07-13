@@ -1,0 +1,77 @@
+l_simp_chinese:
+ 
+  coup_attempt.1.title: "鐵與叛逆"
+  coup_attempt.1.desc: "背叛的低語瀰漫在空氣之中。一場陰謀已在我們的[ROOT.GetCountry.GetGovernment.GetCourtTitle]中扎根，企圖推翻[target_character.GetName]的統治。廷臣們在緊閉的門後竊竊私語，我們[ROOT.GetCountry.GetFlavorRank]的根基也為之震動。在叛逆化為血腥暴行之前，我們必須迅速而果斷地行動。若不動員我們的親信，陰謀者只會更加膽大妄為，在我們最脆弱之時出手，造成長久的不穩。"
+  coup_attempt.1.a: "揪出陰謀者，將他們粉碎！"
+  explain_coup_attempt_tt: "開放使用[ShowGenericActionName('conduct_investigation')]、[ShowGenericActionName('call_private_council')]與[ShowGenericActionName('execute_court_member')][disaster|e][actions|e]\n"
+  explain_coup_attempt_2tt: "我們可以透過提升[legitimacy|e]，或是在#Y 5#!年內、或在陰謀者成功刺殺[target_character.GetNameWithNoTooltip]之前剷除所有陰謀者，從這場[disaster|e]中勝出"
+
+  coup_attempt.2.title: "陰謀滋長"
+  coup_attempt.2.desc: "叛逆的報告與日俱增，我們的[ROOT.GetCountry.GetGovernment.GetCourtTitle]正變成毒蛇之巢。每一天都帶來新的變節者與祕密同盟的傳聞。那些曾經宣誓效忠的人，如今在陰影籠罩的廳堂中密謀。危機正在加深，很快便可能失控。是時候行動起來，驅逐那些企圖散播毒液之人了！"
+  coup_attempt.2.a: "禿鷲正盤旋於王座之上。"
+  conspiracy_grows_tt: "我們的一名[characters|e]已加入針對我們的[ShowDisasterName('coup_attempt')]"
+
+  coup_attempt.3.title: "陰謀者曝光"
+  coup_attempt.3.desc: "我們陣營中的一名間諜，已揭露反對[target_character_2.GetName]之陰謀中的關鍵人物。叛徒[target_character_1.GetName]一直暗中破壞我們的統治，但[target_character_1.GetHerHis]命運如今掌握在我們手中。我們該拿[target_character_1.GetHerHim]殺雞儆猴，期望嚇阻其他人，還是該榨取更多情報？我們或許仍能挖出這場叛逆更深的根源。"
+  coup_attempt.3.a: "處決[target_character_1.GetHerHim]！"
+  coup_attempt.3.b: "饒[target_character_1.GetHerHis]一命。"
+  coup_attempt.3.c: "逼迫[target_character_1.GetHerHim]供出潛在共謀者！"
+  coup_attempts_3_b_tt: "[target_character_1.GetShortNameWithNoTooltip]將停止[target_character_1.GetHerHis]對政變的支持，並導致我們[ROOT.GetCountry.GetGovernment.GetCourtTitle]中兩名#Y 可能#!共謀的[characters|e]遭到處決"
+  conspirators_exposed_tt: "將展開調查以找出潛在陰謀者"
+  target_character_1_flees: "[target_character_1.GetSheHe|U]逃往國外"
+  cease_activities_and_stay: "\n[target_character_1.GetSheHe|U]留在我們的[ROOT.GetCountry.GetGovernment.GetCourtTitle]，並停止[target_character_1.GetHerHis]陰謀活動"
+
+  coup_attempt.4.title: "[SCOPE.sCountry('actor').GetGovernment.GetCourtTitle]中的調查"
+  coup_attempt.4.desc: "在[target_character_2.GetName]警醒的目光下，我們的探員已開始一場深入而危險的調查。他們從容地搜查廳堂，聆聽低聲流傳的祕密，觀察任何最細微的失言。每一次互動都受到審視，無人能置身懷疑之外。但他們挖得越深，我們樹立的敵人也越多。他們最新的發現確實令人震驚，將[target_character_1.GetName]描繪成這場陰謀中的重要成員！"
+  target_character_1_ends_support_tt: "[target_character_1.GetNameWithNoTooltip]將和平停止[target_character_1.GetHerHis]對政變的支持"
+
+  coup_attempt.5.title: "[ROOT.GetCountry.GetGovernment.GetAdjective|U]背叛"
+  coup_attempt.5.desc: "一項驚人的揭露震撼了[ROOT.GetCountry.GetGovernment.GetCourtTitle]！看來連我們自己的[target_character_2.GetName]也身在陰謀者之列。血脈本身已被叛逆毒化。我們能冒險揭露[target_character_2.GetHerHis]暗中勾當嗎？還是[target_character_2.GetHerHis]處決會撕裂整個[ROOT.GetCountry.GetFlavorRank]？"
+  coup_attempt.5.a: "揭露[target_character_2.GetHerHis]陰謀。"
+  coup_attempt.5.b: "砍下[target_character_2.GetHerHis]腦袋！"
+  coup_attempt.5.c: "我們不能拿[ROOT.GetCountry.GetGovernment.GetAdjective]血脈冒險。"
+
+
+  coup_attempt.6.title: "[GetCurrentYear]年的秘密會議"
+  coup_attempt.6.desc: "已安排一場由各階層中最具影響力成員參與的祕密會議；在會中，祕密交易與低聲談判或許將決定我們[ROOT.GetCountry.GetFlavorRank]的命運。有些人索求金錢與特權，也有人提出妥協。無論我們作出何種決定，都必須在內部穩定與掌握權力之間取得平衡。選擇依靠這場會議，必定能交出部分陰謀者的姓名，但長遠而言也會鞏固各階層的權力。"
+  coup_attempt.6.a: "很好，這個代價值得付出。"
+  coup_attempt.6.b: "再想想……"
+  conspirator_names_exposed_tt: "部分陰謀者的姓名將在後續[event|e]中被揭露"
+
+  coup_attempt.7.title: "陰謀者名單曝光"
+  coup_attempt.7.desc: "透過秘密會議的運作，再加上賄賂與敏銳的調查，我們已取得那些密謀反對我們之人的姓名。他們的命運如今由我們決定。我們的一些顧問支持迅速清洗[target_character_2.GetName]及[target_character_2.GetHerHis]同黨等陰謀者。然而，另一些人則建議採取寬赦之道，將這些危險人物留在身邊，以便日後操弄他們。"
+  coup_attempt.7.desc_b: "多虧秘密會議的努力，我們揭開了一名密謀反對我們的叛徒身分。[target_character_2.GetName]如今任由我們發落。一些顧問敦促立即處決，主張讓這樣的威脅活著太過危險。然而，另一些人則建議採取更審慎的做法，認為饒[target_character_2.GetHisHer]一命，或許能讓我們操弄[target_character_2.GetHerHim]，使其為我所用。"
+  coup_attempt.7.a: "殺了他們。全部殺光！"
+  coup_attempt.7.b: "給予他們寬赦，我們需要他們。"
+  coup_attempt.7.c: "殺了[target_character_2.GetHerHim]！"
+  coup_attempt.7.d: "寬赦[target_character_2.GetHerHim]。"
+  conspirators_will_stick_around_absolved_tt: "前述陰謀者將被赦免其罪行，暫時保住項上人頭……"
+  conspirators_will_stick_around_absolved_2_tt: "[target_character_2.GetNameWithNoTooltip]將被赦免[target_character_2.GetHisHer]罪行，[target_character_2.GetHisHer]項上人頭將暫時留在[target_character_2.GetHisHer]肩上……"
+
+  coup_attempt.8.title: "刺殺企圖"
+  coup_attempt.8.desc: "一群刺客大膽地對[target_character_1.GetName]的性命下手；毫無疑問，他們是由那些藏身陰影的陰謀者資助。這些惡徒的行動是數月努力的終點，他們意圖動搖我們的統治，終結[target_character_1.GetShortNameWithNoTooltip]的統治！"
+  coup_attempt.8.a: "惡棍！"
+  this_will_end_the_coup_disaster_tt: "這將以#R 負面#!結果結束[ShowDisasterName('coup_attempt')][disaster|e]"
+
+
+  coup_attempt.9.title: "處決陰謀者？"
+  coup_attempt.9.desc.conspirator: "[target_character_2.GetName]已被處死。人民為一名眾所周知的叛徒受到懲罰而歡欣，而我們的[ROOT.GetCountry.GetGovernment.GetCourtTitle]在正義得以伸張後也鬆了一口氣。若要讓[target_character.GetName]治下的王座安全無虞，這很可能還不是最後一顆必須落地的頭顱，但這仍然是朝正確方向邁出的一步。"
+  coup_attempt.9.desc.innocent: "唉！劊子手太樂於讓斧刃落在無辜者的頸項上，於是犯下了嚴重錯誤！看來[target_character_2.GetName]是無辜的，但[target_character_2.GetHerHis]頭顱如今已躺在我們腳邊。[ROOT.GetCountry.GetGovernment.GetCourtTitle]在恐懼中竊竊私語，對[target_character.GetName]統治的信任也受到動搖。"
+  coup_attempt.9.a: "我們做了什麼？[target_character_2.GetSheHe|U]是無辜的！"
+  coup_attempt.9.b: "叛徒的頭顱將裝飾我們的牆壁！"
+  because_they_are_consort_or_heir_tt: "由於無辜的[target_character_2.GetShortNameWithNoTooltip]身分重要："
+
+  coup_attempt.100.title: "殘留的陰影"
+  coup_attempt.100.desc: "政變尚未被粉碎，不滿仍在陰影中滋長並潰爛。陰謀者或許已沉寂，但他們的思想仍然殘留，毒害著留下之人的心智。若我們不保持警惕，歷史或許仍會重演。"
+  coup_attempt.100.a: "我們必須為他們下一次嘗試做好準備。"
+  inconclusive_end_5_years_tt: "陰謀者未能及時被剷除，然而他們也未對[target_character.GetName]採取行動。[disaster|e]以#R 無定論#!結束，並可能在#Y 5#!年後再次觸發"
+  murdered_ending_tt: "陰謀者成功刺殺了[target_character_2.GetName]。唯有時間能證明[target_character.GetName]是否是陰謀者的傀儡"
+  conspirator_crowned_tt: "其中一名陰謀者[ROOT.GetCountry.GetGovernment.GetRuler.GetName]已加冕為[ruler|e]"
+
+  coup_attempt.101.title: "陰謀終結"
+  coup_attempt.101.desc: "隨著正統性的恢復，[target_character.GetName]的統治穩如磐石。人民團結在我們身後，無人膽敢挑戰我們的權利。我們已從黑暗中走出，比以往更加強大！"
+  coup_attempt.101.a: "無人膽敢挑戰我們的名號！"
+
+  coup_attempt.200.title: "新時代的黎明"
+  coup_attempt.200.desc: "舊秩序已然崩塌，而新的願景從灰燼中升起，將引領我們的[ROOT.GetCountry.GetGovernment.GetCourtTitle]。這場陰謀雖然血腥，卻重塑了前方道路，拋卻舊王政的權力與影響。如今，我們必須把握此刻，為充滿不確定的明日規劃航向——即使那未來看來既令人驚訝，又頗具吸引力！"
+  coup_attempt.200.a: "未來尚無定途！"

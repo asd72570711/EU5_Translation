@@ -1,0 +1,54 @@
+l_simp_chinese:
+ grand_embassy.1.title: "大使團"
+ grand_embassy.1.desc: "宮廷中有人提出一項構想：派遣[ROOT.GetCountry.GetGovernment.GetRuler.GetName]率領大型代表團出訪歐洲——即大使團——以尋求與其他歐洲領袖建立更好的關係，尤其是那些與我們擁有共同敵人的領袖。另一項好處，則可能是有機會研究[ShowSubContinentName('western_europe')]的技術進步，以幫助我們現代化。"
+ grand_embassy.1.a: "踏上穿越歐洲的旅程"
+ grand_embassy.1.b: "我國已擁有所需知識"
+ 
+ grand_embassy.2.title: "大使團抵達[ROOT.GetCountry.GetCapital.GetName]"
+ grand_embassy.2.desc: "一支大使團從[from.GetName]抵達，由[from.GetGovernment.GetRuler.GetName][from.GetGovernment.GetRuler.GetHerselfHimself]親自率領。[from.GetGovernment.GetRuler.GetSheHeCap]正周遊大陸，以確保與其他歐洲國家建立更好關係——尤其是那些擁有共同敵人的國家。我們該如何接待[from.GetGovernment.GetRuler.GetHerHim]？"
+ grand_embassy.2.a: "邀請[from.GetGovernment.GetRuler.GetHerHim]留下"
+ received_grand_embassy: "接待大使團"
+ grand_embassy.2.b: "禮貌地請[from.GetGovernment.GetRuler.GetHerHim]離開"
+ rejected_grand_embassy: "拒絕大使團"
+ grand_embassy.2.c: "把[from.GetGovernment.GetRuler.GetHerHim]打發走！"
+ 
+ 
+ grand_embassy.3.title: "大使團在[ROOT.GetCountry.GetCapital.GetNameWithNoTooltip]"
+ grand_embassy.3.desc: "受到我們熱情歡迎的感動，[from.GetGovernment.GetRuler.GetName]告知我們，他希望延長在[ROOT.GetCountry.GetCapital.GetName]的訪問。在[from.GetGovernment.GetRuler.GetHerHis]使[from.GetLongName]現代化的追求中，[from.GetGovernment.GetRuler.GetSheHe]非常渴望有機會研究[ShowSubContinentName('western_europe')]的技術進步。"
+ grand_embassy.3.a: "邀請[from.GetGovernment.GetRuler.GetHerHim]留下，研究我們的政府制度"
+ grand_embassy.3.a.tt: "[from.GetGovernment.GetRuler.GetName]將學習我們的政府制度"
+ invited_to_study_institutions: "受邀研究制度"
+ grand_embassy.3.b: "邀請[from.GetGovernment.GetRuler.GetHerHim]留下，研究我們的軍隊"
+ grand_embassy.3.b.tt: "[from.GetGovernment.GetRuler.GetName]將學習我們的軍隊組織"
+ grand_embassy.3.c: "邀請[from.GetGovernment.GetRuler.GetHerHim]留下，研究我們的海軍"
+ grand_embassy.3.c.tt: "[from.GetGovernment.GetRuler.GetName]將學習我們的海軍組織"
+ grand_embassy.3.d: "[from.GetGovernment.GetRuler.GetSheHe|U]已經耗盡了[from.GetGovernment.GetRuler.GetHerHis]所受的歡迎……"
+ 
+ 
+ 
+ grand_embassy.4.title: "慷慨的延留提議"
+ grand_embassy.4.desc: "聽聞[ROOT.GetCountry.GetGovernment.GetRuler.GetName]正在推動改革，以使[ROOT.GetCountry.GetLongName]現代化，[embassy_country.GetName]慷慨邀請我們延長在[embassy_country.GetCapital.GetName]的停留，以藉此機會研究他們的技術進步。"
+ grand_embassy.4.a: "讓我們留下並研究[target_institution.GetNameWithNoTooltip]"
+ grand_embassy.4.b: "讓我們留下並研究他們的軍隊"
+ grand_embassy.4.c: "讓我們留下並研究他們的海軍"
+ grand_embassy.4.d: "不，我們還有其他國家要訪問"
+ grand_embassy.4.e: "是時候回國了"
+ 
+ 
+ grand_embassy.5.title: "延留請求遭拒"
+ grand_embassy.5.desc: "在我們嘗試使[ROOT.GetCountry.GetName]現代化的過程中，研究[ShowSubContinentName('western_europe')]的技術進步可能頗具價值。不幸的是，我們為此要求延長在[embassy_country.GetCapital.GetName]停留的請求遭到拒絕。"
+ grand_embassy.5.a: "很好，我們還有其他國家要訪問"
+ grand_embassy.5.b: "是時候回國了"
+ 
+ 
+ grand_embassy.6.title: "延長訪問有所回報"
+ grand_embassy.6.desc: "[ROOT.GetCountry.GetGovernment.GetRuler.GetName]延長在[embassy_country.GetCapital.GetName]的訪問，親自研究他們的技術進步，如今看來似乎相當值得。"
+ grand_embassy.6.a: "我們的政府制度將因此受益！"
+ grand_embassy.6.b: "我們的武裝力量將因此受益！"
+ grand_embassy.6.c: "我們的海軍將因此受益！"
+ 
+ 
+ grand_embassy.7.title: "大使團成功"
+ grand_embassy.7.desc: "我們對[embassy_country.GetCapital.GetCapital.GetName]的訪問取得成功，但如今是時候繼續前行了。問題是，下一站去哪裡？"
+ grand_embassy.7.a: "我們還有其他國家要訪問"
+ grand_embassy.7.b: "是時候回國了"

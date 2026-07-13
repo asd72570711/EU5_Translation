@@ -1,0 +1,28 @@
+l_simp_chinese: 
+  curse_of_stefan_uros_iii.1.title: "[GetCountry('SER').GetNameWithNoTooltip]的詛咒"
+  curse_of_stefan_uros_iii.1.desc: "災厄之時已然降臨！[GetCharacter('ser_stefan_decanski').GetName]的詛咒緊緊攫住了我們的國家，廷臣與顧問們紛紛談論著一個時代的終結，以及我們偉大的國家即將墜入黑暗時期……"
+  curse_of_stefan_uros_iii.1.a: "這不能是終點，不能以這種方式……"
+
+  curse_of_stefan_uros_iii.2.title: "[GetCountry('SER').GetNameWithNoTooltip]的新時代"
+  curse_of_stefan_uros_iii.2.desc: "我們偉大國度上方的蔚藍天空，再度閃耀著希望與新日帶來的歡欣光芒。儘管近來歷經動盪與迷信陰影，我們仍克服了一切阻礙，我們的人民也取得勝利，並比以往更加堅韌！"
+  curse_of_stefan_uros_iii.2.a: "我們團結一致，變得更加強大，繼續向前邁進。"
+
+  curse_of_stefan_uros_iii.3.title: "自治要求"
+  curse_of_stefan_uros_iii.3.desc: "我們日益崩解的行政體系近期出現變動，使許多異議之聲趁勢高漲，企圖從我們的旗幟之下奪取獨立。最新要求代表權與地方自治的請願來自[target_province.GetName]。我們權威衰退的消息已經傳開，因此他們帶著武器前來，提出荒謬的要求，並談論一種名為自由的外來概念。"
+  curse_of_stefan_uros_iii.3.a: "他們會得到的。"
+  curse_of_stefan_uros_iii.3.b: "讓他們認識一下本地所謂的鞭子！"
+
+  curse_of_stefan_uros_iii.4.title: "如禿鷲般的鄰國"
+  curse_of_stefan_uros_iii.4.desc: "[target_country.GetName]宮廷中的陰險惡棍一察覺到我們看似軟弱，便毫不遲疑地策劃陰謀，準備吞噬我們的領土。這種禿鷲般的政策絕不容忍，我們必須提醒他們，[GetCountry('SER').GetLongName]憑什麼是一股不容小覷的力量。"
+  curse_of_stefan_uros_iii.4.a: "讓他們試試！"
+
+  curse_of_stefan_uros_iii.5.title: "農民起義"
+  curse_of_stefan_uros_iii.5.desc: "在這動盪時期，我們日漸衰弱的權威壯大了全國農民的膽量，使他們要求宮廷付出代價，提供財政援助並改善處境。[target_location.GetName]的農民領袖以廣泛破壞與騷擾相威脅，強行提出了他們的要求！"
+  curse_of_stefan_uros_iii.5.a: "我們不與農民談判！"
+  curse_of_stefan_uros_iii.5.b: "我們總能找到折衷方案吧？"
+
+  curse_of_stefan_uros_iii.6.title: "省份宣布獨立！"
+  curse_of_stefan_uros_iii.6.desc: "[target_location.GetName]那些潛伏陰影、卑賤求生之徒竟敢露出利爪，抬頭反抗我們的權威。他們以最怪誕的方式展現虛假的權力，宣稱自己脫離王冠，甚至還對我們的王位提出覬覦！"
+  curse_of_stefan_uros_iii.6.a: "他們的殘骸將滋養我們田野的繁榮！"
+  curse_of_stefan_uros_iii.6.b: "由他們去吧……"
+  people_of_target_province_will_declare_war_on_us_tt: "[target_province.GetNameWithNoTooltip]的人民將對我們宣戰[war|e]！"

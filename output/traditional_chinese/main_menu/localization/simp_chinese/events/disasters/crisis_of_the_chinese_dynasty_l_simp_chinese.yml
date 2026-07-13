@@ -1,0 +1,57 @@
+l_simp_chinese:
+
+#Events
+  crisis_of_the_chinese_dynasty.1.title: "[GetCountry('CHI').GetLongNameWithNoTooltip]權威崩解"
+  crisis_of_the_chinese_dynasty.1.desc: "[ROOT.GetCountry.GetLongName]正面臨可怕的危機。我們未能依循天命而治，也失去了天命所賜予的庇佑與美名。\n\n治理失當與紛爭在$china$蔓延，民間不滿迅速擴散；大批民眾已經揭竿而起。我們必須念及祖先，努力修養德行，因為偉大的天命絕非易守之物。"
+  crisis_of_the_chinese_dynasty.1.a: "願天命不會終結於我等之手。"
+  every_member_of_mkio_loses_20_opinion_tt: "[GetUniqueInternationalOrganization('middle_kingdom').GetName]的所有[member|e]都會對我們失去[ShowBiasValue('opinion_internal_crisis')|+=0][opinion|e]"
+
+  crisis_of_the_chinese_dynasty.2.title: "苦澀的結局"
+  crisis_of_the_chinese_dynasty.2.desc: "我們未能在國土各處恢復權威，人民如今已經支離破碎、士氣低落。無論先前曾嘗試如何補救，成效都遠遠不足，最終使我們失去了威望，也失去了作為偉大[ROOT.GetCountry.GetFlavorRank]主宰者的地位。當我們試圖認清自身困境的現實時，這已是我們前所未有的低谷。"
+  crisis_of_the_chinese_dynasty.2.a: "等待我們的是何等黑暗？"
+
+  crisis_of_the_chinese_dynasty.3.title: "上天眷顧"
+  crisis_of_the_chinese_dynasty.3.desc: "動盪時期已經結束！那些曾密謀使我們覆滅、並以我們的衰落為樂者，如今都逃回了陰影之中！艱難歲月已將我們的人民鍛造成堅毅之眾，即使面對上天降下的考驗也能存續下來。\n\n我們微笑著看著落日，並以昔日讓我們登上偉大[ROOT.GetCountry.GetFlavorRank]之巔的同樣渴望，迎接下一個清晨。"
+  crisis_of_the_chinese_dynasty.3.a: "我們撐過來了！"
+  based_on_current_celestial_authority_tt: "根據我們目前的[celestial_authority_gc|e]數值："
+
+  crisis_of_the_chinese_dynasty.4.title: "農民拒絕納稅"
+  crisis_of_the_chinese_dynasty.4.desc: "即使在最好的時日，[target_province.GetName]的人民也一直難以維生。近期席捲[ROOT.GetCountry.GetGovernment.GetCourtTitle]的動亂，已蔓延至我們[ROOT.GetCountry.GetFlavorRank]境內幾乎每一個省份。因此，那些曾向[target_character.GetName]屈膝的人，如今甚至拒絕最溫和形式的徵稅與糧食貢納。"
+  crisis_of_the_chinese_dynasty.4.a: "強行徵收糧食貢納。"
+  crisis_of_the_chinese_dynasty.4.b: "上天仁慈。"
+  pops_in_target_province_lose_10_satisfaction_tt: "我們在[target_province.GetName]的[pops|e]將失去[ShowNamedValue('pop_satisfaction_mild_penalty')|+=2%][pop_satisfaction|e]"
+  every_pop_in_target_province_gains_5_satisfaction_tt: "我們在[target_province.GetName][province|e]的[pops|e]將獲得[ShowNamedValue('pop_satisfaction_weak_bonus')|+=2%][pop_satisfaction|e]"
+  every_location_in_target_province_suffers_10_devastation_tt: "我們在[target_province.GetName]的[locations|e]失去[ShowNamedValue('prosperity_weak_penalty')|+=2%][prosperity|e]"
+
+  crisis_of_the_chinese_dynasty.5.title: "荒廢蔓延"
+  crisis_of_the_chinese_dynasty.5.desc: "時局對[target_province.GetName]的人民並不仁慈。這個省份曾是市場繁忙、田野豐饒的活躍中心，近來卻淪為猖獗盜匪、劫掠、空空糧倉與燃燒家園的受害者。在這動盪時期，當地人向[target_character.GetName]呼求援助。\n\n收成無人照料，運河年久失修，未來看來越發黑暗。這則荒廢擴散的最新消息，是我們控制力下滑的令人憂心徵兆，也動搖了整個[ROOT.GetCountry.GetFlavorRank]的民眾信心。"
+  crisis_of_the_chinese_dynasty.5.a: "我們可以出錢恢復他們的糧食供應。"
+  every_location_in_target_province_5_prosperity_tt: "[target_province.GetNameWithNoTooltip]的[locations|e]獲得[ShowNamedValue('prosperity_very_weak_bonus')|+=2%][prosperity|e]"
+  crisis_of_the_chinese_dynasty.5.b: "派遣[target_character_1.GetNameWithNoTooltip]！"
+  every_location_in_target_province_scales_with_character_tt: "[target_character_1.GetName]將前往[target_province.GetNameWithNoTooltip]監督復原工作。在此期間，[target_character_1.GetSheHe]將不會是我們[cabinet|e]的一員。\n\n由於[target_character_1.GetHerHis][total_ability|e]，我們在[target_province.GetNameWithNoTooltip]擁有的每個[location|e]都將獲得#G [ROOT.GetVariable('display_character_ability_variable').GetValue]%#![prosperity|e]"
+  crisis_of_the_chinese_dynasty.5.c: "補償當地人。"
+  crisis_of_the_chinese_dynasty.5.d: "我們不在乎這些農民的苦難！"
+
+  crisis_of_the_chinese_dynasty.6.title: "叛軍談判"
+  crisis_of_the_chinese_dynasty.6.desc: "當我們偉大的人民走過名為$crisis_of_the_chinese_dynasty$的動盪時期時，整個[actor.GetFlavorRank]的重擔顯然都壓在[target_character.GetName]肩上。近期事態使[target_rebel.GetName]的運動聲勢大振，迫使我們走上談判桌。"
+  pops_supporting_target_rebel_will_gain_30_satisfaction_and_cease_their_support_tt: "支持[target_rebel.GetNameWithNoTooltip]的[pops|e]將獲得[ShowNamedValue('pop_satisfaction_extreme_bonus')|+=2%][pop_satisfaction|e]，且很可能將效忠轉回我們一方"
+  locations_with_rebel_pops_lose_20_control_tt: "每個支持[target_rebel.GetNameWithNoTooltip][rebellion|e]的[location|e]，其[control|e]都會降低[ShowNamedValue('control_extreme_penalty')|+=2%]"
+  refund_the_cost_of_the_action_tt: "此[action|e]的花費將被退還。"
+  crisis_of_the_chinese_dynasty.6.a: "很好，降低他們的稅負。"
+  crisis_of_the_chinese_dynasty.6.b: "我們做出一些讓步吧。"
+  crisis_of_the_chinese_dynasty.6.c: "給予他們一些臨時自治權。"
+  crisis_of_the_chinese_dynasty.6.d: "我們會聽取他們的要求。"
+  crisis_of_the_chinese_dynasty.6.e: "再想想看……"
+
+  crisis_of_the_chinese_dynasty.7.title: "[GetCurrentYear]年稅制改革"
+  crisis_of_the_chinese_dynasty.7.desc: "近期危機對我們境內的財政與政治世界都造成了深遠影響。這段動盪時期考驗了我們制度的強度，而我們的官僚體系終於取得了勝利！\n\n在艱困的五年之後，我們完成了人民普查，也修訂出一套看來十分有前景的稅法。各種曾經沉溺於腐化的貴族與官員，過去常利用漏洞逃避繳稅，最終導致中央政府遭到侵蝕。\n\n在[target_character.GetName]主導下推行的大膽措施，使承認我們權威的各方重新將收入送入國庫。"
+  crisis_of_the_chinese_dynasty.7.a: "離避免災難又近了一步！"
+  we_can_now_complete_reform_tax_action_tt: "我們現在可以透過[disaster|e]介面完成[ShowGenericActionName('cmd_revise_the_tax_code')][action|e]"
+
+  crisis_of_the_chinese_dynasty.8.title: "[GetCountry('CHI').GetFlavorRank]局勢穩定"
+  crisis_of_the_chinese_dynasty.8.desc: "我們偉大的[ROOT.GetCountry.GetFlavorRank]並不陌生於擊退那些覬覦我們財富之人。試圖動搖我們對$china$掌控的人不在少數，他們的陰影在我們的政務上投下疑慮與腐朽。繼承爭端、官僚體系中的腐敗、經濟不平等，以及北方入侵的持續威脅，共同造就了不確定的氛圍。\n\n然而，[target_character.GetName]的勝利崛起已將光芒照入最深的陰影，從我們的政府中驅逐了許多破壞穩定的因素。"
+  crisis_of_the_chinese_dynasty.8.a: "我們暫時穩定了。"
+
+  crisis_of_the_chinese_dynasty.9.title: "強大的$china$"
+  crisis_of_the_chinese_dynasty.9.desc: "在我們正面臨的這段動盪時期，我們的權威一次又一次遭到質疑。無能的領導與不斷升高的動亂，早已侵蝕了民眾對王座的信任。在一連串惡意官僚與強大的[ROOT.GetCountry.GetGovernment.GetCourtTitle]官員推動下，衰敗的循環已真正深入我們的隊伍之中。\n\n透過[target_character.GetName]指引下的政策，我們成功渡過了這場危險局勢。正統性與信任的重建，如今帶來公正治理，也使我們重新具備處理困擾[ROOT.GetCountry.GetFlavorRank]各種問題的能力。"
+  crisis_of_the_chinese_dynasty.9.a: "王座再度強大，至少暫時如此。"

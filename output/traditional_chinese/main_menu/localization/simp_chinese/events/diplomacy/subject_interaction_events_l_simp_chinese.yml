@@ -1,0 +1,191 @@
+l_simp_chinese:
+ subject_interaction_events.1.title: "覬覦者崛起"
+ subject_interaction_events.1.desc: "[ROOT.GetCountry.GetName]的前任君主仍有[target_previous_ruler.GetHerHis]支持者，其中許多人相信，相較於[target_ruler.GetName]，他們對[ROOT.GetCountry.GetName]王位擁有更好的宣稱。他們已成功聚集了相當龐大的追隨者，正向[ROOT.GetCountry.GetCapital.GetName]進軍，意圖將「真正的」統治者推上王位。"
+ subject_interaction_events.1.a: "向[ROOT.GetCountry.GetDiplomacy.GetOverlord.GetLongNameWithNoTooltip]求援。"
+ subject_interaction_events.ask_overlord_for_help: "我們將派遣使者向宗主懇求援助！"
+ subject_interaction_events.1.b: "我們自己處理。"
+
+ subject_interaction_events.2.title: "[subject_in_need.GetName]請求援助"
+ subject_interaction_events.2.desc: "一支由覬覦者率領的叛軍正向[subject_in_need.GetName]的首都[subject_in_need.GetCapital.GetName]進軍！[subject_in_need.GetName]被廢君主的家族成員已成功聚集相當龐大的追隨者，如今正試圖推翻[subject_in_need.GetGovernment.GetFullRulerName]。"
+ subject_interaction_events.2.a: "送去金錢與士兵。"
+ opinion_sent_help: "提供援助"
+ subject_interaction_events.2.b: "他們必須自己處理。"
+ opinion_refused_send_help: "在我們需要時拒絕援助"
+
+ subject_interaction_events.3.title: "援助抵達？"
+ subject_interaction_events.3.desc: "覬覦者叛軍正逼近我們，而派往[ROOT.GetCountry.GetDiplomacy.GetOverlord.GetName]的信使應該很快就會返回。如果我們夠幸運，或許信使會帶回[ROOT.GetCountry.GetDiplomacy.GetOverlord.GetName]提供的士兵與金錢，幫助我們擊退那些該死的叛軍！"
+ subject_interaction_events.3.a: "[ROOT.GetCountry.GetDiplomacy.GetOverlord.GetGovernment.GetFullRulerName]送來了金錢與士兵！"
+ subject_interaction_events.3.b: "[ROOT.GetCountry.GetDiplomacy.GetOverlord.GetGovernment.GetFullRulerName]拒絕給予我們援助！"
+
+ subject_interaction_events.4.title: "無能親族"
+ subject_interaction_events.4.desc: "我們親愛的[subject_target.GetGovernment.GetFullRulerName]統治著我們的屬國[subject_target.GetName]，但事實證明其乃是一名無能小丑，既不能也不應統治任何國家。"
+ subject_interaction_events.4.a: "用[better_ruler.GetNameWithNoTooltip]取而代之"
+ subject_interaction_events.4.b: "這只會給國家帶來混亂。別管它。"
+
+ subject_interaction_events.5.title: "稱職親族"
+ subject_interaction_events.5.desc: "改革已經推行，無用的大臣與顧問被罷免，陸軍與海軍也從未如此出色……看來我們的[subject_target.GetGovernment.GetFullRulerName]很好地服務著我們的屬國[subject_target.GetName]，以堅定手腕統治並作出稱職決策。"
+ subject_interaction_events.5.a: "即使我們曾有疑慮，如今也早已遺忘。"
+
+ subject_interaction_events.7.title: "軍事支援遭濫用"
+ subject_interaction_events.7.desc: "我們送往屬國的支援被用在我們從未預見的地方！那些人被迫修築道路與建築、清理城鎮廣場上的垃圾與廢物，卻一次也沒有見過戰鬥。雖然道路比以往更寬更好，建築更加堅固，城鎮廣場也一塵不染，但這些人肯定不是該這樣使用的吧？"
+ subject_interaction_events.7.a: "告訴他們如何正確使用這些人！"
+ opinion_reprimanded: "因錯誤使用支援而遭斥責"
+ subject_interaction_events.7.b: "他們很懂得變通，做得好！"
+ opinion_resourceful: "以靈活方式使用支援"
+
+ subject_interaction_events.8.title: "靈活變通或遭受斥責"
+ subject_interaction_events.8.desc: "[our_overlord.GetName]的[our_overlord.GetGovernment.GetFullRulerName]送給我們資源以改善軍隊，但在這和平時期，並不需要士兵。與其讓他們無所事事，只是訓練、吃飯和睡覺，我們將他們派上用場。他們修築道路與建築、清理城鎮廣場上的垃圾與廢物，並執行其他有意義的任務，否則這些工作將耗費[ROOT.GetCountry.GetName]所沒有的更多時間與金錢。"
+ subject_interaction_events.8.a: "[our_overlord.GetGovernment.GetFullRulerName]認為我們浪費了人力。"
+ subject_interaction_events.8.b: "[our_overlord.GetGovernment.GetFullRulerName]稱讚我們懂得變通。"
+
+ subject_interaction_events.9.title: "軍事威脅"
+ subject_interaction_events.9.desc: "自從宗主開始資助我們的軍隊以來，我們一直不缺人力，但新兵抵達後，士兵之間出現了許多麻煩。他們的文化、語言、傳統，有時甚至宗教，都與我們自己的士兵不同，這給我們造成了不少問題。他們紀律較差，或只是公然拒絕服從我們自己將軍的命令。"
+ subject_interaction_events.9.a: "把他們送回原來的地方。"
+ opinion_purged_manpower: "清除了有用但紀律惡劣的士兵"
+ subject_interaction_events.9.b: "試著讓他們守規矩。"
+
+ subject_interaction_events.10.title: "士兵在[subject_target.GetName]滋事"
+ subject_interaction_events.10.desc: "當來自不同文化、擁有不同語言、傳統，甚至有時還有不同宗教的人們聚在一起，並必須在諸多差異中作為一個單位工作時，總會有麻煩。我們送往[subject_target.GetName]的人力造成的麻煩，已超出[subject_target.GetGovernment.GetFullRulerName]願意處理的範圍，因此有些人被送回給我們。"
+ subject_interaction_events.10.a: "我們的人懂得服從命令，是他們不夠努力！"
+
+ subject_interaction_events.14.title: "禁運與走私者"
+ subject_interaction_events.14.desc: "最近針對我們宗主宿敵的禁運，可能會在財政上毀了我們。幸好，[ROOT.GetCountry.GetName]有些德高望重之人願意慷慨協助我們解決貿易問題。雖然稱這樣的小行動為「走私」或許有些荒唐，但它確實就是走私，而既然我們可能違反了宗主要求我們遵守的一些禁運，他們大概不會對我們的不當行為感到高興。"
+ subject_interaction_events.14.a: "這樣的機會難得一見，我們必須接受！"
+ subject_interaction_events.14.ct: "我們的宗主有很小的機率注意到此事"
+ subject_interaction_events.14.b: "為此冒著激怒宗主的風險並不值得。"
+
+ subject_interaction_events.15.title: "我們附庸的走私者"
+ subject_interaction_events.15.desc: "我們對宿敵實施的禁運並未如預期般有效，其中一個原因可能是我們某個附庸仍在與他們貿易！他們來回走私貨物，干擾我們的目標，使我們顯得軟弱。走私規模很小，但可能對我們造成極大損害。\n另一方面，強大的商業利益集團願意付錢讓我們忽視這些走私。"
+ subject_interaction_events.15.a: "強迫他們立刻停止走私！"
+ opinion_smuggling_hindered: "遭阻止走私"
+ subject_interaction_events.15.b: "他們可以繼續這項小事業。"
+ opinion_small_smuggling_ok: "小規模走私被默許"
+
+ subject_interaction_events.16.title: "被逮個正著！"
+ subject_interaction_events.16.desc: "我們的走私行動已被[From.Country.GetName]揭露，走私者在卸下貨物準備送往[From.Country.GetName]某個宿敵時，被當場抓獲。那些懦夫承認了一切，甚至連這項行動持續多久都招供了。"
+ subject_interaction_events.16.a: "他們正在強迫我們停止這項走私！"
+ subject_interaction_events.16.b: "只要規模維持小一點，我們就可以繼續。"
+
+ subject_interaction_events.17.title: "戰爭從未改變"
+ subject_interaction_events.17.desc: "為換取些許和平與安寧，我們的附庸有義務向我們這位宗主繳納更多收入。他們不會被召入我們的任何戰爭，而我們認為這是一筆很划算的交易——用一些金錢換取幾乎免於所有戰爭的待遇。我們的一個附庸想知道，若與其繳納這些在他們看來「荒謬的金額」，是否還不如被召入戰爭。"
+ subject_interaction_events.17.a: "忘恩負義的蠢貨！"
+
+ subject_interaction_events.18.title: "免役稅的好處"
+ subject_interaction_events.18.desc: "隨著我們飽受戰火摧殘的土地逐漸重建，我們注意到附庸大使眼中浮現出某種神情，一種理解與恐懼混雜著些許寬慰的神情，因為他所凝視的土地並不是自己的。「現在，」他們說，「我們為避免被召入戰爭而繳納的免役稅，看起來只是小數目，是我們可以輕易割捨、以換取和平的東西。」"
+ subject_interaction_events.18.a: "我們早說過這會奏效！"
+ opinion_scutage_benefits: "免役稅的好處"
+
+ subject_interaction_events.20.title: "揮霍效忠派"
+ subject_interaction_events.20.desc: "我們付錢給效忠派，以維持次級夥伴國家的獨立傾向低且可控，但最新報告中對金錢的請求變得越來越絕望。他們必定是在揮霍這些錢，而不是用來確保我國與他們國家之間的關係維持不變！"
+ subject_interaction_events.20.a: "說服他們更好地規劃每月款項。"
+ subject_interaction_events.20.b: "送給他們一小筆錢，以確保其忠誠。"
+
+ subject_interaction_events.21.title: "效忠派的尷尬"
+ subject_interaction_events.21.desc: "雖然我們都欣賞愛國者、效忠派，以及那些熱愛國家並願不惜一切保護它的人，但當他們在整個宮廷面前讓我們難堪時，他們的可愛程度便會急遽下降。這不是我們付錢買來的東西，那筆每月消失進他們貪婪口袋的可觀金額！我們試圖保護的關係，比他們滿是蝨子的腦袋更有價值。"
+ subject_interaction_events.21.a: "砍下他們的頭，掛到[ROOT.GetCountry.GetCapital.GetNameWithNoTooltip]城牆上！"
+ opinion_embarrasing_loyalists: "效忠派失態"
+ subject_interaction_events.21.b: "我們一定能做些什麼，來忘記並原諒這起不幸事件吧？"
+
+ subject_interaction_events.22.title: "成功的效忠派"
+ subject_interaction_events.22.desc: "送往某個屬國效忠派的金錢花得很值得，遠超我們所能想像與預期。其人民的獨立傾向已降低到遠超我們認為可能的程度。"
+ subject_interaction_events.22.a: "真是個驚喜！"
+
+ subject_interaction_events.24.title: "粗野軍官的殘酷行為"
+ subject_interaction_events.24.desc: "「涓涓細流匯成洪水」——這句諺語不幸在我們的保護國中被證明為真。一些對我們而言微不足道、幾乎不值一提的小事，對目睹或遭遇者卻是巨大侮辱；再加上該國成為我們保護國時留下的舊怨與苦澀記憶，終於成為最後一根稻草。我們派出的軍官那種可悲，不，殘酷的行為，已導致我們與保護國之間產生裂痕並關係惡化。"
+ subject_interaction_events.24.a: "我們需要教導軍官如何成為紳士！"
+ opinion_cruel_officers: "殘酷軍官"
+
+ subject_interaction_events.25.title: "紳士與軍官"
+ subject_interaction_events.25.desc: "在軍官離開我國前往某個保護國擔任軍事教官之前，我們試圖銘刻在每位軍官心中的行為準則，或許並非浪費時間。我們收到一則訊息，讚揚並表達對這些軍官行為與嚴格紀律的深刻印象，而我們整個國家都應為成功將軍官培養成紳士而自豪。"
+ subject_interaction_events.25.a: "我們再驕傲也不為過。"
+ opinion_excellent_officers: "優秀軍官"
+
+ subject_interaction_events.26.title: "賣得越多，播得越多，長得越多"
+ subject_interaction_events.26.desc: "我們控制著保護國的貿易，而我們越能出口他們所種植與生產的一切，收成就越大！不知怎的，我們成功提升了其生產品質與數量，也增加了我們的貿易力量。"
+ subject_interaction_events.26.a: "數量與品質，正該如此。"
+ opinion_export_good: "透過出口提高生產"
+
+ subject_interaction_events.27.title: "出口效果惡化"
+ subject_interaction_events.27.desc: "當我們決定接管保護國的貿易力量後，其貿易商與商人遭受重大打擊。他們抱怨這項重商政策帶來的「艱辛」，這些抱怨傳到了保護國統治者耳中，而統治者同意他們的看法，並明確表示我們與他們的關係正因此受損。"
+ subject_interaction_events.27.a: "只要他們只是抱怨，我們就不在乎。"
+ opinion_export_bad: "經濟因轉移貿易而受損"
+
+ subject_interaction_events.29.title: "正統性遭質疑"
+ subject_interaction_events.29.desc: "雖然我們對[ROOT.GetCountry.GetName]王位的掌控可能正在鬆動，正統性也受到質疑，但當一個屬國公開反對我們時，我們的自尊與威望仍受到了打擊。他們聲稱，我們連自己的國家都幾乎管不好，根本無權試圖治理他們。"
+ subject_interaction_events.29.a: "斥責他們公開反對我們。"
+ opinion_low_legitimacy: "低正統性"
+ subject_interaction_events.29.b: "他們也許是對的，而這不應影響他們對我們的看法。"
+
+ subject_interaction_events.30.title: "名為破產的深坑"
+ subject_interaction_events.30.desc: "一位熱衷於享受國家所能提供一切最好事物的統治者、一座由貪婪無能之人管理的國庫、失敗的投資，以及太多貸款……這就是挖出名為破產深坑的方式，而讓我們某個屬國跌入坑中、一路摔到底的，也許是全部原因，也許只是其中之一。我們可以捐一筆錢幫他們部分爬出那個深坑，或無視此事，讓他們自救。"
+ subject_interaction_events.30.a: "介入，送給他們錢和梯子！"
+ opinion_money_sent: "在我們需要時送來金錢"
+ subject_interaction_events.30.b: "他們只能怪自己！"
+ opinion_no_money: "在我們需要時沒有送來金錢"
+
+ subject_interaction_events.32.title: "屬國轉而反對我們"
+ subject_interaction_events.32.desc: "據說，我們的好戰引起了屬國的不滿。傳聞中，他們認為我們不在乎公正統治，只更關心像野蠻人一樣征服。儘管這些話既錯誤又無禮，但放任不管並不明智。"
+ subject_interaction_events.32.a: "拿他們殺雞儆猴。"
+ opinion_tyrant_overlord: "暴君宗主"
+ subject_interaction_events.32.b: "我們相信可以化解此事。"
+
+ subject_interaction_events.33.title: "宗主拿我們殺雞儆猴"
+ subject_interaction_events.33.desc: "由於不滿情緒，我們的宗主認為有必要拿我國作為例子。這是恥辱。"
+ subject_interaction_events.33.a: "以眼還眼……"
+
+ subject_interaction_events.34.title: "忠誠屬國"
+ subject_interaction_events.34.desc: "眾所周知，我們的屬國是世上最滿足也最忠誠的一群。幸好，要在我們與他們之間打入楔子幾乎不可能，因此這也為我國增添了光彩。"
+ subject_interaction_events.34.a: "這一刻將被銘記"
+ subject_interaction_events.34.b: "這應該加以利用"
+
+ subject_interaction_events.35.title: "不忠屬國"
+ subject_interaction_events.35.desc: "我們與屬國之間的敵意已到了極其嚴重的地步，這並不是什麼祕密。在我國宮廷中，廳堂因鮮血而泛紅，因祕密而發黑，仇恨滋長。自然，這必須處理。"
+ subject_interaction_events.35.a: "別管它"
+ subject_interaction_events.35.b: "處理它"
+
+ subject_interaction_events.36.title: "炮灰"
+ subject_interaction_events.36.desc: "看來我國正變得相當空虛，並缺乏一項非常重要的資源：炮灰。不必擔心！雖然我們缺少這項資源，但我們的一個屬國有大量適合戰場的新鮮血肉。若我們強迫他們服役，他們會相當不悅，但世事本就如此。"
+ subject_interaction_events.36.a: "火炮需要人來開火"
+ subject_interaction_events.36.b: "我們不能冒著激怒屬國的風險"
+
+ subject_interaction_events.37.title: "炮灰"
+ subject_interaction_events.37.desc: "看來我們的宗主認為有必要強迫我們的臣民服役，以彌補其愚蠢領導造成的缺口。我們的田野變得更加空曠，而且大概會一直如此。"
+ subject_interaction_events.37.a: "這太過分了！"
+
+ subject_interaction_events.38.title: "額外稅款"
+ subject_interaction_events.38.desc: "若說我們的經濟表現「不佳」，那都是輕描淡寫；事實上，有些人會說這是一場災難。當我們艱難維持收支平衡時，我們的屬國卻過得相當不錯。或許我們對他們課稅還不夠。"
+ subject_interaction_events.38.a: "額外稅款或許有幫助"
+ subject_interaction_events.38.b: "我們不需要他們"
+
+ subject_interaction_events.39.title: "額外稅款"
+ subject_interaction_events.39.desc: "我們的宗主要求我們支付一大筆金錢，以幫助修復他們失敗的經濟。"
+ subject_interaction_events.39.a: "該死的他們！"
+
+ subject_interaction_events.43.title: "屬國厭倦戰爭"
+ subject_interaction_events.43.desc: "看來我們的戰爭已使我們的一個屬國相當不穩定。當然，我們可以讓他們自己處理，但若我們協助他們，將展現善意。"
+ subject_interaction_events.43.a: "送去援助"
+ opinion_benevolent_overlord: "仁慈宗主"
+ subject_interaction_events.43.b: "$common_string_let_them_fend_for_themselves$"
+
+ subject_interaction_events.44.title: "宗主送來援助"
+ subject_interaction_events.44.desc: "我們的宗主認為應送來援助，使我們能在戰後重建國家。"
+ subject_interaction_events.44.a: "致上謝意"
+
+ subject_interaction_events.45.title: "經濟自由"
+ subject_interaction_events.45.desc: "既然我們不再受制於另一個國家的反覆無常，便能推行自己的貿易政策，也不必靠規避貿易規範與走私維生。"
+ subject_interaction_events.45.a: "[ROOT.GetCountry.Custom('common_string_ok')]"
+
+ subject_interaction_events.46.title: "平等地位"
+ subject_interaction_events.46.desc: "來自[target.GetName]的代表已向我們提交一份兩國聯合的提案草案。\n\n他們準備立即與[ROOT.GetCountry.GetLongName]合而為一，條件是我們給予[target.GetCulture.GetName]人及其傳統與我們自己人民同等的保護。"
+ subject_interaction_events.46.a: "就這樣吧。"
+ subject_interaction_events.46.b: "他們終將加入我們，但不是以平等身份！"
+
+ subject_interaction_events.47.title: "腐敗外交官"
+ subject_interaction_events.47.desc: "我們駐[target.GetCapital.GetName]的使節發現，若干重要的[target.GetAdjective]外交官願意立即推動我們兩國聯合——只要價錢合適。"
+ subject_interaction_events.47.a: "這只是生意。"
+ subject_interaction_events.47.b: "我們必須誠實行事，否則就什麼都別做！"
+
+ subject_interaction_events.48.title: "[target.GetAdjectiveWithNoTooltip]宣稱者"
+ subject_interaction_events.48.desc: "在深入研究古老手稿後，[target.GetCapital.GetName]的[target.GetAdjective]紋章官開始宣稱，他們的[target.GetGovernment.GetRulerTitle][new_king.GetName]對[ROOT.GetCountry.GetAdjective]王位擁有遙遠但明確的宣稱。\n\n他們說，只要我們同意擁立[new_king.GetHimHer]，我們的國家便終於能夠近乎合而為一。"
+ subject_interaction_events.48.a: "問題解決了！"
+ subject_interaction_events.48.b: "這項證據非常站不住腳……"

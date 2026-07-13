@@ -1,0 +1,72 @@
+l_simp_chinese:
+
+  #Events for the disaster
+  court_and_country.1.title: "宮廷與外省之衝突"
+  court_and_country.1.desc: "[ROOT.GetCountry.GetAdjective]國家逐步侵入傳統上由地方貴族、地方宮廷或其他利益團體支配的領域，已使各地對[ROOT.GetCountry.GetGovernment.GetRulerTitle]以及[target_location.GetName]的[ROOT.GetCountry.GetGovernment.GetCourtTitle]產生普遍怨恨。\n\n這些團體如今已團結起來並結成同盟，以對抗中央權威。今日，我們收到了若干針對最新稅令的異議，理由包括古老權利遭侵犯，以及這些暴發戶代表行為不端。顯然，我們若繼續試圖強化自身權力，他們便會抓住每一個機會從中阻撓。"
+  court_and_country.1.a: "他們將向中央權威屈膝！"
+  court_and_country.1.b: "試著與這些投石黨談判。"
+
+  court_and_country.2.title: "宮廷與外省敵對狀態的終結"
+  court_and_country.2.desc: "各省對權威進行普遍阻撓的時期終於告一段落。我們處理這場危機的方式，將在可預見的未來形塑[target_location.GetName]地方權力結構與政府互動的模式。"
+  court_and_country.2.a: "國家勝利了！"
+  court_and_country.2.b: "或許我們現在終於能攜手合作。"
+  court_and_country.2.c: "[target_location.GetNameWithNoTooltip]的[ROOT.GetCountry.GetGovernment.GetCourtTitle]元氣大傷。"
+  legitimacy_yields_more_crown_power_tt: "由於我們在[ShowDisasterName('court_and_country')][disaster|e]中取得成功，[legitimacy|e]現在將賦予更多[crown_power|e]"
+
+  court_and_country.3.title: "[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('nobles_estate')]的權力"
+  court_and_country.3.desc: "當我們尋求鞏固內部權力時，已逐漸明白我們必須制衡[ROOT.GetCountry.GetGovernment.GetEstateName('nobles_estate')]的影響力。專制主義時代正在形成一場重大轉變：從[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('nobles_estate')]握有重大地方權威的封建權力結構，邁向我們所夢想的、由[target_character.GetName]無可爭議地管轄的集中而強大的制度。"
+  court_and_country.3.a: "撤銷他們的特權！"
+  court_and_country.3.b: "在地方層級介入。"
+  court_and_country.3.c: "剝奪他們在[ROOT.GetCountry.GetGovernment.GetParliament.GetName]中的席位。"
+
+  court_and_country.4.title: "[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('burghers_estate')]的權力"
+  court_and_country.4.desc: "多年來，我們的[ROOT.GetCountry.GetGovernment.GetEstateName('burghers_estate')]階層在政治事務中取得了大量影響力。透過商業與對地方政治的資助，他們時常挑戰我們的權威。為了鞏固我們在權力階序頂端的地位，我們將設法在我們的旗幟之下確立他們應有的位置。"
+
+  court_and_country.5.title: "[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('clergy_estate')]的權力"
+  court_and_country.5.desc: "在我們各社群中掌握神聖精神以及信仰事務的權力，賦予了[ROOT.GetCountry.GetGovernment.GetEstateName('clergy_estate')]巨大的影響力。他們的話語經常與[target_character.GetName]分庭抗禮，因為他們曾持有我們土地中相當可觀的一部分。透過沒收教士資產，並在宗教事務中強制確立國家的至高地位，我們旨在控制他們的權力。"
+
+  court_and_country.6.title: "[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('peasants_estate')]的權力"
+  court_and_country.6.desc: "我們偉大社會的支柱正是[ROOT.GetCountry.GetGovernment.GetEstateName('peasants_estate')]。這些龐大的下層人口是我們經濟的核心，但他們的地方忠誠與傳統權利有時會與中央集權發生衝突。為了確保我們的統治，並對人民建立堅定掌控，主動採取措施遏制他們的權力乃是明智之舉。"
+
+  court_and_country.7.title: "省份拒絕繳稅"
+  court_and_country.7.desc: "[target_province.GetName]的緊張局勢正在升高，當地領袖堅決拒絕遵從[target_character.GetName]批准的一系列近期法令與稅賦。他們沒有安靜服從，反而聯合起來，向[target_capital.GetName]提交正式申訴，要求立即撤換駐紮於該省的數名稅吏。他們主張，這些[ROOT.GetCountry.GetGovernment.GetAdjective]代理人已逾越職權，濫用權威，並無視該地長久以來受到尊重的古老權利與特權。\n\n怨訴既多且嚴重：對本已不堪重負的農民徵收不當賦稅、無合法理由突然扣押貨物，以及近乎公然無視地方習俗。據他們所言，這些行為不僅播下怨恨，也威脅到整個省份中秩序與忠誠之間的微妙平衡。人民視此為對自身尊嚴的冒犯；若不迅速採取行動，異議的低語或將壯大成更難平息的力量。"
+  court_and_country.7.a: "逮捕他們的領袖！"
+  court_and_country.7.b: "我們可以談判。"
+  gain_modifier_loc_key: "[province|e]中的每個[location|e]都將獲得"
+  every_pop_in_target_province_loses_20_satisfaction_tt: "我們在該[province|e]的[pops|e]將失去[ShowNamedValue('pop_satisfaction_severe_penalty')|+=2%][pop_satisfaction|e]"
+  every_location_in_target_province_gets_cnc_local_authority_asserted_tt: "$gain_modifier_loc_key$[ShowModifier('cnc_local_authority_asserted')][modifier|e]"
+  every_pop_in_target_province_gains_20_satisfaction_tt: "我們在該[province|e]的[pops|e]將獲得[ShowNamedValue('pop_satisfaction_severe_bonus')|+=2%][pop_satisfaction|e]"
+  every_location_in_target_province_gets_cnc_refused_to_pay_taxes_tt: "$gain_modifier_loc_key$[ShowModifier('cnc_refused_to_pay_taxes')][modifier|e]"
+
+  court_and_country.8.title: "醞釀中的異議"
+  court_and_country.8.desc: "[target_character.GetName]試圖統一[ROOT.GetCountry.GetLongName]各省的法律傳統、稅賦與義務，已促使[target_rebel.GetName]的領袖號召同胞拿起武器。他們宣稱，我們違背了當初他們的土地落入我們控制之下時，我們曾誓言維護的規則；他們別無選擇，只能再度升起叛亂旗幟。\n\n我們的地方代表懇求我們，在一切都太遲之前，從[target_location.GetName]的權力中心出面達成協議。若我們保證維護他們的一部分自治，他們或許仍可被說服接受廢除其他自治。"
+  court_and_country.8.a: "這場叛亂必須被粉碎！"
+  court_and_country.8.b: "我們會買下他們的忠誠。"
+  rebel_pops_in_target_province_lose_10_satisfaction_tt: "在[target_province.GetNameWithNoTooltip]支持[rebellion|e]的[pops|e]將失去[ShowNamedValue('pop_satisfaction_mild_penalty')|+=2%][pop_satisfaction|e]"
+  non_rebel_pops_in_target_province_lose_5_satisfaction_tt: "在[target_province.GetNameWithNoTooltip]#Y 不#!支持[rebellion|e]的[pops|e]將失去[ShowNamedValue('pop_satisfaction_weak_penalty')|+=2%][pop_satisfaction|e]"
+  rebel_pops_in_target_province_gain_10_satisfaction_tt: "在[target_province.GetNameWithNoTooltip]支持[rebellion|e]的[pops|e]將獲得[ShowNamedValue('pop_satisfaction_mild_bonus')|+=2%][pop_satisfaction|e]"
+  non_rebel_pops_in_target_province_gain_5_satisfaction_tt: "在[target_province.GetNameWithNoTooltip]#Y 不#!支持[rebellion|e]的[pops|e]將獲得[ShowNamedValue('pop_satisfaction_weak_bonus')|+=2%][pop_satisfaction|e]"
+
+  court_and_country.9.title: "好爭的[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('nobles_estate')]"
+  court_and_country.9.desc: "[ROOT.GetCountry.GetGovernment.GetEstateName('nobles_estate')]中有些成員已開始怨恨新的貴族理想。他們在[target_location.GetName]失去了影響力與權力，但憑藉名下廣闊莊園與雄厚財力，仍掌握可觀的地方影響力。他們懷念自己曾是國家支柱的時代，而非[ROOT.GetCountry.GetGovernment.GetRulerTitle]及[target_character.GetHerHis]大臣的僕從；因此變得愈發好爭而頑固。\n\n看來，其中一個這樣的團體一直在籌備陰謀，企圖恢復舊有特權，並將傳統與尊嚴帶回[target_location.GetNameWithNoTooltip]的[ROOT.GetCountry.GetGovernment.GetCourtTitle]。他們以鄉間領地為基地集結了一支軍隊，準備將自身意志強加於我們。"
+  court_and_country.9.a: "我們將手持刀劍迎戰他們。"
+  court_and_country.9.b: "讓我們看看能否滿足他們的要求。"
+  every_supporter_pop_loses_5_satisfaction_tt: "支持[rebellion|e]的[pops|e]將失去[ShowNamedValue('pop_satisfaction_weak_penalty')|+=2%][pop_satisfaction|e]"
+
+  court_and_country.10.title: "[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('burghers_estate')]同盟抵抗"
+  court_and_country.10.desc: "近年來，由[target_rebel_pop.GetName]組成的城市與行會一直在日益加重的稅賦與義務下掙扎，儘管不滿與日俱增，仍然服從。然而，在[target_location.GetName]，局勢已達沸點：當地領袖號召之下，主要的[ROOT.GetCountry.GetGovernment.GetEstateName('burghers_estate')]如今公開違抗[ROOT.GetCountry.GetGovernment.GetAdjective]命令。\n\n他們由強大的行會與共同的不滿團結在一起，要求自行徵稅、執行自身法律，並以前所未有的自治程度進行治理。在理念驅使下，他們已強行將我們的官員逐出該省。隨著動盪在全境醞釀，我們面臨關鍵抉擇：要麼屈從於他們的要求，要麼施加我們的意志以恢復控制。"
+  court_and_country.10.a: "讓我們粉碎這些惹事者！"
+  court_and_country.10.b: "我們可以作出一些例外。"
+  every_pop_in_location_loses_5_satisfaction_tt: "[target_location.GetName]的[pops|e]將失去[ShowNamedValue('pop_satisfaction_weak_penalty')|+=2%][pop_satisfaction|e]"
+  every_pop_in_target_location_10_satisfaction_tt: "[target_location.GetName]的[pops|e]將獲得[ShowNamedValue('pop_satisfaction_mild_bonus')|+=2%][pop_satisfaction|e]"
+
+  court_and_country.11.title: "不忠的軍官"
+  court_and_country.11.desc: "戰爭時期，軍隊提供了獨特的晉升機會。然而，在這個內部紛爭時期，我們必須記住，許多有能力的士兵仍與[ROOT.GetCountry.GetFlavorRank]內心懷不滿且不忠的派系有所牽連。\n\n接近[ROOT.GetCountry.GetGovernment.GetRulerTitle]的大臣們如今質疑我軍的忠誠，敦促我們清洗所有與反對我們的團體及家族有關的人員。"
+  court_and_country.11.a: "我們需要忠誠的士兵。"
+  court_and_country.11.b: "這場清洗不是我們負擔得起的。"
+
+  court_and_country.12.title: "[ROOT.GetCountry.GetGovernment.GetRulerTitle]的支持者"
+  court_and_country.12.desc: "並非每個人都會因[ROOT.GetCountry.GetFlavorRank]內的新秩序而有所損失！有些人如今可以在軍中任職，或在國家眾多新機構之一擔任官吏，藉此獲得有薪職涯。也有人出於榮譽感與傳統，依然效忠[ROOT.GetCountry.GetGovernment.GetRulerTitle]。儘管在我國，對[target_location.GetName]的[ROOT.GetCountry.GetGovernment.GetCourtTitle]日益鐵腕統治的抵抗十分廣泛，我們最近仍見到支持者激增。"
+  court_and_country.12.a: "這是強化我們隊伍的絕佳機會！"
+  court_and_country.12.b: "他們的忠誠將獲得獎賞。"
+  court_and_country.12.c: "尊重舊有制度來行使權力。"

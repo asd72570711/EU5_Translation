@@ -1,0 +1,45 @@
+l_simp_chinese:
+ crisis_of_the_sayfawa_dynasty.1.title: "$crisis_of_the_sayfawa_dynasty$"
+ crisis_of_the_sayfawa_dynasty.1.desc: "可怕的時刻已降臨我們頭上！天空被赤紅雲霞撕裂，旱災與饑荒也已籠罩大地，而我們正準備迎向那無可避免的災厄。我們的敵人眾多，但求生的決心必將支撐我們。我們必須以勇氣武裝自己，保護我們的家人與人民免受這場新災難摧殘。\n\n然而，我們宮廷中的許多顧問質疑我們這番熱切的行動號召，反而支持以和平之名，放棄我們手中某些毫無價值的土地……"
+ crisis_of_the_sayfawa_dynasty.1.a: "我們是戰士，我們將奮戰！"
+ crisis_of_the_sayfawa_dynasty.1.b: "為幾片殘土而亡並不值得……"
+
+ crisis_of_the_sayfawa_dynasty.2.title: "覬覦者崛起"
+ crisis_of_the_sayfawa_dynasty.2.desc: "確實，[ROOT.GetCountry.GetGovernment.GetAdjective]家族對貪婪與權力慾從不陌生。令人遺憾的是，我們也不例外；我們統治者的一名家族成員[pretender_character_scope.GetName]，已將[pretender_character_scope.GetHerHis]的許多支持者團結在一起，推動其登上王位。無論我們採取何種行動，在如此艱難的時刻，我們都不能在人民面前顯得軟弱。我們最信任的將軍與顧問建議我們拋棄這些毒蛇，剝奪他們的頭銜，免得他們將我們整個吞下。\n\n雖然這或許不假，但我們之中也有許多人認為，這位新候選人或許能為王冠帶來更多穩定與正統性……"
+ crisis_of_the_sayfawa_dynasty.2.a: "受詛咒的毒蛇，你們全都是！"
+ crisis_of_the_sayfawa_dynasty.2.b: "是時候離開了，[target_character.GetNameWithNoTooltip]。"
+ rival_branch_sayfawa: "賽法瓦"
+ csd_every_pop_satisfaction_tt: "[target_province.GetName]的所有人口：\n失去[ShowNamedValue('pop_satisfaction_severe_penalty')|+=2%][pop_satisfaction|e]\n加入[rival_branch_sayfawa_scope.GetName]"
+
+ crisis_of_the_sayfawa_dynasty.3.title: "家族內鬥"
+ crisis_of_the_sayfawa_dynasty.3.desc: "[ROOT.GetCountry.GetGovernment.GetEstateName('nobles_estate')]與具有[ROOT.GetCountry.GetGovernment.GetAdjective]血統者，為了零碎權力而爭吵鬥毆，並非罕見之事。尤其在如今動盪的時代，由貴胄出身的王子舉兵反抗兄弟，幾乎已成為一項傳統。這種對[ROOT.GetCountry.GetGovernment.GetAdjective]禮法的公然蔑視，使我們在世人眼中顯得粗鄙而衰敗。\n\n若我們無法約束家族、使其循規蹈矩，日後必將承受後果。我們的[ROOT.GetCountry.GetGovernment.GetAdjective]家族必須重拾昔日光輝，擺脫那些微不足道的怨懟與渴求權力的蠢材。"
+ crisis_of_the_sayfawa_dynasty.3.a: "我們必須讓他們明白自己的位置。"
+ crisis_of_the_sayfawa_dynasty.3.b: "他們終究是家人……"
+
+ crisis_of_the_sayfawa_dynasty.4.title: "團結帶來力量"
+ crisis_of_the_sayfawa_dynasty.4.desc: "過去幾個世紀以來，[ROOT.GetCountry.GetReligion.GetName]已在我們的地區扎根。藉由它，我們受教於神聖之道，並逐漸懂得擁抱真信仰所帶來的美好感受。隨著我們在當前的混亂時期中越陷越深，許多人主張我們必須從信仰中尋求力量，因為那將成為支撐我們升起與得救的支柱。"
+ crisis_of_the_sayfawa_dynasty.4.a: "我們的信仰會引領我們渡過難關。"
+ crisis_of_the_sayfawa_dynasty.4.b: "我們服務的是人民，而不是[ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('clergy_estate')]。"
+ crisis_of_the_sayfawa_dynasty.4.c: "我們拿不出這筆錢……"
+
+ crisis_of_the_sayfawa_dynasty.5.title: "戰士崛起"
+ crisis_of_the_sayfawa_dynasty.5.desc: "艱困時世會造就堅強之人，這是真的嗎？無論如何，一名名為[kbo_strong_general_scope.GetName]的年輕可造戰士已挺身而出。[kbo_strong_general_scope.GetSheHe|U]痛斥篡位者，並希望以[kbo_strong_general_scope.GetHerHis]長矛刺穿我們敵人的身軀。面對來自我們邊境內的一切邪惡、那些想吞噬我們領土的人，以及敵人的惡毒行徑，我們將只在[kbo_strong_general_scope.GetHerHim]身後集結，並給予[kbo_strong_general_scope.GetHerHim]機會去……"
+ crisis_of_the_sayfawa_dynasty.5.a: "……率領我們的軍隊邁向光榮而血腥的勝利！"
+ crisis_of_the_sayfawa_dynasty.5.b: "……作為我們旗下的士兵撕裂敵人、殺出血路。"
+
+ crisis_of_the_sayfawa_dynasty.6.title: "[ROOT.GetCountry.GetGovernment.GetRuler.GetDynasty.GetName]危機的終結"
+ crisis_of_the_sayfawa_dynasty.6.a.desc: "儘管敵人竭盡全力，我們並未屈服於他們奪取我們土地的卑劣企圖。我們的人民經受了時間的考驗，並以勝利者之姿走出困境。由於我們終於擺脫了那些意圖傷害我國人民之輩，我們的領土各地都在舉行慶祝。當我們步入繁榮與安寧的新時代，願陽光照耀我們。願那些在我國衰弱時趁火打劫之人，在我們重新站穩腳步時顫抖。"
+ crisis_of_the_sayfawa_dynasty.6.b.desc: "政治內鬥與[ShowCultureName('bilala_culture')]襲擊所帶來的持續煩擾，已證明超出我們所能承受的範圍。$bilala_culture$人已深入我們的領土，甚至抵達我們位於[ShowLocationName('njimi')]的首都。我們已無法再聲稱對那片地區擁有權威，被迫遷移。許多人或許會因我們為了人民的延續而犧牲土地，稱我們軟弱。然而，他們並不知道，我們將等待時機，謀劃重返權力。這並非挫敗，只是一次戰略行動；我們將集結軍隊，準備奪回失去的領土。"
+ crisis_of_the_sayfawa_dynasty.6.a: "我們勝利了！"
+ crisis_of_the_sayfawa_dynasty.6.b: "我們會堅持下去，並在時機成熟時重拾力量……"
+
+ crisis_of_the_sayfawa_dynasty.7.title: "$bilala_culture$襲擊"
+ crisis_of_the_sayfawa_dynasty.7.desc: "[ShowCultureName('bilala_culture')]人長久以來一直是我們的眼中釘。他們對我國發動的持續襲擊日益大膽，而他們在我們人民之中的存在也開始達到令人憂慮的程度。他們最近入侵[target_location.GetName]，更鼓勵了同族其他人進一步定居到我們的邊境之內。若這種情況持續下去，他們將成為無法遏止的害蟲。"
+ crisis_of_the_sayfawa_dynasty.7.a: "[ROOT.GetCountry.Custom('common_string_negative')]"
+ crisis_of_the_sayfawa_dynasty.7.b: "付錢讓他們離開。"
+
+ #Tooltips
+ gave_autonomy_to_the_bulala_and_sao_tt: "給予#Y $bilala_culture$#!與#Y $sao_culture$#!人自治權"
+ kbo_join_tt: "[kbo_strong_general_scope.GetNameWithNoTooltip]將率領我們的軍隊，確保敵人滅亡"
+ sao_and_bilala_reduced_control_tt: "每個擁有[ShowCultureName('bilala_culture')]或[ShowCultureName('sao_culture')][pops|e]的[location|e]都會失去[ShowNamedValue('control_severe_penalty')|+=2%][control|e]"
+ had_csd_disaster_variable_tt: "此前未發生過此災難"
