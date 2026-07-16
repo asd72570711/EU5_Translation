@@ -1,5 +1,0 @@
-l_simp_chinese:
- JOMINI_MSGRDK_SIGNIN_FAILED_TITLE: "發生問題"
- JOMINI_MSGRDK_SIGNIN_FAILED_TEXT: "無法使用你的Microsoft帳戶登入。部分遊戲功能可能無法使用。"
- JOMINI_MSGRDK_NO_PERMISSION_TITLE: "帳戶權限"
- JOMINI_MSGRDK_NO_UGC_TEXT: "你沒有存取使用者生成內容的權限。模組將停用。"

@@ -1,7 +1,0 @@
-l_simp_chinese:
- CREDITS_CLOSE: "關閉"
- CREDITS_PAUSE: "暫停"
- CREDITS_CONTINUE: "繼續"
- CREDITS_SLOWER: "減緩"
- CREDITS_FASTER: "加快"
- CREDITS_BACK: "返回"

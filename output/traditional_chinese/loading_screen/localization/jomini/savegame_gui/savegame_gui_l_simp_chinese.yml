@@ -1,7 +1,0 @@
-l_simp_chinese:
- DELETE_PLAYTHROUGH_CONFIRMATION_DESC: "#T $SAVE_NAME$#!遊玩紀錄及其中的存檔將被刪除。"
- DELETE_SAVE_CONFIRMATION_DESC: "#T $SAVE_NAME$#!將被刪除。"
- FRONTEND_SAVE_EXIT_TEXT: "將遊戲存為自動存檔#high $SAVE_NAME$#!"
- FRONTEND_END_GAME_TEXT: "若身為主機的你離開遊戲，多人遊戲將會結束，其他玩家也無法繼續一起遊玩。"
- FRONTEND_LEAVE_GAME_TEXT: "若你離開，多人遊戲將會在沒有你的情況下繼續"
- OVERWRITE_SAVE_CONFIRMATION_DESC: "#T $SAVE_NAME$#!將被覆寫。"
