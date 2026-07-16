@@ -2,6 +2,7 @@ import argparse
 import json
 import re
 import sys
+import unicodedata
 from collections import Counter
 from pathlib import Path
 
@@ -191,6 +192,57 @@ def excerpt(text: str, needle: str = "", radius: int = 120) -> str:
     return prefix + text[start:end] + suffix
 
 
+def latin_words(value: str) -> list[str]:
+    """Extract readable Latin-script words while preserving diacritics."""
+    words: list[str] = []
+    current: list[str] = []
+
+    def is_latin(char: str) -> bool:
+        name = unicodedata.name(char, "")
+        return char.isascii() or "LATIN" in name
+
+    def flush() -> None:
+        if current:
+            words.append("".join(current).strip(".-"))
+            current.clear()
+
+    for char in mask_protected(value):
+        if is_latin(char) and char.isalpha():
+            current.append(char)
+        elif unicodedata.combining(char) and current:
+            current.append(char)
+        elif char in "'’.-" and current:
+            current.append(char)
+        else:
+            flush()
+    flush()
+    return [word for word in words if word]
+
+
+def untranslated_issues(
+    source: dict[str, str],
+    output: dict[str, str],
+) -> list[dict[str, str]]:
+    issues: list[dict[str, str]] = []
+    for key, output_value in output.items():
+        words = latin_words(unescape(output_value))
+        if not words:
+            continue
+        text = " ".join(dict.fromkeys(words))
+        first = words[0]
+        issues.append(
+            {
+                "type": "untranslated_text",
+                "key": key,
+                "source": excerpt(unescape(source.get(key, "")), first),
+                "output": excerpt(unescape(output_value), first),
+                "text": text,
+                "reason": "output 中仍保留疑似未翻譯英文",
+            }
+        )
+    return issues
+
+
 def punctuation_issues(
     key: str,
     source_value: str,
@@ -359,6 +411,7 @@ def run(source_path: Path, output_path: Path, glossary: Path) -> dict:
                 )
 
     issues.extend(glossary_mismatches(source, output, glossary))
+    issues.extend(untranslated_issues(source, output))
     counts: dict[str, int] = {}
     for issue in issues:
         counts[issue["type"]] = counts.get(issue["type"], 0) + 1
@@ -380,6 +433,16 @@ def output_relative_path(source_relative: Path) -> Path:
     if name.endswith("_l_english.yml"):
         name = name[: -len("_l_english.yml")] + "_l_simp_chinese.yml"
     return source_relative.with_name(name)
+
+
+def source_relative_path(output_relative: Path) -> Path:
+    name = output_relative.name
+    if name.endswith("_l_simp_chinese.yml"):
+        name = name[: -len("_l_simp_chinese.yml")] + "_l_english.yml"
+    parts = list(output_relative.parts)
+    parts[-1] = name
+    parts = ["english" if part == "simp_chinese" else part for part in parts]
+    return Path(*parts)
 
 
 def run_recursive(
@@ -449,6 +512,106 @@ def run_recursive(
     }
 
 
+def run_existing_outputs(
+    source_root: Path,
+    output_root: Path,
+    glossary: Path,
+    filename_pattern: re.Pattern[str] | None = None,
+) -> dict:
+    """Check only output files that already exist, without reporting untranslated source files."""
+    output_files = [
+        path
+        for path in sorted(output_root.rglob("*.yml"))
+        if filename_pattern is None or filename_pattern.search(path.name)
+    ]
+    reports: list[dict] = []
+    issues: list[dict] = []
+    for output_path in output_files:
+        relative = output_path.relative_to(output_root)
+        source_path = source_root / source_relative_path(relative)
+        if not source_path.exists():
+            issues.append(
+                {
+                    "type": "missing_source",
+                    "output_file": str(output_path),
+                    "expected_source": str(source_path),
+                }
+            )
+            continue
+        report = run(source_path, output_path, glossary)
+        reports.append(report)
+        issues.extend(report["issues"])
+
+    counts: dict[str, int] = {}
+    for issue in issues:
+        counts[issue["type"]] = counts.get(issue["type"], 0) + 1
+    return {
+        "source_directory": str(source_root),
+        "output_directory": str(output_root),
+        "summary": {
+            "source_files": 0,
+            "output_files": len(output_files),
+            "files_checked": len(reports),
+            "issues": len(issues),
+            "by_type": counts,
+        },
+        "files": reports,
+        "directory_issues": [
+            issue for issue in issues if issue.get("type") == "missing_source"
+        ],
+    }
+
+
+def run_untranslated_only(
+    source_root: Path,
+    output_root: Path,
+    filename_pattern: re.Pattern[str] | None = None,
+) -> dict:
+    """Fast scan for readable Latin text in existing output files only."""
+    output_files = [
+        path
+        for path in sorted(output_root.rglob("*.yml"))
+        if filename_pattern is None or filename_pattern.search(path.name)
+    ]
+    reports: list[dict] = []
+    issues: list[dict] = []
+    for output_path in output_files:
+        relative = output_path.relative_to(output_root)
+        source_path = source_root / source_relative_path(relative)
+        source = parse_localization(source_path) if source_path.exists() else {}
+        output = parse_localization(output_path)
+        file_issues = untranslated_issues(source, output)
+        reports.append(
+            {
+                "source_file": str(source_path),
+                "output_file": str(output_path),
+                "summary": {
+                    "output_keys": len(output),
+                    "issues": len(file_issues),
+                    "by_type": {"untranslated_text": len(file_issues)}
+                    if file_issues
+                    else {},
+                },
+                "issues": file_issues,
+            }
+        )
+        issues.extend(file_issues)
+
+    return {
+        "source_directory": str(source_root),
+        "output_directory": str(output_root),
+        "summary": {
+            "source_files": 0,
+            "output_files": len(output_files),
+            "files_checked": len(reports),
+            "issues": len(issues),
+            "by_type": {"untranslated_text": len(issues)} if issues else {},
+        },
+        "files": reports,
+        "directory_issues": [],
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--source", required=True, type=Path)
@@ -459,11 +622,26 @@ def main() -> None:
         "--filename-regex",
         help="Only check files whose basename matches this regular expression",
     )
+    parser.add_argument(
+        "--output-only",
+        action="store_true",
+        help="Only check existing output files; do not report missing output files",
+    )
+    parser.add_argument(
+        "--untranslated-only",
+        action="store_true",
+        help="Only scan output human-readable text for untranslated Latin words",
+    )
     args = parser.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
     if args.source.is_dir():
         filename_pattern = re.compile(args.filename_regex, re.IGNORECASE) if args.filename_regex else None
-        report = run_recursive(args.source, args.output, args.glossary, filename_pattern)
+        if args.untranslated_only:
+            report = run_untranslated_only(args.source, args.output, filename_pattern)
+        elif args.output_only:
+            report = run_existing_outputs(args.source, args.output, args.glossary, filename_pattern)
+        else:
+            report = run_recursive(args.source, args.output, args.glossary, filename_pattern)
     else:
         report = run(args.source, args.output, args.glossary)
     args.report.parent.mkdir(parents=True, exist_ok=True)
