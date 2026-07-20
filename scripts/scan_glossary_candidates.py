@@ -17,13 +17,25 @@ ENTRY_RE = re.compile(r'^\s*([^#\s][^:]*):\s*"(.*)"\s*(?:#.*)?$')
 PROTECTED_RE = re.compile(
     r"\$[^$]+\$|\[[^\]]+\]|#\w+|#!|\\n|@[A-Za-z0-9_]+!|<[^>]+>"
 )
+# Keep protected fragments out of candidate text without turning them into
+# ordinary whitespace that could join words across a placeholder or \n.
+PROTECTED_SEPARATOR = "\uE000"
 WORD_RE = re.compile(r"[A-Za-z][A-Za-z0-9'._-]*")
 TITLE_CASE_RE = re.compile(
     rf"\b[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+"
     rf"(?:\s+(?:of|de|del|da|di|du|von|van|the|and|la|le|des|"
     rf"d[{APOSTROPHE}][{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+|"
+    rf"l[{APOSTROPHE}][{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+|"
     rf"d[{APOSTROPHE}]|"
     r"I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII|"
+    rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+))*\b"
+)
+ENTITY_HEAD_RE = re.compile(
+    rf"\b(?:Board|Corps|Order|Company|League|Treaty|Academy|University|"
+    rf"Institute|Council|House|Dynasty|Kingdom|Republic|Empire|Army|Navy)"
+    rf"(?:\s+(?:of|de|del|da|di|du|von|van|the|la|le|des|"
+    rf"d[{APOSTROPHE}][{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+|"
+    rf"l[{APOSTROPHE}][{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+|"
     rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+))*\b"
 )
 
@@ -175,16 +187,19 @@ def glossary_entries(glossary_path: Path) -> dict[str, str]:
 def candidates(entries: list[tuple[str, str]]) -> dict[str, set[str]]:
     found: dict[str, set[str]] = {}
     for key, value in entries:
-        clean = PROTECTED_RE.sub(lambda match: " " * len(match.group(0)), value)
-        for match in TITLE_CASE_RE.finditer(clean):
-            term = normalize_candidate(match.group(0))
-            if not term:
-                continue
-            if is_sentence_initial_single_word(clean, match.start(), term):
-                continue
-            if is_sentence_fragment(term):
-                continue
-            found.setdefault(term, set()).add(key)
+        clean = PROTECTED_RE.sub(
+            lambda match: PROTECTED_SEPARATOR * len(match.group(0)), value
+        )
+        for pattern in (TITLE_CASE_RE, ENTITY_HEAD_RE):
+            for match in pattern.finditer(clean):
+                term = normalize_candidate(match.group(0))
+                if not term:
+                    continue
+                if is_sentence_initial_single_word(clean, match.start(), term):
+                    continue
+                if is_sentence_fragment(term):
+                    continue
+                found.setdefault(term, set()).add(key)
     return found
 
 

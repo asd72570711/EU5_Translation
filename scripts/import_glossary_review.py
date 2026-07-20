@@ -312,7 +312,8 @@ def apply_import(
     lines = glossary_text.splitlines()
     if fixed_items:
         fixed_lines: list[str] = []
-        for term, translation, note in sorted(fixed_items, key=lambda item: item[0].casefold()):
+        # Preserve review order; glossary sorting is an explicit separate operation.
+        for term, translation, note in fixed_items:
             line = f"  {term}: {yaml_quote(translation)}"
             if note:
                 line += f"  # {yaml_inline_comment(note)}"

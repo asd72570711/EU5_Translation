@@ -167,6 +167,14 @@ def term_in_text(term: str, text: str) -> bool:
     return re.search(r"(?<![A-Za-z])" + re.escape(term) + r"(?![A-Za-z])", text) is not None
 
 
+def term_spans(term: str, text: str) -> list[tuple[int, int]]:
+    """Return actual term occurrences so longest-match checks use overlap."""
+    if " " in term:
+        return [match.span() for match in re.finditer(re.escape(term), text)]
+    pattern = r"(?<![A-Za-z])" + re.escape(term) + r"(?![A-Za-z])"
+    return [match.span() for match in re.finditer(pattern, text)]
+
+
 def ordered_text_present(needle: str, haystack: str) -> bool:
     characters = [char for char in needle if not char.isspace()]
     position = 0
@@ -309,11 +317,15 @@ def glossary_mismatches(
             translated_plain = mask_protected(translated)
             if not expected or not term_in_text(term, source_plain):
                 continue
+            term_occurrences = term_spans(term, source_plain)
             longer_term_used = any(
-                longer != term
-                and len(longer) > len(term)
-                and term_in_text(longer, source_plain)
+                any(
+                    start < longer_end and longer_start < end
+                    for start, end in term_occurrences
+                    for longer_start, longer_end in term_spans(longer, source_plain)
+                )
                 for longer in fixed
+                if longer != term and len(longer) > len(term)
             )
             if longer_term_used or term in contextual:
                 continue
