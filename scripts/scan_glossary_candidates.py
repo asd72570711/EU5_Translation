@@ -38,6 +38,14 @@ ENTITY_HEAD_RE = re.compile(
     rf"l[{APOSTROPHE}][{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+|"
     rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+))*\b"
 )
+POSSESSIVE_NAME_RE = re.compile(
+    rf"\b([{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+"
+    rf"(?:\s+[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+){{0,3}})[{APOSTROPHE}]s\b"
+)
+CONNECTOR_NAME_RE = re.compile(
+    rf"\b(?:of|de|del|da|di|du|von|van)\s+"
+    rf"([{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+)\b"
+)
 
 IGNORE_TERMS = {
     "A",
@@ -200,6 +208,25 @@ def candidates(entries: list[tuple[str, str]]) -> dict[str, set[str]]:
                 if is_sentence_fragment(term):
                     continue
                 found.setdefault(term, set()).add(key)
+                for embedded in embedded_candidates(match.group(0)):
+                    embedded_term = normalize_candidate(embedded)
+                    if embedded_term and not is_sentence_initial_single_word(
+                        clean, match.start(), embedded_term
+                    ):
+                        found.setdefault(embedded_term, set()).add(key)
+    return found
+
+
+def embedded_candidates(term: str) -> set[str]:
+    """Return likely named subterms hidden inside a larger title or phrase."""
+    found: set[str] = set()
+    for match in POSSESSIVE_NAME_RE.finditer(term):
+        found.add(match.group(1))
+    for match in CONNECTOR_NAME_RE.finditer(term):
+        found.add(match.group(1))
+    for word in re.findall(rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+", term):
+        if any(ord(char) > 127 for char in word):
+            found.add(word)
     return found
 
 
