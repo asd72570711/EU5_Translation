@@ -46,6 +46,13 @@ CONNECTOR_NAME_RE = re.compile(
     rf"\b(?:of|de|del|da|di|du|von|van)\s+"
     rf"([{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+)\b"
 )
+CONNECTOR_PHRASE_RE = re.compile(
+    rf"\b([{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+"
+    rf"(?:\s+[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+){{0,3}}"
+    rf"\s+(?:of|de|del|da|di|du|von|van)\s+"
+    rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+"
+    rf"(?:\s+[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+){{0,3}})\b"
+)
 
 IGNORE_TERMS = {
     "A",
@@ -178,7 +185,7 @@ def glossary_entries(glossary_path: Path) -> dict[str, str]:
             current_term = None
             continue
 
-        block = re.match(r"^  (?! )([^:#][^:]+):\s*$", line)
+        block = re.match(r"^  (?! )([^:#][^:]+):(?:\s+#.*)?\s*$", line)
         if block:
             current_term = block.group(1).strip()
             continue
@@ -189,6 +196,33 @@ def glossary_entries(glossary_path: Path) -> dict[str, str]:
                 entries[current_term] = default.group(1)
 
     flush_alias()
+    return entries
+
+
+def reference_entries(glossary_path: Path) -> dict[str, str]:
+    """Read reference-only terms without treating them as enforced terms."""
+    entries: dict[str, str] = {}
+    in_reference_terms = False
+    current_term: str | None = None
+
+    for line in read_text(glossary_path).splitlines():
+        if line == "reference_terms:":
+            in_reference_terms = True
+            current_term = None
+            continue
+        if in_reference_terms and line and not line.startswith(" "):
+            break
+        if not in_reference_terms:
+            continue
+
+        term = re.match(r"^  (?! )([^:#][^:]+):(?:\s+#.*)?$", line)
+        if term:
+            current_term = term.group(1).strip()
+            continue
+        suggestion = re.match(r'^\s{6,8}-\s*"([^"]*)"', line)
+        if suggestion and current_term and current_term not in entries:
+            entries[current_term] = suggestion.group(1)
+
     return entries
 
 
@@ -223,6 +257,8 @@ def embedded_candidates(term: str) -> set[str]:
     for match in POSSESSIVE_NAME_RE.finditer(term):
         found.add(match.group(1))
     for match in CONNECTOR_NAME_RE.finditer(term):
+        found.add(match.group(1))
+    for match in CONNECTOR_PHRASE_RE.finditer(term):
         found.add(match.group(1))
     for word in re.findall(rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+", term):
         if any(ord(char) > 127 for char in word):
@@ -308,7 +344,7 @@ def words(term: str) -> set[str]:
 def glossary_refs(term: str, glossary: dict[str, str], limit: int = 12) -> list[dict[str, str]]:
     term_lower = term.lower()
     term_words = words(term)
-    refs: list[tuple[int, str, str]] = []
+    refs: list[tuple[int, int, str, str]] = []
     for known_term, translation in glossary.items():
         known_lower = known_term.lower()
         known_words = words(known_term)
@@ -321,12 +357,12 @@ def glossary_refs(term: str, glossary: dict[str, str], limit: int = 12) -> list[
         if overlap:
             score += 10 * len(overlap)
         if score:
-            refs.append((score, known_term, translation))
+            refs.append((score, len(known_term), known_term, translation))
 
-    refs.sort(key=lambda item: (-item[0], item[1].lower()))
+    refs.sort(key=lambda item: (-item[0], -item[1], item[2].lower()))
     return [
         {"term": known_term, "translation": translation}
-        for _, known_term, translation in refs[:limit]
+        for _, _, known_term, translation in refs[:limit]
     ]
 
 
@@ -356,7 +392,10 @@ def guess_category(term: str) -> str:
 def existing_review_items(path: Path) -> dict[str, dict[str, Any]]:
     if not path.exists():
         return {}
-    data = json.loads(path.read_text(encoding="utf-8"))
+    text = path.read_text(encoding="utf-8")
+    if not text.strip():
+        return {}
+    data = json.loads(text)
     return {
         normalize_candidate(item["term"]) or item["term"]: item
         for item in data.get("items", [])
@@ -393,16 +432,33 @@ def write_review_json(
     source_file: list[str],
     rows: list[tuple[str, str, list[str]]],
     glossary: dict[str, str],
+    known_glossary: dict[str, str] | None = None,
 ) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    existing_items = existing_review_items(output_path)
-    review_items = [
-        build_review_item(term, keys, glossary, existing_items.get(term))
-        for status, term, keys in rows
-        if status == "review"
-    ]
+    existing_data: dict[str, Any] = {}
+    if output_path.exists():
+        existing_text = output_path.read_text(encoding="utf-8") if output_path.exists() else ""
+        existing_data = json.loads(existing_text) if existing_text.strip() else {"files": []}
+    known_terms = set(known_glossary if known_glossary is not None else glossary)
+    existing_items = {
+        term: item
+        for term, item in existing_review_items(output_path).items()
+        if term not in known_terms
+    }
+    new_items = []
+    for status, term, keys in rows:
+        if status != "review":
+            continue
+        item = build_review_item(term, keys, glossary, existing_items.get(term))
+        new_items.append(item)
+    merged_items = dict(existing_items)
+    for item in new_items:
+        merged_items[item["term"]] = item
+    existing_source_files = existing_data.get("source_file", [])
+    if not isinstance(existing_source_files, list):
+        existing_source_files = []
     review = {
-        "source_file": source_file,
+        "source_file": sorted(set(existing_source_files) | set(source_file)),
         "status": "todo",
         "instructions": (
             "Status values: todo=fill translation manually, "
@@ -410,7 +466,7 @@ def write_review_json(
             "cont=have Codex propose a contextual glossary rule from source contexts, "
             "skip=ignore. glossary_refs are references only."
         ),
-        "items": review_items,
+        "items": sorted(merged_items.values(), key=lambda item: str(item.get("term", "")).lower()),
     }
     output_path.write_text(json.dumps(review, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
@@ -429,7 +485,9 @@ def main() -> int:
 
     glossary_path = Path(args.glossary)
     glossary = glossary_entries(glossary_path)
-    known = set(glossary)
+    reference_glossary = reference_entries(glossary_path)
+    glossary_for_refs = {**glossary, **reference_glossary}
+    known = set(glossary_for_refs)
     candidate_terms: dict[str, list[str]] = {}
     scanned_files: list[str] = []
     for source_file in args.file:
@@ -451,7 +509,13 @@ def main() -> int:
 
     if args.write_review:
         review_rows = [row for row in rows if row[0] == "review"]
-        write_review_json(Path(args.review_output), scanned_files, review_rows, glossary)
+        write_review_json(
+            Path(args.review_output),
+            scanned_files,
+            review_rows,
+            glossary_for_refs,
+            known_glossary=glossary_for_refs,
+        )
         print(f"wrote: {args.review_output}")
         print(f"review_items: {len(review_rows)}")
         return 0
@@ -460,7 +524,7 @@ def main() -> int:
     print(f"candidates: {len(rows)}")
     print("status\tterm\tkeys\tglossary_refs")
     for status, term, keys in rows:
-        refs = glossary_refs(term, glossary)
+        refs = glossary_refs(term, glossary_for_refs)
         ref_text = "; ".join(f"{ref['term']}={ref['translation']}" for ref in refs[:5])
         print(f"{status}\t{term}\t{', '.join(keys)}\t{ref_text}")
     return 0

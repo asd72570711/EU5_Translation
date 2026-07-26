@@ -64,6 +64,10 @@ LANGUAGE_SUFFIX = "\u8a9e"
 CONTROL_VALUES = {"ai", "cont", "skip"}
 
 CONTEXTUAL_RULES = {
+    "Autonomy": [
+        ("自治", "指自治運動、分權方向或一般自治概念"),
+        ("自治權", "指政治實體、地區、階層或群體所擁有的自治權利或權限"),
+    ],
     "Advance": [
         ("革新", "指科技、知識或制度的革新"),
         ("推進", "指推進流程、計畫或行動，而非科技名詞"),
@@ -272,6 +276,7 @@ def glossary_terms(text: str) -> set[str]:
 def importable_items(
     review: dict[str, Any],
     resolved_only: bool,
+    include_cont: bool,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     items = []
     contextual_items = []
@@ -281,11 +286,16 @@ def importable_items(
         if status == "skip":
             continue
         if status == "cont":
+            if not include_cont:
+                continue
             if not translation:
                 if resolved_only:
                     continue
                 raise ValueError(f"Missing translation for {item.get('term')}")
-            contextual_items.append(item)
+            if item.get("term") in CONTEXTUAL_RULES or item.get("term") in CONTEXTUAL_DERIVED_TERMS:
+                contextual_items.append(item)
+            else:
+                items.append(item)
             continue
         if status not in {"todo", "ai"}:
             if resolved_only:
@@ -422,6 +432,11 @@ def main() -> int:
         action="store_true",
         help="Import filled todo items and remove them plus skip items from the review",
     )
+    parser.add_argument(
+        "--include-cont",
+        action="store_true",
+        help="Import cont items only after AI has completed contextual judgment",
+    )
     parser.add_argument("--write", action="store_true")
     args = parser.parse_args()
 
@@ -431,7 +446,11 @@ def main() -> int:
     glossary_path = Path(args.glossary)
     review = json.loads(review_path.read_text(encoding="utf-8"))
     glossary_text = read_text(glossary_path)
-    items, contextual_items = importable_items(review, args.resolved_only)
+    items, contextual_items = importable_items(
+        review,
+        args.resolved_only,
+        args.include_cont,
+    )
     new_text, stats = apply_import(glossary_text, items, contextual_items)
 
     stats["importable_items"] = len(items)

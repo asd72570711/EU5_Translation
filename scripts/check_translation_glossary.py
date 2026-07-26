@@ -33,6 +33,7 @@ def glossary_entries(path: Path) -> dict[str, str]:
     alias_translation: str | None = None
     alias_names: list[str] = []
     in_aliases = False
+    in_reference_terms = False
 
     def flush_alias() -> None:
         if alias_term and alias_translation:
@@ -41,6 +42,16 @@ def glossary_entries(path: Path) -> dict[str, str]:
                 entries[alias] = alias_translation
 
     for line in read_text(path).splitlines():
+        if line == "reference_terms:":
+            flush_alias()
+            in_aliases = False
+            in_reference_terms = True
+            current_term = None
+            continue
+        if in_reference_terms and line and not line.startswith(" "):
+            in_reference_terms = False
+        if in_reference_terms:
+            continue
         if line == "aliases:":
             flush_alias()
             in_aliases = True

@@ -21,10 +21,27 @@ DIRECTIVE_RE = re.compile(
     re.IGNORECASE,
 )
 ACTION_RE = re.compile(
-    r"^(abandon|become|break|build|claim|complete|conquer|create|form|gain|"
+    r"^(abandon|abolish|abort|absorb|accept|access|acquire|activate|add|affirm|appease|become|ban|break|build|call|claim|complete|conquer|corrupt|create|curb|deny|destroy|develop|disable|dismiss|"
     r"get|give|join|master|open|own|reach|restore|rule|take|win|clear|"
     r"cancel|cede|copy|decline|delete|demand|dissolve|enforce|force|release|"
-    r"revoke|save|seize|select|send|spread|subjugate|switch|toggle|visit)\b",
+    r"revoke|save|seize|select|send|spread|subjugate|switch|toggle|visit|"
+    r"improve|increase|decrease|establish|declare|grant|appoint|remove|change|"
+    r"lose|hold|accept|reject|annex|reform|reduce|raise|lower|end|enable|expand|"
+    r"export|expel|favor|find|fortify|invite|limit|negotiate|offer|purchase|request|"
+    r"share|sponsor|strengthen|support|suppress|transfer|vote|choose)\b",
+    re.IGNORECASE,
+)
+RESULT_PHRASE_RE = re.compile(
+    r"\b(abandoned|accepted|annexed|appointed|broken|cancelled|canceled|"
+    r"changed|cleared|closed|completed|conquered|created|declared|defeated|"
+    r"established|formed|gained|granted|integrated|lost|opened|owned|"
+    r"reformed|rejected|removed|restored|won)\s*$",
+    re.IGNORECASE,
+)
+STATUS_PREFIX_RE = re.compile(
+    r"^(abandoned|approved|cancelled|canceled|denied|granted|imposed|"
+    r"integrated|reinstated|removed|restored|returned|revoked|supported|"
+    r"terminated|withdrawn)\b.*\b(of|de|del|da|di|du|von|van)\b",
     re.IGNORECASE,
 )
 NARRATIVE_RE = re.compile(
@@ -55,13 +72,19 @@ COMMON_WORDS = {
     "of", "on", "or", "our", "the", "this", "to", "was", "we", "when", "with", "you",
 }
 STANDALONE_VERBS = {
-    "abandon", "begin", "become", "break", "build", "cancel", "claim", "clear",
+    "abandon", "abolish", "abort", "absorb", "accept", "access", "acquire", "activate", "add", "begin", "become", "ban", "break", "build", "cancel", "claim", "clear",
     "click", "complete", "conquer", "confirm", "continue", "create", "decline",
     "delete", "demand", "discard", "dissolve", "employ", "enforce", "exit", "form",
     "gain", "get", "give", "improve", "increase", "integrate", "join", "load", "open",
     "own", "reach", "recruit", "reload", "remove", "restore", "revoke", "save", "select",
     "send", "seize", "skip", "spread", "start", "subjugate", "suggest", "switch", "take",
-    "toggle", "upgrade", "use", "visit", "win",
+    "toggle", "use", "visit", "win", "choose", "appease", "call", "charter", "corrupt", "curb", "deny", "destroy", "develop", "disable", "dismiss", "enable", "end", "expand", "expel", "export", "favor", "find", "fortify", "grant", "invite", "limit", "negotiate", "offer", "purchase", "reduce", "reform", "request", "share", "sponsor", "spread", "strengthen", "support", "suppress", "transfer", "vote",
+}
+PHRASE_VERBS = STANDALONE_VERBS | {
+    "abolish", "abort", "absorb", "affirm", "annex", "appease", "appoint", "call", "cede", "charter", "change", "curb", "expel",
+    "declare", "decrease", "enforce", "establish", "force", "hold", "lose", "lower",
+    "master", "remove", "reject", "restore", "rule", "seize", "subjugate", "take",
+    "transfer", "vote",
 }
 FIXED_ACTION_TERMS = {"upgrade", "recruit", "integrate", "colonize", "convert"}
 STANDALONE_PREDICATES = {"are", "exists", "never", "not", "owns", "requires"}
@@ -113,6 +136,32 @@ def is_achievement(keys: list[str]) -> bool:
     return bool(keys) and all(k.upper().startswith("ACHIEVEMENT") for k in keys)
 
 
+def is_inflected_action(word: str) -> bool:
+    forms = {word.casefold()}
+    if word.endswith("ing") and len(word) > 4:
+        stem = word[:-3]
+        forms.update({stem, stem + "e"})
+        if len(stem) > 1 and stem[-1] == stem[-2]:
+            forms.add(stem[:-1])
+    if word.endswith("ed") and len(word) > 3:
+        stem = word[:-2]
+        forms.update({stem, stem + "e"})
+        if stem.endswith("i"):
+            forms.add(stem[:-1] + "y")
+    return bool(forms & PHRASE_VERBS)
+
+
+def is_generic_action_phrase(term: str) -> bool:
+    words = [word.casefold() for word in re.findall(r"[A-Za-z]+(?:[-\u2011][A-Za-z]+)?", term)]
+    if len(words) < 2:
+        return False
+    if is_inflected_action(words[0]):
+        return True
+    if is_inflected_action(words[1]):
+        return True
+    return bool(RESULT_PHRASE_RE.search(term))
+
+
 def should_skip(item: dict[str, Any]) -> bool:
     term = str(item.get("term", "")).strip()
     keys = [str(key) for key in item.get("keys", [])]
@@ -136,6 +185,18 @@ def should_skip(item: dict[str, Any]) -> bool:
     if GENERIC_DETERMINER_RE.search(term) and len(term.split()) >= 2:
         return True
 
+    # Generic action/result phrases are translated from context rather than
+    # stored as glossary entries. The scanner separately preserves embedded
+    # proper-name candidates such as "Confession of Biljno Polje".
+    if is_generic_action_phrase(term):
+        return True
+
+    # Status/result modifiers before a connector phrase, for example
+    # "Abandoned Exemption of Sound Toll", are usually one-off labels.
+    # The connector phrase is extracted separately by the candidate scanner.
+    if STATUS_PREFIX_RE.search(term):
+        return True
+
     if item.get("category") in PROTECTED_CATEGORY:
         return False
 
@@ -146,11 +207,6 @@ def should_skip(item: dict[str, Any]) -> bool:
             return False
         if ACTION_RE.search(term) or len(term.split()) >= 3:
             return True
-
-    # Multi-word action labels outside achievements are usually one-off
-    # buttons, trigger descriptions, or tutorial-style instructions.
-    if len(term.split()) >= 2 and ACTION_RE.search(term) and not MECHANIC_RE.search(term):
-        return True
 
     words = {word.lower() for word in re.findall(r"[A-Za-z]+", term)}
     if OBVIOUS_PREFIX_RE.search(term) and len(term.split()) >= 2 and not MECHANIC_RE.search(term):
@@ -200,7 +256,7 @@ def main() -> int:
 
     marked = 0
     for item in existing.values():
-        if item.get("status") == "todo" and should_skip(item):
+        if item.get("status") in {"todo", "cont"} and should_skip(item):
             item["status"] = "skip"
             marked += 1
 

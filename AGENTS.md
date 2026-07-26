@@ -99,7 +99,9 @@
 ## 術語表
 
 - 固定術語以 `translation_glossary.yml` 為準。
-- 遊戲術語、機制名、UI 系統名與可重複出現的專案用語，放入 `translation_glossary.yml` 的 `game_terms` 區。
+- 遊戲術語、機制名、UI 系統名與可重複出現的專案用語，依是否需要語境分流放入 `translation_glossary.yml` 的 `fixed` 或 `contextual` 區；本專案目前不使用 `game_terms` 區。
+- `reference_terms` 只提供普通多義單字的參考譯義，不是固定翻譯規則；翻譯腳本不得強制套用，QA 也不得因未使用 reference term 而判定 mismatch。
+- 完整片語、contextual term 或較長詞組優先於其中的 reference term；例如 `In Defense of the Less Fortunate` 不得因 `Defense` 的參考譯義而機械翻譯為「防禦」。
 - 如果 glossary term 出現在人類可讀文字中，必須一致使用術語表翻譯。
 - 不要在 protected token 或 code-like fragment 裡套用術語替換。
 - 大寫開頭且看起來像系統名、單位名、勢力名、機制名、品牌名、平台服務名或 UI term 的詞，不要直接當普通名詞處理；若尚未收錄，應先列為遊戲術語候選並向使用者確認。
@@ -120,14 +122,16 @@
 - 未收錄的候選 term 可寫入固定臨時檔 `work/glossary_review/review.json`，讓使用者手動填入 `translation`。
 - `review.json` 中的候選項應盡量附上 `glossary_refs`，列出既有 glossary 中可能相關的完整詞組或部分詞組，供使用者避免譯名不一致。
 - `review.json` 的 `status` 使用短值：`todo` 表示等待使用者填寫 `translation`，`ai` 表示請 Codex 先把建議譯名填回 `review.json` 供使用者檢查，`skip` 表示忽略且不收錄。
-- `review.json` 的 `status: cont` 表示使用者已填入核心譯名，但該 term 可能需依語境採用不同譯法。處理 `cont` 時，Codex 必須先讀取 review 提供的來源 key 與上下文，不可因為 `cont` 就機械建立 `contextual`。
+- `review.json` 的 `status: cont` 表示使用者已填入核心譯名，但該 term 可能需依語境採用不同譯法。處理 `cont` 時，Codex 必須先讀取 review 提供的來源 key 與上下文，由 AI 自行判斷，不要求使用者再次確認；不可因為 `cont` 就機械建立 `contextual`。
 - 若現有上下文不足以判斷，或 term 可能有多重詞義、普通用法與遊戲術語可能混淆，或可能與其他遊戲機制產生不同譯法，才搜尋 `source/english/` 下該 term 的其他用法；搜尋時只讀取命中行與前後短片段，不讀取或輸出完整檔案。
 - `cont` 項目的 `translation` 是使用者確認的核心用法，不一定是 glossary 的 default。若所有相關用法都能使用同一譯名，匯入 `fixed`；若不同語境需要不同譯法，才建立 `contextual`；若無法確定，保留 `cont` 並回報原因。
 - 處理 `cont` 後，必須列出所有判定為 `fixed` 或 `contextual` 並匯入的項目、譯名與理由，以及仍保留 `cont` 的項目與原因。
 - review 項目的 `note` 是長期翻譯理由。匯入 fixed 或 contextual glossary 時，應以 term 上方的 YAML 註解保留 note。
-- 當使用者要求進行 review 確認與 ai 建議時，應先以 `scripts/import_glossary_review.py --resolved-only --write` 匯入已填譯名的 `todo`，並從 review 移除這些項目與所有 `skip`。`ai` 與 `cont` 項目必須保留，供後續建議或 contextual 草案處理。
+- 預審時應同時檢查 `todo` 與 `cont`；若 `cont` 明顯只是一般動詞片語、結果狀態片語或按鈕指示，仍可標記為 `skip`，例如 `Subject Owned`。
+- AI 完成 `cont` 的語境判斷後，才可使用 `scripts/import_glossary_review.py --resolved-only --include-cont --write` 匯入已判定的 `cont`；未完成判斷時不得使用 `--include-cont`。已填譯名的 `todo` 可使用 `--resolved-only --write` 匯入，並從 review 移除已匯入項目與所有 `skip`。
 - `ai` 不應直接跳過使用者檢查匯入 glossary；Codex 只先補上 `translation`，使用者保留或修改該譯名後，才進行 glossary 匯入。
 - 若 review term 與既有 glossary term 疑似為名詞、形容詞、族群名或語言名等派生關係，且使用者填入譯名與既有中文譯名相同或高度相關，應優先建立或調整 `contextual` 條目，而不是直接加入 `fixed`。
+- 一般 `V+N`、`N+V` 或 `N+過去分詞` 片語一律標記為 `skip`，包括一般操作、事件結果、通知、狀態描述、遊戲機制與 UI 指示；完整片語交由 AI 依上下文翻譯，不作為 glossary 詞條。若片語中含有人名、地名、組織名、制度名、歷史事件、作品名或宗教概念，應將內嵌專有名詞另行拆出並保留候選。
 - 例如 `Catalonia` 已固定為「加泰隆尼亞」時，`Catalan` 若使用者也填「加泰隆尼亞」，應視上下文建立 `Catalan` 的 contextual 規則，區分「加泰隆尼亞的」、「加泰隆尼亞人」、「加泰隆尼亞語」等用法。
 - `review.json` 完成匯入 `translation_glossary.yml` 後即可刪除，不作為長期紀錄；長期固定譯名以 `translation_glossary.yml` 為準。
 - 使用者確認譯名後，若屬於會重複出現的固定名詞，應加入 `translation_glossary.yml`；若只是單檔特殊判斷，才寫入 `translation_notes.md`。
