@@ -4,7 +4,7 @@ import argparse
 import json
 from pathlib import Path
 
-from scan_glossary_candidates import glossary_entries, glossary_refs
+from scan_glossary_candidates import glossary_entries, glossary_refs, reference_entries
 
 
 def main() -> int:
@@ -17,6 +17,7 @@ def main() -> int:
     review_path = Path(args.review)
     review = json.loads(review_path.read_text(encoding="utf-8"))
     glossary = glossary_entries(Path(args.glossary))
+    glossary.update(reference_entries(Path(args.glossary)))
     changed = 0
     for item in review.get("items", []):
         refs = glossary_refs(str(item.get("term", "")), glossary)
