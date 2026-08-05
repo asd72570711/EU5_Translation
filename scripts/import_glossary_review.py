@@ -228,6 +228,33 @@ CONTEXTUAL_RULES = {
         ("倫巴底人", "指倫巴底族群或人物"),
         ("倫巴底語", "指 Lombard 語言"),
     ],
+    "Bubu": [
+        ("魚籠", "指 Bubu 建築或當地魚籠陷阱"),
+        ("布布", "指人物姓名或其他專有名詞"),
+    ],
+    "Dock": [
+        ("船塢", "指遊戲中的 Dock 建築或建造、修理船隻的設施"),
+        ("停靠", "作動詞，指船隻停靠港口或船塢"),
+    ],
+    "Sect": [
+        ("宗派", "指遊戲中的宗教宗派或 Sect 國際組織"),
+        ("教派", "指一般宗教語境中的 sect，且不作為遊戲機制名稱"),
+    ],
+    "Siberian": [
+        ("西伯利亞", "作地理或環境修飾語，例如 Siberian wilds、Siberian forests"),
+        ("西伯利亞的", "作一般形容詞，修飾西伯利亞相關的地區、文化或事物"),
+        ("西伯利亞人", "指西伯利亞文化或族群"),
+        ("西伯利亞語", "指西伯利亞語言"),
+    ],
+    "Yamashiro": [
+        ("山城", "指日本山地的土木與木柵防禦建築"),
+        ("山城國", "指日本歷史上的山城國、相關省份或政體"),
+        ("山城氏", "指 Yamashiro 家族或王朝名稱"),
+    ],
+    "Chancery": [
+        ("秘書室", "指遊戲中的 Chancery 建築或政府文書辦公機構"),
+        ("文書署", "指歷史或行政語境中的 chancery 文書機關"),
+    ],
 }
 
 
@@ -422,7 +449,10 @@ def apply_import(
         lines[aliases_index:aliases_index] = fixed_lines + [""]
 
     if contextual_lines:
-        lines.extend([""] + contextual_lines)
+        reference_index = next(
+            i for i, line in enumerate(lines) if line == "reference_terms:"
+        )
+        lines[reference_index:reference_index] = [""] + contextual_lines
 
     stats = {
         "fixed_added": len(fixed_items),

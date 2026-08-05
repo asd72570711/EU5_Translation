@@ -35,7 +35,8 @@ RESULT_PHRASE_RE = re.compile(
     r"\b(abandoned|accepted|annexed|appointed|broken|cancelled|canceled|"
     r"changed|cleared|closed|completed|conquered|created|declared|defeated|"
     r"established|formed|gained|granted|integrated|lost|opened|owned|"
-    r"reformed|rejected|removed|restored|won)\s*$",
+    r"reformed|rejected|removed|restored|retreating|lent|sold|visible|"
+    r"converted|won)\s*$",
     re.IGNORECASE,
 )
 STATUS_PREFIX_RE = re.compile(
@@ -54,6 +55,8 @@ PREDICATE_RE = re.compile(
     r"exists|owns|owned|requires|allows|contains|includes)\b",
     re.IGNORECASE,
 )
+PAST_PARTICIPLE_RE = re.compile(r"^[A-Za-z]+ed$", re.IGNORECASE)
+IRREGULAR_RESULT_WORDS = {"born", "given", "left", "lost", "won"}
 COMMAND_RE = re.compile(
     r"^(open|close|click(?:ing)?|double[-‑]?click(?:ing)?|left[-‑]?click(?:ing)?|"
     r"right[-‑]?click(?:ing)?|select|toggle|switch|"
@@ -81,10 +84,10 @@ STANDALONE_VERBS = {
     "toggle", "use", "visit", "win", "choose", "appease", "call", "charter", "corrupt", "curb", "deny", "destroy", "develop", "disable", "dismiss", "enable", "end", "expand", "expel", "export", "favor", "find", "fortify", "grant", "invite", "limit", "negotiate", "offer", "purchase", "reduce", "reform", "request", "share", "sponsor", "spread", "strengthen", "support", "suppress", "transfer", "vote",
 }
 PHRASE_VERBS = STANDALONE_VERBS | {
-    "abolish", "abort", "absorb", "affirm", "annex", "appease", "appoint", "call", "cede", "charter", "change", "curb", "expel",
+    "abolish", "abort", "absorb", "affirm", "agree", "annex", "appease", "appoint", "apply", "assign", "await", "call", "cede", "charter", "change", "convert", "curb", "deselect", "disband", "disembark", "dismantle", "distribute", "embark", "embrace", "engage", "expel",
     "declare", "decrease", "enforce", "establish", "force", "hold", "lose", "lower",
-    "master", "remove", "reject", "restore", "rule", "seize", "subjugate", "take",
-    "transfer", "vote",
+    "colonize", "exchange", "extend", "fail", "fight", "finish", "grow", "hire", "insult", "leave", "lend", "master", "merge", "move", "need", "oppose", "pause", "profess", "recover", "reorganize", "remain", "remove", "repair", "repay", "reject", "respond", "restore", "return", "reset", "rule", "seize", "show", "surrender", "take", "trade",
+    "transfer", "try", "upgrade", "vote",
 }
 FIXED_ACTION_TERMS = {"upgrade", "recruit", "integrate", "colonize", "convert"}
 STANDALONE_PREDICATES = {"are", "exists", "never", "not", "owns", "requires"}
@@ -139,15 +142,19 @@ def is_achievement(keys: list[str]) -> bool:
 def is_inflected_action(word: str) -> bool:
     forms = {word.casefold()}
     if word.endswith("ing") and len(word) > 4:
-        stem = word[:-3]
+        stem = word[:-3].casefold()
         forms.update({stem, stem + "e"})
         if len(stem) > 1 and stem[-1] == stem[-2]:
             forms.add(stem[:-1])
     if word.endswith("ed") and len(word) > 3:
-        stem = word[:-2]
+        stem = word[:-2].casefold()
         forms.update({stem, stem + "e"})
         if stem.endswith("i"):
             forms.add(stem[:-1] + "y")
+    if word.endswith("ies") and len(word) > 4:
+        forms.add((word[:-3] + "y").casefold())
+    elif word.endswith("s") and len(word) > 3:
+        forms.add(word[:-1].casefold())
     return bool(forms & PHRASE_VERBS)
 
 
@@ -157,7 +164,13 @@ def is_generic_action_phrase(term: str) -> bool:
         return False
     if is_inflected_action(words[0]):
         return True
-    if is_inflected_action(words[1]):
+    if re.fullmatch(r"order\s+(?:assault|full\s+retreat)", term, re.IGNORECASE):
+        return True
+    if PAST_PARTICIPLE_RE.fullmatch(words[-1]) and not words[-1].endswith("eed"):
+        return True
+    if words[0] == "constructing":
+        return True
+    if term.casefold() in {"gathering food", "dismantle the pest houses"}:
         return True
     return bool(RESULT_PHRASE_RE.search(term))
 
@@ -200,6 +213,25 @@ def should_skip(item: dict[str, Any]) -> bool:
     if item.get("category") in PROTECTED_CATEGORY:
         return False
 
+    # Standalone past participles are normally message/status labels rather
+    # than reusable glossary terms. Exclude noun-like words ending in -eed.
+    if len(term.split()) == 1 and PAST_PARTICIPLE_RE.fullmatch(term) and not term.lower().endswith("eed"):
+        return True
+    if len(term.split()) == 1 and term.casefold() in IRREGULAR_RESULT_WORDS:
+        return True
+
+    # Construction and maintenance localization keys use action labels as
+    # resource/status names; translate the full sentence from context.
+    key_text = " ".join(keys).lower()
+    if (
+        ("_construction" in key_text or "_maintenance" in key_text)
+        and re.match(r"^(constructing|distill)\b", term, re.IGNORECASE)
+    ):
+        return True
+
+    if term.casefold().startswith("detach ") and item.get("category") == "unknown":
+        return True
+
     # Achievement titles are retained only when they look like a mechanic,
     # historical name, work title, organization, or other reusable term.
     if is_achievement(keys):
@@ -214,6 +246,8 @@ def should_skip(item: dict[str, Any]) -> bool:
     if len(words) >= 2 and words and words <= COMMON_WORDS:
         return True
     if len(words) == 1 and term.lower() in STANDALONE_VERBS:
+        return term.lower() not in FIXED_ACTION_TERMS
+    if len(words) == 1 and is_inflected_action(term):
         return term.lower() not in FIXED_ACTION_TERMS
     if PREDICATE_RE.search(term) and len(term.split()) >= 2:
         return True
@@ -232,6 +266,11 @@ def main() -> int:
     parser.add_argument("--source-root", default="source/english")
     parser.add_argument("--glossary", default="translation_glossary.yml")
     parser.add_argument("--write", action="store_true")
+    parser.add_argument(
+        "--existing-only",
+        action="store_true",
+        help="only update existing todo/cont items; do not rescan source files",
+    )
     args = parser.parse_args()
 
     review_path = Path(args.review)
@@ -240,9 +279,10 @@ def main() -> int:
     existing = {item.get("term"): item for item in review.get("items", []) if item.get("term")}
 
     scanned: dict[str, set[str]] = {}
-    for source_file in source_paths(review, Path(args.source_root)):
-        for term, keys in candidates(parse_entries(source_file)).items():
-            scanned.setdefault(term, set()).update(keys)
+    if not args.existing_only:
+        for source_file in source_paths(review, Path(args.source_root)):
+            for term, keys in candidates(parse_entries(source_file)).items():
+                scanned.setdefault(term, set()).update(keys)
 
     added = 0
     for term, keys in scanned.items():

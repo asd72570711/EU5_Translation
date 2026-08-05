@@ -1,0 +1,128 @@
+????  main_menu/localization/english/character_names_dynamic_l_english.yml
+????  main_menu/localization/english/character_names_l_english.yml
+3767  main_menu/localization/english/province_names_l_english.yml -> x
+3160  main_menu/localization/english/country_names_l_english.yml -> x
+2293  main_menu/localization/english/cultural_and_languages_l_english.yml -> x
+1652  main_menu/localization/english/dynasty_names_l_english.yml -> x
+934   main_menu/localization/english/religion_l_english.yml -> x
+629   main_menu/localization/english/area_l_english.yml -> x
+413   main_menu/localization/english/government_names_l_english.yml -> x
+349   main_menu/localization/english/culture_groups_l_english.yml -> x
+268   main_menu/localization/english/ship_names_l_english.yml -> xxx
+
+
+4021  main_menu/localization/english/advances_l_english.yml
+1567  main_menu/localization/english/static_modifiers_l_english.yml
+1555  main_menu/localization/english/interfaces_l_english.yml
+1232  main_menu/localization/english/modifier_types_l_english.yml
+1093  main_menu/localization/english/game_concepts_l_english.yml
+967   main_menu/localization/english/laws_and_policies_l_english.yml
+900   main_menu/localization/english/artists_l_english.yml
+687   main_menu/localization/english/units_l_english.yml
+657   main_menu/localization/english/messages_l_english.yml
+604   main_menu/localization/english/goods_l_english.yml
+542   main_menu/localization/english/buildings_l_english.yml
+535   main_menu/localization/english/opinions_l_english.yml
+
+
+
+484   main_menu/localization/english/location_flavor_l_english.yml
+419   main_menu/localization/english/government_reforms_l_english.yml
+394   main_menu/localization/english/estate_l_english.yml
+392   main_menu/localization/english/diplomacy_l_english.yml
+360   main_menu/localization/english/international_organizations_l_english.yml
+344   main_menu/localization/english/credits_l_english.yml
+317   main_menu/localization/english/government_l_english.yml
+281   main_menu/localization/english/parliament_l_english.yml
+273   main_menu/localization/english/actions_l_english.yml
+269   main_menu/localization/english/situations_l_english.yml
+262   main_menu/localization/english/scripted_relations_l_english.yml
+252   main_menu/localization/english/holy_sites_l_english.yml
+231   main_menu/localization/english/hints_l_english.yml
+215   main_menu/localization/english/lists_l_english.yml
+196   main_menu/localization/english/settings_l_english.yml
+
+
+
+
+---done---
+169   main_menu/localization/english/economy_l_english.yml
+163   main_menu/localization/english/country_interactions_l_english.yml
+156   main_menu/localization/english/traits_l_english.yml
+154   main_menu/localization/english/formable_countries_l_english.yml
+150   main_menu/localization/english/_achievements_l_english.yml
+147   main_menu/localization/english/country_history_l_english.yml
+143   main_menu/localization/english/tutorial_l_english.yml
+139   main_menu/localization/english/core_l_english.yml
+128   main_menu/localization/english/alerts_l_english.yml
+123   main_menu/localization/english/triggers_l_english.yml
+118   main_menu/localization/english/offer_peace_l_english.yml
+94    main_menu/localization/english/casus_belli_l_english.yml
+89    main_menu/localization/english/diplomatic_status_l_english.yml
+86    main_menu/localization/english/work_of_art_l_english.yml
+76    main_menu/localization/english/lateralviews_l_english.yml
+74    main_menu/localization/english/game_rules_l_english.yml
+67    main_menu/localization/english/historical_score_l_english.yml
+62    main_menu/localization/english/region_names_l_english.yml
+62    main_menu/localization/english/general_tooltips_l_english.yml
+61    main_menu/localization/english/location_specific_base_modifiers_l_english.yml
+57    main_menu/localization/english/town_rights_l_english.yml
+55    main_menu/localization/english/effects_l_english.yml
+55    main_menu/localization/english/tooltip_structs_l_english.yml
+50    main_menu/localization/english/outliner_l_english.yml
+49    main_menu/localization/english/player_profiling_l_english.yml
+45    main_menu/localization/english/rebel_l_english.yml
+45    main_menu/localization/english/terrains_l_english.yml
+44    main_menu/localization/english/disasters_l_english.yml
+44    main_menu/localization/english/encyclopedia_l_english.yml
+44    main_menu/localization/english/hre_circles_l_english.yml
+43    main_menu/localization/english/area_preferences_l_english.yml
+43    main_menu/localization/english/bureaucracies_l_english.yml
+42    main_menu/localization/english/character_interactions_l_english.yml
+37    main_menu/localization/english/auto_modifiers_l_english.yml
+33    main_menu/localization/english/war_overview_l_english.yml
+28    main_menu/localization/english/caesar_tools_l_english.yml
+25    main_menu/localization/english/languages_desc_l_english.yml
+21    main_menu/localization/english/ai_personalities_l_english.yml
+21    main_menu/localization/english/scripted_geography_names_l_english.yml
+19    main_menu/localization/english/unit_abilities_l_english.yml
+17    main_menu/localization/english/subject_interactions_l_english.yml
+16    main_menu/localization/english/character_l_english.yml
+16    main_menu/localization/english/scripted_triggers_l_english.yml
+15    main_menu/localization/english/regencies_l_english.yml
+14    main_menu/localization/english/scripted_country_names_l_english.yml
+13    main_menu/localization/english/scripted_effects_l_english.yml
+12    main_menu/localization/english/insults_l_english.yml
+12    main_menu/localization/english/map_markers_l_english.yml
+12    main_menu/localization/english/pause_menu_l_english.yml
+11    main_menu/localization/english/_debug_l_english.yml
+11    main_menu/localization/english/issue_reporter_l_english.yml
+11    main_menu/localization/english/scripted_lists_l_english.yml
+10    main_menu/localization/english/country_description_category_l_english.yml
+10    main_menu/localization/english/customizable_localization_l_english.yml
+9     main_menu/localization/english/map_actions_l_english.yml
+9     main_menu/localization/english/military_l_english.yml
+9     main_menu/localization/english/trade_orders_l_english.yml
+8     main_menu/localization/english/colonisation_l_english.yml
+8     main_menu/localization/english/diseases_l_english.yml
+7     main_menu/localization/english/construction_cost_reasons_l_english.yml
+7     main_menu/localization/english/mercenaries_l_english.yml
+7     main_menu/localization/english/movements_l_english.yml
+7     main_menu/localization/english/multiplayer_l_english.yml
+6     main_menu/localization/english/common_used_strings_l_english.yml
+6     main_menu/localization/english/victory_cards_l_english.yml
+5     main_menu/localization/english/end_game_view_l_english.yml
+5     main_menu/localization/english/pops_l_english.yml
+4     main_menu/localization/english/declare_war_l_english.yml
+4     main_menu/localization/english/modifiers_l_english.yml
+2     main_menu/localization/english/ordinals_l_english.yml
+
+
+game_concept_
+
+處理 Batch 1
+1~26
+
+Identity: 身份認同
+
+Admiralty
