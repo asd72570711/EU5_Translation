@@ -110,9 +110,7 @@ fixed:
   Acropolis: "衛城"
   Act of Navigation: "航海法案"
   Act of Revocation: "撤銷法案"
-  Action Cost: "行動花費"
   Action Lock: "行動鎖定"
-  Actions Cost: "行動花費"
   Actions Cost Modifier: "行動花費修正"
   Actions Price: "行動花費"
   Actions Tab: "行動分頁"
@@ -139,6 +137,7 @@ fixed:
   Adelståndet: "阿德爾斯通德特"
   Aden: "亞丁"
   Adjacent Markets: "相鄰市場"
+  Administration Buildings: "行政建築"
   Administration Center: "行政中心"
   Administration Law: "行政法"
   Administrative Ability: "行政能力"
@@ -171,13 +170,69 @@ fixed:
   African: "非洲"
   African Trade: "非洲貿易"
   Agadir: "阿加迪爾"
+  Age of Absolutism Artillery: "專制主義時代炮兵"
+  Age of Absolutism Auxiliary: "專制主義時代輔助部隊"
+  Age of Absolutism Galley: "專制主義時代槳帆戰艦"
+  Age of Absolutism Heavy Cavalry: "專制主義時代重騎兵"
+  Age of Absolutism Heavy Infantry: "專制主義時代重步兵"
+  Age of Absolutism Heavy Ship: "專制主義時代重型戰艦"
+  Age of Absolutism Light Cavalry: "專制主義時代輕騎兵"
+  Age of Absolutism Light Infantry: "專制主義時代輕步兵"
+  Age of Absolutism Light Ship: "專制主義時代輕型戰艦"
+  Age of Absolutism Transport: "專制主義時代運輸船"
   Age of Consort: "配偶年齡"
   Age of Discovery: "地理大發現時代"
+  Age of Discovery Artillery: "地理大發現時代炮兵"
+  Age of Discovery Auxiliary: "地理大發現時代輔助部隊"
+  Age of Discovery Galley: "地理大發現時代槳帆戰艦"
+  Age of Discovery Heavy Cavalry: "地理大發現時代重騎兵"
+  Age of Discovery Heavy Infantry: "地理大發現時代重步兵"
+  Age of Discovery Heavy Ship: "地理大發現時代重型戰艦"
+  Age of Discovery Light Cavalry: "地理大發現時代輕騎兵"
+  Age of Discovery Light Infantry: "地理大發現時代輕步兵"
+  Age of Discovery Light Ship: "地理大發現時代輕型戰艦"
+  Age of Discovery Transport: "地理大發現時代運輸船"
   Age of Reformation: "宗教改革時代"
   Age of Reformation Artillery: "宗教改革時代炮兵"
+  Age of Reformation Auxiliary: "宗教改革時代輔助部隊"
+  Age of Reformation Galley: "宗教改革時代槳帆戰艦"
+  Age of Reformation Heavy Cavalry: "宗教改革時代重騎兵"
+  Age of Reformation Heavy Infantry: "宗教改革時代重步兵"
+  Age of Reformation Heavy Ship: "宗教改革時代重型戰艦"
+  Age of Reformation Light Cavalry: "宗教改革時代輕騎兵"
+  Age of Reformation Light Infantry: "宗教改革時代輕步兵"
+  Age of Reformation Light Ship: "宗教改革時代輕型戰艦"
+  Age of Reformation Transport: "宗教改革時代運輸船"
   Age of Renaissance Artillery: "文藝復興時代炮兵"
+  Age of Renaissance Auxiliary: "文藝復興時代輔助部隊"
+  Age of Renaissance Galley: "文藝復興時代槳帆戰艦"
+  Age of Renaissance Heavy Cavalry: "文藝復興時代重騎兵"
+  Age of Renaissance Heavy Infantry: "文藝復興時代重步兵"
+  Age of Renaissance Heavy Ship: "文藝復興時代重型戰艦"
+  Age of Renaissance Light Cavalry: "文藝復興時代輕騎兵"
+  Age of Renaissance Light Infantry: "文藝復興時代輕步兵"
+  Age of Renaissance Light Ship: "文藝復興時代輕型戰艦"
+  Age of Renaissance Transport: "文藝復興時代運輸船"
   Age of Revolutions Artillery: "大革命時代炮兵"
+  Age of Revolutions Auxiliary: "大革命時代輔助部隊"
+  Age of Revolutions Galley: "大革命時代槳帆戰艦"
+  Age of Revolutions Heavy Cavalry: "大革命時代重騎兵"
+  Age of Revolutions Heavy Infantry: "大革命時代重步兵"
+  Age of Revolutions Heavy Ship: "大革命時代重型戰艦"
+  Age of Revolutions Light Cavalry: "大革命時代輕騎兵"
+  Age of Revolutions Light Infantry: "大革命時代輕步兵"
+  Age of Revolutions Light Ship: "大革命時代輕型戰艦"
+  Age of Revolutions Transport: "大革命時代運輸船"
   Age of Traditions Artillery: "傳統時代炮兵"
+  Age of Traditions Auxiliary: "傳統時代輔助部隊"
+  Age of Traditions Galley: "傳統時代槳帆戰艦"
+  Age of Traditions Heavy Cavalry: "傳統時代重騎兵"
+  Age of Traditions Heavy Infantry: "傳統時代重步兵"
+  Age of Traditions Heavy Ship: "傳統時代重型戰艦"
+  Age of Traditions Light Cavalry: "傳統時代輕騎兵"
+  Age of Traditions Light Infantry: "傳統時代輕步兵"
+  Age of Traditions Light Ship: "傳統時代輕型戰艦"
+  Age of Traditions Transport: "傳統時代運輸船"
   Agenda Impact: "議程影響"
   Agni: "阿耆尼"
   Agni Parthene: "潔貞頌"
@@ -216,6 +271,7 @@ fixed:
   Akimel O'odham: "阿基梅爾奧奧德姆"
   Akimiski: "阿基米斯基"
   Akinaa: "阿基納"
+  Akritai: "邊防軍"
   Aksum: "阿克蘇姆"
   Aksumite Empire: "阿克蘇姆帝國"
   Akwesasne: "阿克韋薩斯內"
@@ -252,6 +308,7 @@ fixed:
   Almeheno'ob: "阿爾梅赫諾布"
   Almería: "阿爾梅里亞"
   Almodóvar del Campo: "阿爾莫多瓦-德爾坎波"
+  Almogavars: "阿爾莫加瓦爾輕步兵"
   Almoravid: "阿爾摩拉維德"
   Alms Giver: "施捨者"
   Alpine: "阿爾卑斯"
@@ -261,6 +318,8 @@ fixed:
   Alpine Passes: "阿爾卑斯山口"
   Alps: "阿爾卑斯山"
   Altar of Zeus: "宙斯祭壇"
+  Alum: "明礬"
+  Alum-Fixed Dyes: "明礬媒染"
   Alyutor: "阿留特"
   Alyutor Coast Sea: "阿留特沿岸海域"
   Alī Shrine: "阿里聖陵"
@@ -269,6 +328,7 @@ fixed:
   Amazon: "亞馬遜"
   Amazon Coastal Sea: "亞馬遜沿岸海域"
   Amazone: "亞馬遜"
+  Amber: "琥珀"
   Amber Coast: "琥珀海岸"
   Ambient Illustration Volume: "插圖環境音量"
   Ambient Illustrations: "插圖環境音"
@@ -372,9 +432,9 @@ fixed:
   Apothecary: "藥房"
   Appoint as Heir Cost: "指定為繼承人花費"
   Aptekarsky: "藥務衙門"
-  Aqueduct System: "引水道系統"
   Aquitaine: "亞奎丹"
   Arabia: "阿拉伯"
+  Arabian Peninsula: "阿拉伯半島"
   Aragon: "亞拉岡"
   Arakhan: "若開"
   Arakhan Coast Sea: "若開沿岸海域"
@@ -389,7 +449,11 @@ fixed:
   Archer Infantry: "弓箭步兵"
   Archer Infantry Construction: "弓箭步兵建造"
   Archer Infantry Maintenance: "弓箭步兵維護費"
+  Archers: "弓箭手"
+  Archipelago Frigate: "群島巡防艦"
   Archistrategos: "天軍統帥"
+  Arctic Climate: "極地氣候"
+  Arctic Fishing Villages: "極地捕魚村落"
   Area Population: "地區人口"
   Area Preferences: "地區偏好"
   Areal Defense: "地區防禦"
@@ -444,8 +508,6 @@ fixed:
   Artileara: "炮兵部隊"
   Artilerie: "炮兵部隊"
   Artilier: "炮兵部隊"
-  Artilleri: "炮兵部隊"
-  Artilleria: "炮兵部隊"
   Artillerie: "炮兵部隊"
   Artillerij: "炮兵部隊"
   Artilleriyskiy: "炮兵部隊"
@@ -455,8 +517,6 @@ fixed:
   Artillery Maintenance Cost: "炮兵維護花費"
   Artillery Reinforcement Cost: "炮兵補員花費"
   Artillery School: "炮兵學校"
-  Artillerí: "炮兵部隊"
-  Artillería: "炮兵部隊"
   Artis Magnae Artilleriae: "火炮大術"
   Artisan: "工匠"
   Artisan Guilds: "工匠行會"
@@ -803,8 +863,6 @@ fixed:
   Bruges: "布魯日"
   Brunei: "汶萊"
   Brāhmadeyā: "婆羅門賜地"
-  Bubin Budui: "步兵部隊"
-  Bubing Budui: "步兵部隊"
   Bubonic Plague: "腺鼠疫"
   Buddha: "佛陀"
   Buddha Amida: "阿彌陀佛"
@@ -854,8 +912,6 @@ fixed:
   Byzantium: "拜占庭"
   Bárangoi Phýlakes: "瓦良格衛隊"
   Bárbaroi: "巴爾巴羅伊"
-  Bùbīn Bùduì: "步兵部隊"
-  Bùbīng Bùduì: "步兵部隊"
   Bāla: "波羅"
   Bāla Tripurasundarī: "童女三城美神"
   Caballer: "騎兵部隊"
@@ -957,22 +1013,12 @@ fixed:
   Caucasus: "高加索"
   Cavadderia: "騎兵部隊"
   Cavaeria: "騎兵部隊"
-  Cavalaria: "騎兵部隊"
-  Cavalariá: "騎兵部隊"
   Cavaleiros: "騎兵部隊"
   Cavaler: "騎兵部隊"
   Cavaleri: "騎兵部隊"
-  Cavaleria: "騎兵部隊"
   Cavalerie: "騎兵部隊"
   Cavalerèa: "騎兵部隊"
-  Cavalerìa: "騎兵部隊"
-  Cavalier: "騎兵部隊"
-  Cavaliere: "騎兵部隊"
-  Cavalieri: "騎兵部隊"
-  Cavalieris: "騎兵部隊"
-  Cavaliers: "騎兵部隊"
   Cavalir: "騎兵部隊"
-  Cavalièrs: "騎兵部隊"
   Cavallarìa: "騎兵部隊"
   Cavalleria: "騎兵部隊"
   Cavallers: "騎兵部隊"
@@ -1038,6 +1084,7 @@ fixed:
   Chernobyl: "車諾比"
   Chevaliers: "騎兵部隊"
   Chhinnamasta Temple: "欽納瑪斯塔神廟"
+  Chichimec: "奇奇梅克人"
   Chicōmecōātl: "奇科梅科瓦特爾"
   Chieftains: "酋長"
   Chiemsee: "基姆湖"
@@ -1174,6 +1221,7 @@ fixed:
   Company Governance: "公司軍務處"
   Company Harbor: "公司港棧"
   Company Local Ventures: "公司地方開發據點"
+  Complacency: "自滿度"
   Comùn: "公社"
   Común: "平民"
   Conciliarism Doctrine: "大公會議至上論"
@@ -1249,6 +1297,7 @@ fixed:
   Country Opinions: "國家好感度"
   Country Rank: "國家等級"
   Country Type Bonuses: "國家類型加成"
+  County: "伯國"
   County Privileges: "伯國特權"
   Cour des Comptes: "審計法院"
   Court and Country: "宮廷與外省"
@@ -1449,6 +1498,7 @@ fixed:
   Drassanes Reials de Barcelona: "巴塞隆納皇家造船廠"
   Dresden: "德累斯頓"
   Dry Dock: "旱塢"
+  Dry Docks: "旱塢"
   Dubai: "杜拜"
   Dublin: "都柏林"
   Ducal Prussia: "普魯士公國"
@@ -1636,13 +1686,13 @@ fixed:
   Family Shrine: "家祠"
   Fangatau: "方阿陶"
   Fangatau Coast Sea: "方阿陶沿岸海域"
-  Fantaria: "步兵部隊"
   Fantarèa: "步兵部隊"
-  Fantarìa: "步兵部隊"
   Fantaìa: "步兵部隊"
   Fanter: "步兵部隊"
   Fanteria: "步兵部隊"
   Farari: "法拉里"  # 採用官中翻譯
+  Farari Cavalry: "法拉里騎兵"
+  Farari Infantry: "法拉里步兵"
   Farima-Soura: "法里馬-蘇拉"
   Farming Village: "農耕村落"
   Faroe Islands: "法羅群島"
@@ -1778,13 +1828,10 @@ fixed:
   Furs de Valencia: "瓦倫西亞特許法"
   Fushimi Inari Taisha: "伏見稻荷大社"
   Fute: "步兵部隊"
-  Fuzu Budui: "輔助部隊"
   Fànjìng Shān: "梵淨山"
-  Fàntaria: "步兵部隊"
   Fāṭima: "法蒂瑪"
   Fǎjiā: "法家"
   Fǔzhù Bùduì: "輔助部隊"
-  Fǔzù Bùduì: "輔助部隊"
   Gabon: "加彭"
   Gafana Coast Sea: "加法納沿岸海域"
   Gagana Faa Samoa: "薩摩亞語"
@@ -1993,7 +2040,6 @@ fixed:
   Halhaheran-Guinean: "哈爾哈赫拉-幾內亞"
   Hamp'atu: "安帕托峰"
   Han Sŏkpong: "韓石峯"
-  Hand Cannon Guild: "手銃行會"
   Handel: "韓德爾"
   Hannibal: "漢尼拔"
   Hanno: "漢諾"
@@ -2127,7 +2173,6 @@ fixed:
   Hudson: "哈德遜"
   Huelva: "威爾瓦"
   Huesca: "威斯卡"
-  Huitzilopochtli: "維齊洛波奇特利"
   Hulptroepen: "輔助部隊"
   Human Anatomy: "人體解剖學"
   Humanist Ideas: "人文理念"
@@ -2145,7 +2190,6 @@ fixed:
   Husuni Kubwa: "胡蘇尼庫布瓦宮"
   Huángdì: "皇帝"
   Huēhuehteōtl: "韋韋特奧特爾"
-  Huītzilōpōchtli: "維齊洛波奇特利"
   Huīxtohcihuātl: "維什托西瓦特爾"
   Hywel Dda: "「好人」海威爾"
   Hán Yōng: "韓雍"
@@ -2238,11 +2282,7 @@ fixed:
   Industrial Revolution: "工業革命"
   Industrial Workshops: "工業工場"
   Infantaria: "步兵部隊"
-  Infanteri: "步兵部隊"
-  Infanteria: "步兵部隊"
   Infanterie: "步兵部隊"
-  Infanterí: "步兵部隊"
-  Infantería: "步兵部隊"
   Infantrie: "步兵部隊"
   Infantry: "步兵"
   Infidels: "異教徒"
@@ -2544,8 +2584,6 @@ fixed:
   Konkan High Sea: "康坎外海"
   Konkani: "康坎"
   Konstanz: "康斯坦茨"
-  Kontor: "漢薩商館"
-  Kontors: "漢薩商館"
   Konya: "科尼亞"
   Korea: "朝鮮"
   Korean Barracks: "朝鮮兵營"
@@ -3304,8 +3342,6 @@ fixed:
   Neith: "奈特"
   Nekokiaw: "內科基亞夫"
   Nekokiaw Coast Sea: "內科基亞夫沿岸海域"
-  Nelipic: "內利皮奇"
-  Nelipić: "內利皮奇"
   Nemea: "尼米亞"
   Nemi: "內米"
   Neo Sufism: "新蘇非主義"
@@ -3456,7 +3492,6 @@ fixed:
   Okam: "奧卡姆"
   Okam Coast Sea: "奧卡姆沿岸海域"
   Old Norse: "古諾斯"
-  Old World: "舊世界"
   Oldenburg: "歐爾登堡"
   Oligarchic Elective: "寡頭選舉制"
   Oliver: "奧利佛"
@@ -3851,7 +3886,6 @@ fixed:
   Qatar: "卡達"
   Qatar Coastal Sea: "卡達沿岸海域"
   Qibin Pudui: "騎兵部隊"
-  Qibing Budui: "騎兵部隊"
   Qiyās: "格亞斯"
   Quartermaster: "軍需官"
   Quetzalcōātl: "魁札爾科亞特爾"
@@ -3866,7 +3900,6 @@ fixed:
   Qusqu: "庫斯科"
   Qutb: "庫特布"
   Qíbīn Bùduì: "騎兵部隊"
-  Qíbīng Bùduì: "騎兵部隊"
   Qādir Suhrawardī: "卡迪爾·蘇赫拉瓦迪"
   Qāsim: "卡西姆"
   Qāḍī: "卡迪"
@@ -3902,6 +3935,7 @@ fixed:
   Ratio of Great Power Score: "列強分數比例"
   Ravenna: "拉文納"
   Raw Goods Location Filters: "原料商品地點過濾器"
+  Raw Material: "原材料"
   Raw Material Production: "原材料生產"
   Rawaki: "拉瓦基"
   Rawaki Coastal Sea: "拉瓦基沿岸海域"
@@ -3944,6 +3978,7 @@ fixed:
   Reinforcement Cost: "補員花費"
   Rekenkamer: "審計院"
   Relation Type: "關係類型"
+  Relations: "關係"
   Relations Tab: "關係分頁"
   Relative Military Strength: "相對軍事實力"
   Relevant Countries: "相關國家"
@@ -4068,7 +4103,6 @@ fixed:
   Rufiji-Ruvuma: "魯菲吉-魯伍馬"
   Ruler: "統治者"
   Ruling Dynasty: "統治家族"
-  Rum: "魯姆"
   Rural Buildings Construction Efficiency: "鄉村建築建造效率"
   Rural Clothmaker: "鄉村製布坊"
   Rural Crafts Charter: "鄉村手工業特許狀"
@@ -4092,7 +4126,6 @@ fixed:
   Rytíři: "騎兵部隊"
   Ryūkyū: "琉球"
   Río de la Plata: "拉普拉塔河"
-  Rûm: "魯姆"
   Rāfiḍa: "拉菲達"
   Rōmanismós: "羅馬認同"
   Sabbath: "安息日"
@@ -4131,9 +4164,6 @@ fixed:
   Saladin: "薩拉丁"
   Salamanca: "薩拉曼卡"
   Salic Law: "薩利克法"
-  Salt Collector: "採鹽場"
-  Saltpeter Guild: "製硝行會"
-  Saltpeter Workshop: "製硝作坊"
   Salzburg: "薩爾茨堡"
   Salé: "塞拉"
   Samar: "薩馬"
@@ -4159,7 +4189,6 @@ fixed:
   Sanaa: "沙那"
   Sanction the Empire: "制裁帝國"
   Sanctuary of Daphne: "達芙妮聖所"
-  Sand Pit: "採砂場"
   Sandaki: "桑達基"
   Sandcastle: "沙堡"
   Sangmin: "常民"
@@ -4190,7 +4219,6 @@ fixed:
   Savannakhet: "沙灣拿吉"
   Savonarola: "薩佛納羅拉"
   Savoyard: "薩伏依"
-  Sawmill: "鋸木廠"
   Saxo Grammaticus: "薩克索·格拉瑪提庫斯"
   Saxony: "薩克森"
   Sayfawa: "賽法瓦"
@@ -4267,8 +4295,6 @@ fixed:
   Shelikhov Gulf: "舍利霍夫灣"
   Shiism: "什葉派"
   Shikoku Henro: "四國遍路"
-  Shinto: "神道"
-  Shintō: "神道"
   Ship Losses: "船艦損失"
   Shipwright Contracts: "船匠契約"
   Shipyard: "造船廠"
@@ -4276,7 +4302,6 @@ fixed:
   Shirk: "以物配主"
   Shirvan: "希爾凡"
   Shirvan Coast Sea: "希爾凡沿岸海域"
-  Shogun: "幕府將軍"
   Shogunate: "幕府"
   Shrewsbury: "舒茲伯利"
   Shri Idagunji Maha Ganapati Temple: "室利伊陀郡時‑摩訶伽那波底神廟"
@@ -4292,7 +4317,6 @@ fixed:
   Shāh: "沙阿"
   Shānxī: "山西"
   Shōen: "莊園"
-  Shōgun: "幕府將軍"
   Shōgun of Japan: "日本幕府將軍"
   Siam: "暹羅"
   Siberia: "西伯利亞"
@@ -4352,7 +4376,6 @@ fixed:
   Society Tab: "社會分頁"
   Sodom: "所多瑪"
   Sofa Barracks: "索法兵營"
-  Sofa Stockade: "索法柵寨"
   Sofia: "索菲亞"
   Sokoto: "索科托"
   Solomon: "所羅門"
@@ -4591,7 +4614,6 @@ fixed:
   Tecumseh: "特庫姆塞"
   Telesterion: "泰勒斯台里昂神廟"
   Tellus: "特魯斯"
-  Telpochcalli: "特爾波奇卡利"
   Temotu: "泰莫圖"
   Temotu Coastal Sea: "泰莫圖沿岸海域"
   Temotu Sea: "泰莫圖海"
@@ -4608,8 +4630,6 @@ fixed:
   Tenet Price: "信條花費"
   Tengri: "騰格里"
   Tennō: "天皇"
-  Tenochtitlan: "特諾奇提特蘭"
-  Tenōchtitlan: "特諾奇提特蘭"
   Teotl: "特奧特爾"
   Ternate: "德那第"
   Ternate Coast Sea: "德那第沿岸海域"
@@ -4668,7 +4688,6 @@ fixed:
   The Way of Tea: "茶道"
   The Wealth of Nations: "《國富論》"
   The Za: "座"
-  Thema Headquarters: "軍區總部"
   Theocratic Elective: "神權選舉制"
   Theodora Kantakouzenos: "狄奧多拉·坎塔庫澤諾斯"
   Theodosian Walls: "狄奧多西城牆"
@@ -4696,7 +4715,6 @@ fixed:
   Three Sisters: "三姊妹"
   Thrikkakara Temple: "特里卡卡拉神廟"
   Théma: "軍區"
-  Théma Headquarters: "軍區總部"
   Thémata: "軍區"
   Tibet: "吐蕃"
   Tibetan: "吐蕃的"
@@ -4886,7 +4904,6 @@ fixed:
   Tzompantli: "骷髏架"
   Téng Wáng Pavilion: "滕王閣"
   Tübingen: "圖賓根"
-  Tēlpōchcalli: "特爾波奇卡利"
   Tēteoh: "特特奧"
   Tēzcatlipōca: "特斯卡特利波卡"
   Tōllān: "托蘭"
@@ -4929,10 +4946,8 @@ fixed:
   Union Member: "共主邦聯成員"
   Union of Aragon: "亞拉岡聯盟"
   Union of Crowns: "王冠聯合"
-  Union of Crowns Pact: "王冠聯合協定"
   Union of Crowns Succession: "王冠聯合繼承制"
   Union of Valencia: "瓦倫西亞聯盟"
-  Unions of Crowns Pact: "王冠聯合協定"
   Unique Content Type: "獨特內容類型"
   Unique Content Type Filters: "獨特內容類型過濾器"
   Unique Policy: "獨特政策"
@@ -5080,7 +5095,6 @@ fixed:
   Wakasa: "若狹"
   Waldemar: "瓦爾德馬"
   Wales: "威爾斯"
-  Walkthrough: "教學導覽"
   Wallenstein's Death: "華倫斯坦之死"
   Walls of Ston: "斯通城牆"
   Walls of Vienna: "維也納之牆"
@@ -5131,6 +5145,7 @@ fixed:
   Welfare State: "福利國家"
   Wellington: "威靈頓"
   Welser: "韋爾瑟"
+  Wends: "文德人"
   Wessex: "威塞克斯"
   West Africa: "西非"
   West China: "華西"
@@ -5283,6 +5298,25 @@ fixed:
   Ḥisba: "希斯巴"
   Ṣāḥib Qirān: "吉星交會之主"
   Ṭawāf al-Ifadah: "朝覲主巡遊"
+  Armored Horsemen: "披甲騎兵"
+  Army Tradition: "陸軍傳統"
+  Arquebusiers: "火繩槍兵"
+  Art Schools: "藝術學校"
+  Artilharia: "炮兵部隊"
+  Artillery Construction: "炮兵建造"
+  Artillery Maintenance: "炮兵維護費"
+  Arts Academies: "藝術學院"
+  Atakebune: "安宅船"
+  Automate Balance of Flanks: "自動平衡側翼"
+  Auxiliaries: "輔助部隊"
+  Auxiliary Construction: "輔助部隊建造"
+  Auxiliary Maintenance: "輔助部隊維護費"
+  Baggage Train: "輜重隊"
+  Baghlah: "巴格拉帆船"
+  Bailiffs: "地方行政官署"
+  Baker Rifle: "貝克式步槍"
+  Balance Formation: "平衡編隊"
+  Urban Parliament Seats: "城市議會席位"
 
 aliases:
   Aberffraw:
@@ -5319,6 +5353,11 @@ aliases:
     zh: "太陽貞女"
     also:
       - Acllas
+
+  Action Cost:
+    zh: "行動花費"
+    also:
+      - Actions Cost
 
   Adipati:
     zh: "阿迪帕蒂"
@@ -5385,6 +5424,11 @@ aliases:
     also:
       - Appanages
 
+  Aqueduct System:
+    zh: "引水道系統"
+    also:
+      - Aqueduct Systems
+
   Archbishop-Elector:
     zh: "大主教選帝侯"
     also:
@@ -5409,6 +5453,16 @@ aliases:
     zh: "陸軍國家"
     also:
       - Army Based Countries
+
+  Artilleri:
+    zh: "炮兵部隊"
+    also:
+      - Artillerí
+
+  Artilleria:
+    zh: "炮兵部隊"
+    also:
+      - Artillería
 
   Asante:
     zh: "阿散蒂"
@@ -5449,6 +5503,16 @@ aliases:
     zh: "布萊梅"
     also:
       - Brema
+
+  Bubin Budui:
+    zh: "步兵部隊"
+    also:
+      - Bùbīn Bùduì
+
+  Bubing Budui:
+    zh: "步兵部隊"
+    also:
+      - Bùbīng Bùduì
 
   Buccaneer:
     zh: "海盜"
@@ -5510,6 +5574,28 @@ aliases:
     also:
       - Cardinal-Nephew
       - Cardinal-Nephews
+
+  Cavalaria:
+    zh: "騎兵部隊"
+    also:
+      - Cavalariá
+
+  Cavaleria:
+    zh: "騎兵部隊"
+    also:
+      - Cavalerìa
+
+  Cavalier:
+    zh: "騎兵部隊"
+    also:
+      - Cavaliers
+      - Cavalièrs
+
+  Cavaliere:
+    zh: "騎兵部隊"
+    also:
+      - Cavalieri
+      - Cavalieris
 
   Celestial Governor:
     zh: "天朝總督"
@@ -5681,6 +5767,12 @@ aliases:
     also:
       - False Dmitrys
 
+  Fantaria:
+    zh: "步兵部隊"
+    also:
+      - Fantarìa
+      - Fàntaria
+
   Felipe II:
     zh: "腓力二世"
     also:
@@ -5721,6 +5813,11 @@ aliases:
     also:
       - Free Imperial Cities
 
+  Fuzu Budui:
+    zh: "輔助部隊"
+    also:
+      - Fǔzù Bùduì
+
   Galapagos:
     zh: "加拉巴哥"
     also:
@@ -5745,6 +5842,11 @@ aliases:
     zh: "列強"
     also:
       - Great Powers
+
+  Hand Cannon Guild:
+    zh: "手銃行會"
+    also:
+      - Hand Cannon Guilds
 
   Hanseatic Kontor:
     zh: "漢薩商館"
@@ -5786,6 +5888,11 @@ aliases:
     also:
       - Huguenots
 
+  Huitzilopochtli:
+    zh: "維齊洛波奇特利"
+    also:
+      - Huītzilōpōchtli
+
   Hundred Years' War:
     zh: "百年戰爭"
     also:
@@ -5815,6 +5922,16 @@ aliases:
     zh: "改善關係"
     also:
       - Improve Relations
+
+  Infanteri:
+    zh: "步兵部隊"
+    also:
+      - Infanterí
+
+  Infanteria:
+    zh: "步兵部隊"
+    also:
+      - Infantería
 
   International Organization:
     zh: "國際組織"
@@ -5870,6 +5987,11 @@ aliases:
     zh: "法令集成"
     also:
       - The Kephalai
+
+  Kontor:
+    zh: "漢薩商館"
+    also:
+      - Kontors
 
   La Plata:
     zh: "拉普拉塔"
@@ -6032,6 +6154,11 @@ aliases:
     also:
       - Navy Based Countries
 
+  Nelipic:
+    zh: "內利皮奇"
+    also:
+      - Nelipić
+
   Non-Integrated Provinces:
     zh: "未整合省份"
     also:
@@ -6143,6 +6270,11 @@ aliases:
     also:
       - Prónoiai
 
+  Qibing Budui:
+    zh: "騎兵部隊"
+    also:
+      - Qíbīng Bùduì
+
   R.G.O:
     zh: "資源採集產業"
     also:
@@ -6209,15 +6341,45 @@ aliases:
     also:
       - Royalists
 
+  Rum:
+    zh: "魯姆"
+    also:
+      - Rûm
+
   Saint Schenoute the Archimandrite:
     zh: "大修院長聖舍努特"
     also:
       - Saint Shenoute the Archimandrite
 
+  Salt Collector:
+    zh: "採鹽場"
+    also:
+      - Salt Collectors
+
   Salt Pan:
     zh: "鹽田"
     also:
       - Salt Pans
+
+  Saltpeter Guild:
+    zh: "製硝行會"
+    also:
+      - Saltpeter Guilds
+
+  Saltpeter Workshop:
+    zh: "製硝作坊"
+    also:
+      - Saltpeter Workshops
+
+  Sand Pit:
+    zh: "採砂場"
+    also:
+      - Sand Pits
+
+  Sawmill:
+    zh: "鋸木廠"
+    also:
+      - Sawmills
 
   Sea Current:
     zh: "洋流"
@@ -6239,6 +6401,16 @@ aliases:
     also:
       - Senior Partners
 
+  Shinto:
+    zh: "神道"
+    also:
+      - Shintō
+
+  Shogun:
+    zh: "幕府將軍"
+    also:
+      - Shōgun
+
   Slave:
     zh: "奴隸"
     also:
@@ -6258,6 +6430,11 @@ aliases:
     zh: "社會價值觀"
     also:
       - Societal Values
+
+  Sofa Stockade:
+    zh: "索法柵寨"
+    also:
+      - Sofa Stockades
 
   Sound Toll:
     zh: "海峽通行費"
@@ -6314,6 +6491,16 @@ aliases:
     also:
       - Tea Ceremonies
 
+  Telpochcalli:
+    zh: "特爾波奇卡利"
+    also:
+      - Tēlpōchcalli
+
+  Tenochtitlan:
+    zh: "特諾奇提特蘭"
+    also:
+      - Tenōchtitlan
+
   Tercio:
     zh: "大方陣"
     also:
@@ -6328,6 +6515,11 @@ aliases:
     zh: "鳳凰的命運"
     also:
       - Fate of the Phoenix
+
+  Thema Headquarters:
+    zh: "軍區總部"
+    also:
+      - Théma Headquarters
 
   Thirty Years' War:
     zh: "三十年戰爭"
@@ -6389,6 +6581,11 @@ aliases:
     also:
       - The Tágmata
 
+  Union of Crowns Pact:
+    zh: "王冠聯合協定"
+    also:
+      - Unions of Crowns Pact
+
   Union Partner:
     zh: "邦聯成員國"
     also:
@@ -6419,6 +6616,11 @@ aliases:
     also:
       - Wakō
       - Wōkòu
+
+  Walkthrough:
+    zh: "教學導覽"
+    also:
+      - Walkthroughs
 
   War Goal:
     zh: "戰爭目標"
@@ -6599,6 +6801,14 @@ contextual:
       - zh: "安納托利亞人"
         when: "指人或族群"
 
+  Andean:
+    default: "安地斯的"
+    senses:
+      - zh: "安地斯的"
+        when: "作形容詞，修飾安地斯地區、文化、宗教或相關事物"
+      - zh: "安地斯人"
+        when: "指安地斯地區人民或族群"
+
   Anglican:
     default: "聖公宗"
     senses:
@@ -6610,6 +6820,14 @@ contextual:
         when: "作形容詞，修飾聖公宗相關的人、事物或制度"
       - zh: "聖公宗信徒"
         when: "指信仰聖公宗的人或群體"
+
+  Arabian:
+    default: "阿拉伯的"
+    senses:
+      - zh: "阿拉伯的"
+        when: "作形容詞，修飾阿拉伯地區、文化、海域、馬匹或相關事物"
+      - zh: "阿拉伯人"
+        when: "指阿拉伯人或阿拉伯族群"
 
   Arabic:
     default: "阿拉伯的"
@@ -6921,8 +7139,6 @@ contextual:
       - zh: "文書署"
         when: "指歷史或行政語境中的 chancery 文書機關"
 
-  Chichimec: "奇奇梅克人"
-
   Chinese:
     default: "中國的"
     senses:
@@ -7015,8 +7231,6 @@ contextual:
       - zh: "顏色"
         when: "指一般顏色"
 
-  Complacency: "自滿度"
-
   Confucian:
     default: "儒家的"
     senses:
@@ -7080,8 +7294,6 @@ contextual:
         when: "指生產、建設、維護或經濟活動的成本"
       - zh: "代價"
         when: "指一般敘事或抽象語境中的代價"
-
-  County: "伯國"
 
   Court:
     default: "宮廷"
@@ -8135,6 +8347,16 @@ contextual:
       - zh: "奧奇帕尼斯特利"
         when: "明確需要保留阿茲特克文化原名、音譯或原名辨識時"
 
+  Old World:
+    default: "舊大陸"
+    senses:
+      - zh: "舊大陸"
+        when: "指與新大陸相對的歐洲、亞洲、非洲等地理概念"
+      - zh: "舊世界"
+        when: "指與新世界相對的歷史或文化概念"
+      - zh: "舊世界的"
+        when: "作形容詞，修飾商品、文化、地區或其他相關事物"
+
   Olympian:
     default: "奧林帕斯的"
     senses:
@@ -8344,8 +8566,6 @@ contextual:
         when: "指基督教歷史上的宗教改革運動，或其相關宗教、教派與時代語境"
       - zh: "改革"
         when: "指一般行政、制度或組織改革，而非宗教改革"
-
-  Relations: "關係"
 
   Republic:
     default: "共和國"
@@ -8907,8 +9127,6 @@ contextual:
       - zh: "威尼斯人"
         when: "指人或族群"
 
-  Walkthroughs: "教學導覽"
-
   Welsh:
     default: "威爾斯"
     senses:
@@ -8918,8 +9136,6 @@ contextual:
         when: "指人或族群"
       - zh: "威爾斯語"
         when: "指語言"
-
-  Wends: "文德人"
 
   Xocotl Huetzi:
     default: "索科特爾落下節"
