@@ -18,14 +18,13 @@
 1093  main_menu/localization/english/game_concepts_l_english.yml
 967   main_menu/localization/english/laws_and_policies_l_english.yml
 900   main_menu/localization/english/artists_l_english.yml
+
 687   main_menu/localization/english/units_l_english.yml
 657   main_menu/localization/english/messages_l_english.yml
 604   main_menu/localization/english/goods_l_english.yml
+
 542   main_menu/localization/english/buildings_l_english.yml
 535   main_menu/localization/english/opinions_l_english.yml
-
-
-
 484   main_menu/localization/english/location_flavor_l_english.yml
 419   main_menu/localization/english/government_reforms_l_english.yml
 394   main_menu/localization/english/estate_l_english.yml
@@ -37,15 +36,16 @@
 273   main_menu/localization/english/actions_l_english.yml
 269   main_menu/localization/english/situations_l_english.yml
 262   main_menu/localization/english/scripted_relations_l_english.yml
-252   main_menu/localization/english/holy_sites_l_english.yml
-231   main_menu/localization/english/hints_l_english.yml
-215   main_menu/localization/english/lists_l_english.yml
-196   main_menu/localization/english/settings_l_english.yml
+
 
 
 
 
 ---done---
+252   main_menu/localization/english/holy_sites_l_english.yml
+231   main_menu/localization/english/hints_l_english.yml
+215   main_menu/localization/english/lists_l_english.yml
+196   main_menu/localization/english/settings_l_english.yml
 169   main_menu/localization/english/economy_l_english.yml
 163   main_menu/localization/english/country_interactions_l_english.yml
 156   main_menu/localization/english/traits_l_english.yml

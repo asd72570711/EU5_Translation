@@ -420,7 +420,6 @@ fixed:
   Anticosti Coast Sea: "安蒂科斯蒂沿岸海域"
   Antilles: "安地列斯"
   Antioch: "安條克"
-  Antiquity: "古典時代"
   Antoine Louis: "安托萬·路易"
   Antwerp: "安特衛普"
   Anugraha: "恩典"
@@ -473,6 +472,7 @@ fixed:
   Aristotle: "亞里斯多德"
   Armagh: "阿馬"
   Armistice: "停戰協定"
+  Armored Horsemen: "披甲騎兵"
   Army Academy: "陸軍學院"
   Army Attrition: "陸軍損耗"
   Army Builder: "陸軍編制器"
@@ -486,12 +486,13 @@ fixed:
   Army Morale Recovery Speed: "陸軍士氣恢復速度"
   Army Recruitment: "陸軍徵募"
   Army Size: "陸軍規模"
+  Army Tradition: "陸軍傳統"
   Army Units: "陸軍單位"
+  Arquebusiers: "火繩槍兵"
   Arras: "阿拉斯"
   Arsenal: "軍械庫"
   Arsenal of Argostoli: "阿爾戈斯托利軍械庫"
   Art Patronage: "藝術贊助"
-  Art School: "藝術學校"
   Artailéireachd: "炮兵部隊"
   Artalzary: "炮兵部隊"
   Arte della Lana: "羊毛行會"
@@ -507,6 +508,7 @@ fixed:
   Artiglierie: "炮兵部隊"
   Artileara: "炮兵部隊"
   Artilerie: "炮兵部隊"
+  Artilharia: "炮兵部隊"
   Artilier: "炮兵部隊"
   Artillerie: "炮兵部隊"
   Artillerij: "炮兵部隊"
@@ -514,6 +516,8 @@ fixed:
   Artillery: "炮兵"
   Artillery Bonus: "炮兵加成"
   Artillery Build Cost: "炮兵建造花費"
+  Artillery Construction: "炮兵建造"
+  Artillery Maintenance: "炮兵維護費"
   Artillery Maintenance Cost: "炮兵維護花費"
   Artillery Reinforcement Cost: "炮兵補員花費"
   Artillery School: "炮兵學校"
@@ -525,6 +529,7 @@ fixed:
   Artist Modifiers: "藝術家修正"
   Artist Type: "藝術家類型"
   Artois: "阿圖瓦"
+  Arts Academies: "藝術學院"
   Arts Academy: "藝術學院"
   Artyleria: "炮兵部隊"
   Artyleriya: "炮兵部隊"
@@ -553,6 +558,7 @@ fixed:
   Astronomy: "天文學"
   Atacama: "阿他加馬"
   Atacama Coastal Sea: "阿他加馬沿岸海域"
+  Atakebune: "安宅船"
   Ataman: "哥薩克首領"
   Athena: "雅典娜"
   Athenian: "雅典"
@@ -601,14 +607,18 @@ fixed:
   Autocratic Parliament: "專制議會"
   Autokratorikoí Bárangoi: "帝國瓦良格衛隊"
   Autokratorikoí Bárangoi Phýlakes: "帝國瓦良格近衛隊"
+  Automate Balance of Flanks: "自動平衡側翼"
   Autonomous Subject: "自治屬國"
   Autonomy Movement: "自治運動"
   Auxilia: "輔助部隊"
   Auxiliaire: "輔助部隊"
   Auxiliar: "輔助部隊"
   Auxiliari: "輔助部隊"
+  Auxiliaries: "輔助部隊"
   Auxiliary: "輔助部隊"
   Auxiliary Build Cost: "輔助部隊建造花費"
+  Auxiliary Construction: "輔助部隊建造"
+  Auxiliary Maintenance: "輔助部隊維護費"
   Auxiliary Maintenance Cost: "輔助部隊維護花費"
   Auxiliary Reinforcement Cost: "輔助部隊補員花費"
   Auxilium et Consilium: "援助與諮議"
@@ -649,19 +659,25 @@ fixed:
   Bach: "巴哈"
   Badajoz: "巴達霍斯"
   Badrinath Temple: "巴德里納特神廟"
+  Baggage Train: "輜重隊"
   Baghdad: "巴格達"
+  Baghlah: "巴格拉帆船"
   Bahamas: "巴哈馬"
   Bailiff: "地方行政官署"
+  Bailiffs: "地方行政官署"
   Bajang Ratu: "巴章拉圖門"
   Bajorai: "巴約賴"
   Bajreshwari Mata Temple: "巴傑什瓦里女神廟"
   Bakaro Coastal Sea: "巴卡羅沿岸海域"
+  Baker Rifle: "貝克式步槍"
+  Balance Formation: "平衡編隊"
   Balanced Byzantine Studies: "均衡拜占庭式學習"
   Balanced Harmony: "陰陽調和"  # 採用官中翻譯
   Balanced Latin Studies: "均衡拉丁式學習"
   Bali: "峇里"
   Bali Coast Sea: "峇里沿岸海域"
   Balkan League: "巴爾幹聯盟"
+  Ballista Elephants: "弩砲戰象"
   Ballistarii: "炮兵部隊"
   Baltasar Gracián: "巴爾塔薩·格拉西安"
   Baltic: "波羅的"
@@ -673,6 +689,7 @@ fixed:
   Bangka Coast Sea: "邦加沿岸海域"
   Bangui: "班基"
   Bankruptcy Penalty: "破產懲罰"
+  Banner Cavalry: "八旗騎兵"
   Banten: "萬丹"
   Banu Hummay: "胡邁家族"
   Banu Kanz: "坎茲家族"
@@ -692,6 +709,7 @@ fixed:
   Barlaam: "貝爾拉姆"
   Barons: "男爵"
   Baroque: "巴洛克"
+  Barque: "巴克帆船"
   Barracks: "兵營"
   Barter Economy: "以物易物經濟"
   Barter Exchange: "以物易物"
@@ -705,6 +723,8 @@ fixed:
   Base Cost: "基礎花費"
   Base Decay: "基礎衰減"
   Base Factor: "基礎係數"
+  Base Morale: "基礎士氣"
+  Base Production Method: "基礎生產方式"
   Base Rating: "基本評分"
   Base Reluctance: "基礎不情願值"  # 採用官方中文翻譯
   Base Value: "基礎值"
@@ -715,7 +735,6 @@ fixed:
   Basra: "巴斯拉"
   Bastar: "巴斯塔"
   Bastille: "巴士底"
-  Bastion: "稜堡"
   Bateren: "伴天連"
   Battle of Ankara: "安卡拉之戰"
   Battle of Gaixia: "垓下之戰"
@@ -725,13 +744,20 @@ fixed:
   Battle of Vienna: "維也納之戰"
   Battlefield Medic: "戰地醫生"
   Bavaria: "巴伐利亞"
+  Bavarian Beer Workshops: "巴伐利亞啤酒工坊"
+  Bavarian Breweries: "巴伐利亞式釀酒"
+  Bavarian Jäger: "巴伐利亞獵兵"
   Bawo: "巴沃"
   Bayezid: "巴耶濟德"
   Bayt al-Māl: "財富之屋"  # 財富之屋是字面意思，AI 推薦翻譯為國庫
   Baština: "世襲領地"
   Beaver War: "河狸戰爭"
+  Bedouin Cavalry: "貝都因騎兵"
   Beelzebub: "別西卜"
+  Beer Liquor Workshops: "啤酒蒸餾作坊"
+  Beer Manufactories: "啤酒工場"
   Beer Workshop: "啤酒工坊"
+  Beeswax: "蜂蠟"
   Behavioral Modifiers: "行為修正"
   Beijing: "北京"
   Belgium: "比利時"
@@ -743,6 +769,8 @@ fixed:
   Bengal: "孟加拉"
   Bengal High Sea: "孟加拉外海"
   Bengali: "孟加拉"
+  Bengali Elephant Cavalry: "孟加拉象騎兵"
+  Bengali War Elephant: "孟加拉戰象"
   Bengkulu: "明古魯"
   Bengkulu Coast Sea: "明古魯沿岸海域"
   Benin: "貝南"
@@ -752,12 +780,13 @@ fixed:
   Bermuda: "百慕達"
   Bern: "伯爾尼"
   Bernabò: "貝爾納波"
+  Bernini: "貝尼尼"
   Bertrand du Guesclin: "貝特朗·杜·蓋克蘭"
   Betsimisaraka: "貝齊米薩拉卡"
   Betsimisaraka Coast Sea: "貝齊米薩拉卡沿岸海域"
   Betsimisarakan: "貝齊米薩拉卡"
   Bey: "貝伊"
-  Bey Fortress: "貝伊堡壘"
+  Bey Fortress: "貝伊要塞"
   Bhattara Saptaprabhu: "王室七長老會議"
   Bhres: "布雷諸侯"
   Bhu Varaha Swamy Temple: "大地婆羅訶神廟"
@@ -767,6 +796,7 @@ fixed:
   Bilbao: "畢爾巴鄂"
   Biljno Polje: "比利諾波列"
   Biraja Temple: "比拉賈神廟"
+  Birlinn: "高地槳帆船"  # 採用官方中文翻譯
   Birmingham: "伯明罕"
   Bishop: "主教"
   Bishopric: "主教區"
@@ -777,9 +807,12 @@ fixed:
   Black Bart: "黑色准男爵"
   Black Death Origin: "黑死病起源"
   Black Death Outbreak Year: "黑死病爆發年份"
+  Black Guard: "黑衛軍"
   Black Market: "黑市"
   Black Sea: "黑海"
   Blackbeard: "黑鬍子"
+  Blacksmiths: "鐵匠鋪"
+  Bladesmiths: "刀劍鍛造坊"
   Blas de Lezo: "布拉斯·德·萊索"
   Blue Dragon: "青龍"
   Board of Admiralty: "海軍部委員會"
@@ -792,7 +825,6 @@ fixed:
   Bock Fortifications: "博克防禦工事"
   Bodh Gayā: "菩提伽耶"
   Boeren: "布倫"
-  Bog Iron Smelter: "沼鐵冶煉場"
   Bohemia: "波希米亞"
   Bohol Coast Sea: "保和沿岸海域"
   Bojo Budae: "輔助部隊"
@@ -801,6 +833,8 @@ fixed:
   Bolshogo Dvortsa: "宮廷衙門"
   Bolshoi Theater: "莫斯科大劇院"
   Bolyari: "波雅爾"  # Bolyari 是保加利亞語中 Bolyar 的複數
+  Bomb Ketch: "臼炮船"
+  Bombard Phase: "炮擊階段"
   Bondeståndet: "邦德斯通德特"
   Bone: "波尼"
   Bone Coast Sea: "波尼沿岸海域"
@@ -842,7 +876,6 @@ fixed:
   Brethren of the Coast: "海岸兄弟會"
   Brethren of the Marsh: "沼澤兄弟會"  # 採用官方中文翻譯
   Brewery: "釀酒坊"
-  Brewery Mill: "釀酒廠"
   Brian Boru: "布萊恩·博魯"
   Bribe Burghers: "賄賂市民"
   Bribe Clergy: "賄賂教士"
@@ -852,13 +885,16 @@ fixed:
   Bribe Nobility: "賄賂貴族"
   Bridge Price: "橋樑花費"
   Bridgeport: "布里奇波特"
+  Brig: "雙桅橫帆船"
   Brihadisvara Temple: "布里哈迪希瓦拉神廟"
   Bristol: "布里斯托"
   Britain: "不列顛"
   British Empire: "大英帝國"
   British Isles: "不列顛群島"
   Brittany: "布列塔尼"
+  Broken Units: "潰敗單位"
   Bronze Cannons: "青銅炮"
+  Bronze Tool Makers: "青銅工具工坊"
   Brothel: "妓院"
   Bruges: "布魯日"
   Brunei: "汶萊"
@@ -888,7 +924,6 @@ fixed:
   Burghers Estate: "市民階層"
   Burghers Rebellion: "市民叛亂"
   Burgos: "布爾戈斯"
-  Burgtor: "城堡門"
   Burguesía: "布爾格西亞"
   Burgunds: "勃艮地人"  # 應該是官方拼錯？
   Burgundy: "勃艮地"
@@ -904,6 +939,7 @@ fixed:
   Buy Military Access: "購買軍事通行權"
   Buôbĭng Buôdôi: "步兵部隊"
   BWV: "巴哈作品目錄"
+  Byzantine Cataphracts: "拜占庭全覆裝甲騎兵"
   Byzantine Emperor: "拜占庭皇帝"
   Byzantine Empire: "拜占庭帝國"
   Byzantine Military Studies: "拜占庭式軍事學習"
@@ -914,6 +950,7 @@ fixed:
   Bárbaroi: "巴爾巴羅伊"
   Bāla: "波羅"
   Bāla Tripurasundarī: "童女三城美神"
+  Bǎochuán: "寶船"
   Caballer: "騎兵部隊"
   Caballeros: "騎兵部隊"
   Caballeros Villanos: "平民騎士"
@@ -922,12 +959,14 @@ fixed:
   Cabinet Efficiency: "內閣效率"
   Cabinet Slot: "內閣欄位"
   Cabinet Subtab: "內閣子分頁"
+  Cabot: "卡伯特"
   Caen: "卡昂"
   Caesar: "凱撒"
   Cagayan: "卡加煙"
   Cagayan Coast Sea: "卡加煙沿岸海域"
   Cahokia: "卡霍基亞"
   Cairo: "開羅"
+  Cakradonya: "查克拉多尼亞戰船"
   Calicoes: "印花棉布"
   California Gulf Sea: "加利福尼亞灣"
   Call Circle: 召集行政圈
@@ -937,10 +976,12 @@ fixed:
   Camaguey: "卡馬圭"
   Camaguey Coast Sea: "卡馬圭沿岸海域"
   Cambro-Norman: "威爾斯諾曼"
+  Camp Followers: "隨營人員"
   Campanile: "鐘樓"
   Canada: "加拿大"
   Canadian Atlantic Coast: "加拿大大西洋海岸"
   Candidates Filter: "候選人過濾器"
+  Cannon Foundries: "火炮鑄造場"
   Cannon Foundry: "火炮鑄造場"
   Cannon Maker: "鑄炮匠行會"
   Cannon Workshop: "火炮工坊"
@@ -959,6 +1000,7 @@ fixed:
   Capetian: "卡佩"
   Capibaribe: "卡皮巴里貝"
   Capibaribe Coastal Sea: "卡皮巴里貝沿岸海域"
+  Capital Buildings: "首都建築"
   Capital Distance: "首都距離"
   Capital Economy: "資本經濟"
   Capitolium: "卡皮托利姆神廟"
@@ -967,15 +1009,14 @@ fixed:
   Captain James Misson: "船長詹姆斯·米森"
   Captain John Smith: "約翰·史密斯船長"
   Caracas: "卡拉卡斯"
-  Caravan Stop: "商隊驛站"
-  Caravanserai: "商隊驛館"
-  Caravels: "卡拉維爾帆船"
+  Caracole: "半迴旋騎兵"
   Cardinal Price: "樞機花費"
   Cardinal Seat: "樞機席位"
   Cardinals: "樞機"
   Caribbean: "加勒比"
   Carl Gotthard Langhans: "卡爾·戈特哈德·朗漢斯"
   Carnatic: "卡納提克"
+  Caroleans: "卡爾軍"
   Carolingian Empire: "卡洛林帝國"
   Carolus XII: "卡爾十二世"
   Carpathia: "喀爾巴阡"
@@ -985,22 +1026,29 @@ fixed:
   Carpathian Mountains: "喀爾巴阡山脈"
   Carpathians: "喀爾巴阡"
   Carpenters' Guild: "木匠行會"
+  Carrack: "克拉克帆船"
   Cartagena: "卡塔赫納"
   Carthage: "迦太基"
   Carthaginian: "迦太基"
   Cartographer: "製圖師"
   Casa Gioiosa: "歡樂之家"
   Casimir: "卡齊米日"
+  Cast Bronze Barrels: "鑄製青銅砲管"
   Castel Sant'Angelo: "聖天使城堡"
   Castile: "卡斯提爾"
+  Castle Maintenance: "城堡維護費"
   Castrate: "閹割"
   Castries: "卡斯翠"
   Casus Belli: "宣戰理由"
   Casus Belli Target: "宣戰理由目標"
+  Catalan Crossbowmen: "加泰隆尼亞弩兵"
+  Catalan Galley: "加泰隆尼亞槳帆戰艦"
   Catalonia: "加泰隆尼亞"
   Cataphracts: "全覆裝甲騎兵"
   Cateau-Cambrésis: "卡托康布雷西"
+  Caterans: "高地劫掠兵"
   Cathay: "契丹"
+  Cathedrals: "大教堂"
   Catherine: "凱薩琳"
   Catholic Church: "天主教會"
   Catholic Country Interaction Cost: "天主教國家互動花費"
@@ -1024,11 +1072,14 @@ fixed:
   Cavallers: "騎兵部隊"
   Cavalry: "騎兵"
   Cavalry Companions: "夥伴騎兵"
+  Cavalry Maintenance: "騎兵維護費"
   Cavalry Reserve: "騎兵預備隊"
+  Cavalrymen: "騎手"
   Cavalê: "騎兵部隊"
   Cave of the Patriarchs: "列祖之洞"
   Cayenne: "卡宴"
   Cayuga: "卡尤加"
+  Caçadores: "葡萄牙獵兵"
   Cede Location: "割讓地點"
   Celestial Actions: "天朝行動"
   Celestial Authority: "天朝威儀"
@@ -1053,6 +1104,7 @@ fixed:
   Ceremonial Tax Exemptions: "儀典免稅權"
   Ceres: "刻瑞斯"
   Cerro Rico del Potosí: "波托西里科山"
+  Cetbang: "切特邦砲"
   Ch'ibalo'ob: "奇巴洛布"
   Cha-no-Yu: "茶之湯"
   Chaco: "查科"
@@ -1060,10 +1112,12 @@ fixed:
   Chala: "查拉"
   Chala Coastal Sea: "查拉沿岸海域"
   Challenge League Leadership Price: "挑戰聯盟領導權花費"
+  Chambered Cannon: "藥室砲"
   Chambery: "香貝里"
   Chamundeshwari Temple: "查蒙德什瓦里神廟"
   Chan Bo Coast Sea: "占婆沿岸海域"
   Chance After Battle: "戰鬥後獲得機率"  # 原文沒有「獲得」，但官方中文有
+  Chance of Falling: "陷落機率"
   Chancellor: "宰相"
   Chancellor Nobles: "掌璽貴族"  # 採用官方中文翻譯
   Changu Narayan Temple: "昌古那羅延神廟"
@@ -1078,6 +1132,7 @@ fixed:
   Charles Vane: "查爾斯·范恩"
   Charles VIII: "查理八世"
   Chartres: "夏特"
+  Chasseurs: "法國獵兵"
   Chausath Yogini Temple: "六十四瑜伽女神廟"
   Cheirosiphōnes: "希臘火噴射兵"
   Chen-Sui: "陳隋"
@@ -1096,6 +1151,7 @@ fixed:
   Chivalric Orders: "騎士團"
   Chișinău: "基希訥烏"
   Chola: "朱羅"
+  Chongtong: "銃筒"
   Chouan: "舒昂黨人"
   Christendom: "基督教世界"
   Christian Holy Site: "基督教聖地"
@@ -1137,11 +1193,16 @@ fixed:
   Civil War: "內戰"
   Clan Diplomacy Law: "氏族外交法"
   Clan Embassies: "氏族使節團"
+  Clan Retainer Cavalry: "家臣騎兵"
+  Clan Retainer Cavalry Maintenance: "家臣騎兵維護費"
+  Clan Retainers: "家臣眾"
+  Clan Retainers Maintenance: "家臣眾維護費"
   Clan Seat: "氏族堡寨"
   Clan Shipyards: "氏族造船場"
   Clan Taxation Law: "氏族徵稅法"
+  Classical Antiquity: "古典時代"
   Clausewitz: "克勞塞維茨"
-  Clay Pit: "黏土採掘場"
+  Clay Bricks: "黏土磚"
   Cleanse Heresy: "清除異端"
   Cleansing Ritual: "禊祓儀式"
   Clerecía: "教士"
@@ -1149,6 +1210,7 @@ fixed:
   Clergé: "教士"
   Clerical Aristocracy: "教士貴族"
   Clerical Literature: "教士文獻"
+  Cloth Paper: "布料紙"  # 採用官方中文翻譯
   Cloth Workshop: "布料工坊"
   Cloud Serpent God: "雲蛇神"
   Cloves: "丁香"
@@ -1160,8 +1222,9 @@ fixed:
   Coalition War: "包圍網戰爭"
   Coast of America: "美洲海岸"
   Coast of Lucayas: "盧卡亞海岸"
-  Coastal Fort: "岸防堡壘"
+  Coastal Boatyards: "沿海造船場"
   Coastal Gunnery: "岸防砲臺"
+  Coca Leaf: "古柯葉"
   Cochin: "科欽"
   Cocoa: "可可"
   Coffee: "咖啡"
@@ -1173,6 +1236,7 @@ fixed:
   Coisichean: "步兵部隊"
   Coisithe: "步兵部隊"
   Cola di Rienzo: "柯拉·迪·里恩佐"
+  Cold Climate: "寒冷氣候"
   Cold War: "冷戰"
   College of Cardinals: "樞機團"
   Collegium Helveticum: "赫爾維蒂亞學院"
@@ -1195,22 +1259,25 @@ fixed:
   Colony Maintenance: "殖民地維護費"
   Colony War: "殖民地戰爭"
   Columbian Exchange: "哥倫布大交換"
+  Combat Modifier: "戰鬥修正"
   Combat Side: "交戰方"
+  Combat Speed: "戰鬥速度"
   Combined Arms: "聯合兵種"
   Combined Arms Bonus: "聯合兵種加成"
   Combined Arms Requirement: "最低聯合兵種比例"  # 採用半官中翻譯
   Combined Arms Threshold: "最高聯合兵種比例"  # 採用半官中翻譯
   Combined Number of Allies: "盟友總數"
-  Commerce Center: "商業中心"
   Commercial Advisory Council: "商業顧問委員會"
   Commissariat: "軍需部"
   Commission Art Cost: "委託創作花費"
   Commissioners: "委員"
   Committee of Public Safety: "公共安全委員會"
+  Common Fortifications: "通用防禦工事"
   Common Militias: "民兵"
   Common People: "平民"
   Commons Petition: "平民請願書"
   Commonwealth: "聯邦"
+  Commonwealth of England: "英格蘭聯邦"
   Communal Lands: "共有地"
   Communal Values: "集體主義價值觀"
   Communalism: "集體主義"
@@ -1235,13 +1302,11 @@ fixed:
   Condottiero: "傭兵隊長"
   Confession of Biljno Polje: "比利諾波列棄絕宣言"
   Confucian Academy: "儒學書院"
-  Confucian School: "儒學學堂"
   Confucianism: "儒學"
   Congress of Visegrad: "維謝格拉德會議"
   Connacht: "康諾特"
   Connecticut: "康乃狄克"
   Conqueror: "征服者"
-  Conquistador: "征服者"
   Conscription: "徵兵"
   Conscription Center: "徵兵中心"
   Consejo de Guerra: "戰爭委員會"
@@ -1249,6 +1314,7 @@ fixed:
   Consilium Regium: "王室會議"
   Consilium Rogatorum: "威尼斯元老院"
   Consistory: "樞機會議"
+  Consolidate Regiments: "整併軍團"
   Constant Effects: "固定效果"
   Constantine: "君士坦丁"
   Constantine XI: "君士坦丁十一世"
@@ -1269,6 +1335,8 @@ fixed:
   Convert Culture: "轉變文化"
   Copenhagen: "哥本哈根"
   Copenhagen Dockyard: "哥本哈根造船廠"
+  Copper Based Jewelry: "銅製珠寶"
+  Copper Tool Makers: "銅製工具工坊"
   Core Region: "核心區域"
   Cornwall: "康瓦爾"
   Corps Royal de l'Artillerie: "皇家砲兵軍團"
@@ -1280,16 +1348,17 @@ fixed:
   Cost of Action: "行動花費"
   Costs of National Church Actions: "國家教會行動花費"
   Cottage Industry: "家庭手工業"
-  Cotton Plantation: "棉花種植園"
+  Cotton Cloth Workshops: "棉布作坊"
+  Cotton Clothmakers: "棉布工坊"
+  Cotton Spinners Guild: "棉紡工匠行會"
+  Cotton Textile Mills: "棉紡織廠"
   Council: "議會"
-  Council Hall: "議政廳"
   Council of the North: "北方政務會"
   Council of Trent: "特利騰大公會議"
   Count Palatine of the Rhine: "萊茵宮廷伯爵"
   Counter-Reformation: "反宗教改革"
   Counterespionage: "反間諜行動"
   Countess: "女伯爵"
-  Counting House: "會計室"
   Countries List: "國家列表"
   Country Bonuses: "國家加成"
   Country Events: "國家事件"
@@ -1306,6 +1375,7 @@ fixed:
   Court Eunuchs: "宮廷宦官"
   Court Language: "宮廷語言"
   Court Politics: "宮廷政治"
+  Court Resources: "宮廷資源"
   Courtier: "廷臣"
   Covert Actions: "秘密行動"
   Create Market: "建立市場"
@@ -1318,8 +1388,12 @@ fixed:
   Crimea Coast Sea: "克里米亞沿岸海域"
   Croatia: "克羅埃西亞"
   Cromwell: "克倫威爾"
+  Crossbowmen: "弩兵"
   Crown Power: "王室力量"
+  Crude Stone Quarries: "簡陋採石場"
   Crusade Leader: "十字軍領袖"
+  Crusader Sergeants: "十字軍軍士"
+  Cuirassiers: "胸甲騎兵"
   Cuius Regio, Eius Religio: "教隨君定"
   Culiacan: "庫利亞坎"
   Culiacan Coast Sea: "庫利亞坎沿岸海域"
@@ -1332,6 +1406,7 @@ fixed:
   Culture Bonuses: "文化加成"
   Culture Group Bonuses: "文化組加成"
   Culture Group Filters: "文化組過濾器"
+  Culverin: "長管砲"
   Cumbria: "坎布里亞"
   Curonia: "庫爾蘭"
   Current Effects: "目前效果"
@@ -1341,8 +1416,6 @@ fixed:
   Current Stability: "目前穩定度"
   Curry Favors: "博取人情"
   Customs and the Spirit of the Nations: "試論各民族的精神與風俗"
-  Customs House: "海關"
-  Customs Houses: "海關"
   Cuyo: "庫約"
   Cuyo Coastal Sea: "庫約沿岸海域"
   Cuyonon: "庫約農"
@@ -1364,6 +1437,7 @@ fixed:
   Dahomey Amazons: "達荷美女戰士"
   Dahomeyan: "達荷美"
   Dai Coastal Sea: "代沿岸海域"
+  Daiku Artisan: "大工"
   Dalmatia: "達爾馬提亞"
   Damascus: "大馬士革"
   Danmark: "丹麥"
@@ -1426,8 +1500,10 @@ fixed:
   Dewa Sanzan: "出羽三山"
   Dharma School: "法相宗"
   Dhimmi: "齊米"
+  Dhow: "達烏船"
   Diarchic Election: "雙頭選舉制"
   Diawara: "迪亞瓦拉"
+  Dice Range: "骰點範圍"
   Didima: "迪迪瑪"
   Dido: "狄多"
   Diego: "迪亞哥"
@@ -1472,6 +1548,7 @@ fixed:
   Dmitry Shemyaka: "德米特里·舍米亞卡"
   Dnieper: "聶伯河"
   Doab: "河間"
+  Docks: "船塢"
   Doctrines Panel: "學說面板"
   Dodona: "多多納"
   Doge: "總督"
@@ -1486,6 +1563,7 @@ fixed:
   Donation of Pepin: "丕平獻土"
   Donetsk: "頓內茨克"
   Dopomizhnyy: "輔助部隊"
+  Doppelsöldner: "雙酬傭兵"
   Dositej Obradović: "多西泰伊·奧布拉多維奇"
   Douai: "杜埃"
   Douro: "杜羅"
@@ -1494,11 +1572,11 @@ fixed:
   Dragoman: "通譯官"
   Dragon Throne: "龍椅"
   Dragon-Tiger General: "龍虎將軍"
+  Dragoons: "龍騎兵"
   Drake: "德雷克"
   Drassanes Reials de Barcelona: "巴塞隆納皇家造船廠"
   Dresden: "德累斯頓"
-  Dry Dock: "旱塢"
-  Dry Docks: "旱塢"
+  Du Roi: "國王近衛"  # 採用官方中文翻譯
   Dubai: "杜拜"
   Dublin: "都柏林"
   Ducal Prussia: "普魯士公國"
@@ -1510,13 +1588,14 @@ fixed:
   Dukhovenstvo: "杜霍文斯特沃"
   Dutch: "荷蘭"
   Dutch Parliament: "荷蘭議會"
+  Dutch Trade Outpost: "荷蘭貿易前哨站"
   Dutchman: "荷蘭人"
   Dušan: "杜尚"
   Dvasininkai: "德瓦西寧凱"
   Dwarkadhish Temple: "德瓦爾卡迪什神廟"
-  Dye Maker: "染料坊"
+  Dyes Makers: "染料坊"
   Dyes Mill: "染料工廠"
-  Dyes Workshop: "染料工坊"
+  Dyesmills: "染料廠"
   Dyesworks: "染料工場"
   Dying of the Light: "消逝的光芒"
   Dynamic Names: "動態名稱"
@@ -1531,11 +1610,24 @@ fixed:
   Dūcháyuàn: "都察院"
   Eachraidh: "騎兵部隊"
   Eagle of Brittany: "布列塔尼之鷹"
+  Eagle Warriors: "鷹戰士"
   Earl: "伯爵"
+  Early Arquebusiers: "早期火繩槍兵"
+  Early Capital Buildings: "早期首都建築"
+  Early Carrack: "早期克拉克帆船"
+  Early Conquistadors: "早期征服者"
+  Early Council Halls: "早期議政廳"
+  Early Heavy Infantry Maintenance: "早期重步兵維護費"
   Early Hunting Guns: "早期獵槍"
+  Early Iberian Caravel: "早期伊比利亞卡拉維爾帆船"
+  Early Iberian Galleon: "早期伊比利亞蓋倫帆船"
   Early Imperial Diet: "早期帝國議會"
+  Early Infantry Maintenance: "早期步兵維護費"
   Early Legionaries: "早期軍團士兵"
   Early Modern: "近代早期"
+  Early Paik: "早期帕伊克"
+  Early Paik Infantry: "早期帕伊克步兵"
+  Early Soldier Building Upkeep: "早期軍事建築維護"
   Earth-Shaker: "撼地者"
   Earthquake Zone: "地震帶"
   East Africa: "東非"
@@ -1546,6 +1638,7 @@ fixed:
   East Lanka Coastal Sea: "東蘭卡沿岸海域"
   East Midlands: "東密德蘭"
   East Siberia: "東西伯利亞"
+  East-Indiaman: "東印度商船"
   Eastern Abenaki: "東阿貝納基"
   Eastern Adamawa: "東阿達馬瓦"
   Eastern Christian: "東方基督教"
@@ -1560,6 +1653,7 @@ fixed:
   Economic Hegemon: "經濟霸權"
   Economic Law: "經濟法"
   Economic Policy: "經濟政策"
+  Economical Transactions: "經濟交易"
   Economy Actions: "經濟行動"
   Economy Tab: "經濟分頁"
   Ecuador: "厄瓜多"
@@ -1585,7 +1679,12 @@ fixed:
   Eleanor: "艾莉諾"
   Elective Potestate: "執政官選舉制"
   Elective Succession: "選舉繼承制"
+  Elephant Auxiliary: "馱象兵"  # 採用官方中文翻譯
+  Elephant Auxiliary Maintenance: "馱象兵維護費"
+  Elephant Cavalry: "象騎兵"
+  Elephant Cavalry Maintenance: "象騎兵維護費"
   Elephant Hunting Grounds: "獵象場"  # 採用官方中文翻譯
+  Elephant Infantry Maintenance: "戰象步兵維護費"
   Eleusa: "慈愛聖母像"
   Eleusinian: "艾盧西斯"
   Eleusinian Mysteries: "艾盧西斯秘儀"
@@ -1631,6 +1730,8 @@ fixed:
   Eritrea: "厄利垂亞"
   Eritrean Coast Sea: "厄利垂亞沿岸海域"
   Erzurum: "埃爾祖魯姆"
+  Esho Cavalry: "埃紹騎兵"
+  Essais de Théodicée sur la bonté de Dieu, la liberté de l'homme et l'origine du mal: "《神義論：關於上帝的至善、人的自由與惡的起源》"
   Estate Actions: "階層行動"
   Estate Buildings: "階層建築"
   Estate Parliament: "階級議會"
@@ -1647,6 +1748,8 @@ fixed:
   Etchmiadzin Cathedral: "埃奇米阿津主教座堂"
   Ethiopia: "衣索比亞"
   Eucharist: "聖餐"
+  Eurasian: "歐亞"
+  Eurasian Steppe: "歐亞大草原"
   Europa Universalis: "《歐陸風雲》"
   Europa Universalis V: "歐陸風雲V"
   Europe: "歐洲"
@@ -1671,6 +1774,8 @@ fixed:
   Expensive Byzantine Studies: "拜占庭式菁英學習"
   Expensive Estate Building Cost: "昂貴階層建築花費"
   Expensive Latin Studies: "拉丁式菁英學習"
+  Experience Decays: "經驗衰減"
+  Experimental Riflemen: "試驗步槍兵"
   Exploration Distance: "探索距離"
   Extortioner: "敲詐者"
   Extra Levies: "額外徵召兵"
@@ -1683,6 +1788,7 @@ fixed:
   Fakarava: "法卡拉瓦"
   Fakarava Coastal Sea: "法卡拉瓦沿岸海域"
   Falaj: "法拉吉"
+  Falconet: "隼砲"
   Family Shrine: "家祠"
   Fangatau: "方阿陶"
   Fangatau Coast Sea: "方阿陶沿岸海域"
@@ -1707,9 +1813,14 @@ fixed:
   Fernández: "費南德茲"
   Festival Grounds: "節慶場地"
   Fetishist: "拜物教"
+  Feudal Levies: "封建徵召兵"
   Feudal Mercenary Contracts: "封建傭兵契約"
   Fez: "費茲"
+  Fiber Clothmakers: "纖維布工坊"
+  Fiber Crops: "纖維作物"
   Fiber Crops Farms: "纖維作物農場"
+  Fiber Pulp Paper: "纖維漿紙"
+  Fiber-Pulp Paper: "纖維漿紙"
   Fiefdom: "采邑"
   Field Hospitals: "野戰醫院"
   Fihrīya: "菲赫里耶"
@@ -1717,19 +1828,25 @@ fixed:
   Fiji Coastal Sea: "斐濟沿岸海域"
   Fiji Sea: "斐濟海"
   Filioque: "和子說"
+  Fine Cloth: "高級布料"
+  Fine Cloth Manufactories: "高級布料工場"
   Fine Cloth Manufactory: "高級布料工場"
-  Fine Cloth Mill: "高級織布廠"
-  Fine Cloth Workshop: "高級布料工坊"
   Fine Textiles Mill: "高級紡織廠"
   Finest Infantry: "精銳步兵"
   Finland: "芬蘭"
   Firearms: "火器"
+  Firearms Factories: "火器工廠"
   Firearms Factory: "火器工廠"
+  Firearms Guilds: "火器行會"
+  Firearms Manufactories: "火器工場"
   Firearms Manufactory: "火器工場"
   Firman: "敕令"
   First Bank of America: "美利堅第一銀行"
   First Empire: "第一帝國"
   First Italian League: "第一義大利聯盟"
+  First-Rate Ship of the Line: "一級風帆戰列艦"
+  Fishing Boat: "漁船"
+  Fishing Boat Maintenance: "漁船維護費"
   Fishing Village: "捕魚村落"  # 採用官方中文翻譯
   Fiskeriprivilegier: "漁業特權"
   Flanders: "法蘭德斯"
@@ -1739,11 +1856,15 @@ fixed:
   Flatland: "平地"
   Flatland Wasteland: "平地荒地"
   Fleet Basing Rights: "艦隊駐港權"
+  Flintlock Levy: "燧發槍徵召兵"
   Flintlock Muskets: "燧發火槍"
   Florence: "佛羅倫斯"
+  Florentine Citizen Militia: "佛羅倫斯公民民兵"
   Florida: "佛羅里達"
   Flower Garland School: "華嚴宗"
   Flower Wars: "榮冠戰爭"
+  Flute: "福祿特帆船"
+  Flying Battery: "機動火炮"
   Fog of War: "戰爭迷霧"
   Folk Religion: "民間信仰"
   Fondaco Rights: "商館設立權"
@@ -1758,14 +1879,25 @@ fixed:
   Foreign League: "外國聯盟"
   Foreign Ministry: "外交部"
   Forest: "森林"
+  Forest Tanneries: "林地製革場"
   Forest Village: "森林村落"
+  Forestry: "林業"
   Formation Period: "組建期"
   Foros Extensos: "廣泛特許法"
-  Fort Construction Efficiency: "要塞建造效率"
-  Fort Level: "要塞等級"
+  Fort Construction Efficiency: "堡壘建造效率"
+  Fort Defense: "堡壘防禦"
+  Fort Level: "堡壘等級"
   Fortezza di Sant'Andrea: "聖安德肋要塞"
-  Fortress: "堡壘"
-  Fortress Church: "堡壘教堂"
+  Fortress: "要塞"
+  Fortress Church: "要塞教堂"
+  Fortress Churches: "要塞教堂"
+  Fortress Granaries: "要塞糧倉"
+  Fortress Maize Granaries: "要塞玉米糧倉"
+  Fortress Qullqa Granaries: "要塞科爾卡糧倉"
+  Fortress Rice Granaries: "要塞稻米糧倉"
+  Fortress Sturdy Grain Granaries: "要塞雜穀糧倉"
+  Fortresses: "要塞"
+  Forts Level: "堡壘等級"
   Fortuna Primigenia: "原初福爾圖娜"
   Forward Depots: "前線補給站"
   Fosterage: "寄養制"
@@ -1822,9 +1954,8 @@ fixed:
   Fuhjoh Bouhdeuih: "輔助部隊"
   Full Élan: "士氣高昂"
   Funduq: "商棧"
+  Furniture Manufactories: "家具工場"
   Furniture Manufactory: "家具工場"
-  Furniture Mill: "家具廠"
-  Furniture Workshop: "家具工坊"
   Furs de Valencia: "瓦倫西亞特許法"
   Fushimi Inari Taisha: "伏見稻荷大社"
   Fute: "步兵部隊"
@@ -1840,8 +1971,10 @@ fixed:
   Galen: "加倫"
   Galileo Galilei: "伽利略·伽利萊"
   Gall-òglach: "步兵部隊"
+  Galleon: "蓋倫帆船"
   Galley Barracks: "槳帆戰艦營房"
   Galley Build Cost: "槳帆戰艦建造花費"
+  Galley Maintenance: "槳帆戰艦維護費"
   Galley Maintenance Cost: "槳帆戰艦維護花費"
   Galley Reinforcement Cost: "槳帆戰艦補員花費"
   Galley Veterans: "槳帆戰艦老兵"
@@ -1871,6 +2004,7 @@ fixed:
   Geneva: "日內瓦"
   Genghis: "成吉思"
   Genoa: "熱那亞"
+  Genoese Crossbowmen: "熱那亞弩兵"
   Gente Nuova: "新公民派"  # 採用官中翻譯
   Geoffrey Chaucer: "傑弗瑞·喬叟"
   Geography Tab: "地理分頁"
@@ -2071,12 +2205,12 @@ fixed:
   Heavy Cavalry Build Cost: "重騎兵建造花費"
   Heavy Cavalry Maintenance Cost: "重騎兵維護花費"
   Heavy Cavalry Reinforcement Cost: "重騎兵補員花費"
+  Heavy Cavalrymen: "重騎手"
   Heavy Infantry: "重步兵"
   Heavy Infantry Build Cost: "重步兵建造花費"
   Heavy Infantry Maintenance Cost: "重步兵維護花費"
   Heavy Infantry Reinforcement Cost: "重步兵補員花費"
   Heavy Legionaries: "重型軍團士兵"
-  Heavy Ship: "重型戰艦"
   Heavy Ship Build Cost: "重型戰艦建造花費"
   Heavy Ship Maintenance Cost: "重型戰艦維護花費"
   Heavy Ship Reinforcement Cost: "重型戰艦補員花費"
@@ -2090,6 +2224,7 @@ fixed:
   Hellenism: "希臘化"
   Helsingborg: "赫爾辛堡"
   Hen Ogledd: "亨奧格萊茲"
+  Henri Grâce à Dieu: "蒙上帝恩典的亨利號"
   Henrician Articles: "亨利條款"
   Henry: "亨利"
   Henry III: "亨利三世"
@@ -2106,6 +2241,7 @@ fixed:
   Heron Clan: "鷺鷥氏族"
   Herrenchiemsee Abbey: "海倫基姆湖修道院"
   Hesse-Kassel: "黑森-卡塞爾"
+  Hessian Jäger: "黑森獵兵"
   Hexamilion Wall: "六里牆"
   Hiawatha: "海華沙"
   High Kingship: "至高王權"
@@ -2155,7 +2291,6 @@ fixed:
   Hook Faction: "鉤子派"
   Hooks: "鉤子派"
   Horatio Nelson: "霍雷肖·納爾遜"
-  Horde: "部落"
   Horde Unity: "游牧部落團結"
   Hormuz: "荷姆茲"
   Horn of Africa: "非洲之角"
@@ -2164,6 +2299,7 @@ fixed:
   Hostile Attrition: "敵方損耗"
   Hostile Naval Attrition: "敵方海軍損耗"
   Hot Chocolate: "熱巧克力"
+  Hot Climate: "炎熱氣候"
   House of Parliament: "議會大廈"
   Houston: "休士頓"
   Huancavelica: "萬卡韋利卡"
@@ -2201,6 +2337,8 @@ fixed:
   Hǎijìn: "海禁"
   I.Prélude: "第一前奏曲"
   Ibadat Khana: "伊巴達特會堂"
+  Iberian Caravel: "伊比利亞卡拉維爾帆船"
+  Iberian Galleon: "伊比利亞蓋倫帆船"
   Iberian League: "伊比利亞聯盟"
   Iberian Peninsula: "伊比利半島"
   Iberian Union: "伊比利聯盟"
@@ -2325,7 +2463,6 @@ fixed:
   Iron Cannons: "鍛鐵火炮"
   Iron Deposits: "鐵礦床"
   Iron Foundry: "鐵器鑄造場"
-  Iron Mill: "鐵器廠"
   Ironman: "鐵人模式"
   Ironman Mode: "鐵人模式"
   Ironman Save: "鐵人存檔"
@@ -2389,7 +2526,7 @@ fixed:
   Jeremy Bentham: "傑瑞米·邊沁"
   Jerusalem: "耶路撒冷"
   Jesuit: "耶穌會"
-  Jesuit College: "耶穌會學院"
+  Jesuit College Maintenance: "耶穌會學院維護費"
   Jesus: "耶穌"
   Jesus Christ: "耶穌基督"
   Jewelers' Guild: "珠寶匠行會"
@@ -2449,6 +2586,7 @@ fixed:
   Justinian: "查士丁尼"
   Justinian I: "查士丁尼一世"
   Jyotisar: "喬蒂薩爾"
+  Jägers: "獵兵"
   Jñāna: "智"
   Jīn: "金"
   Jōdo Shinshū: "淨土真宗"
@@ -2587,6 +2725,7 @@ fixed:
   Konya: "科尼亞"
   Korea: "朝鮮"
   Korean Barracks: "朝鮮兵營"
+  Korean Gunneries: "朝鮮砲臺"
   Korean Gunnery: "朝鮮砲臺"
   Kormlenije: "地方供養制"
   Korona: "科羅納"
@@ -2630,7 +2769,6 @@ fixed:
   Kurmina Headquarter: "庫爾米納軍區總部"
   Kursk: "庫爾斯克"
   Kurt von Schwerin: "庫爾特·馮·施威林"
-  Kurultai: "忽里勒臺"
   Kuskatan: "庫斯卡坦"
   Kuskatan Coast Sea: "庫斯卡坦沿岸海域"
   Kutna Hora: "庫特納荷拉"
@@ -2686,6 +2824,8 @@ fixed:
   Late Medieval: "中世紀晚期"
   Late Medieval Cataphracts: "中世紀晚期全覆裝甲騎兵"
   Late Middle Ages: "中世紀晚期"
+  Late Paik: "晚期帕伊克"
+  Late Paik Infantry: "晚期帕伊克步兵"
   Latin: "拉丁"
   Latin Empire: "拉丁帝國"
   Latinitas: "拉丁精神"
@@ -2711,6 +2851,7 @@ fixed:
   League of the Public Weal: "公益同盟"
   Lecture Oaths: "講學誓約"
   Left and Right Chancellor: "左、右丞相"
+  Left Flank: "左翼"
   Legal Framework: "法律框架"
   Legalistic: "教條主義"
   Legatus Natus: "當然教宗使節"
@@ -2758,6 +2899,7 @@ fixed:
   Lighthouse of Alexandria: "亞歷山卓燈塔"
   Liguria: "利古里亞"
   Line of Succession: "繼承順位"
+  Linen Clothmakers: "亞麻布工坊"
   Lion of Lech: "萊赫之獅"
   Lion of the North: "北方雄獅"
   Lion of Thopia: "托皮亞之獅"
@@ -2846,7 +2988,6 @@ fixed:
   Luioù: "徵召部隊"
   Luis de Molina: "路易斯·德·莫林納"
   Lumber: "木材"
-  Lumbermill: "木材加工廠"
   Lunar New Year: "農曆新年"
   Luther: "路德"
   Lutheranism: "路德宗"
@@ -2871,10 +3012,10 @@ fixed:
   Madagascar Sea: "馬達加斯加海"
   Madame Guillotine: "斷頭臺夫人"
   Madawaska: "馬達瓦斯卡"
-  Madrasa: "伊斯蘭學院"
   Madrid: "馬德里"
   Magdeburg: "馬格德堡"
   Magdeburg Law: "馬格德堡法"
+  Magellan: "麥哲倫"
   Maghreb: "馬格里布"
   Maghreb Coastal Sea: "馬格里布沿岸海域"
   Maginot Line: "馬奇諾防線"
@@ -2972,7 +3113,6 @@ fixed:
   Mark of Ephesus: "以弗所的馬可"
   Market Access: "市場接入度"
   Market Card: "市場卡"
-  Market Center: "市場中心"
   Market Dominance: "市場主導"
   Market Expansion Acts: "市場擴張法案"
   Market Food: "市場食物"
@@ -2982,7 +3122,6 @@ fixed:
   Market Relevance: "市場關聯度"
   Market Village: "市集村落"
   Market Warehouse: "市場貨棧"
-  Marketplace: "市集"
   Markets and Goods Filters: "市場與商品過濾器"
   Markets Filters: "市場過濾器"
   Markets Presence: "市場存在"
@@ -3039,6 +3178,7 @@ fixed:
   Medina del Campo: "梅迪納德爾坎波"
   Meditation School: "禪宗"
   Mediterranean: "地中海"
+  Mediterranean Galley: "地中海槳帆戰艦"
   Mediterranean Sea: "地中海"
   Meenakshi Temple: "米納克希神廟"
   Megalopolis: "大都會"
@@ -3073,7 +3213,6 @@ fixed:
   Mercenary Leader Filters: "傭兵領袖過濾器"
   Mercenary Leader Info: "傭兵領袖資訊"
   Merchant Fleet: "商船"
-  Merchant Guild Chapel: "商人行會禮拜堂"
   Merchant Marine: "商船船隊"
   Merchant Privileges: "商人特權"
   Merchant Republic: "商業共和國"
@@ -3198,6 +3337,7 @@ fixed:
   Montpellier: "蒙彼利埃"
   Montserrat: "蒙哲臘"
   Monumental Bonus: "紀念碑獎勵"
+  Morale: "士氣"
   Morale Recovery: "士氣恢復"
   Moravia: "摩拉維亞"
   Moray: "摩瑞"
@@ -3274,6 +3414,7 @@ fixed:
   Naggade: "納加德"
   Nahoi Coastal Sea: "納霍伊沿岸海域"
   Nahuatl: "納瓦特爾"
+  Nahuatl Warrior Building Upkeep: "納瓦特爾戰士建築維護"
   Nainativu Nagapooshani Amman Temple: "奈納提武那伽普沙尼女神廟"
   Nair: "奈爾"
   Najīb: "納吉布"
@@ -3307,7 +3448,6 @@ fixed:
   Nauru Coastal Sea: "諾魯沿岸海域"
   Naval Academy: "海軍學院"
   Naval Attrition: "海軍損耗"
-  Naval Base: "海軍基地"
   Naval Battery: "海防砲臺"
   Naval Battles: "海戰"
   Naval Buildings: "海軍建築"
@@ -3318,10 +3458,8 @@ fixed:
   Naval Movement: "海軍運動"
   Naval Range: "海軍範圍"
   Naval Supplies: "海軍物資"
-  Naval Supplies Guild: "海軍物資行會"
+  Naval Supplies Manufactories: "海軍物資工場"
   Naval Supplies Manufactory: "海軍物資工場"
-  Naval Supplies Mill: "海軍物資廠"
-  Naval Supplies Workshop: "海軍物資工坊"
   Naval Supply Contracts: "海軍補給契約"
   Naval Values: "海軍價值觀"
   Navigation Acts: "航海法案"
@@ -3332,6 +3470,7 @@ fixed:
   Navy Maintenance: "海軍維護費"
   Navy Morale Recovery Speed: "海軍士氣恢復速度"
   Navy Recruitment: "海軍徵募"
+  Navy Tradition: "海軍傳統"
   Navy Units: "海軍單位"
   Ndom: "恩多姆"
   Ndom Coastal Sea: "恩多姆沿岸海域"
@@ -3476,6 +3615,7 @@ fixed:
   Observer: "觀察者"
   Observer Mode: "觀察者模式"
   Obsidian Knife: "黑曜石刀"
+  Obsidian Weaponmakers: "黑曜石武器工坊"
   Occitania: "奧克西塔尼亞"
   Ocean Wasteland: "海洋荒地"
   Oceania: "大洋洲"
@@ -3506,18 +3646,19 @@ fixed:
   Omani: "阿曼"
   Omen Length: "神諭持續時間"
   Opera House: "歌劇院"
+  Opera House Maintenance: "歌劇院維護費"
   Oracle of Ammon: "阿蒙神諭所"
   Orange: "奧蘭治"
   Oranje: "奧蘭治"
+  Order Commanderies: "騎士團莊院"
   Order Commandery: "騎士團莊院"
-  Order Hall: "教團會堂"
+  Order Commandery Maintenance: "騎士團莊院維護費"
   Order Headquarters: "騎士團總部"
   Order of Brothers of the German House of Saint Mary in Jerusalem: "耶路撒冷聖瑪利亞醫院德意志兄弟騎士團"
   Order of Chivalry: "騎士團"
   Order of Saint Augustine: "聖奧古斯丁修道會"
   Order of the Danubian Dragon: "多瑙河龍騎士團"
   Order of the Dragon: "龍騎士團"
-  Order Stronghold: "騎士團要塞"
   Ordinance of Laborers: "勞工敕令"
   Ore Mountains: "厄爾士山脈"
   Oregon: "俄勒岡"
@@ -3530,6 +3671,8 @@ fixed:
   Orissa: "奧里薩"
   Orissa Coast: "奧里薩海岸"
   Orissa High Sea: "奧里薩外海"
+  Orissan Elephant Cavalry: "奧里薩象騎兵"
+  Orissan War Elephant: "奧里薩戰象"
   Orlando Furioso: "《瘋狂奧蘭多》"
   Orpheus: "俄耳甫斯"  # 採用簡中翻譯
   Orsini: "奧爾西尼"
@@ -3557,6 +3700,9 @@ fixed:
   Pact Partner: "協定夥伴"
   Pacta Conventa: "協約條款"
   Padua: "帕多瓦"
+  Paik: "帕伊克"
+  Paik Infantry: "帕伊克步兵"
+  Paik System: "帕伊克制度"
   Palace Coup: "宮廷政變"
   Palace of Holyroodhouse: "荷里路德宮"
   Palace of Justice: "司法宮"
@@ -3592,8 +3738,8 @@ fixed:
   Papal Bull: "教宗詔書"
   Papal Candidate: "教宗候選人"
   Papal Candidate Score: "教宗候選人分數"
+  Paper Manufactories: "造紙工場"
   Paper Manufactory: "造紙工場"
-  Paper Mill: "造紙廠"
   Paper Workshop: "造紙作坊"
   Papermakers' Guild: "造紙工匠行會"
   Papism: "教宗主義"
@@ -3640,7 +3786,6 @@ fixed:
   Paço da Ribeira: "李維拉宮"
   Peace Cost Per Income: "每單位收入的戰爭分數花費"
   Peace of Westphalia: "西發里亞和約"
-  Peace Offer: "和平提議"
   Peace Treaty: "和平條約"
   Peasant Elective: "農民選舉制"
   Peasant Uprising: "農民起義"
@@ -3720,7 +3865,6 @@ fixed:
   Pittsfield: "匹茲菲"
   Pius: "庇護"
   Plan Invasion: "策劃入侵"
-  Plantation: "種植園"
   Plateau: "高原"
   Plateau Wasteland: "高原荒地"
   Plato: "柏拉圖"
@@ -3750,7 +3894,6 @@ fixed:
   Pomerania: "波美拉尼亞"
   Pomocniczy: "輔助部隊"
   Pomocný: "輔助部隊"
-  Pomor Outpost: "波莫爾前哨站"
   Pontevedra: "朋提威德拉"
   Pontic: "本都"
   Pontic Steppe: "東歐大草原"
@@ -3764,8 +3907,11 @@ fixed:
   Popōcatepētl: "波波卡特佩特爾"
   Porcelain: "瓷器"
   Porcelain Kiln: "瓷窯"
+  Porcelain Makers: "瓷器工坊"
   Porcelain Manufactory: "瓷器工場"
+  Port Authorities: "港務局"
   Port Authority: "港務局"
+  Port Buildings: "港口建築"
   Port Construction Efficiency: "港口建造效率"
   Port of Aden: "亞丁港"
   Port Royal: "羅亞爾港"
@@ -3788,9 +3934,8 @@ fixed:
   Potosí: "波托西"
   Potsdam: "波茲坦"
   Potters' Guild: "陶工行會"
+  Pottery Manufactories: "陶器工場"
   Pottery Manufactory: "陶器工場"
-  Pottery Mill: "陶器廠"
-  Pottery Workshop: "陶器作坊"
   Pounamou: "紐西蘭玉"
   Pound Lock Canal: "船閘運河"
   Pound Lock Canal Maintenance: "船閘運河維護費"
@@ -3805,6 +3950,7 @@ fixed:
   Premium Edition: "高級版"
   Presbyterian Education Act: "長老宗教育法案"
   Press Claims Price: "索取宣稱花費"  # 採用官方中文翻譯
+  Prestige Buildings: "威望建築"
   Prestige Decay: "威望衰減"
   Prestige Decay Sources: "威望衰減來源"
   Previous Left Window: "上一個左側視窗"
@@ -3816,8 +3962,8 @@ fixed:
   Prime Minister: "首相"
   Principality: "公國"
   Printers Shop: "印刷坊"
+  Printing Manufactories: "印刷工場"
   Printing Manufactory: "印刷工場"
-  Printing Mill: "印刷廠"
   Privateer Contracts: "私掠者契約"
   Privateer Maintenance: "私掠者維護費"
   Privilege of Koszyce: "科希策特權"
@@ -3853,6 +3999,7 @@ fixed:
   Proximity Cost: "鄰近度花費"
   Proximity Efficiency Impact: "鄰近度效率影響"
   Prussia: "普魯士"
+  Prussian Crusade: "普魯士十字軍"
   Prästeståndet: "普雷斯特斯通德特"
   Psalm: "詩篇"
   Psyche Kosmou: "世界靈魂"
@@ -3868,7 +4015,6 @@ fixed:
   Pure Land: "淨土"
   Puritanism: "清教主義"
   Puritans: "清教徒"
-  Putrefaction Mill: "腐熟製硝廠"
   Putrefaction Works: "腐熟製硝工場"
   Pyrenees: "庇里牛斯"
   Pàobīn Bùduì: "炮兵部隊"
@@ -3894,7 +4040,6 @@ fixed:
   Quitu: "基圖"
   Quitu Coastal Sea: "基圖沿岸海域"
   Quitzow: "奎措"
-  Qullqa: "科爾卡糧倉"
   Qur'ān: "《古蘭經》"
   Quri Kancha: "科里坎查"
   Qusqu: "庫斯科"
@@ -3962,8 +4107,6 @@ fixed:
   Reformed Cataphracts: "改良全覆裝甲騎兵"
   Reformed Church: "改革宗教堂"
   Reformed Legionaries: "改良軍團士兵"
-  Regiment: "軍團"
-  Regimental Camp: "軍團營地"
   Regimiento: "市政評議會制"
   Region: "區域"
   Region of Origin: "起源區域"
@@ -4042,6 +4185,7 @@ fixed:
   Ridders: "騎兵部隊"
   Ridirean: "騎兵部隊"
   Ridirí: "騎兵部隊"
+  Right Flank: "右翼"
   Rihla: "《里哈拉》"
   Rijn: "萊因"
   Riksbank: "瑞典國家銀行"
@@ -4062,6 +4206,7 @@ fixed:
   Road Builder: "道路建造器"
   Road Building: "道路建造"
   Road Building Time: "道路建造時間"
+  Road Maintenance: "道路維護費"
   Road Type: "道路類型"
   Road Upkeep Corvée: "道路養護徭役"
   Robert Boyle: "羅伯特·波以耳"
@@ -4092,7 +4237,6 @@ fixed:
   Royal Audience and Chancery: "皇家審問院暨大法官署"
   Royal Censure: "王室譴責令"  # 採用官方中文翻譯
   Royal Forest: "王室保留地"
-  Royal Garden: "王室花園"
   Royal Power: "王權"
   Royal Prussia: "王室普魯士"
   Royal Road Commission: "皇家道路委員會"
@@ -4296,8 +4440,8 @@ fixed:
   Shiism: "什葉派"
   Shikoku Henro: "四國遍路"
   Ship Losses: "船艦損失"
+  Ship Maintenance: "船艦維護費"
   Shipwright Contracts: "船匠契約"
-  Shipyard: "造船廠"
   Shirazi: "設拉子"
   Shirk: "以物配主"
   Shirvan: "希爾凡"
@@ -4357,8 +4501,6 @@ fixed:
   Skoazell: "輔助部隊"
   Skopje: "斯科普里"
   Skåne: "斯堪尼"
-  Slave Center: "奴隸中心"
-  Slave Market: "奴隸市場"
   Sleherniki: "斯萊赫爾尼基"
   Slovenia: "斯洛維尼亞"
   Small Culture Building: "小型文化建築"
@@ -4445,13 +4587,11 @@ fixed:
   Stannary Court: "錫礦法庭"
   Stannary Law: "錫礦法"
   Staple Port: "指定集散港"
-  Star Fort: "星形要塞"
   State Church: "國家教會"
   State Religion: "國教"
   Statutes: "法規"
   Steam Engine: "蒸汽機"
   Steam Workshop: "Steam工作坊"
-  Steel Mill: "煉鋼廠"
   Stefan: "斯特凡"
   Stefan Dušan: "斯特凡·杜尚"
   Stefan Nemanja: "斯特凡·尼曼雅"
@@ -4460,10 +4600,11 @@ fixed:
   Stezyca: "斯滕日察"
   Stipe-einheiten: "輔助部隊"
   Stock Exchange: "證券交易所"
-  Stockade: "木柵寨"
   Stockholm: "斯德哥爾摩"
   Stone of Scone: "斯昆石"
+  Stone Quarries: "採石場"
   Stone Quarry: "採石場"
+  Stone Tool Makers: "石製工具工坊"
   Stora Kopparberget: "大銅山"
   Strait of Gibraltar: "直布羅陀海峽"
   Strait of Juan de Fuca: "胡安·德·富卡海峽"
@@ -4507,7 +4648,6 @@ fixed:
   Sufism: "蘇非派"
   Sugar Distillery: "糖類蒸餾坊"
   Sugar Distillery Mills: "糖類蒸餾廠"
-  Sugar Plantation: "甘蔗種植園"
   Sukadana: "巫律述"
   Sukadana Coast Sea: "巫律述沿岸海域"
   Sukharev Tower: "蘇哈列夫塔"
@@ -4572,13 +4712,13 @@ fixed:
   Taluqdar: "塔盧克達爾"
   Tamaulipeco: "塔毛利佩科"
   Tamaulipeco Coast Sea: "塔毛利佩科沿岸海域"
-  Tambo: "坦博驛站"
   Tanegashima: "種子島"
   Tanegashima Teppō: "種子島鐵炮"
   Tangier: "丹吉爾"
   Tanistry Elective: "凱爾特選舉制"
+  Tanneries: "製革場"
   Tannery: "製革場"
-  Tannery Mill: "製革廠"
+  Tanning Manufactories: "製革工場"
   Tanning Manufactory: "製革工場"
   Tanning Workshop: "製革作坊"
   Tantric: "怛特羅"
@@ -4617,6 +4757,7 @@ fixed:
   Temotu: "泰莫圖"
   Temotu Coastal Sea: "泰莫圖沿岸海域"
   Temotu Sea: "泰莫圖海"
+  Temperate Climate: "溫帶氣候"
   Template: "模板"
   Template Maintenance Cost: "模板維護花費"
   Temple of Confucius: "孔廟"
@@ -4749,7 +4890,6 @@ fixed:
   Tlaxōchimaco: "獻花節"
   Tlācatetehuit: "特拉卡特特維特"
   Tobacco: "菸草"
-  Tobacco Plantation: "菸草種植園"
   Tobago: "托巴哥"
   Tochtepec: "托克特佩克"
   Tochtepec Coast Sea: "托克特佩克沿岸海域"
@@ -4831,6 +4971,7 @@ fixed:
   Trans-Saharan Trade Outpost: "跨撒哈拉貿易前哨站"
   Transport: "運輸船"
   Transport Build Cost: "運輸船建造花費"
+  Transport Maintenance: "運輸船維護費"
   Transport Maintenance Cost: "運輸船維護花費"
   Transport Reinforcement Cost: "運輸船補員花費"
   Transylvania: "特蘭西瓦尼亞"
@@ -4866,6 +5007,7 @@ fixed:
   Troedfilwyr: "步兵部隊"
   Troop Rotation: "更戍制度"
   Troop Type: "部隊類型"
+  Tropical Climate: "熱帶氣候"
   Troy: "特洛伊"
   Truce: "停戰協議"
   True Faith: "正統信仰"
@@ -4987,7 +5129,6 @@ fixed:
   Uralic: "烏拉"
   Urban Buildings Construction Efficiency: "城鎮建築建造效率"
   Urban Goods: "城鎮商品"
-  Urban Parliament Seat: "城市議會席位"
   Urbanization: "都市化"
   Urbino: "烏爾比諾"
   Urbs Restituta: "復興之城"
@@ -5032,6 +5173,7 @@ fixed:
   Velbazhd: "維爾巴茲德"
   Venetian Arsenal: "威尼斯軍械庫"
   Venetian Palaces: "威尼斯宮殿群"
+  Venetian Palaces Maintenance: "威尼斯宮殿群維護費"
   Venetian Quarter: "威尼斯特區"
   Venetian Republic: "威尼斯共和國"
   Venice: "威尼斯"
@@ -5106,7 +5248,9 @@ fixed:
   War Contribution: "戰爭貢獻度"
   War Council: "戰爭委員會"
   War Economy: "戰爭經濟"
+  War Enthusiasm: "戰爭熱情"
   War Exhaustion: "厭戰度"
+  War Galleon: "戰鬥蓋倫帆船"
   War Leader: "戰爭領袖"
   War of Religions: "宗教戰爭"
   War of the Public Weal: "公益同盟戰爭"
@@ -5123,6 +5267,7 @@ fixed:
   War with No Casus Belli Cost: "無宣戰理由宣戰花費"  # 採用官中翻譯
   Warrior Lodge: "戰士會堂"
   Warrior Monks Training Grounds: "武僧訓練場"
+  Warrior Monks Training Grounds Upkeep: "武僧訓練場維護"
   Warrior Temple: "戰士神殿"
   Warrior Tribunal: "戰士裁判所"
   Wars of Religion: "宗教戰爭"
@@ -5135,8 +5280,8 @@ fixed:
   Wave of Innovation: "革新浪潮"
   Wave of Urbanization: "城市化浪潮"
   Wayna Qhari: "瓦納考里山"
-  Weapon Mill: "武器廠"
-  Weapon Workshop: "武器作坊"
+  Weaponmakers: "武器工坊"
+  Weaponry Manufactories: "武器工場"
   Weaponry Manufactory: "武器工場"
   Weapons Industry: "武器工業"
   Weaponsmith: "武器匠行會"
@@ -5183,7 +5328,6 @@ fixed:
   William Shakespeare: "威廉·莎士比亞"
   William the Conqueror: "征服者威廉"
   William Wallace: "威廉·華勒斯"
-  Windmill: "風車磨坊"
   Winery: "釀酒坊"
   Winery Manufactory: "葡萄酒工場"
   Wisconsin: "威斯康辛"
@@ -5196,6 +5340,7 @@ fixed:
   Woodes Rogers: "伍茲·羅傑斯"
   Woodhenge: "巨木陣"
   Wool: "羊毛"
+  Wool Clothmakers: "羊毛布工坊"
   Wool Guild: "羊毛行會"
   Work Of Art: "藝術品"
   Works of Art Tab: "藝術品分頁"
@@ -5298,26 +5443,6 @@ fixed:
   Ḥisba: "希斯巴"
   Ṣāḥib Qirān: "吉星交會之主"
   Ṭawāf al-Ifadah: "朝覲主巡遊"
-  Armored Horsemen: "披甲騎兵"
-  Army Tradition: "陸軍傳統"
-  Arquebusiers: "火繩槍兵"
-  Art Schools: "藝術學校"
-  Artilharia: "炮兵部隊"
-  Artillery Construction: "炮兵建造"
-  Artillery Maintenance: "炮兵維護費"
-  Arts Academies: "藝術學院"
-  Atakebune: "安宅船"
-  Automate Balance of Flanks: "自動平衡側翼"
-  Auxiliaries: "輔助部隊"
-  Auxiliary Construction: "輔助部隊建造"
-  Auxiliary Maintenance: "輔助部隊維護費"
-  Baggage Train: "輜重隊"
-  Baghlah: "巴格拉帆船"
-  Bailiffs: "地方行政官署"
-  Baker Rifle: "貝克式步槍"
-  Balance Formation: "平衡編隊"
-  Urban Parliament Seats: "城市議會席位"
-
 aliases:
   Aberffraw:
     zh: "阿伯弗勞"
@@ -5454,6 +5579,11 @@ aliases:
     also:
       - Army Based Countries
 
+  Art School:
+    zh: "藝術學校"
+    also:
+      - Art Schools
+
   Artilleri:
     zh: "炮兵部隊"
     also:
@@ -5484,6 +5614,11 @@ aliases:
     also:
       - Barays
 
+  Bastion:
+    zh: "稜堡"
+    also:
+      - Bastions
+
   Beylik:
     zh: "貝伊國"
     also:
@@ -5494,6 +5629,11 @@ aliases:
     also:
       - The Black Death
 
+  Bog Iron Smelter:
+    zh: "沼鐵冶煉場"
+    also:
+      - Bog Iron Smelters
+
   Boyar:
     zh: "波雅爾"
     also:
@@ -5503,6 +5643,11 @@ aliases:
     zh: "布萊梅"
     also:
       - Brema
+
+  Brewery Mill:
+    zh: "釀酒廠"
+    also:
+      - Brewery Mills
 
   Bubin Budui:
     zh: "步兵部隊"
@@ -5533,6 +5678,11 @@ aliases:
     zh: "市民"
     also:
       - Burghers
+
+  Burgtor:
+    zh: "城堡門"
+    also:
+      - Burgtors
 
   Cabinet Action:
     zh: "內閣行動"
@@ -5568,6 +5718,21 @@ aliases:
     zh: "划艇"
     also:
       - Canoes
+
+  Caravan Stop:
+    zh: "商隊驛站"
+    also:
+      - Caravan Stops
+
+  Caravanserai:
+    zh: "商隊驛館"
+    also:
+      - Caravanserais
+
+  Caravel:
+    zh: "卡拉維爾帆船"
+    also:
+      - Caravels
 
   Cardinal Nephew:
     zh: "姪子樞機"
@@ -5627,6 +5792,11 @@ aliases:
     also:
       - Clans
 
+  Clay Pit:
+    zh: "黏土採掘場"
+    also:
+      - Clay Pits
+
   Cleric:
     zh: "教士"
     also:
@@ -5636,6 +5806,11 @@ aliases:
     zh: "沿岸海域"
     also:
       - Coastal Sea
+
+  Coastal Fort:
+    zh: "岸防堡壘"
+    also:
+      - Coastal Forts
 
   Colonial Charter:
     zh: "殖民地特許狀"
@@ -5652,6 +5827,11 @@ aliases:
     also:
       - Colonies
 
+  Commerce Center:
+    zh: "商業中心"
+    also:
+      - Commerce Centers
+
   Commoner:
     zh: "平民"
     also:
@@ -5661,6 +5841,16 @@ aliases:
     zh: "僱傭兵"
     also:
       - Condottieri
+
+  Confucian School:
+    zh: "儒學學堂"
+    also:
+      - Confucian Schools
+
+  Conquistador:
+    zh: "征服者"
+    also:
+      - Conquistadors
 
   Construction:
     zh: "建造"
@@ -5676,6 +5866,21 @@ aliases:
     zh: "哥薩克"
     also:
       - Cossacks
+
+  Cotton Plantation:
+    zh: "棉花種植園"
+    also:
+      - Cotton Plantations
+
+  Council Hall:
+    zh: "議政廳"
+    also:
+      - Council Halls
+
+  Counting House:
+    zh: "會計室"
+    also:
+      - Counting Houses
 
   Country:
     zh: "國家"
@@ -5697,6 +5902,11 @@ aliases:
     also:
       - Culture Groups
 
+  Customs House:
+    zh: "海關"
+    also:
+      - Customs Houses
+
   Debt:
     zh: "債務"
     also:
@@ -5717,10 +5927,25 @@ aliases:
     also:
       - Diplomatic Actions
 
+  Dry Dock:
+    zh: "旱塢"
+    also:
+      - Dry Docks
+
   Duchy:
     zh: "公國"
     also:
       - Duchies
+
+  Dye Maker:
+    zh: "染料坊"
+    also:
+      - Dye Makers
+
+  Dyes Workshop:
+    zh: "染料工坊"
+    also:
+      - Dyes Workshops
 
   Earldom:
     zh: "伯爵領"
@@ -5778,6 +6003,21 @@ aliases:
     also:
       - Philip II
 
+  Fine Cloth Mill:
+    zh: "高級織布廠"
+    also:
+      - Fine Cloth Mills
+
+  Fine Cloth Workshop:
+    zh: "高級布料工坊"
+    also:
+      - Fine Cloth Workshops
+
+  Flank:
+    zh: "側翼"
+    also:
+      - Flanks
+
   Fondaco:
     zh: "商館"
     also:
@@ -5794,7 +6034,7 @@ aliases:
       - Formable Countries
 
   Fort:
-    zh: "要塞"
+    zh: "堡壘"
     also:
       - Forts
 
@@ -5812,6 +6052,16 @@ aliases:
     zh: "帝國自由市"
     also:
       - Free Imperial Cities
+
+  Furniture Mill:
+    zh: "家具廠"
+    also:
+      - Furniture Mills
+
+  Furniture Workshop:
+    zh: "家具工坊"
+    also:
+      - Furniture Workshops
 
   Fuzu Budui:
     zh: "輔助部隊"
@@ -5857,6 +6107,11 @@ aliases:
     zh: "豪德諾索尼"
     also:
       - Haundenosaunee
+
+  Heavy Ship:
+    zh: "重型戰艦"
+    also:
+      - Heavy Ships
 
   High King:
     zh: "至高王"
@@ -5943,6 +6198,11 @@ aliases:
     also:
       - International Organization Types
 
+  Iron Mill:
+    zh: "鐵器廠"
+    also:
+      - Iron Mills
+
   Islam:
     zh: "伊斯蘭"
     also:
@@ -5968,6 +6228,11 @@ aliases:
     also:
       - Janissaries
 
+  Jesuit College:
+    zh: "耶穌會學院"
+    also:
+      - Jesuit Colleges
+
   Jinaichō:
     zh: "寺內町"
     also:
@@ -5992,6 +6257,11 @@ aliases:
     zh: "漢薩商館"
     also:
       - Kontors
+
+  Kurultai:
+    zh: "忽里勒臺"
+    also:
+      - Kurultais
 
   La Plata:
     zh: "拉普拉塔"
@@ -6048,10 +6318,20 @@ aliases:
     also:
       - Location Ranks
 
+  Lumbermill:
+    zh: "木材加工廠"
+    also:
+      - Lumbermills
+
   Lutherans:
     zh: "路德宗信徒"
     also:
       - The Lutherans
+
+  Madrasa:
+    zh: "伊斯蘭學院"
+    also:
+      - Madrasas
 
   Madrasah:
     zh: "伊斯蘭學校"
@@ -6079,6 +6359,16 @@ aliases:
     also:
       - Markets
 
+  Market Center:
+    zh: "市場中心"
+    also:
+      - Market Centers
+
+  Marketplace:
+    zh: "市集"
+    also:
+      - Marketplaces
+
   Marriage Union:
     zh: "聯姻共主邦聯"
     also:
@@ -6098,6 +6388,11 @@ aliases:
     zh: "商人"
     also:
       - Merchants
+
+  Merchant Guild Chapel:
+    zh: "商人行會禮拜堂"
+    also:
+      - Merchant Guild Chapels
 
   Military Action:
     zh: "軍事行動"
@@ -6134,10 +6429,30 @@ aliases:
     also:
       - Mos Maiorum
 
+  Naval Base:
+    zh: "海軍基地"
+    also:
+      - Naval Bases
+
   Naval Governor:
     zh: "海軍總督"
     also:
       - Naval Governors
+
+  Naval Supplies Guild:
+    zh: "海軍物資行會"
+    also:
+      - Naval Supplies Guilds
+
+  Naval Supplies Mill:
+    zh: "海軍物資廠"
+    also:
+      - Naval Supplies Mills
+
+  Naval Supplies Workshop:
+    zh: "海軍物資工坊"
+    also:
+      - Naval Supplies Workshops
 
   Navarra:
     zh: "納瓦拉"
@@ -6169,6 +6484,16 @@ aliases:
     also:
       - The Olympic Games
 
+  Order Hall:
+    zh: "教團會堂"
+    also:
+      - Order Halls
+
+  Order Stronghold:
+    zh: "騎士團要塞"
+    also:
+      - Order Strongholds
+
   Ostrog:
     zh: "木柵堡"
     also:
@@ -6183,6 +6508,11 @@ aliases:
     zh: "教宗國"
     also:
       - Papal States
+
+  Paper Mill:
+    zh: "造紙廠"
+    also:
+      - Paper Mills
 
   Parliament:
     zh: "議會"
@@ -6210,6 +6540,11 @@ aliases:
     also:
       - Patriarchates
 
+  Peace Offer:
+    zh: "和平提議"
+    also:
+      - Peace Offers
+
   Peasant:
     zh: "農民"
     also:
@@ -6225,10 +6560,20 @@ aliases:
     also:
       - Philosophers
 
+  Plantation:
+    zh: "種植園"
+    also:
+      - Plantations
+
   Player:
     zh: "玩家"
     also:
       - Players
+
+  Pomor Outpost:
+    zh: "波莫爾前哨站"
+    also:
+      - Pomor Outposts
 
   Pop Based Country:
     zh: "人群國家"
@@ -6245,6 +6590,16 @@ aliases:
     also:
       - Ports
 
+  Pottery Mill:
+    zh: "陶器廠"
+    also:
+      - Pottery Mills
+
+  Pottery Workshop:
+    zh: "陶器作坊"
+    also:
+      - Pottery Workshops
+
   Pragmatic Sanction:
     zh: "國事詔書"
     also:
@@ -6254,6 +6609,11 @@ aliases:
     zh: "選帝侯"
     also:
       - Prince-Electors
+
+  Printing Mill:
+    zh: "印刷廠"
+    also:
+      - Printing Mills
 
   Privateer:
     zh: "私掠者"
@@ -6270,10 +6630,20 @@ aliases:
     also:
       - Prónoiai
 
+  Putrefaction Mill:
+    zh: "腐熟製硝廠"
+    also:
+      - Putrefaction Mills
+
   Qibing Budui:
     zh: "騎兵部隊"
     also:
       - Qíbīng Bùduì
+
+  Qullqa:
+    zh: "科爾卡糧倉"
+    also:
+      - Qullqas
 
   R.G.O:
     zh: "資源採集產業"
@@ -6294,6 +6664,16 @@ aliases:
     zh: "改革"
     also:
       - Reforms
+
+  Regiment:
+    zh: "軍團"
+    also:
+      - Regiments
+
+  Regimental Camp:
+    zh: "軍團營地"
+    also:
+      - Regimental Camps
 
   Religion Group:
     zh: "宗教組"
@@ -6330,6 +6710,11 @@ aliases:
     also:
       - Rhōmaiōn
       - Rhōmaîoi
+
+  Royal Garden:
+    zh: "王室花園"
+    also:
+      - Royal Gardens
 
   Royal Marriage:
     zh: "王室聯姻"
@@ -6406,6 +6791,11 @@ aliases:
     also:
       - Shintō
 
+  Shipyard:
+    zh: "造船廠"
+    also:
+      - Shipyards
+
   Shogun:
     zh: "幕府將軍"
     also:
@@ -6415,6 +6805,16 @@ aliases:
     zh: "奴隸"
     also:
       - Slaves
+
+  Slave Center:
+    zh: "奴隸中心"
+    also:
+      - Slave Centers
+
+  Slave Market:
+    zh: "奴隸市場"
+    also:
+      - Slave Markets
 
   Slot:
     zh: "欄位"
@@ -6451,10 +6851,25 @@ aliases:
     also:
       - Spy Networks
 
+  Star Fort:
+    zh: "星形堡壘"
+    also:
+      - Star Forts
+
   Starving Province:
     zh: "飢餓中的省份"
     also:
       - Starving Provinces
+
+  Steel Mill:
+    zh: "煉鋼廠"
+    also:
+      - Steel Mills
+
+  Stockade:
+    zh: "木柵寨"
+    also:
+      - Stockades
 
   Strategarchia:
     zh: "軍政署"
@@ -6465,6 +6880,11 @@ aliases:
     zh: "屬國類型"
     also:
       - Subject Types
+
+  Sugar Plantation:
+    zh: "甘蔗種植園"
+    also:
+      - Sugar Plantations
 
   Supply Depot:
     zh: "補給站"
@@ -6485,6 +6905,16 @@ aliases:
     zh: "大不里士"
     also:
       - Tabrīz
+
+  Tambo:
+    zh: "坦博驛站"
+    also:
+      - Tambos
+
+  Tannery Mill:
+    zh: "製革廠"
+    also:
+      - Tannery Mills
 
   Tea Ceremony:
     zh: "茶道"
@@ -6535,6 +6965,11 @@ aliases:
     zh: "特拉洛克"
     also:
       - Tlāloc
+
+  Tobacco Plantation:
+    zh: "菸草種植園"
+    also:
+      - Tobacco Plantations
 
   Tolerated Culture:
     zh: "相容文化"
@@ -6606,6 +7041,11 @@ aliases:
     also:
       - Universities
 
+  Urban Parliament Seat:
+    zh: "城市議會席位"
+    also:
+      - Urban Parliament Seats
+
   Urban Right:
     zh: "城市特權"
     also:
@@ -6637,10 +7077,25 @@ aliases:
     also:
       - Warscore
 
+  Weapon Mill:
+    zh: "武器廠"
+    also:
+      - Weapon Mills
+
+  Weapon Workshop:
+    zh: "武器作坊"
+    also:
+      - Weapon Workshops
+
   Wharf:
     zh: "船埠"
     also:
       - Wharfs
+
+  Windmill:
+    zh: "風車磨坊"
+    also:
+      - Windmills
 
   Works of Art:
     zh: "藝術品"
@@ -6984,6 +7439,16 @@ contextual:
         when: "指葡萄牙地名或相關政體"
       - zh: "貝賈"
         when: "指非洲的貝雅民族、文化或政體"
+
+  Bohemian:
+    default: "波希米亞的"
+    senses:
+      - zh: "波希米亞的"
+        when: "作形容詞，修飾波希米亞地區、政體、文化或相關事物"
+      - zh: "波希米亞人"
+        when: "指波希米亞人或波希米亞族群"
+      - zh: "波希米亞語"
+        when: "指波希米亞語言"
 
   Brazilian:
     default: "巴西的"
@@ -7473,14 +7938,6 @@ contextual:
       - zh: "末日"
         when: "指一般末日、毀滅或厄運語境"
 
-  Dream:
-    default: "夢想"
-    senses:
-      - zh: "夢想"
-        when: "指願望、理想或抱負"
-      - zh: "夢"
-        when: "指睡眠中的夢境"
-
   Eastern:
     default: "東方的"
     senses:
@@ -7704,9 +8161,9 @@ contextual:
         when: "指 Germanic language family 等語言分類"
 
   Gold:
-    default: "金幣"
+    default: "金錢"
     senses:
-      - zh: "金幣"
+      - zh: "金錢"
         when: "指遊戲中的貨幣、支付成本或國庫資金"
       - zh: "黃金"
         when: "指一般敘事中的黃金"
@@ -7809,6 +8266,22 @@ contextual:
       - zh: "印度教徒"
         when: "指印度教信徒或族群"
 
+  Horde:
+    default: "部落"
+    senses:
+      - zh: "部落"
+        when: "指 Horde 政體、政府等級或明確的游牧政治實體"
+      - zh: "游牧部落"
+        when: "指一般歷史或軍事語境中的游牧勢力"
+
+  Hordes:
+    default: "部落"
+    senses:
+      - zh: "部落"
+        when: "指複數的 Horde 政體或部落集團"
+      - zh: "游牧部落"
+        when: "指一般敘事中的多個游牧勢力、部眾或軍隊"
+
   Horse:
     default: "騎兵部隊"
     senses:
@@ -7894,6 +8367,14 @@ contextual:
         when: "作形容詞，修飾帝國相關的制度、機構、土地或事物"
       - zh: "帝國"
         when: "中文複合名詞中自然省略「的」，例如帝國議會、帝國軍械庫"
+
+  Incan:
+    default: "印加的"
+    senses:
+      - zh: "印加的"
+        when: "作形容詞，修飾印加地區、政體、文化或相關事物"
+      - zh: "印加人"
+        when: "指印加人或印加族群"
 
   Indian:
     default: "印度的"
@@ -8071,6 +8552,16 @@ contextual:
       - zh: "騎士團"
         when: "指歷史或宗教軍事騎士團"
 
+  Korean:
+    default: "朝鮮的"
+    senses:
+      - zh: "朝鮮的"
+        when: "作形容詞，修飾朝鮮地區、政體、文化或相關事物"
+      - zh: "朝鮮人"
+        when: "指朝鮮人或朝鮮族群"
+      - zh: "朝鮮語"
+        when: "指朝鮮語言"
+
   Legitimacy:
     default: "正統性"
     senses:
@@ -8080,6 +8571,14 @@ contextual:
         when: "指一般政治、法律或統治正當性"
       - zh: "合法性"
         when: "強調權力、程序或主張是否合法"
+
+  Levy:
+    default: "徵召兵"
+    senses:
+      - zh: "徵召兵"
+        when: "指遊戲中的徵召兵、徵召部隊或 levy 軍事機制"
+      - zh: "課徵"
+        when: "作動詞，指課徵稅款或其他資源"
 
   Ligurian:
     default: "利古里亞的"
@@ -8226,6 +8725,16 @@ contextual:
         when: "指密特拉教宗教或信仰"
       - zh: "密特拉教徒"
         when: "指密特拉教信徒"
+
+  Mongolian:
+    default: "蒙古的"
+    senses:
+      - zh: "蒙古的"
+        when: "作形容詞，修飾蒙古地區、政體、文化或相關事物"
+      - zh: "蒙古人"
+        when: "指蒙古人或蒙古族群"
+      - zh: "蒙古語"
+        when: "指蒙古語言"
 
   Moroccan:
     default: "摩洛哥"
@@ -9174,6 +9683,13 @@ contextual:
         when: "指宗教或信仰分類"
 
 reference_terms:
+  Dream:
+    suggestions:
+      - "夢想"
+      - "夢"
+      - "夢境"
+    note: "依完整片語與上下文判斷，不得機械套用固定譯名"
+
   March:
     suggestions:
       - "三月"
