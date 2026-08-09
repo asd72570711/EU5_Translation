@@ -744,7 +744,7 @@ fixed:
   Battle of Vienna: "維也納之戰"
   Battlefield Medic: "戰地醫生"
   Bavaria: "巴伐利亞"
-  Bavarian Beer Workshops: "巴伐利亞啤酒工坊"
+  Bavarian Beer Workshops: "巴伐利亞啤酒作坊"
   Bavarian Breweries: "巴伐利亞式釀酒"
   Bavarian Jäger: "巴伐利亞獵兵"
   Bawo: "巴沃"
@@ -756,7 +756,7 @@ fixed:
   Beelzebub: "別西卜"
   Beer Liquor Workshops: "啤酒蒸餾作坊"
   Beer Manufactories: "啤酒工場"
-  Beer Workshop: "啤酒工坊"
+  Beer Workshop: "啤酒作坊"
   Beeswax: "蜂蠟"
   Behavioral Modifiers: "行為修正"
   Beijing: "北京"
@@ -983,8 +983,8 @@ fixed:
   Candidates Filter: "候選人過濾器"
   Cannon Foundries: "火炮鑄造場"
   Cannon Foundry: "火炮鑄造場"
-  Cannon Maker: "鑄炮匠行會"
-  Cannon Workshop: "火炮工坊"
+  Cannon Maker: "火砲工坊"
+  Cannon Workshop: "火炮作坊"
   Cannoneer: "炮手"
   Cannons Factory: "火炮工廠"
   Canoe Maintenance: "划艇維護費"
@@ -1211,7 +1211,7 @@ fixed:
   Clerical Aristocracy: "教士貴族"
   Clerical Literature: "教士文獻"
   Cloth Paper: "布料紙"  # 採用官方中文翻譯
-  Cloth Workshop: "布料工坊"
+  Cloth Workshop: "布料作坊"
   Cloud Serpent God: "雲蛇神"
   Cloves: "丁香"
   Cluny Abbey: "克呂尼修道院"
@@ -1540,7 +1540,7 @@ fixed:
   Dispositio Achillea: "阿基里斯家法"
   Distiller Mill: "蒸餾酒工廠"
   Distillers: "蒸餾酒匠"
-  Distillers Workshop: "蒸餾酒工坊"
+  Distillers Workshop: "蒸餾酒作坊"
   Distillers' Guild: "蒸餾酒匠行會"
   Divert Trade: "轉移貿易"
   Djanik Emirate: "詹尼克埃米爾國"
@@ -1943,8 +1943,13 @@ fixed:
   Friendly Actions: "友善行動"
   Friendly Participants: "友方參與國"
   Friesland: "弗里斯蘭"
+  Frigate: "巡防艦"
   Frondeurs: "投石黨"
+  Frontage Usage: "戰鬥寬度使用量"
+  Fruit Beer Workshops: "水果啤酒作坊"
+  Fruit Cideries: "水果西打酒坊"
   Fruit Orchard: "果園"
+  Fruit Wineries: "水果釀酒廠"
   Fuero General: "通用法典"  # 採用官中翻譯
   Fuero Juzgo: "司法法典"  # 採用官中翻譯
   Fuero Real: "王室法典"  # 採用官中翻譯
@@ -1954,10 +1959,13 @@ fixed:
   Fuhjoh Bouhdeuih: "輔助部隊"
   Full Élan: "士氣高昂"
   Funduq: "商棧"
+  Funduq Maintenance: "商棧維護費"
+  Fur Trims: "毛皮飾邊"
   Furniture Manufactories: "家具工場"
   Furniture Manufactory: "家具工場"
   Furs de Valencia: "瓦倫西亞特許法"
   Fushimi Inari Taisha: "伏見稻荷大社"
+  Fusiliers: "燧發槍兵"
   Fute: "步兵部隊"
   Fànjìng Shān: "梵淨山"
   Fāṭima: "法蒂瑪"
@@ -1970,7 +1978,9 @@ fixed:
   Galata: "加拉塔"
   Galen: "加倫"
   Galileo Galilei: "伽利略·伽利萊"
+  Galiot: "加利奧特槳帆船"
   Gall-òglach: "步兵部隊"
+  Galleass: "加萊賽戰船"
   Galleon: "蓋倫帆船"
   Galley Barracks: "槳帆戰艦營房"
   Galley Build Cost: "槳帆戰艦建造花費"
@@ -1981,6 +1991,7 @@ fixed:
   Gallicanism: "高盧主義"
   Gallicanism Doctrine: "高盧主義教義"
   Gallipoli: "加里波利"
+  Gallop Cavalry: "疾馳騎兵"
   Gallowglass: "步兵部隊"
   Gallowglass Sept: "加洛格拉斯氏族聚落"
   Gallóglaigh: "步兵部隊"
@@ -1994,18 +2005,24 @@ fixed:
   Gaur: "高達"
   Gaza: "加薩"
   Gebbar: "納貢民"
+  Gebirgsschützen: "山地射手"
   Geestelijken: "赫斯特利肯"
   Gelati Monastery: "格拉特修道院"
   Gemistos Plethon: "格彌斯托士·卜列東"
+  Gendarmerie: "法國重騎兵"
   General Archive of Simancas: "西曼卡斯總檔案館"
   General Privilege: "總特權"
   General Staff Election: "高階將領選舉制"
   Generic Action: "通用行動"
   Geneva: "日內瓦"
   Genghis: "成吉思"
+  Genitour Moorish: "摩爾吉內特騎兵"
   Genoa: "熱那亞"
   Genoese Crossbowmen: "熱那亞弩兵"
+  Genoese Galley: "熱那亞槳帆戰艦"
   Gente Nuova: "新公民派"  # 採用官中翻譯
+  Geobukseon: "龜船"
+  Geobukseon Turtle Ship: "龜船"
   Geoffrey Chaucer: "傑弗瑞·喬叟"
   Geography Tab: "地理分頁"
   Geopolitics: "地緣政治"
@@ -2029,9 +2046,8 @@ fixed:
   Gibraltar: "直布羅陀"
   Gibyeong Budae: "騎兵部隊"
   Gilan: "吉蘭"
-  Glass Guild: "玻璃行會"
   Glass Mill: "玻璃廠"
-  Glass Workshop: "玻璃工坊"
+  Glassmills: "玻璃廠"
   Glassworks: "玻璃工場"
   Global Migration Speed: "全域移民速度"
   Global Variable: "全域變數"  # 台灣通常使用「全域變數」
@@ -2042,6 +2058,7 @@ fixed:
   Goa: "果亞"
   Goidelic: "蓋爾亞支"
   Golconda: "戈爾康達"
+  Gold Based Jewelry: "金製珠寶"
   Golden Age: "黃金時代"
   Golden Age of Piracy: "海盜的黃金時代"
   Golden Ambrosian Republic: "金色安布羅修共和國"  # 採用安布羅修是因為較接近拉丁文 Ambrosius
@@ -2054,6 +2071,7 @@ fixed:
   Good Filters: "商品過濾器"
   Good Relations: "關係良好"
   Goods: "商品"
+  Goods Act: "商品法案"
   Goods Types: "商品類型"
   Goringhaikona: "戈林海科納"
   Goringhaikona Coast Sea: "戈林海科納沿岸海域"
@@ -2065,20 +2083,18 @@ fixed:
   Government Type Bonuses: "政體加成"
   Governor: "總督"
   Gradozidanije and Gradobljudenije: "築城與守城役"
+  Grain Breweries: "穀物釀酒廠"
   Grain House: "軍糧庫"
   Granada: "格拉納達"
   Granary: "穀倉"
   Grand Admiral: "海軍大將"
-  Grand Apartment: "宏偉宮室"
   Grand Banks of Newfoundland: "紐芬蘭大淺灘"
   Grand Canal: "大運河"
   Grand Coordinator: "巡撫"
   Grand Embassy: "大使團"
-  Grand Marketplace: "大市集"
   Grand Mosque: "大清真寺"
   Grand Prince: "大公"
   Grand Secretariat: "內閣大學士"
-  Grand Shipyard: "大型造船廠"
   Grand Trunk Road: "大幹道"
   Grand Vizier: "大維齊爾"
   Grandmaster: "大團長"
@@ -2094,6 +2110,7 @@ fixed:
   Great Fire: "大火"
   Great Hill Complex: "大山丘建築群"
   Great Lakes: "大湖"
+  Great Long Fada: "大型高地長船"
   Great Madrasa: "大伊斯蘭學院"
   Great Middle Kingdom: "大中華"
   Great Mosque of Samarra: "薩邁拉大清真寺"
@@ -2115,7 +2132,10 @@ fixed:
   Greek Marian: "希臘聖母頌歌"
   Greek-Latin Academy: "希臘-拉丁學院"
   Grenada: "格瑞那達"
+  Grenadiers: "擲彈兵"
   Grenadines: "格瑞那丁"
+  Grenzer Infantry: "邊防步兵"
+  Grenzhussar: "邊防驃騎兵"
   Guadalcanal: "瓜達康納爾"
   Guadeloupe: "瓜地洛普"
   Guanajauto: "瓜納華托"
@@ -2148,14 +2168,18 @@ fixed:
   Gulf of Saint Lawrence: "聖羅倫斯灣"
   Gulf Of Saint Lawrence Sea: "聖羅倫斯灣海域"
   Gulf of Sirte: "蘇爾特灣"
-  Guns Workshop: "火器工坊"
+  Gun Factories: "火砲工廠"
+  Guns Foundries: "鑄槍廠"  # 採用官方中文翻譯
+  Guns Workshop: "火器作坊"
   Gunsmith: "火器匠鋪"
   Gurgaddi: "上師寶座"
+  Gurkha: "廓爾喀"
   Guru: "上師"
   Guru Gaddi: "上師寶座"
   Guruvayur Temple: "古魯瓦尤爾神廟"
   Gustavus Adolphus: "古斯塔夫·阿道夫"
   Guyana: "圭亞那"
+  Gwiseon Turtle Ship: "早期龜船"
   Gymnasium: "文理學院"
   Gǎitǔguīliú: "改土歸流"
   Habsburg: "哈布斯堡"
@@ -2171,15 +2195,20 @@ fixed:
   Haixi Confederation: "海西聯盟"
   Haixi Jurchens: "海西女真"
   Haixi River: "松花江"
+  Hajduk: "哈伊杜克"
+  Hakkapeliitta: "哈卡佩利塔"
+  Halberdiers: "長戟兵"
   Halhaheran-Guinean: "哈爾哈赫拉-幾內亞"
   Hamp'atu: "安帕托峰"
   Han Sŏkpong: "韓石峯"
   Handel: "韓德爾"
+  Handgonners: "手銃兵"
   Hannibal: "漢尼拔"
   Hanno: "漢諾"
   Hans: "漢斯"
   Hansa: "漢薩"
   Hanseatic: "漢薩"
+  Hanseatic Cog: "漢薩柯克船"
   Hanseatic League: "漢薩同盟"
   Hanseatic Shipwright Guild: "漢薩船匠行會"
   Hanseatic Town Hall: "漢薩市政廳"
@@ -2203,15 +2232,20 @@ fixed:
   Heavy Cataphracts: "重型全覆裝甲騎兵"
   Heavy Cavalry: "重騎兵"
   Heavy Cavalry Build Cost: "重騎兵建造花費"
+  Heavy Cavalry Maintenance: "重騎兵維護費"
   Heavy Cavalry Maintenance Cost: "重騎兵維護花費"
   Heavy Cavalry Reinforcement Cost: "重騎兵補員花費"
   Heavy Cavalrymen: "重騎手"
+  Heavy Frigate: "重型巡防艦"
   Heavy Infantry: "重步兵"
   Heavy Infantry Build Cost: "重步兵建造花費"
+  Heavy Infantry Maintenance: "重步兵維護費"
   Heavy Infantry Maintenance Cost: "重步兵維護花費"
   Heavy Infantry Reinforcement Cost: "重步兵補員花費"
+  Heavy Lancers: "重裝槍騎兵"
   Heavy Legionaries: "重型軍團士兵"
   Heavy Ship Build Cost: "重型戰艦建造花費"
+  Heavy Ship Maintenance: "重型戰艦維護費"
   Heavy Ship Maintenance Cost: "重型戰艦維護花費"
   Heavy Ship Reinforcement Cost: "重型戰艦補員花費"
   Heavy Ship Veterans: "重型戰艦老兵"
@@ -2263,8 +2297,10 @@ fixed:
   Hippótes: "騎兵部隊"
   Hispania: "希斯帕尼亞"
   Hispaniola: "伊斯帕尼奧拉"
+  Historical Event: "歷史事件"
   Historical Rival: "歷史宿敵"
   Hittite: "西臺"
+  Hobelars: "霍貝拉爾騎兵"
   Hofkriegsrat: "帝國戰爭委員會"
   Hoheitai: "步兵隊"
   Hohenzollern: "霍亨索倫"
@@ -2286,6 +2322,9 @@ fixed:
   Home Region: "本土區域"
   Homer: "荷馬"
   Honduras: "宏都拉斯"
+  Honey Beer Workshops: "蜂蜜啤酒作坊"
+  Honey Braggoteries: "蜂蜜麥芽酒坊"
+  Honey Meaderies: "蜂蜜酒坊"
   Honnō-ji: "本能寺"
   Hook and Cod Wars: "鉤子與鱈魚戰爭"
   Hook Faction: "鉤子派"
@@ -2295,6 +2334,9 @@ fixed:
   Hormuz: "荷姆茲"
   Horn of Africa: "非洲之角"
   Horodiany: "霍羅迪亞尼"
+  Horon: "霍隆"
+  Horse Archers: "弓騎兵"
+  Horsemen: "騎手"
   Hostile Actions: "敵對行動"
   Hostile Attrition: "敵方損耗"
   Hostile Naval Attrition: "敵方海軍損耗"
@@ -2418,11 +2460,12 @@ fixed:
   Indonesia: "印度尼西亞"
   Indragiri: "丁機宜"
   Industrial Revolution: "工業革命"
-  Industrial Workshops: "工業工場"
+  Industrial Workshops: "工業作坊"
   Infantaria: "步兵部隊"
   Infanterie: "步兵部隊"
   Infantrie: "步兵部隊"
   Infantry: "步兵"
+  Infantry Maintenance: "步兵維護費"
   Infidels: "異教徒"
   Infiltrate Administration: "滲透行政系統"
   Inflation: "通貨膨脹"
@@ -2513,9 +2556,11 @@ fixed:
   Jan Janszoon: "揚·揚松"
   Jan Sobieski: "揚·索別斯基"
   Jan Szczesny Herburt: "揚·什琴斯內·赫爾布特"
+  Janissary Arquebusiers: "耶尼切里火繩槍兵"
   Janissary Barracks: "耶尼切里兵營"
   Janusz Radziwill: "亞努什·拉齊維烏"
   Japan: "日本"
+  Japanese Clan Building: "日本氏族建築"
   Jaxa: "雅克薩"
   Jaysh Armies: "吉什部族軍"
   Jayš Garrison: "吉什軍營"
@@ -2801,6 +2846,7 @@ fixed:
   Lakshmi Temple: "吉祥天女神廟"
   Lalibela: "拉利貝拉"
   Lancaster: "蘭卡斯特"
+  Lancers: "槍騎兵"
   Land Army: "陸軍"
   Land Based Country: "領地國家"
   Land Battles: "陸戰"
@@ -2893,7 +2939,9 @@ fixed:
   Light Infantry Build Cost: "輕步兵建造花費"
   Light Infantry Maintenance Cost: "輕步兵維護花費"
   Light Infantry Reinforcement Cost: "輕步兵補員花費"
+  Light Lancers: "輕裝槍騎兵"
   Light Ship Build Cost: "輕型戰艦建造花費"
+  Light Ship Maintenance: "輕型戰艦維護費"
   Light Ship Maintenance Cost: "輕型戰艦維護花費"
   Light Ship Reinforcement Cost: "輕型戰艦補員花費"
   Lighthouse of Alexandria: "亞歷山卓燈塔"
@@ -2948,6 +2996,7 @@ fixed:
   Lombard League: "倫巴底同盟"
   Lombardy: "倫巴底"
   London: "倫敦"
+  Long Fada: "高地長船"
   Lope de Vega: "羅培·德·維加"
   Lord Howe: "豪勳爵"
   Lord Howe High Sea: "豪勳爵外海"
@@ -3155,12 +3204,17 @@ fixed:
   Matsya Narayana: "摩蹉那羅延"
   Mauritius: "模里西斯"
   Max Control: "最大控制力"
+  Max Frontage: "最大戰鬥寬度"
   Max Literacy: "最大識字率"
   Maxentius: "馬克森提烏斯"
   Maximilian I: "馬克西米連一世"
   Maximilien Robespierre: "馬克西米連·羅伯斯比爾"
   Maximum Attrition: "最大損耗"
   Maximum Control: "最大控制力"
+  Maximum Frontage: "最大戰鬥寬度"
+  Maximum Garrison: "最大駐軍"
+  Maximum Morale: "最大士氣"
+  Maximum Penalty: "最大懲罰"
   Maya: "馬雅"
   Mayan Holy Site: "馬雅聖地"
   Mazovia: "馬佐維亞"
@@ -3925,6 +3979,7 @@ fixed:
   Posolsky Prikaz: "使節衙門"
   Pospolite Ruszenie: "徵召部隊"
   Possible Cabinet Actions: "可用內閣行動"
+  Possible Frontage: "可用戰鬥寬度"
   Possible Interactions: "可用互動"
   Possible Reforms: "可用改革"
   Possible Rivals: "可選宿敵"
@@ -4000,6 +4055,7 @@ fixed:
   Proximity Efficiency Impact: "鄰近度效率影響"
   Prussia: "普魯士"
   Prussian Crusade: "普魯士十字軍"
+  Prussian Grenadiers: "普魯士擲彈兵"
   Prästeståndet: "普雷斯特斯通德特"
   Psalm: "詩篇"
   Psyche Kosmou: "世界靈魂"
@@ -4911,7 +4967,7 @@ fixed:
   Tonga Coastal Sea: "東加沿岸海域"
   Tonkin Gulf: "北部灣"
   Tools Guild: "工具行會"
-  Tools Workshop: "工具工坊"
+  Tools Workshop: "工具作坊"
   Tooltip Settings: "工具提示設定"
   Tooltips: "工具提示"
   Topkapi Palace: "托普卡匹皇宮"
@@ -5443,1671 +5499,1361 @@ fixed:
   Ḥisba: "希斯巴"
   Ṣāḥib Qirān: "吉星交會之主"
   Ṭawāf al-Ifadah: "朝覲主巡遊"
+
 aliases:
   Aberffraw:
     zh: "阿伯弗勞"
     also:
       - Aberfrau
-
   Abruzzo:
     zh: "阿布魯佐"
     also:
       - Abruzzi
-
   Abu Bakr:
     zh: "阿布·巴克爾"
     also:
       - Abū Bakr
-
   Academy of Experiment:
     zh: "實驗學院"
     also:
       - Accademia del Cimento
-
   Accepted Culture:
     zh: "已接納文化"
     also:
       - Accepted Cultures
-
   Achille:
     zh: "阿基里斯"
     also:
       - Achilles
-
   Aclla:
     zh: "太陽貞女"
     also:
       - Acllas
-
   Action Cost:
     zh: "行動花費"
     also:
       - Actions Cost
-
   Adipati:
     zh: "阿迪帕蒂"
     also:
       - Adipatis
-
   Admiral:
     zh: "海軍將領"
     also:
       - Admirals
-
   Admiral Trait:
     zh: "海軍將領特質"
     also:
       - Admiral Traits
-
   Adolescent:
     zh: "青少年"
     also:
       - Adolescents
-
   Advisor:
     zh: "顧問"
     also:
       - Advisors
-
   Agenda:
     zh: "議程"
     also:
       - Agendas
-
   Al-'Andalus:
     zh: "安達盧斯"
     also:
       - Al-Andalus
-
   Alliance:
     zh: "同盟"
     also:
       - Alliances
-
   Alliance Bloc:
     zh: "同盟集團"
     also:
       - Alliance Blocs
-
   Ambassador:
     zh: "大使"
     also:
       - Ambassadors
-
   America:
     zh: "美洲"
     also:
       - Americas
-
   Annexation:
     zh: "吞併"
     also:
       - Annexations
-
   Appanage:
     zh: "封邑"
     also:
       - Appanages
-
   Aqueduct System:
     zh: "引水道系統"
     also:
       - Aqueduct Systems
-
   Archbishop-Elector:
     zh: "大主教選帝侯"
     also:
       - Archbishop-Electors
-
   Area:
     zh: "地區"
     also:
       - Areas
-
   Area Type:
     zh: "地區類型"
     also:
       - Area Types
-
   Armory:
     zh: "軍械站"
     also:
       - Armories
-
   Army Based Country:
     zh: "陸軍國家"
     also:
       - Army Based Countries
-
   Art School:
     zh: "藝術學校"
     also:
       - Art Schools
-
   Artilleri:
     zh: "炮兵部隊"
     also:
       - Artillerí
-
   Artilleria:
     zh: "炮兵部隊"
     also:
       - Artillería
-
   Asante:
     zh: "阿散蒂"
     also:
       - Ashanti
-
   Attrition Loss:
     zh: "損耗傷亡"
     also:
       - Attrition Losses
-
   Avatar:
     zh: "化身"
     also:
       - Avatars
-
   Baray:
     zh: "巴萊水庫"
     also:
       - Barays
-
   Bastion:
     zh: "稜堡"
     also:
       - Bastions
-
   Beylik:
     zh: "貝伊國"
     also:
       - Beyliks
-
   Black Death:
     zh: "黑死病"
     also:
       - The Black Death
-
   Bog Iron Smelter:
     zh: "沼鐵冶煉場"
     also:
       - Bog Iron Smelters
-
   Boyar:
     zh: "波雅爾"
     also:
       - Boyars
-
   Bremen:
     zh: "布萊梅"
     also:
       - Brema
-
   Brewery Mill:
     zh: "釀酒廠"
     also:
       - Brewery Mills
-
   Bubin Budui:
     zh: "步兵部隊"
     also:
       - Bùbīn Bùduì
-
   Bubing Budui:
     zh: "步兵部隊"
     also:
       - Bùbīng Bùduì
-
   Buccaneer:
     zh: "海盜"
     also:
       - Buccaneers
-
   Building:
     zh: "建築"
     also:
       - Buildings
-
   Building Based Country:
     zh: "建築國家"
     also:
       - Building Based Countries
-
   Burgher:
     zh: "市民"
     also:
       - Burghers
-
   Burgtor:
     zh: "城堡門"
     also:
       - Burgtors
-
   Cabinet Action:
     zh: "內閣行動"
     also:
       - Cabinet Actions
-
   Cabinet Member:
     zh: "內閣成員"
     also:
       - Cabinet Members
-
   Caliph:
     zh: "哈里發"
     also:
       - Caliphs
-
   Caliphate:
     zh: "哈里發國"
     also:
       - Caliphates
-
   Call Ally:
     zh: "召集盟友"
     also:
       - Call Allies
-
   Candidate:
     zh: "候選人"
     also:
       - Candidates
-
   Canoe:
     zh: "划艇"
     also:
       - Canoes
-
   Caravan Stop:
     zh: "商隊驛站"
     also:
       - Caravan Stops
-
   Caravanserai:
     zh: "商隊驛館"
     also:
       - Caravanserais
-
   Caravel:
     zh: "卡拉維爾帆船"
     also:
       - Caravels
-
   Cardinal Nephew:
     zh: "姪子樞機"
     also:
       - Cardinal-Nephew
       - Cardinal-Nephews
-
   Cavalaria:
     zh: "騎兵部隊"
     also:
       - Cavalariá
-
   Cavaleria:
     zh: "騎兵部隊"
     also:
       - Cavalerìa
-
   Cavalier:
     zh: "騎兵部隊"
     also:
       - Cavaliers
       - Cavalièrs
-
   Cavaliere:
     zh: "騎兵部隊"
     also:
       - Cavalieri
       - Cavalieris
-
   Celestial Governor:
     zh: "天朝總督"
     also:
       - Celestial Governors
-
   Ciompi Revolt:
     zh: "梳毛工起義"
     also:
       - Ciompi Revolts
-
   Circle Member:
     zh: "行政圈成員"
     also:
       - Circle Members
-
   City:
     zh: "城市"
     also:
       - Cities
-
   Claim:
     zh: "宣稱"
     also:
       - Claims
-
   Clan:
     zh: "氏族"
     also:
       - Clans
-
   Clay Pit:
     zh: "黏土採掘場"
     also:
       - Clay Pits
-
   Cleric:
     zh: "教士"
     also:
       - Clerics
-
   Coast Sea:
     zh: "沿岸海域"
     also:
       - Coastal Sea
-
   Coastal Fort:
     zh: "岸防堡壘"
     also:
       - Coastal Forts
-
   Colonial Charter:
     zh: "殖民地特許狀"
     also:
       - Colonial Charters
-
   Colonial Subject:
     zh: "殖民屬國"
     also:
       - Colonial Subjects
-
   Colony:
     zh: "殖民地"
     also:
       - Colonies
-
   Commerce Center:
     zh: "商業中心"
     also:
       - Commerce Centers
-
   Commoner:
     zh: "平民"
     also:
       - Commoners
-
   Condotieri:
     zh: "僱傭兵"
     also:
       - Condottieri
-
   Confucian School:
     zh: "儒學學堂"
     also:
       - Confucian Schools
-
   Conquistador:
     zh: "征服者"
     also:
       - Conquistadors
-
   Construction:
     zh: "建造"
     also:
       - Constructions
-
   Construction Center:
     zh: "建設中心"
     also:
       - Construction Centers
-
   Cossack:
     zh: "哥薩克"
     also:
       - Cossacks
-
   Cotton Plantation:
     zh: "棉花種植園"
     also:
       - Cotton Plantations
-
   Council Hall:
     zh: "議政廳"
     also:
       - Council Halls
-
   Counting House:
     zh: "會計室"
     also:
       - Counting Houses
-
   Country:
     zh: "國家"
     also:
       - Countries
-
   Crusade:
     zh: "十字軍"
     also:
       - Crusades
-
   Crusader:
     zh: "十字軍"
     also:
       - Crusaders
-
   Culture Group:
     zh: "文化組"
     also:
       - Culture Groups
-
   Customs House:
     zh: "海關"
     also:
       - Customs Houses
-
   Debt:
     zh: "債務"
     also:
       - Debts
-
   Dionysus:
     zh: "狄俄尼索斯"
     also:
       - Diónūsos
-
   Diplomat:
     zh: "外交官"
     also:
       - Diplomats
-
   Diplomatic Action:
     zh: "外交行動"
     also:
       - Diplomatic Actions
-
   Dry Dock:
     zh: "旱塢"
     also:
       - Dry Docks
-
   Duchy:
     zh: "公國"
     also:
       - Duchies
-
   Dye Maker:
     zh: "染料坊"
     also:
       - Dye Makers
-
   Dyes Workshop:
-    zh: "染料工坊"
+    zh: "染料作坊"
     also:
       - Dyes Workshops
-
   Earldom:
     zh: "伯爵領"
     also:
       - Earldoms
-
   Elite:
     zh: "菁英"
     also:
       - Elites
-
   Emir:
     zh: "埃米爾"
     also:
       - Emirs
-
   Empire:
     zh: "帝國"
     also:
       - Empires
-
   Entrepôt:
     zh: "轉口港"
     also:
       - Entrepôts
-
   Estate:
     zh: "階層"
     also:
       - Estates
-
   Eunuch:
     zh: "宦官"
     also:
       - Eunuchs
-
   Explorer:
     zh: "探險家"
     also:
       - Explorers
-
   False Dmitry:
     zh: "偽德米特里"
     also:
       - False Dmitrys
-
   Fantaria:
     zh: "步兵部隊"
     also:
       - Fantarìa
       - Fàntaria
-
   Felipe II:
     zh: "腓力二世"
     also:
       - Philip II
-
   Fine Cloth Mill:
     zh: "高級織布廠"
     also:
       - Fine Cloth Mills
-
   Fine Cloth Workshop:
-    zh: "高級布料工坊"
+    zh: "高級布料作坊"
     also:
       - Fine Cloth Workshops
-
   Flank:
     zh: "側翼"
     also:
       - Flanks
-
   Fondaco:
     zh: "商館"
     also:
       - Fondacos
-
   Foreign Building:
     zh: "外國建築"
     also:
       - Foreign Buildings
-
   Formable Country:
     zh: "可成立國家"
     also:
       - Formable Countries
-
   Fort:
     zh: "堡壘"
     also:
       - Forts
-
   Fortification:
     zh: "防禦工事"
     also:
       - Fortifications
-
   Free City:
     zh: "自由市"
     also:
       - Free Cities
-
   Free Imperial City:
     zh: "帝國自由市"
     also:
       - Free Imperial Cities
-
   Furniture Mill:
     zh: "家具廠"
     also:
       - Furniture Mills
-
   Furniture Workshop:
-    zh: "家具工坊"
+    zh: "家具作坊"
     also:
       - Furniture Workshops
-
   Fuzu Budui:
     zh: "輔助部隊"
     also:
       - Fǔzù Bùduì
-
   Galapagos:
     zh: "加拉巴哥"
     also:
       - Galápagos
-
   Galley:
     zh: "槳帆戰艦"
     also:
       - Galleys
-
+  Glass Guild:
+    zh: "玻璃行會"
+    also:
+      - Glass Guilds
+  Glass Workshop:
+    zh: "玻璃作坊"
+    also:
+      - Glass Workshops
   Government Reform:
     zh: "政府改革"
     also:
       - Government Reforms
-
   Government Type:
     zh: "政體"
     also:
       - Government Types
-
+  Grand Apartment:
+    zh: "宏偉宮室"
+    also:
+      - Grand Apartments
+  Grand Marketplace:
+    zh: "大市集"
+    also:
+      - Grand Marketplaces
+  Grand Shipyard:
+    zh: "大型造船廠"
+    also:
+      - Grand Shipyards
   Great Power:
     zh: "列強"
     also:
       - Great Powers
-
   Hand Cannon Guild:
     zh: "手銃行會"
     also:
       - Hand Cannon Guilds
-
   Hanseatic Kontor:
     zh: "漢薩商館"
     also:
       - Hanseatic Kontors
-
   Haudensaunee:
     zh: "豪德諾索尼"
     also:
       - Haundenosaunee
-
   Heavy Ship:
     zh: "重型戰艦"
     also:
       - Heavy Ships
-
   High King:
     zh: "至高王"
     also:
       - High Kings
-
   High Sea:
     zh: "外海、公海"
     also:
       - High Seas
-
   Holy Roman Empire:
     zh: "神聖羅馬帝國"
     also:
       - HRE
-
   Holy Site:
     zh: "聖地"
     also:
       - Holy Sites
-
   Hot Join:
     zh: "即時加入"
     also:
       - Hotjoin
-
   Huguenot:
     zh: "胡格諾派"
     also:
       - Huguenots
-
   Huitzilopochtli:
     zh: "維齊洛波奇特利"
     also:
       - Huītzilōpōchtli
-
   Hundred Years' War:
     zh: "百年戰爭"
     also:
       - Hundred Years War
-
   Imperial Circle:
     zh: "帝國行政圈"
     also:
       - Imperial Circles
-
   Imperial Peasant Republic:
     zh: "帝國農民共和國"
     also:
       - Imperial Peasant Republics
-
   Imperial Prelate:
     zh: "帝國教長"
     also:
       - Imperial Prelates
-
   Imperial Prince:
     zh: "帝國諸侯"
     also:
       - Imperial Princes
-
   Improve Relation:
     zh: "改善關係"
     also:
       - Improve Relations
-
   Infanteri:
     zh: "步兵部隊"
     also:
       - Infanterí
-
   Infanteria:
     zh: "步兵部隊"
     also:
       - Infantería
-
   International Organization:
     zh: "國際組織"
     also:
       - International Organizations
-
   International Organization Type:
     zh: "國際組織類型"
     also:
       - International Organization Types
-
   Iron Mill:
     zh: "鐵器廠"
     also:
       - Iron Mills
-
   Islam:
     zh: "伊斯蘭"
     also:
       - Islām
-
   Italian League:
     zh: "義大利聯盟"
     also:
       - Italian Leagues
-
   Italian War:
     zh: "義大利戰爭"
     also:
       - Italian Wars
-
   Iulius Caesar:
     zh: "尤利烏斯·凱撒"
     also:
       - Julius Caesar
-
   Janissary:
     zh: "耶尼切里"
     also:
       - Janissaries
-
   Jesuit College:
     zh: "耶穌會學院"
     also:
       - Jesuit Colleges
-
   Jinaichō:
     zh: "寺內町"
     also:
       - Jinaimachi
-
   Junior Partner:
     zh: "邦聯成員國"
     also:
       - Junior Partners
-
   Kadiluk:
     zh: "卡迪司法區"
     also:
       - Kadiluks
-
   Kephalai:
     zh: "法令集成"
     also:
       - The Kephalai
-
   Kontor:
     zh: "漢薩商館"
     also:
       - Kontors
-
   Kurultai:
     zh: "忽里勒臺"
     also:
       - Kurultais
-
   La Plata:
     zh: "拉普拉塔"
     also:
       - la Plata
-
   Lakshmi Narasimha Temple:
     zh: "吉祥天女那羅辛哈神廟"
     also:
       - Lakshminarasimha Temple
-
   Lama:
     zh: "喇嘛"
     also:
       - Lamas
-
   League Leader:
     zh: "聯盟領袖"
     also:
       - League Leaders
-
   Legionary:
     zh: "軍團士兵"
     also:
       - Legionaries
-
   Lieutenancy:
     zh: "代理官署"
     also:
       - Lieutenancies
-
   Lieutenant:
     zh: "代理官"
     also:
       - Lieutenants
-
   Light Ship:
     zh: "輕型戰艦"
     also:
       - Light Ships
-
   Local Governor:
     zh: "地方總督"
     also:
       - Local Governors
-
   Location:
     zh: "地點"
     also:
       - Locations
-
   Location Rank:
     zh: "地點等級"
     also:
       - Location Ranks
-
   Lumbermill:
     zh: "木材加工廠"
     also:
       - Lumbermills
-
   Lutherans:
     zh: "路德宗信徒"
     also:
       - The Lutherans
-
   Madrasa:
     zh: "伊斯蘭學院"
     also:
       - Madrasas
-
   Madrasah:
     zh: "伊斯蘭學校"
     also:
       - Madrasahs
-
   Mamlūk:
     zh: "馬穆魯克"
     also:
       - Mamālīk
-
   Manufactory:
     zh: "工場"
     also:
       - Manufactories
-
   Map Mode:
     zh: "地圖模式"
     also:
       - Map Modes
       - Mapmode
-
   Market:
     zh: "市場"
     also:
       - Markets
-
   Market Center:
     zh: "市場中心"
     also:
       - Market Centers
-
   Marketplace:
     zh: "市集"
     also:
       - Marketplaces
-
   Marriage Union:
     zh: "聯姻共主邦聯"
     also:
       - Marriage Unions
-
   Masjid:
     zh: "清真寺"
     also:
       - Mosque
-
   Mercenary:
     zh: "傭兵"
     also:
       - Mercenaries
-
   Merchant:
     zh: "商人"
     also:
       - Merchants
-
   Merchant Guild Chapel:
     zh: "商人行會禮拜堂"
     also:
       - Merchant Guild Chapels
-
   Military Action:
     zh: "軍事行動"
     also:
       - Military Actions
-
   Military Order:
     zh: "軍事修會"
     also:
       - Military Orders
-
   Modifier:
     zh: "修正"
     also:
       - Modifiers
-
   Monastery:
     zh: "修道院"
     also:
       - Monasteries
-
   Mount Olympus:
     zh: "奧林帕斯山"
     also:
       - Olympus
-
   Muḥtasib:
     zh: "穆赫塔西卜"
     also:
       - Muḥtasibīn
-
   Mōs Maiōrum:
     zh: "祖宗成法"
     also:
       - Mos Maiorum
-
   Naval Base:
     zh: "海軍基地"
     also:
       - Naval Bases
-
   Naval Governor:
     zh: "海軍總督"
     also:
       - Naval Governors
-
   Naval Supplies Guild:
     zh: "海軍物資行會"
     also:
       - Naval Supplies Guilds
-
   Naval Supplies Mill:
     zh: "海軍物資廠"
     also:
       - Naval Supplies Mills
-
   Naval Supplies Workshop:
-    zh: "海軍物資工坊"
+    zh: "海軍物資作坊"
     also:
       - Naval Supplies Workshops
-
   Navarra:
     zh: "納瓦拉"
     also:
       - Navarre
-
   Navy:
     zh: "海軍"
     also:
       - Navies
-
   Navy Based Country:
     zh: "海軍國家"
     also:
       - Navy Based Countries
-
   Nelipic:
     zh: "內利皮奇"
     also:
       - Nelipić
-
   Non-Integrated Provinces:
     zh: "未整合省份"
     also:
       - Non-integrated Provinces
-
   Olympic Games:
     zh: "奧林匹克運動會"
     also:
       - The Olympic Games
-
   Order Hall:
     zh: "教團會堂"
     also:
       - Order Halls
-
   Order Stronghold:
     zh: "騎士團要塞"
     also:
       - Order Strongholds
-
   Ostrog:
     zh: "木柵堡"
     also:
       - Ostrogs
-
   Pachacuti:
     zh: "帕查庫特克"
     also:
       - Pachacutec
-
   Papal State:
     zh: "教宗國"
     also:
       - Papal States
-
   Paper Mill:
     zh: "造紙廠"
     also:
       - Paper Mills
-
   Parliament:
     zh: "議會"
     also:
       - Parliaments
-
   Parliament Agenda:
     zh: "議會議程"
     also:
       - Parliament Agendas
-
   Parliamentarian:
     zh: "議會派"
     also:
       - Parliamentarians
-
   Patriarch:
     zh: "牧首"
     also:
       - Patriarchs
       - The Patriarch
-
   Patriarchate:
     zh: "牧首區"
     also:
       - Patriarchates
-
   Peace Offer:
     zh: "和平提議"
     also:
       - Peace Offers
-
   Peasant:
     zh: "農民"
     also:
       - Peasants
-
   Pentarchy:
     zh: "五大牧首區"
     also:
       - The Pentarchy
-
   Philosopher:
     zh: "哲學家"
     also:
       - Philosophers
-
   Plantation:
     zh: "種植園"
     also:
       - Plantations
-
   Player:
     zh: "玩家"
     also:
       - Players
-
   Pomor Outpost:
     zh: "波莫爾前哨站"
     also:
       - Pomor Outposts
-
   Pop Based Country:
     zh: "人群國家"
     also:
       - Pop Based Countries
-
   Pope:
     zh: "教宗"
     also:
       - The Pope
-
   Port:
     zh: "港口"
     also:
       - Ports
-
   Pottery Mill:
     zh: "陶器廠"
     also:
       - Pottery Mills
-
   Pottery Workshop:
     zh: "陶器作坊"
     also:
       - Pottery Workshops
-
   Pragmatic Sanction:
     zh: "國事詔書"
     also:
       - Pragmatic Sanctions
-
   Prince-Elector:
     zh: "選帝侯"
     also:
       - Prince-Electors
-
   Printing Mill:
     zh: "印刷廠"
     also:
       - Printing Mills
-
   Privateer:
     zh: "私掠者"
     also:
       - Privateers
-
   Province:
     zh: "省份"
     also:
       - Provinces
-
   Prónoia:
     zh: "普羅尼亞"
     also:
       - Prónoiai
-
   Putrefaction Mill:
     zh: "腐熟製硝廠"
     also:
       - Putrefaction Mills
-
   Qibing Budui:
     zh: "騎兵部隊"
     also:
       - Qíbīng Bùduì
-
   Qullqa:
     zh: "科爾卡糧倉"
     also:
       - Qullqas
-
   R.G.O:
     zh: "資源採集產業"
     also:
       - RGO
-
   Rangatira:
     zh: "毛利首領"
     also:
       - Rangatiras
-
   Raw Good:
     zh: "原料商品"
     also:
       - Raw Goods
-
   Reform:
     zh: "改革"
     also:
       - Reforms
-
   Regiment:
     zh: "軍團"
     also:
       - Regiments
-
   Regimental Camp:
     zh: "軍團營地"
     also:
       - Regimental Camps
-
   Religion Group:
     zh: "宗教組"
     also:
       - Religion Groups
-
   Religious Aspect:
     zh: "宗教信條"
     also:
       - Religious Aspects  # 採用官中翻譯
-
   Religious League:
     zh: "宗教聯盟"
     also:
       - Religious Leagues
-
   Road:
     zh: "道路"
     also:
       - Roads
-
   Robber Baron:
     zh: "強盜男爵"
     also:
       - Robber Barons
-
   Roma:
     zh: "羅馬"
     also:
       - Rome
-
   Romans:
     zh: "羅馬人"
     also:
       - Rhōmaiōn
       - Rhōmaîoi
-
   Royal Garden:
     zh: "王室花園"
     also:
       - Royal Gardens
-
   Royal Marriage:
     zh: "王室聯姻"
     also:
       - Royal Marriages
-
   Royalist:
     zh: "保王派"
     also:
       - Royalists
-
   Rum:
     zh: "魯姆"
     also:
       - Rûm
-
   Saint Schenoute the Archimandrite:
     zh: "大修院長聖舍努特"
     also:
       - Saint Shenoute the Archimandrite
-
   Salt Collector:
     zh: "採鹽場"
     also:
       - Salt Collectors
-
   Salt Pan:
     zh: "鹽田"
     also:
       - Salt Pans
-
   Saltpeter Guild:
     zh: "製硝行會"
     also:
       - Saltpeter Guilds
-
   Saltpeter Workshop:
     zh: "製硝作坊"
     also:
       - Saltpeter Workshops
-
   Sand Pit:
     zh: "採砂場"
     also:
       - Sand Pits
-
   Sawmill:
     zh: "鋸木廠"
     also:
       - Sawmills
-
   Sea Current:
     zh: "洋流"
     also:
       - Sea Currents
-
   Seazone:
     zh: "海域"
     also:
       - Seazones
-
   Secessionist:
     zh: "歸併國"
     also:
       - Secessionists
-
   Senior Partner:
     zh: "邦聯宗主國"
     also:
       - Senior Partners
-
   Shinto:
     zh: "神道"
     also:
       - Shintō
-
   Shipyard:
     zh: "造船廠"
     also:
       - Shipyards
-
   Shogun:
     zh: "幕府將軍"
     also:
       - Shōgun
-
   Slave:
     zh: "奴隸"
     also:
       - Slaves
-
   Slave Center:
     zh: "奴隸中心"
     also:
       - Slave Centers
-
   Slave Market:
     zh: "奴隸市場"
     also:
       - Slave Markets
-
   Slot:
     zh: "欄位"
     also:
       - Slots
-
   Social Class:
     zh: "社會階級"
     also:
       - Social Classes
-
   Societal Value:
     zh: "社會價值觀"
     also:
       - Societal Values
-
   Sofa Stockade:
     zh: "索法柵寨"
     also:
       - Sofa Stockades
-
   Sound Toll:
     zh: "海峽通行費"
     also:
       - Sound Tolls
-
   South East Asia:
     zh: "東南亞"
     also:
       - Southeast Asia
-
   Spy Network:
     zh: "間諜網"
     also:
       - Spy Networks
-
   Star Fort:
     zh: "星形堡壘"
     also:
       - Star Forts
-
   Starving Province:
     zh: "飢餓中的省份"
     also:
       - Starving Provinces
-
   Steel Mill:
     zh: "煉鋼廠"
     also:
       - Steel Mills
-
   Stockade:
     zh: "木柵寨"
     also:
       - Stockades
-
   Strategarchia:
     zh: "軍政署"
     also:
       - The Strategarchia
-
   Subject Type:
     zh: "屬國類型"
     also:
       - Subject Types
-
   Sugar Plantation:
     zh: "甘蔗種植園"
     also:
       - Sugar Plantations
-
   Supply Depot:
     zh: "補給站"
     also:
       - Supply Depots
-
   Tab:
     zh: "分頁"
     also:
       - Tabs
-
   Tablas alfonsíes:
     zh: "阿方索星曆表"
     also:
       - Tablas Alfonsíes
-
   Tabriz:
     zh: "大不里士"
     also:
       - Tabrīz
-
   Tambo:
     zh: "坦博驛站"
     also:
       - Tambos
-
   Tannery Mill:
     zh: "製革廠"
     also:
       - Tannery Mills
-
   Tea Ceremony:
     zh: "茶道"
     also:
       - Tea Ceremonies
-
   Telpochcalli:
     zh: "特爾波奇卡利"
     also:
       - Tēlpōchcalli
-
   Tenochtitlan:
     zh: "特諾奇提特蘭"
     also:
       - Tenōchtitlan
-
   Tercio:
     zh: "大方陣"
     also:
       - Tercios
-
   Textile Mill:
     zh: "紡織廠"
     also:
       - Textile Mills
-
   The Fate of the Phoenix:
     zh: "鳳凰的命運"
     also:
       - Fate of the Phoenix
-
   Thema Headquarters:
     zh: "軍區總部"
     also:
       - Théma Headquarters
-
   Thirty Years' War:
     zh: "三十年戰爭"
     also:
       - The Thirty Year's War
-
   Tlahzolteōtl:
     zh: "特拉索爾特奧特爾"
     also:
       - Tlazolteotl  # 繁中維基為特拉索爾特奧托
-
   Tlaloc:
     zh: "特拉洛克"
     also:
       - Tlāloc
-
   Tobacco Plantation:
     zh: "菸草種植園"
     also:
       - Tobacco Plantations
-
   Tolerated Culture:
     zh: "相容文化"
     also:
       - Tolerated Cultures
-
   Top Bar:
     zh: "頂端列"
     also:
       - Topbar
-
   Trade Capacity:
     zh: "貿易容量"
     also:
       - Trade Capacities
-
   Trade Route:
     zh: "貿易路線"
     also:
       - Trade Routes
-
   Tradition:
     zh: "傳統"
     also:
       - Traditions
-
   Treaty:
     zh: "條約"
     also:
       - Treaties
-
   Trinity:
     zh: "三位一體"
     also:
       - The Trinity
-
   Tuamotu:
     zh: "土亞莫土"
     also:
       - Tuamotus
-
   Tágmata:
     zh: "塔格馬塔"
     also:
       - The Tágmata
-
   Union of Crowns Pact:
     zh: "王冠聯合協定"
     also:
       - Unions of Crowns Pact
-
   Union Partner:
     zh: "邦聯成員國"
     also:
       - Union Partners
-
   Unit:
     zh: "單位"
     also:
       - Units
-
   Unit Type:
     zh: "單位類型"
     also:
       - Unit Types
-
   University:
     zh: "大學"
     also:
       - Universities
-
   Urban Parliament Seat:
     zh: "城市議會席位"
     also:
       - Urban Parliament Seats
-
   Urban Right:
     zh: "城市特權"
     also:
       - Urban Rights
-
   Waegu:
     zh: "倭寇"
     also:
       - Wakō
       - Wōkòu
-
   Walkthrough:
     zh: "教學導覽"
     also:
       - Walkthroughs
-
   War Goal:
     zh: "戰爭目標"
     also:
       - Wargoal
-
   War of the Roses:
     zh: "玫瑰戰爭"
     also:
       - Wars of the Roses
-
   War Score:
     zh: "戰爭分數"
     also:
       - Warscore
-
   Weapon Mill:
     zh: "武器廠"
     also:
       - Weapon Mills
-
   Weapon Workshop:
     zh: "武器作坊"
     also:
       - Weapon Workshops
-
   Wharf:
     zh: "船埠"
     also:
       - Wharfs
-
   Windmill:
     zh: "風車磨坊"
     also:
       - Windmills
-
   Works of Art:
     zh: "藝術品"
     also:
       - Work of Art
       - Works Of Art
-
   Zimmî:
     zh: "齊米"
     also:
       - Zimmī
-
   Zonta:
     zh: "增補議員團"
     also:
@@ -7119,7 +6865,6 @@ contextual:
     senses:
       - zh: "亞琛的"
         when: "作形容詞，修飾亞琛的國家、地區、文化或事物"
-
   Abenakian:
     default: "阿貝納基"
     senses:
@@ -7127,7 +6872,6 @@ contextual:
         when: "指阿貝納基文化群組或族群名稱"
       - zh: "阿貝納基語"
         when: "指阿貝納基語言"
-
   Abrahamic:
     default: "亞伯拉罕宗教"
     senses:
@@ -7135,7 +6879,6 @@ contextual:
         when: "指亞伯拉罕宗教或宗教分類"
       - zh: "亞伯拉罕的"
         when: "作形容詞，修飾亞伯拉罕宗教、信仰或相關事物"
-
   Absolutist:
     default: "專制的"
     senses:
@@ -7143,7 +6886,6 @@ contextual:
         when: "作形容詞，修飾專制的統治、制度或傾向"
       - zh: "專制主義"
         when: "指政治思想或制度概念"
-
   Abun:
     default: "阿布恩"
     senses:
@@ -7151,7 +6893,6 @@ contextual:
         when: "指阿布恩文化或族群名稱"
       - zh: "阿布恩語"
         when: "指阿布恩語言"
-
   Abwoi:
     default: "阿布沃伊"
     senses:
@@ -7159,7 +6900,6 @@ contextual:
         when: "指阿布沃伊宗教名稱"
       - zh: "阿布沃伊的"
         when: "作形容詞，修飾阿布沃伊宗教相關事物"
-
   Achaean:
     default: "亞該亞的"
     senses:
@@ -7167,7 +6907,6 @@ contextual:
         when: "作形容詞，修飾亞該亞地區、政體、文化或相關事物"
       - zh: "亞該亞人"
         when: "明確指亞該亞人或其族群"
-
   Achenese:
     default: "亞齊"
     senses:
@@ -7175,7 +6914,6 @@ contextual:
         when: "指亞齊文化或族群名稱"
       - zh: "亞齊語"
         when: "指亞齊方言或語言"
-
   Adat Musi:
     default: "穆希傳統信仰"
     senses:
@@ -7183,7 +6921,6 @@ contextual:
         when: "指穆希傳統信仰宗教名稱"
       - zh: "穆希傳統信仰的"
         when: "作形容詞，修飾穆希傳統信仰相關事物"
-
   Adat Pu'un:
     default: "普烏恩傳統信仰"
     senses:
@@ -7191,7 +6928,6 @@ contextual:
         when: "指普烏恩傳統信仰宗教名稱"
       - zh: "普烏恩傳統信仰的"
         when: "作形容詞，修飾普烏恩傳統信仰相關事物"
-
   Advance:
     default: "革新"
     senses:
@@ -7199,7 +6935,6 @@ contextual:
         when: "指科技、知識或制度的革新"
       - zh: "推進"
         when: "指推進流程、計畫或行動，而非科技名詞"
-
   Advances:
     default: "革新"
     senses:
@@ -7207,7 +6942,6 @@ contextual:
         when: "指科技、知識或制度的多項革新"
       - zh: "推進"
         when: "指推進流程、計畫或行動，而非科技名詞"
-
   Age:
     default: "時代"
     senses:
@@ -7215,7 +6949,6 @@ contextual:
         when: "指遊戲中的歷史時代或時代機制"
       - zh: "年齡"
         when: "指人物的年齡"
-
   Aggression:
     default: "侵略性"
     senses:
@@ -7223,7 +6956,6 @@ contextual:
         when: "指 AI 設定中的侵略傾向或侵略性等級"
       - zh: "侵略"
         when: "指戰爭、邊境、海上或其他一般政治與軍事侵略行為"
-
   Akei:
     default: "阿凱"
     senses:
@@ -7231,7 +6963,6 @@ contextual:
         when: "指阿凱文化或族群名稱"
       - zh: "阿凱語"
         when: "指阿凱語言"
-
   Amazons:
     default: "亞馬遜女戰士"
     senses:
@@ -7239,7 +6970,6 @@ contextual:
         when: "指神話、傳說或歷史敘事中的亞馬遜女戰士"
       - zh: "亞馬遜人"
         when: "指亞馬遜地區居民、族群或其他一般人群語境"
-
   American:
     default: "美洲的"
     senses:
@@ -7247,7 +6977,6 @@ contextual:
         when: "作形容詞，修飾美洲原住民或來自美洲的事物"
       - zh: "美洲貨"
         when: "出現在 buy American 的語境，指殖民地輸入的美洲商品"
-
   Anatolian:
     default: "安納托利亞"
     senses:
@@ -7255,7 +6984,6 @@ contextual:
         when: "作形容詞，修飾行政區、文化、制度或事物"
       - zh: "安納托利亞人"
         when: "指人或族群"
-
   Andean:
     default: "安地斯的"
     senses:
@@ -7263,7 +6991,6 @@ contextual:
         when: "作形容詞，修飾安地斯地區、文化、宗教或相關事物"
       - zh: "安地斯人"
         when: "指安地斯地區人民或族群"
-
   Anglican:
     default: "聖公宗"
     senses:
@@ -7275,7 +7002,6 @@ contextual:
         when: "作形容詞，修飾聖公宗相關的人、事物或制度"
       - zh: "聖公宗信徒"
         when: "指信仰聖公宗的人或群體"
-
   Arabian:
     default: "阿拉伯的"
     senses:
@@ -7283,7 +7009,6 @@ contextual:
         when: "作形容詞，修飾阿拉伯地區、文化、海域、馬匹或相關事物"
       - zh: "阿拉伯人"
         when: "指阿拉伯人或阿拉伯族群"
-
   Arabic:
     default: "阿拉伯的"
     senses:
@@ -7293,7 +7018,6 @@ contextual:
         when: "指阿拉伯人或阿拉伯族群"
       - zh: "阿拉伯語"
         when: "指語言"
-
   Archbishop:
     default: "大主教"
     senses:
@@ -7301,7 +7025,6 @@ contextual:
         when: "指天主教或其他教會的 archbishop 職銜"
       - zh: "總主教"
         when: "依特定教會、歷史或專案用語將 archbishop 譯為總主教"
-
   Archbishopric:
     default: "總主教區"
     senses:
@@ -7309,7 +7032,6 @@ contextual:
         when: "指教會行政區或總主教管轄的教區"
       - zh: "大主教區"
         when: "依特定教會、歷史或專案用語將 archbishopric 譯為大主教區"
-
   Aretine:
     default: "阿雷佐"
     senses:
@@ -7317,7 +7039,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "阿雷佐人"
         when: "指人或族群"
-
   Armenian:
     default: "亞美尼亞的"
     senses:
@@ -7325,7 +7046,6 @@ contextual:
         when: "作形容詞，修飾亞美尼亞地區、文化、政體或事物"
       - zh: "亞美尼亞人"
         when: "指亞美尼亞人或亞美尼亞族群"
-
   Armies:
     default: "陸軍"
     senses:
@@ -7333,7 +7053,6 @@ contextual:
         when: "指遊戲地圖上的陸軍集合、陸軍單位或陸上軍力"
       - zh: "軍隊"
         when: "指一般敘事中的多支軍隊或武裝力量"
-
   Army:
     default: "軍隊"
     senses:
@@ -7341,7 +7060,6 @@ contextual:
         when: "指遊戲中的陸上軍力、陸軍單位或與海軍等軍種相對的 army"
       - zh: "軍隊"
         when: "指一般武裝部隊、軍力或敘事中的軍隊"
-
   Aru:
     default: "阿魯"
     senses:
@@ -7349,7 +7067,6 @@ contextual:
         when: "指阿魯文化或族群名稱"
       - zh: "阿魯語"
         when: "指阿魯語言"
-
   Assyrian:
     default: "亞述的"
     senses:
@@ -7359,7 +7076,6 @@ contextual:
         when: "指亞述人或亞述族群"
       - zh: "亞述語"
         when: "指語言"
-
   Austrian:
     default: "奧地利的"
     senses:
@@ -7367,7 +7083,6 @@ contextual:
         when: "作形容詞，修飾奧地利政體、文化、軍事或相關事物"
       - zh: "奧地利人"
         when: "明確指奧地利人或其族群"
-
   Autonomy:
     default: "自治"
     senses:
@@ -7375,7 +7090,6 @@ contextual:
         when: "指自治運動、分權方向或一般自治概念"
       - zh: "自治權"
         when: "指政治實體、地區、階層或群體所擁有的自治權利或權限"
-
   Aztec:
     default: "阿茲特克的"
     senses:
@@ -7383,7 +7097,6 @@ contextual:
         when: "作形容詞，修飾阿茲特克文化、政體或事物"
       - zh: "阿茲特克人"
         when: "指阿茲特克人或族群"
-
   Bahan:
     default: "八幡"
     senses:
@@ -7391,7 +7104,6 @@ contextual:
         when: "指日本文化或宗教相關的八幡概念"
       - zh: "八幡貿易"
         when: "指文本中的 Bahan Trade，即以海盜劫掠為主的貿易活動"
-
   Balinese:
     default: "峇里"
     senses:
@@ -7401,19 +7113,16 @@ contextual:
         when: "指峇里語言"
       - zh: "峇里的"
         when: "作形容詞，修飾峇里相關地區、文化或事物"
-
   Balkan:
     default: "巴爾幹的"
     senses:
       - zh: "巴爾幹的"
         when: "作形容詞，修飾巴爾幹地區、文化、勢力或相關事物"
-
   Balkans:
     default: "巴爾幹"
     senses:
       - zh: "巴爾幹"
         when: "指巴爾幹地區或巴爾幹半島"
-
   Basque:
     default: "巴斯克"
     senses:
@@ -7423,7 +7132,6 @@ contextual:
         when: "指人或族群"
       - zh: "巴斯克語"
         when: "指語言"
-
   Bavarian:
     default: "巴伐利亞的"
     senses:
@@ -7431,7 +7139,6 @@ contextual:
         when: "作形容詞，修飾巴伐利亞的地區、政體、文化或人物"
       - zh: "巴伐利亞人"
         when: "指巴伐利亞人或巴伐利亞族群"
-
   Beja:  # 需判斷是在葡萄牙還是在非洲
     default: "貝雅"
     senses:
@@ -7439,7 +7146,6 @@ contextual:
         when: "指葡萄牙地名或相關政體"
       - zh: "貝賈"
         when: "指非洲的貝雅民族、文化或政體"
-
   Bohemian:
     default: "波希米亞的"
     senses:
@@ -7449,7 +7155,6 @@ contextual:
         when: "指波希米亞人或波希米亞族群"
       - zh: "波希米亞語"
         when: "指波希米亞語言"
-
   Brazilian:
     default: "巴西的"
     senses:
@@ -7457,7 +7162,6 @@ contextual:
         when: "作形容詞，修飾巴西地區、文化、政體或相關事物"
       - zh: "巴西人"
         when: "明確指巴西人或其族群"
-
   Brethren:
     default: "弟兄會"
     senses:
@@ -7465,7 +7169,6 @@ contextual:
         when: "指宗教或歷史上的弟兄會、Unity of Brethren 等團體"
       - zh: "兄弟會"
         when: "指海盜或其他世俗組織、兄弟會或同業結社"
-
   Breton:
     default: "布列塔尼"
     senses:
@@ -7473,7 +7176,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "布列塔尼人"
         when: "指人或族群"
-
   British:
     default: "英國"
     senses:
@@ -7483,7 +7185,6 @@ contextual:
         when: "指近現代英國國家、英國勢力、英國政府或一般國名形容詞"
       - zh: "英國人"
         when: "指人或族群"
-
   Bubu:
     default: "魚籠"
     senses:
@@ -7491,7 +7192,6 @@ contextual:
         when: "指 Bubu 建築或當地魚籠陷阱"
       - zh: "布布"
         when: "指人物姓名或其他專有名詞"
-
   Bureaucracy:
     default: "官僚體系"
     senses:
@@ -7499,7 +7199,6 @@ contextual:
         when: "指國家或政府的官僚制度、行政體系或整體官僚運作"
       - zh: "官僚部門"
         when: "指遊戲中的 bureaucracy 部門、職能機構或具體行政部門"
-
   Byzantine:
     default: "拜占庭"
     senses:
@@ -7507,7 +7206,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "拜占庭人"
         when: "指人或族群"
-
   Calvinist:
     default: "喀爾文宗的"
     senses:
@@ -7515,7 +7213,6 @@ contextual:
         when: "作形容詞，修飾喀爾文宗的信仰、教義、人物或相關事物"
       - zh: "喀爾文宗信徒"
         when: "指信仰喀爾文宗的人或群體"
-
   Cannon:
     default: "火炮"
     senses:
@@ -7523,7 +7220,6 @@ contextual:
         when: "指大砲、砲兵武器或軍事裝備"
       - zh: "炮灰"
         when: "出現在 cannon fodder 詞組中，指被當作消耗品投入戰鬥的人員"
-
   Capital:
     default: "首都"
     senses:
@@ -7531,7 +7227,6 @@ contextual:
         when: "指政治實體的首都或首府"
       - zh: "資本"
         when: "指經濟、金融或資產語境"
-
   Cardinal:
     default: "樞機"
     senses:
@@ -7543,7 +7238,6 @@ contextual:
         when: "指數學中的 cardinal number 或基數"
       - zh: "主要的"
         when: "作一般形容詞，表示主要、首要或核心"
-
   Carolingian:
     default: "卡洛林的"
     senses:
@@ -7551,7 +7245,6 @@ contextual:
         when: "作形容詞，修飾卡洛林王朝、文化、勢力或相關事物"
       - zh: "卡洛林人"
         when: "明確指卡洛林人或其族群"
-
   Castilian:
     default: "卡斯提爾"
     senses:
@@ -7561,7 +7254,6 @@ contextual:
         when: "指人或族群"
       - zh: "卡斯提爾語"
         when: "指語言"
-
   Catalan:
     default: "加泰隆尼亞"
     senses:
@@ -7571,7 +7263,6 @@ contextual:
         when: "指人或族群"
       - zh: "加泰隆尼亞語"
         when: "指語言"
-
   Cathedral:
     default: "大教堂"
     senses:
@@ -7579,7 +7270,6 @@ contextual:
         when: "泛指大型基督宗教教堂或一般 cathedral 建築"
       - zh: "主教座堂"
         when: "明確指主教座堂或主教駐地教堂"
-
   Catholic:
     default: "天主教的"
     senses:
@@ -7587,7 +7277,6 @@ contextual:
         when: "作形容詞，修飾教會、宗教、信仰、人物或相關事物"
       - zh: "天主教徒"
         when: "指信仰天主教的人或天主教族群"
-
   Cham:
     default: "占婆"
     senses:
@@ -7595,7 +7284,6 @@ contextual:
         when: "指占婆政體、地區或相關文化"
       - zh: "占族"
         when: "明確指 Cham 族群或人民"
-
   Chancery:
     default: "秘書室"
     senses:
@@ -7603,7 +7291,6 @@ contextual:
         when: "指遊戲中的 Chancery 建築或政府文書辦公機構"
       - zh: "文書署"
         when: "指歷史或行政語境中的 chancery 文書機關"
-
   Chinese:
     default: "中國的"
     senses:
@@ -7613,7 +7300,6 @@ contextual:
         when: "指中國人或族群"
       - zh: "中文"
         when: "指語言或文字"
-
   Chobanids:
     default: "丘拜尼"
     senses:
@@ -7621,7 +7307,6 @@ contextual:
         when: "指人名、家族始祖或個人 Choban"
       - zh: "丘拜尼"
         when: "指國家、王朝、政權或 Chobanid state/dynasty"
-
   Christian:
     default: "基督教的"
     senses:
@@ -7629,7 +7314,6 @@ contextual:
         when: "作形容詞，修飾基督教世界、信仰或相關事物"
       - zh: "基督徒"
         when: "指基督徒或基督徒群體"
-
   Circassian:
     default: "切爾克西亞的"
     senses:
@@ -7637,7 +7321,6 @@ contextual:
         when: "作形容詞，修飾切爾克西亞地區、文化、政體或相關事物"
       - zh: "切爾克西亞人"
         when: "指切爾克西亞人或其族群"
-
   Circle:
     default: "行政圈"
     senses:
@@ -7647,7 +7330,6 @@ contextual:
         when: "指一般團體、社交圈或人際群體"
       - zh: "圓圈"
         when: "指幾何形狀或圓形排列"
-
   Cloths:
     default: "布料"
     senses:
@@ -7655,7 +7337,6 @@ contextual:
         when: "指遊戲中的布料貨物、紡織品或布料生產"
       - zh: "布匹"
         when: "指一般貿易、商品或敘事語境中的布匹"
-
   Coast:
     default: "海岸"
     senses:
@@ -7663,7 +7344,6 @@ contextual:
         when: "指地理上的海岸、海岸線或沿海地區"
       - zh: "沿岸"
         when: "作地理修飾語，表示靠近海岸或沿海分布"
-
   Cods:
     default: "鱈魚派"
     senses:
@@ -7671,7 +7351,6 @@ contextual:
         when: "指 Hook and Cod Wars 中的 Cods 派系"
       - zh: "鱈魚"
         when: "指一般魚類或食物語境中的 cod 複數"
-
   Cog:
     default: "齒輪"
     senses:
@@ -7679,7 +7358,6 @@ contextual:
         when: "指 UI 中的齒輪圖示或齒輪按鈕"
       - zh: "柯克船"
         when: "指中世紀帆船類型 cog"
-
   Colonial:
     default: "殖民的"
     senses:
@@ -7687,7 +7365,6 @@ contextual:
         when: "作形容詞，修飾殖民政策、制度、活動或事物"
       - zh: "殖民地的"
         when: "明確修飾殖民地或殖民屬國"
-
   Colors:
     default: "軍旗"
     senses:
@@ -7695,7 +7372,6 @@ contextual:
         when: "指軍隊所持的旗幟或軍旗"
       - zh: "顏色"
         when: "指一般顏色"
-
   Confucian:
     default: "儒家的"
     senses:
@@ -7705,7 +7381,6 @@ contextual:
         when: "指儒家思想或學說"
       - zh: "儒者"
         when: "指儒家學者或信奉儒學的人"
-
   Control:
     default: "控制力"
     senses:
@@ -7713,7 +7388,6 @@ contextual:
         when: "指遊戲中的地區、社會或政治控制力數值"
       - zh: "控制"
         when: "指一般控制、支配或管理行為"
-
   Conversion:
     default: "皈依"
     senses:
@@ -7723,7 +7397,6 @@ contextual:
         when: "指文化、類型、數值或其他非宗教轉換"
       - zh: "轉化"
         when: "指將某種對象轉化為另一種狀態，且語境不是宗教改宗"
-
   Coptic:
     default: "科普特的"
     senses:
@@ -7733,7 +7406,6 @@ contextual:
         when: "指科普特人或科普特族群"
       - zh: "科普特語"
         when: "指科普特語言"
-
   Corrupt:
     default: "腐敗的"
     senses:
@@ -7741,7 +7413,6 @@ contextual:
         when: "形容統治者、制度或機構失去廉正"
       - zh: "腐化"
         when: "指逐漸墮落或敗壞的過程"
-
   Corsican:
     default: "科西嘉"
     senses:
@@ -7749,7 +7420,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "科西嘉人"
         when: "指人或族群"
-
   Cost:
     default: "花費"
     senses:
@@ -7759,7 +7429,6 @@ contextual:
         when: "指生產、建設、維護或經濟活動的成本"
       - zh: "代價"
         when: "指一般敘事或抽象語境中的代價"
-
   Court:
     default: "宮廷"
     senses:
@@ -7769,7 +7438,6 @@ contextual:
         when: "指 court of law、最高法院或其他司法機構"
       - zh: "考特"
         when: "指人物姓名 Court"
-
   Crescent:
     default: "新月沃土"
     senses:
@@ -7777,7 +7445,6 @@ contextual:
         when: "指遊戲中的 Crescent 區域"
       - zh: "新月"
         when: "作地理名稱修飾語，出現在 Crescent Coast、Crescent Lake 等名稱中"
-
   Crimean:
     default: "克里米亞的"
     senses:
@@ -7785,7 +7452,6 @@ contextual:
         when: "作形容詞，修飾克里米亞地區、政體、文化或相關事物"
       - zh: "克里米亞人"
         when: "明確指克里米亞人或其族群"
-
   Crown:
     default: "王室"
     senses:
@@ -7795,7 +7461,6 @@ contextual:
         when: "指君主統治權、王權或政治權力"
       - zh: "王冠"
         when: "指實體王冠或冠冕"
-
   Crypto-:
     default: "秘密"
     senses:
@@ -7803,7 +7468,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "秘密人"
         when: "指人或族群"
-
   Crypto-Catholicism:
     default: "秘密天主教"
     senses:
@@ -7811,7 +7475,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "秘密天主教人"
         when: "指人或族群"
-
   Curia:
     default: "教廷"
     senses:
@@ -7819,7 +7482,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "教廷人"
         when: "指人或族群"
-
   Current:
     default: "目前"
     senses:
@@ -7829,7 +7491,6 @@ contextual:
         when: "指海洋中的洋流"
       - zh: "暖流"
         when: "指海洋中的暖流"
-
   Dai:  # ordinal_numeral.japanese_language、ordinal_numeral.ping_language 中是「第」的用法
     default: "傣"
     senses:
@@ -7837,7 +7498,6 @@ contextual:
         when: "指傣族、傣文化或相關名稱"
       - zh: "第"
         when: "指序數詞中的序數標記"
-
   Danube:
     default: "多瑙河"
     senses:
@@ -7845,7 +7505,6 @@ contextual:
         when: "指多瑙河本身或河流地理名稱"
       - zh: "多瑙"
         when: "作形容詞或地區修飾語，指多瑙河流域相關事物"
-
   Decentralization:
     default: "分權"
     senses:
@@ -7853,7 +7512,6 @@ contextual:
         when: "指一般政治、行政或組織權力下放的概念"
       - zh: "地方分權"
         when: "指將權力或行政職能下放至地方的制度或政策"
-
   Development:
     default: "發展度"
     senses:
@@ -7863,7 +7521,6 @@ contextual:
         when: "指一般社會、經濟、制度或歷史語境中的發展過程"
       - zh: "開發"
         when: "指產品、技術、土地或其他對象的開發工作"
-
   Devotion:
     default: "奉獻度"
     senses:
@@ -7871,7 +7528,6 @@ contextual:
         when: "指遊戲中的宗教或政府數值、機制或指標"
       - zh: "虔誠"
         when: "指一般宗教語境中的虔誠、敬虔或信仰投入"
-
   Dharmic:
     default: "達摩宗教"
     senses:
@@ -7879,7 +7535,6 @@ contextual:
         when: "指 Dharmic 宗教分類或 qa_debug 的宗教選項"
       - zh: "達摩的"
         when: "作形容詞，修飾文化、傳統或其他事物"
-
   Diet:
     default: "議會"
     senses:
@@ -7887,7 +7542,6 @@ contextual:
         when: "指神聖羅馬帝國或其他歷史政治體系中的 Diet 議會"
       - zh: "飲食"
         when: "指一般生活、健康或食物語境中的飲食"
-
   Din:
     default: "丁"
     senses:
@@ -7895,7 +7549,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "丁人"
         when: "指人或族群"
-
   Disorder:
     default: "混亂"
     senses:
@@ -7903,7 +7556,6 @@ contextual:
         when: "指一般失序、混亂或秩序不穩定的狀態"
       - zh: "動亂"
         when: "指政治、社會或國家局勢中的動亂與不安"
-
   Dock:
     default: "船塢"
     senses:
@@ -7911,7 +7563,6 @@ contextual:
         when: "指遊戲中的 Dock 建築或建造、修理船隻的設施"
       - zh: "停靠"
         when: "作動詞，指船隻停靠港口或船塢"
-
   Doctrine:
     default: "教義、學說"
     senses:
@@ -7919,7 +7570,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "教義、學說人"
         when: "指人或族群"
-
   Dominion:
     default: "自治領"
     senses:
@@ -7929,7 +7579,6 @@ contextual:
         when: "指一般政治、歷史或敘事中的支配與統治，例如 Foreign Dominion 或 Dominion over the Baltic Sea"
       - zh: "領地"
         when: "指人物或勢力所控制的區域或勢力範圍"
-
   Doom:
     default: "末日值"
     senses:
@@ -7937,7 +7586,6 @@ contextual:
         when: "指遊戲中的 Doom 數值或相關機制"
       - zh: "末日"
         when: "指一般末日、毀滅或厄運語境"
-
   Eastern:
     default: "東方的"
     senses:
@@ -7945,7 +7593,6 @@ contextual:
         when: "指 Eastern religion 或 qa_debug 的東方宗教分類"
       - zh: "東方的"
         when: "作形容詞，指東方地區、文化或事物"
-
   Effects:
     default: "效果"
     senses:
@@ -7955,7 +7602,6 @@ contextual:
         when: "指一般事件、政策或行動造成的影響"
       - zh: "音效"
         when: "指音效設定或聲音效果"
-
   Egyptian:
     default: "埃及的"
     senses:
@@ -7965,7 +7611,6 @@ contextual:
         when: "指埃及人或埃及族群"
       - zh: "埃及語"
         when: "指埃及語言"
-
   Equilibrium:
     default: "均衡值"
     senses:
@@ -7975,7 +7620,6 @@ contextual:
         when: "指一般制度、狀態或力量之間的均衡"
       - zh: "平衡"
         when: "指一般抽象概念或兩方力量的平衡"
-
   Ethiopian:
     default: "衣索比亞"
     senses:
@@ -7983,7 +7627,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "衣索比亞人"
         when: "指人或族群"
-
   Etzalcualiztli:
     default: "玉米豆粥節"
     senses:
@@ -7991,7 +7634,6 @@ contextual:
         when: "一般 UI、事件標題或需要玩家快速理解時，使用意譯"
       - zh: "埃察爾夸利斯特利"
         when: "明確需要保留阿茲特克文化原名、音譯或原名辨識時"
-
   European:
     default: "歐洲"
     senses:
@@ -7999,7 +7641,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力、制度、歷史或事物"
       - zh: "歐洲人"
         when: "指人或族群"
-
   Exemption:
     default: "豁免"
     senses:
@@ -8009,7 +7650,6 @@ contextual:
         when: "指一般免除義務、責任或付款"
       - zh: "免稅"
         when: "明確指稅捐或稅務上的免除"
-
   Farmlands:
     default: "農田"
     senses:
@@ -8017,7 +7657,6 @@ contextual:
         when: "指遊戲中的 Farmlands 地形類型"
       - zh: "農地"
         when: "指一般農業、地理或敘事語境中的耕作土地"
-
   Fatimid:
     default: "法蒂瑪"
     senses:
@@ -8025,7 +7664,6 @@ contextual:
         when: "指法蒂瑪王朝或其政權"
       - zh: "法蒂瑪的"
         when: "作形容詞，修飾法蒂瑪王朝、文化、勢力或相關事物"
-
   Favor:
     default: "人情"
     senses:
@@ -8035,7 +7673,6 @@ contextual:
         when: "指一般敘事中的個人恩惠或情分"
       - zh: "寵信"
         when: "指君主、統治者或權力人物給予的偏愛與信任"
-
   Favors:
     default: "人情"
     senses:
@@ -8043,7 +7680,6 @@ contextual:
         when: "指政治、階層或外交關係中的可用人情資源"
       - zh: "恩惠"
         when: "指一般敘事中的個人恩惠或情分"
-
   Ferdinand:
     default: "斐迪南"
     senses:
@@ -8051,7 +7687,6 @@ contextual:
         when: "指國王、君主或德語 / 中歐王室語境"
       - zh: "費爾南多"
         when: "指西班牙語、葡萄牙語或非王號的一般人名語境"
-
   Ferrarese:
     default: "費拉拉"
     senses:
@@ -8059,7 +7694,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "費拉拉人"
         when: "指人或族群"
-
   Finnish:
     default: "芬蘭的"
     senses:
@@ -8069,7 +7703,6 @@ contextual:
         when: "指芬蘭人或芬蘭族群"
       - zh: "芬蘭語"
         when: "指芬蘭語言"
-
   Fish:
     default: "魚類"
     senses:
@@ -8079,7 +7712,6 @@ contextual:
         when: "指一般敘事中的魚或魚類"
       - zh: "費許"
         when: "明確作為人物姓氏 Fish"
-
   Flemish:
     default: "法蘭德斯"
     senses:
@@ -8089,7 +7721,6 @@ contextual:
         when: "指人或族群"
       - zh: "法蘭德斯語"
         when: "指語言"
-
   Florentine:
     default: "佛羅倫斯"
     senses:
@@ -8097,7 +7728,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "佛羅倫斯人"
         when: "指人或族群"
-
   Francis:
     default: "法蘭西斯"
     senses:
@@ -8107,7 +7737,6 @@ contextual:
         when: "義大利語 Francesco / Francis 對應語境"
       - zh: "法蘭索瓦"
         when: "法語 François / 法蘭西王室語境"
-
   Frederick:
     default: "腓特烈"
     senses:
@@ -8115,7 +7744,6 @@ contextual:
         when: "國王、君主、王號或 name_frederick.german_language 語境"
       - zh: "弗里德里希"
         when: "德語一般人名、學者、作家或非王號語境"
-
   Gaelic:
     default: "蓋爾"
     senses:
@@ -8125,7 +7753,6 @@ contextual:
         when: "明確指蓋爾人或其族群"
       - zh: "蓋爾語"
         when: "指蓋爾語言"
-
   General:
     default: "將軍"
     senses:
@@ -8133,7 +7760,6 @@ contextual:
         when: "指軍事階級或軍事指揮官"
       - zh: "一般"
         when: "作形容詞，表示普遍、概括或非特定的情況"
-
   Genoese:
     default: "熱那亞的"
     senses:
@@ -8141,7 +7767,6 @@ contextual:
         when: "作形容詞，修飾熱那亞地區、政體、文化或事物"
       - zh: "熱那亞人"
         when: "指熱那亞人或族群"
-
   Georgia:
     default: "喬治亞"
     senses:
@@ -8149,7 +7774,6 @@ contextual:
         when: "指地名、國家、地區或政治實體"
       - zh: "喬治婭"
         when: "指女性人名，特別是 character_names 相關語境"
-
   Germanic:
     default: "日耳曼的"
     senses:
@@ -8159,7 +7783,6 @@ contextual:
         when: "指德意志地區或德意志政治文化語境"
       - zh: "日耳曼語族"
         when: "指 Germanic language family 等語言分類"
-
   Gold:
     default: "金錢"
     senses:
@@ -8169,7 +7792,6 @@ contextual:
         when: "指一般敘事中的黃金"
       - zh: "金礦"
         when: "指遊戲中的黃金資源、黃金商品或礦產資源名稱"
-
   Greek:
     default: "希臘的"
     senses:
@@ -8179,7 +7801,6 @@ contextual:
         when: "指希臘人或族群"
       - zh: "希臘語"
         when: "指語言"
-
   Gujarati:
     default: "古加拉特的"
     senses:
@@ -8189,7 +7810,6 @@ contextual:
         when: "指古加拉特人或相關族群"
       - zh: "古加拉特語"
         when: "指古加拉特語言"
-
   Heathen:
     default: "異教徒"
     senses:
@@ -8197,7 +7817,6 @@ contextual:
         when: "指不信奉本國宗教的人或人口"
       - zh: "異教"
         when: "作名詞修飾宗教或信仰"
-
   Heir:
     default: "繼承人"
     senses:
@@ -8205,7 +7824,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "繼承人"
         when: "指人或族群"
-
   Hell:
     default: "地獄"
     senses:
@@ -8213,7 +7831,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "地獄人"
         when: "指人或族群"
-
   Hellenic:  # 指古希臘文化、宗教或歷史脈絡時依完整詞組判斷
     default: "希臘"
     senses:
@@ -8223,7 +7840,6 @@ contextual:
         when: "指人或族群"
       - zh: "希臘語"
         when: "指語言"
-
   Hellenistic:
     default: "希臘化、希臘式"
     senses:
@@ -8231,7 +7847,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "希臘化、希臘式人"
         when: "指人或族群"
-
   Herculean:
     default: "海克力斯般"
     senses:
@@ -8239,7 +7854,6 @@ contextual:
         when: "形容如 Hercules / Heracles 般的力量、偉業或英雄式特質"
       - zh: "巨大的"
         when: "一般形容艱鉅、龐大或極困難，且不需保留神話典故時"
-
   Heretic:
     default: "異端"
     senses:
@@ -8247,7 +7861,6 @@ contextual:
         when: "指異端信仰或宗教分類"
       - zh: "異端者"
         when: "指異端人口或人物"
-
   Hiberno-Norman:
     default: "愛爾蘭諾曼"
     senses:
@@ -8255,7 +7868,6 @@ contextual:
         when: "作形容詞，修飾愛爾蘭諾曼文化、勢力或相關事物"
       - zh: "愛爾蘭諾曼人"
         when: "明確指愛爾蘭諾曼人或其族群"
-
   Hindu:
     default: "印度教"
     senses:
@@ -8265,7 +7877,6 @@ contextual:
         when: "作形容詞，修飾印度教文化、教義或事物"
       - zh: "印度教徒"
         when: "指印度教信徒或族群"
-
   Horde:
     default: "部落"
     senses:
@@ -8273,7 +7884,6 @@ contextual:
         when: "指 Horde 政體、政府等級或明確的游牧政治實體"
       - zh: "游牧部落"
         when: "指一般歷史或軍事語境中的游牧勢力"
-
   Hordes:
     default: "部落"
     senses:
@@ -8281,7 +7891,6 @@ contextual:
         when: "指複數的 Horde 政體或部落集團"
       - zh: "游牧部落"
         when: "指一般敘事中的多個游牧勢力、部眾或軍隊"
-
   Horse:
     default: "騎兵部隊"
     senses:
@@ -8289,7 +7898,6 @@ contextual:
         when: "指遊戲中的騎兵兵種"
       - zh: "馬"
         when: "指船名或一般馬匹名稱"
-
   Host:
     default: "主機"
     senses:
@@ -8299,7 +7907,15 @@ contextual:
         when: "指主持活動、節目或聚會的人"
       - zh: "主持"
         when: "作動詞，指主持活動、節目、聚會或遊戲房間"
-
+  Hungarian:
+    default: "匈牙利的"
+    senses:
+      - zh: "匈牙利的"
+        when: "作形容詞，修飾匈牙利地區、政體、文化、軍事或相關事物"
+      - zh: "匈牙利人"
+        when: "指匈牙利人或匈牙利族群"
+      - zh: "匈牙利語"
+        when: "指匈牙利語言"
   Hussite:
     default: "胡斯派"
     senses:
@@ -8307,7 +7923,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "胡斯派人"
         when: "指人或族群"
-
   Huēyi Tēcuilhuitōntli:
     default: "大貴族宴節"
     senses:
@@ -8315,7 +7930,6 @@ contextual:
         when: "一般 UI、事件標題或需要玩家快速理解時，使用意譯"
       - zh: "韋伊·特奎爾維通特利"
         when: "明確需要保留阿茲特克文化原名、音譯或原名辨識時"
-
   Huēyi Tōzōztli:
     default: "大守夜節"
     senses:
@@ -8323,7 +7937,6 @@ contextual:
         when: "一般 UI、事件標題或需要玩家快速理解時，使用意譯"
       - zh: "韋伊·托索斯特利"
         when: "明確需要保留阿茲特克文化原名、音譯或原名辨識時"
-
   Iberia:
     default: "伊比利亞"
     senses:
@@ -8333,7 +7946,6 @@ contextual:
         when: "明確指 Iberian Mountains"
       - zh: "伊比利亞"
         when: "其他地理、文化、區域或泛稱語境"
-
   Iberian:
     default: "伊比利亞的"
     senses:
@@ -8341,7 +7953,6 @@ contextual:
         when: "作形容詞，修飾伊比利亞地區、文化、政體或事物"
       - zh: "伊比利亞人"
         when: "指伊比利亞人或相關族群"
-
   Icon:  # 宗教脈絡的 Icon 指聖像；電腦 UI 的 icon 指圖示
     default: "聖像"
     senses:
@@ -8349,7 +7960,6 @@ contextual:
         when: "指宗教聖物、崇拜圖像或 loan_icon 等遊戲行動"
       - zh: "圖示"
         when: "指介面、按鈕或電腦圖示"
-
   Ilkhanid:
     default: "伊兒汗國的"
     senses:
@@ -8359,7 +7969,6 @@ contextual:
         when: "明確指伊兒汗國人或其族群"
       - zh: "伊兒汗國"
         when: "名詞直接指伊兒汗國政權"
-
   Imperial:
     default: "帝國的"
     senses:
@@ -8367,7 +7976,6 @@ contextual:
         when: "作形容詞，修飾帝國相關的制度、機構、土地或事物"
       - zh: "帝國"
         when: "中文複合名詞中自然省略「的」，例如帝國議會、帝國軍械庫"
-
   Incan:
     default: "印加的"
     senses:
@@ -8375,7 +7983,6 @@ contextual:
         when: "作形容詞，修飾印加地區、政體、文化或相關事物"
       - zh: "印加人"
         when: "指印加人或印加族群"
-
   Indian:
     default: "印度的"
     senses:
@@ -8383,7 +7990,6 @@ contextual:
         when: "作形容詞，修飾來自印度的棉布或其他事物"
       - zh: "印度人"
         when: "指印度人或印度族群"
-
   Influence:
     default: "影響力"
     senses:
@@ -8391,7 +7997,6 @@ contextual:
         when: "作名詞，指文化、宗教、政治或遊戲機制中的影響力"
       - zh: "影響"
         when: "作動詞，表示對人物、國家、地區或結果產生影響"
-
   Innovative:
     default: "創新"
     senses:
@@ -8399,7 +8004,6 @@ contextual:
         when: "指新穎的想法、方法、技術或成果"
       - zh: "革新"
         when: "指制度、社會、政治或文化方面的改革與革新"
-
   Institution:
     default: "思潮"
     senses:
@@ -8407,7 +8011,6 @@ contextual:
         when: "指遊戲中的 Institution 名稱或 institution 選項"
       - zh: "制度"
         when: "指一般組織制度或非遊戲機制語境"
-
   Institutions:
     default: "思潮"
     senses:
@@ -8417,7 +8020,6 @@ contextual:
         when: "指一般政治、歷史或社會語境中的制度"
       - zh: "機構"
         when: "指一般組織、學術或宗教機構"
-
   Iraqi:
     default: "伊拉克的"
     senses:
@@ -8425,7 +8027,6 @@ contextual:
         when: "作形容詞，修飾伊拉克地區、政體、文化或事物"
       - zh: "伊拉克人"
         when: "指伊拉克人或族群"
-
   Irish:
     default: "愛爾蘭"
     senses:
@@ -8435,7 +8036,6 @@ contextual:
         when: "指人或族群"
       - zh: "愛爾蘭語"
         when: "指語言"
-
   Iron:
     default: "鐵礦"
     senses:
@@ -8443,7 +8043,6 @@ contextual:
         when: "指遊戲中的 Iron 商品、資源或生產材料"
       - zh: "鐵"
         when: "指一般金屬、材料或冶金語境中的 iron"
-
   Iroquoian:
     default: "易洛魁的"
     senses:
@@ -8455,7 +8054,6 @@ contextual:
         when: "指易洛魁語言"
       - zh: "易洛魁人"
         when: "指易洛魁人或相關族群"
-
   Irrigation:
     default: "灌溉設施"
     senses:
@@ -8463,7 +8061,6 @@ contextual:
         when: "指遊戲中的灌溉建設、設施或投資"
       - zh: "灌溉"
         when: "指一般農業活動、政策或過程"
-
   Isidore:  # 聖職名使用依西多祿
     default: "依西多祿"
     senses:
@@ -8471,7 +8068,6 @@ contextual:
         when: "指聖職人員、教會人物或宗教職銜相關人物"
       - zh: "伊西多爾"
         when: "指一般人名或非聖職語境"
-
   Islamic:
     default: "伊斯蘭"
     senses:
@@ -8479,7 +8075,6 @@ contextual:
         when: "作形容詞，修飾文化、制度、學院、教義或事物"
       - zh: "伊斯蘭教的"
         when: "明確修飾宗教、信仰或教派語境"
-
   Italian:
     default: "義大利"
     senses:
@@ -8489,7 +8084,6 @@ contextual:
         when: "指人或族群"
       - zh: "義大利語"
         when: "指語言"
-
   Ivan:
     default: "伊凡"
     senses:
@@ -8497,7 +8091,6 @@ contextual:
         when: "指俄羅斯、保加利亞等東歐歷史人物姓名，或 Novgorod 的 Ivan's Hundred"
       - zh: "伊萬"
         when: "指專案既有譯名或特定人物語境採用伊萬的音譯"
-
   Izcalli:
     default: "生長節"
     senses:
@@ -8505,7 +8098,6 @@ contextual:
         when: "一般 UI、事件標題或需要玩家快速理解時，使用意譯"
       - zh: "伊斯卡利"
         when: "明確需要保留阿茲特克文化原名、音譯或原名辨識時"
-
   Jamaican:
     default: "牙買加的"
     senses:
@@ -8513,7 +8105,6 @@ contextual:
         when: "作形容詞，修飾牙買加地區、文化、政體或相關事物"
       - zh: "牙買加人"
         when: "明確指牙買加人或其族群"
-
   Japanese:
     default: "日本"
     senses:
@@ -8523,7 +8114,6 @@ contextual:
         when: "指人或族群"
       - zh: "日本語"
         when: "指語言"
-
   Jason:  # 希臘神話英雄用伊阿宋；一般現代英語人名需另依人物判斷
     default: "伊阿宋"
     senses:
@@ -8531,7 +8121,6 @@ contextual:
         when: "指希臘神話英雄、阿爾戈英雄或薩莫色雷斯秘儀脈絡"
       - zh: "傑森"
         when: "指一般現代英語人名"
-
   Jewish:
     default: "猶太教"
     senses:
@@ -8541,7 +8130,6 @@ contextual:
         when: "作形容詞修飾文化、人物或事物"
       - zh: "猶太人"
         when: "指人或族群"
-
   Knights:
     default: "騎兵部隊"
     senses:
@@ -8551,7 +8139,6 @@ contextual:
         when: "指傭兵名稱或一般騎士"
       - zh: "騎士團"
         when: "指歷史或宗教軍事騎士團"
-
   Korean:
     default: "朝鮮的"
     senses:
@@ -8561,7 +8148,6 @@ contextual:
         when: "指朝鮮人或朝鮮族群"
       - zh: "朝鮮語"
         when: "指朝鮮語言"
-
   Legitimacy:
     default: "正統性"
     senses:
@@ -8571,7 +8157,6 @@ contextual:
         when: "指一般政治、法律或統治正當性"
       - zh: "合法性"
         when: "強調權力、程序或主張是否合法"
-
   Levy:
     default: "徵召兵"
     senses:
@@ -8579,7 +8164,6 @@ contextual:
         when: "指遊戲中的徵召兵、徵召部隊或 levy 軍事機制"
       - zh: "課徵"
         when: "作動詞，指課徵稅款或其他資源"
-
   Ligurian:
     default: "利古里亞的"
     senses:
@@ -8589,7 +8173,6 @@ contextual:
         when: "指利古里亞人或族群"
       - zh: "利古里亞語"
         when: "指利古里亞語言或方言"
-
   Literacy:
     default: "識字率"
     senses:
@@ -8599,7 +8182,6 @@ contextual:
         when: "指一般教育、文化或個人的識字能力"
       - zh: "讀寫能力"
         when: "強調閱讀與書寫能力，而非人口比例"
-
   Local:
     default: "本地"
     senses:
@@ -8611,7 +8193,6 @@ contextual:
         when: "強調相對於外來或外國的當地事物、居民或勢力"
       - zh: "當地人"
         when: "Local 作名詞，指居住於該地的人"
-
   Lombard:
     default: "倫巴底的"
     senses:
@@ -8621,7 +8202,6 @@ contextual:
         when: "指倫巴底族群或人物"
       - zh: "倫巴底語"
         when: "指 Lombard 語言"
-
   Lutheran:
     default: "路德宗"
     senses:
@@ -8631,7 +8211,6 @@ contextual:
         when: "作形容詞，修飾教會、神學、教義、文化或事物"
       - zh: "路德宗信徒"
         when: "指人或族群"
-
   Malagasy:
     default: "馬拉加斯的"
     senses:
@@ -8641,7 +8220,6 @@ contextual:
         when: "指馬拉加斯人或其族群"
       - zh: "馬拉加斯語"
         when: "指馬拉加斯語言"
-
   Mandate:
     default: "天命"
     senses:
@@ -8649,7 +8227,6 @@ contextual:
         when: "指 Mandate of Heaven 等中國政治或宗教概念"
       - zh: "命令"
         when: "作動詞或一般政治語境，表示下令、授權或要求執行"
-
   Mary:
     default: "瑪利亞"
     senses:
@@ -8659,7 +8236,6 @@ contextual:
         when: "指一般西式人名，且語境採用此譯名"
       - zh: "瑪麗"
         when: "指一般西式人名，且語境採用此譯名"
-
   Mason:
     default: "石匠"
     senses:
@@ -8667,7 +8243,6 @@ contextual:
         when: "指從事砌石或建築工作的職業、人物或群體"
       - zh: "磚窯"
         when: "指遊戲中的 mason 建築類型或相關建築物"
-
   Maximilian:
     default: "馬克西米利安"
     senses:
@@ -8675,7 +8250,6 @@ contextual:
         when: "德語人名語境"
       - zh: "馬克西米連"
         when: "法語人名語境"
-
   Mayan:
     default: "馬雅"
     senses:
@@ -8683,7 +8257,6 @@ contextual:
         when: "指馬雅文化、文明或相關事物"
       - zh: "馬雅人"
         when: "指人或族群"
-
   Mazovian:
     default: "馬佐維亞的"
     senses:
@@ -8691,7 +8264,6 @@ contextual:
         when: "作形容詞，修飾馬佐維亞地區、政體、文化或相關事物"
       - zh: "馬佐維亞人"
         when: "指馬佐維亞人或其族群"
-
   Mecklenburgian:
     default: "梅克倫堡的"
     senses:
@@ -8699,7 +8271,6 @@ contextual:
         when: "作形容詞，修飾梅克倫堡地區、政體、文化或相關事物"
       - zh: "梅克倫堡人"
         when: "指梅克倫堡人或其族群"
-
   Mesopotamian:
     default: "美索不達米亞"
     senses:
@@ -8707,7 +8278,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力、歷史或事物"
       - zh: "美索不達米亞人"
         when: "指人或族群"
-
   Miller:
     default: "磨坊主"
     senses:
@@ -8715,7 +8285,6 @@ contextual:
         when: "指經營或管理磨坊的職業"
       - zh: "米勒"
         when: "指 Miller 姓氏或人物姓名"
-
   Mithraic:
     default: "密特拉教的"
     senses:
@@ -8725,7 +8294,6 @@ contextual:
         when: "指密特拉教宗教或信仰"
       - zh: "密特拉教徒"
         when: "指密特拉教信徒"
-
   Mongolian:
     default: "蒙古的"
     senses:
@@ -8735,7 +8303,6 @@ contextual:
         when: "指蒙古人或蒙古族群"
       - zh: "蒙古語"
         when: "指蒙古語言"
-
   Moroccan:
     default: "摩洛哥"
     senses:
@@ -8743,7 +8310,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "摩洛哥人"
         when: "指人或族群"
-
   Mossi:
     default: "莫西"
     senses:
@@ -8751,7 +8317,6 @@ contextual:
         when: "作地區、政體或相關名稱的修飾語"
       - zh: "莫西人"
         when: "指莫西人或莫西族群"
-
   Muslim:
     default: "穆斯林"
     senses:
@@ -8761,7 +8326,6 @@ contextual:
         when: "作形容詞，修飾穆斯林文化、社群或事物"
       - zh: "伊斯蘭教"
         when: "指宗教或信仰分類"
-
   Muḥammad:
     default: "穆罕默德"
     senses:
@@ -8771,7 +8335,6 @@ contextual:
         when: "明代中國史料或明代漢文語境"
       - zh: "馬合麻"
         when: "古典漢文、歷史文獻或特定傳統譯名語境"
-
   Mystic:
     default: "神祕主義者"
     senses:
@@ -8779,7 +8342,6 @@ contextual:
         when: "指追求神祕主義或靈性體驗的人"
       - zh: "神祕主義的"
         when: "作形容詞，修飾神祕主義相關的修會、教派或事物"
-
   Mystical:
     default: "神祕的"
     senses:
@@ -8787,7 +8349,6 @@ contextual:
         when: "一般形容神祕、難以理解的事物"
       - zh: "神祕主義的"
         when: "作宗教或神祕主義語境的形容詞"
-
   Mysticism:
     default: "神祕主義"
     senses:
@@ -8795,7 +8356,6 @@ contextual:
         when: "指遊戲中的社會價值觀方向或政府理念"
       - zh: "神秘主義"
         when: "指一般宗教、思想或文化語境中的神秘主義"
-
   Narrows:
     default: "狹窄海域"
     senses:
@@ -8803,7 +8363,6 @@ contextual:
         when: "指遊戲中的 Narrows 海域地形，表示多面臨近海岸、航行空間有限的海域"
       - zh: "海峽"
         when: "指一般地理語境中的海峽或狹窄水道"
-
   Neapolitan:
     default: "那不勒斯"
     senses:
@@ -8811,7 +8370,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "那不勒斯人"
         when: "指人或族群"
-
   New World:
     default: "新大陸"
     senses:
@@ -8819,7 +8377,6 @@ contextual:
         when: "指地理概念、Random New World 或遊戲機制"
       - zh: "新世界"
         when: "指一般敘事或抽象世界概念"
-
   Nicean:
     default: "尼西亞的"
     senses:
@@ -8829,7 +8386,6 @@ contextual:
         when: "明確指尼西亞人或其族群"
       - zh: "尼西亞帝國"
         when: "名詞直接指尼西亞帝國政權"
-
   Noble:
     default: "貴族的"
     senses:
@@ -8837,7 +8393,6 @@ contextual:
         when: "作形容詞，修飾貴族、貴族階層或其相關事物"
       - zh: "貴族"
         when: "指貴族個人或群體"
-
   Norman:
     default: "諾曼"
     senses:
@@ -8847,7 +8402,6 @@ contextual:
         when: "指諾曼人或諾曼族群"
       - zh: "諾曼語"
         when: "指諾曼語言"
-
   Ochpāniztli:
     default: "掃除節"
     senses:
@@ -8855,7 +8409,6 @@ contextual:
         when: "一般 UI、事件標題或需要玩家快速理解時，使用意譯"
       - zh: "奧奇帕尼斯特利"
         when: "明確需要保留阿茲特克文化原名、音譯或原名辨識時"
-
   Old World:
     default: "舊大陸"
     senses:
@@ -8865,7 +8418,6 @@ contextual:
         when: "指與新世界相對的歷史或文化概念"
       - zh: "舊世界的"
         when: "作形容詞，修飾商品、文化、地區或其他相關事物"
-
   Olympian:
     default: "奧林帕斯的"
     senses:
@@ -8875,7 +8427,6 @@ contextual:
         when: "指 Olympian gods 或奧林帕斯眾神"
       - zh: "奧林帕斯信仰"
         when: "指 Olympian faith 或宗教信仰"
-
   Omen:  # 遊戲機制用神諭；一般敘事中的徵兆用預兆
     default: "神諭"
     senses:
@@ -8883,7 +8434,6 @@ contextual:
         when: "指選擇神明、獲得效果或 omen 行動等遊戲機制"
       - zh: "預兆"
         when: "指一般敘事中的徵兆、吉兆或凶兆"
-
   Omens:
     default: "神諭"
     senses:
@@ -8891,7 +8441,6 @@ contextual:
         when: "指遊戲中的宗教 Omens 機制或與神祇相關的預示"
       - zh: "預兆"
         when: "指一般敘事中的預兆、徵兆或不祥現象"
-
   Order:
     default: "修會"
     senses:
@@ -8903,7 +8452,6 @@ contextual:
         when: "指一般命令或指示"
       - zh: "秩序"
         when: "指一般秩序、狀態或社會安定"
-
   Orthodox:
     default: "東正教"
     senses:
@@ -8915,7 +8463,6 @@ contextual:
         when: "指人或族群"
       - zh: "正統的"
         when: "非宗教語境，指正統、傳統或符合教義的事物"
-
   Orthodoxy:
     default: "東正教"
     senses:
@@ -8923,7 +8470,6 @@ contextual:
         when: "指 Eastern Orthodoxy 宗教、教會或信仰語境"
       - zh: "正統教義"
         when: "非特指東正教，指抽象的正統性、正統觀念或教義立場"
-
   Ottoman:
     default: "鄂圖曼"
     senses:
@@ -8931,7 +8477,6 @@ contextual:
         when: "指 Ottoman Empire、Ottoman state、Ottoman government、Ottoman culture、Ottoman dynasty 或一般鄂圖曼相關事物"
       - zh: "奧斯曼"
         when: "明確指 Osman 人名、奧斯曼一世或語源相關情境"
-
   Pagan:
     default: "泛靈信仰"
     senses:
@@ -8939,7 +8484,6 @@ contextual:
         when: "指遊戲中的 Pagan 宗教分類"
       - zh: "異教徒"
         when: "指非本宗教的人或人口"
-
   Panquetzaliztli:
     default: "舉旗節"
     senses:
@@ -8947,7 +8491,6 @@ contextual:
         when: "一般 UI、事件標題或需要玩家快速理解時，使用意譯"
       - zh: "潘克察利斯特利"
         when: "明確需要保留阿茲特克文化原名、音譯或原名辨識時"
-
   Papist:
     default: "教宗派的"
     senses:
@@ -8955,7 +8498,6 @@ contextual:
         when: "作形容詞，修飾與教宗或教宗派信仰相關的符號、思想、代理人或傾向"
       - zh: "教宗派信徒"
         when: "作名詞，指支持教宗或教宗派的信徒"
-
   Patriarchy:
     default: "牧首區"
     senses:
@@ -8963,7 +8505,6 @@ contextual:
         when: "指東正教等宗教體系中的牧首管轄區或宗教組織"
       - zh: "父權制"
         when: "指一般政治、社會或家庭制度中的 patriarchy"
-
   Peruvian:
     default: "祕魯的"
     senses:
@@ -8971,7 +8512,6 @@ contextual:
         when: "作形容詞，修飾祕魯的地理、政體、文化或事物"
       - zh: "祕魯人"
         when: "指祕魯人或祕魯族群"
-
   Peter:  # 依人物、宗派與教會傳統選擇譯名
     default: "彼得"
     senses:
@@ -8981,7 +8521,6 @@ contextual:
         when: "天主教、拉丁教會或教宗傳承語境"
       - zh: "裴特若"
         when: "東正教或東方教會語境"
-
   Pisan:
     default: "比薩"
     senses:
@@ -8989,7 +8528,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "比薩人"
         when: "指人或族群"
-
   Policies:
     default: "政策"
     senses:
@@ -8997,7 +8535,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "政策人"
         when: "指人或族群"
-
   Polish:
     default: "波蘭的"
     senses:
@@ -9007,7 +8544,6 @@ contextual:
         when: "指波蘭人或族群"
       - zh: "波蘭語"
         when: "指語言"
-
   Pomeranian:
     default: "波美拉尼亞的"
     senses:
@@ -9015,7 +8551,6 @@ contextual:
         when: "作形容詞，修飾波美拉尼亞地區、政體、文化或相關事物"
       - zh: "波美拉尼亞人"
         when: "指波美拉尼亞人或其族群"
-
   Portuguese:
     default: "葡萄牙的"
     senses:
@@ -9025,7 +8560,6 @@ contextual:
         when: "明確指葡萄牙人或其族群"
       - zh: "葡萄牙語"
         when: "指葡萄牙語言"
-
   Prestige:
     default: "威望"
     senses:
@@ -9035,7 +8569,6 @@ contextual:
         when: "指一般人物、國家或組織累積的社會評價"
       - zh: "聲譽"
         when: "強調某人或某組織在一般語境中的名聲"
-
   Protestant:
     default: "新教的"
     senses:
@@ -9043,7 +8576,6 @@ contextual:
         when: "作形容詞，修飾新教信仰、教派、人物或事物"
       - zh: "新教徒"
         when: "指新教徒或新教信仰者"
-
   Prussian:
     default: "普魯士的"
     senses:
@@ -9051,7 +8583,6 @@ contextual:
         when: "作形容詞，修飾普魯士的土地、國家、軍隊、文化或歷史事物"
       - zh: "普魯士語"
         when: "指普魯士語言"
-
   Puritan:
     default: "清教徒"
     senses:
@@ -9059,7 +8590,6 @@ contextual:
         when: "指清教徒或清教徒群體"
       - zh: "清教的"
         when: "作形容詞，修飾清教信仰、價值或相關事物"
-
   Quechōlli:
     default: "紅琵鷺節"
     senses:
@@ -9067,7 +8597,6 @@ contextual:
         when: "一般 UI、事件標題或需要玩家快速理解時，使用意譯"
       - zh: "克喬利"
         when: "明確需要保留阿茲特克文化原名、音譯或原名辨識時"
-
   Reformation:
     default: "宗教改革"
     senses:
@@ -9075,7 +8604,6 @@ contextual:
         when: "指基督教歷史上的宗教改革運動，或其相關宗教、教派與時代語境"
       - zh: "改革"
         when: "指一般行政、制度或組織改革，而非宗教改革"
-
   Republic:
     default: "共和國"
     senses:
@@ -9083,7 +8611,6 @@ contextual:
         when: "指共和國家、共和政體或國名中的 Republic"
       - zh: "共和制"
         when: "指政治制度、政體形式或共和制度"
-
   Reputation:
     default: "聲譽"
     senses:
@@ -9091,7 +8618,6 @@ contextual:
         when: "指外交或國際關係中的 reputation"
       - zh: "聲望"
         when: "指一般社會評價或名聲"
-
   Revolutionary Republic:
     default: "革命共和制"
     senses:
@@ -9099,7 +8625,6 @@ contextual:
         when: "指政府改革或政治制度"
       - zh: "革命共和國"
         when: "指國家名稱或政體名稱"
-
   Rival:
     default: "宿敵"
     senses:
@@ -9107,7 +8632,6 @@ contextual:
         when: "指遊戲中被指定為 rival 的國家、角色或勢力"
       - zh: "競爭對手"
         when: "指一般競爭關係，且未被指定為遊戲 rival"
-
   Roman:
     default: "羅馬"
     senses:
@@ -9115,7 +8639,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "羅馬人"
         when: "指人或族群"
-
   Russian:
     default: "俄羅斯的"
     senses:
@@ -9125,7 +8648,6 @@ contextual:
         when: "指俄羅斯人或族群"
       - zh: "俄語"
         when: "指語言"
-
   Samaritan:
     default: "撒馬利亞人"
     senses:
@@ -9133,7 +8655,6 @@ contextual:
         when: "指撒馬利亞人或撒馬利亞文化族群"
       - zh: "撒馬利亞的"
         when: "作形容詞，修飾撒馬利亞宗教或相關事物"
-
   Sao:
     default: "薩奧"
     senses:
@@ -9141,7 +8662,6 @@ contextual:
         when: "指薩奧地區、政體、文化或語言名稱"
       - zh: "聖"
         when: "作葡萄牙語地名或宗教名稱中的聖字譯法"
-
   Saxon:
     default: "薩克森的"
     senses:
@@ -9151,7 +8671,6 @@ contextual:
         when: "指德意志薩克森人或其族群"
       - zh: "薩克森語"
         when: "指薩克森語言"
-
   Saxons:
     default: "撒克遜人"
     senses:
@@ -9159,7 +8678,6 @@ contextual:
         when: "指英格蘭或盎格魯撒克遜歷史語境中的 Saxons"
       - zh: "薩克森人"
         when: "指德意志薩克森地區或政體的 Saxons"
-
   Schism:  # 基督宗教的大分裂與一般分裂需區分
     default: "大分裂"
     senses:
@@ -9167,7 +8685,6 @@ contextual:
         when: "指基督宗教、東西教會或 Great Schism 的歷史與遊戲機制"
       - zh: "分裂"
         when: "指一般政治、社會或組織的分裂"
-
   Scottish:
     default: "蘇格蘭"
     senses:
@@ -9175,7 +8692,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "蘇格蘭人"
         when: "指人或族群"
-
   Sect:
     default: "宗派"
     senses:
@@ -9183,7 +8699,6 @@ contextual:
         when: "指遊戲中的宗教宗派或 Sect 國際組織"
       - zh: "教派"
         when: "指一般宗教語境中的 sect，且不作為遊戲機制名稱"
-
   Senate:
     default: "元老院"
     senses:
@@ -9191,7 +8706,6 @@ contextual:
         when: "指羅馬、拜占庭或古典世界的 Senate"
       - zh: "參議院"
         when: "指近現代國家的 Senate"
-
   Serbian:
     default: "塞爾維亞的"
     senses:
@@ -9201,7 +8715,6 @@ contextual:
         when: "明確指塞爾維亞人或其族群"
       - zh: "塞爾維亞語"
         when: "指塞爾維亞語言"
-
   Settle:
     default: "定居"
     senses:
@@ -9211,7 +8724,6 @@ contextual:
         when: "指解決爭端、問題或衝突"
       - zh: "敲定"
         when: "指敲定條約、協議或安排"
-
   Shan:
     default: "撣族"
     senses:
@@ -9221,7 +8733,6 @@ contextual:
         when: "指撣語言"
       - zh: "撣族的"
         when: "作形容詞，修飾撣族地區、文化或事物"
-
   Shia:
     default: "什葉派"
     senses:
@@ -9229,7 +8740,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "什葉派人"
         when: "指人或族群"
-
   Shias:
     default: "什葉派教徒"
     senses:
@@ -9237,7 +8747,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "什葉派教徒人"
         when: "指人或族群"
-
   Shiite:
     default: "什葉派"
     senses:
@@ -9245,7 +8754,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "什葉派人"
         when: "指人或族群"
-
   Shiites:
     default: "什葉派教徒"
     senses:
@@ -9253,7 +8761,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "什葉派教徒人"
         when: "指人或族群"
-
   Shuyūkh:
     default: "謝赫"
     senses:
@@ -9261,7 +8768,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "謝赫人"
         when: "指人或族群"
-
   Siberian:
     default: "西伯利亞"
     senses:
@@ -9273,7 +8779,6 @@ contextual:
         when: "指西伯利亞文化或族群"
       - zh: "西伯利亞語"
         when: "指西伯利亞語言"
-
   Sikh:
     default: "錫克教"
     senses:
@@ -9283,7 +8788,6 @@ contextual:
         when: "作形容詞修飾文化、人物或事物"
       - zh: "錫克人"
         when: "指人或族群"
-
   Silesian:
     default: "西里西亞的"
     senses:
@@ -9291,7 +8795,6 @@ contextual:
         when: "作形容詞，修飾西里西亞地區、政體、文化或相關事物"
       - zh: "西里西亞人"
         when: "指西里西亞人或其族群"
-
   Sinicized:
     default: "漢化的"
     senses:
@@ -9299,7 +8802,6 @@ contextual:
         when: "作形容詞，指受漢文化影響或採用漢文化形式"
       - zh: "漢化"
         when: "指漢化的過程或政策"
-
   Sinified:
     default: "漢化的"
     senses:
@@ -9307,7 +8809,6 @@ contextual:
         when: "作形容詞，指受漢文化影響或採用漢文化形式"
       - zh: "漢化"
         when: "指漢化的過程或政策"
-
   Slavic:
     default: "斯拉夫"
     senses:
@@ -9317,7 +8818,6 @@ contextual:
         when: "明確指斯拉夫人或其族群"
       - zh: "斯拉夫語"
         when: "指斯拉夫語言"
-
   Sound:
     default: "音效"
     senses:
@@ -9327,7 +8827,6 @@ contextual:
         when: "指一般敘事、聽覺或聲響語境"
       - zh: "海峽"
         when: "作為 Sound Toll 的地理概念，指可徵收通行稅的海峽"
-
   South Asian:
     default: "南亞的"
     senses:
@@ -9335,7 +8834,6 @@ contextual:
         when: "作形容詞，修飾南亞地區、文化、政體或相關事物"
       - zh: "南亞人"
         when: "明確指南亞人或其族群"
-
   Spanish:
     default: "西班牙的"
     senses:
@@ -9345,7 +8843,6 @@ contextual:
         when: "指西班牙人或西班牙族群"
       - zh: "西班牙語"
         when: "指語言"
-
   St Peter:
     default: "聖彼得"
     senses:
@@ -9355,7 +8852,6 @@ contextual:
         when: "天主教、拉丁教會或教宗傳承語境"
       - zh: "聖裴特若"
         when: "東正教或東方教會語境"
-
   Stability:
     default: "穩定度"
     senses:
@@ -9365,7 +8861,6 @@ contextual:
         when: "指一般政治、社會、制度或狀態的穩定程度"
       - zh: "穩定"
         when: "作一般形容或描述狀態保持不變"
-
   Subject:  # 政治依附關係用屬國；指人民或文法概念時另譯
     default: "屬國"
     senses:
@@ -9375,7 +8870,6 @@ contextual:
         when: "指受君主統治的人民"
       - zh: "主詞"
         when: "指文法概念"
-
   Subjects:  # 複數形式仍依政治、人民或文法語境判斷
     default: "屬國"
     senses:
@@ -9385,7 +8879,6 @@ contextual:
         when: "指受君主統治的人民"
       - zh: "主詞"
         when: "指文法概念"
-
   Sufi:
     default: "蘇非派"
     senses:
@@ -9395,7 +8888,6 @@ contextual:
         when: "作形容詞，修飾蘇非派的教團、信仰、人物或事物"
       - zh: "蘇非派信徒"
         when: "指蘇非派信徒或個別蘇非派人物"
-
   Sugar:
     default: "糖類"
     senses:
@@ -9403,7 +8895,6 @@ contextual:
         when: "指遊戲中的糖類貨物、資源或種植生產"
       - zh: "糖"
         when: "指一般敘事、食品或製作材料中的糖"
-
   Sunni:
     default: "遜尼派"
     senses:
@@ -9413,7 +8904,6 @@ contextual:
         when: "作形容詞，修飾遜尼派政權、信仰、文化或相關事物"
       - zh: "遜尼派信徒"
         when: "指遜尼派信徒或族群"
-
   Swan:
     default: "斯旺"
     senses:
@@ -9421,7 +8911,6 @@ contextual:
         when: "指人物姓名 Swan"
       - zh: "天鵝"
         when: "指天鵝、天鵝意象或 Order of the Swan 等組織名稱中的 Swan"
-
   Swedish:
     default: "瑞典"
     senses:
@@ -9431,7 +8920,6 @@ contextual:
         when: "指人或族群"
       - zh: "瑞典語"
         when: "指語言"
-
   Syrian:
     default: "敘利亞"
     senses:
@@ -9439,7 +8927,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力、教會、歷史或事物"
       - zh: "敘利亞人"
         when: "指人或族群"
-
   Tabaristani:
     default: "塔巴里斯坦的"
     senses:
@@ -9447,7 +8934,6 @@ contextual:
         when: "作形容詞，修飾塔巴里斯坦相關地區、文化或政體"
       - zh: "塔巴里斯坦語"
         when: "指語言"
-
   Tea:
     default: "茶葉"
     senses:
@@ -9455,7 +8941,6 @@ contextual:
         when: "指遊戲中的 Tea 商品、資源或貿易品"
       - zh: "茶"
         when: "指飲品、飲茶或一般文化與敘事語境中的 tea"
-
   Tenets:
     default: "信條"
     senses:
@@ -9463,7 +8948,6 @@ contextual:
         when: "指宗教或遊戲中的核心信念、教義或信條"
       - zh: "準則"
         when: "指一般組織、思想或主張所遵循的原則"
-
   Tepēilhuitl:
     default: "山岳節"
     senses:
@@ -9471,7 +8955,6 @@ contextual:
         when: "一般 UI、事件標題或需要玩家快速理解時，使用意譯"
       - zh: "特佩伊爾維特爾"
         when: "明確需要保留阿茲特克文化原名、音譯或原名辨識時"
-
   Teōtlehco:
     default: "眾神降臨節"
     senses:
@@ -9479,7 +8962,6 @@ contextual:
         when: "一般 UI、事件標題或需要玩家快速理解時，使用意譯"
       - zh: "特奧特萊科"
         when: "明確需要保留阿茲特克文化原名、音譯或原名辨識時"
-
   Timoric:
     default: "帝汶"
     senses:
@@ -9487,7 +8969,6 @@ contextual:
         when: "指帝汶地區或相關族群名稱"
       - zh: "帝汶語"
         when: "指帝汶語言"
-
   Tititl:
     default: "收縮節"
     senses:
@@ -9495,7 +8976,6 @@ contextual:
         when: "一般 UI、事件標題或需要玩家快速理解時，使用意譯"
       - zh: "蒂蒂特爾"
         when: "明確需要保留阿茲特克文化原名、音譯或原名辨識時"
-
   Tlācaxīpēhualiztli:
     default: "剝皮節"
     senses:
@@ -9503,7 +8983,6 @@ contextual:
         when: "一般 UI、事件標題或需要玩家快速理解時，使用意譯"
       - zh: "特拉卡希佩瓦利斯特利"
         when: "明確需要保留阿茲特克文化原名、音譯或原名辨識時"
-
   Tokelauan:
     default: "托克勞"
     senses:
@@ -9513,7 +8992,6 @@ contextual:
         when: "指語言"
       - zh: "托克勞崇拜"
         when: "指宗教、信仰或 worship 語境"
-
   Tolerance:
     default: "容忍度"
     senses:
@@ -9525,19 +9003,16 @@ contextual:
         when: "指對他人、不同觀點、信仰或行為的寬容態度"
       - zh: "忍受"
         when: "指對痛苦、不便或不愉快事物的承受程度"
-
   Tolerate:
     default: "容忍"
     senses:
       - zh: "容忍"
         when: "指遊戲中的文化容忍或政策行動"
-
   Tolerated:
     default: "受容忍的"
     senses:
       - zh: "受容忍的"
         when: "指遊戲中受到容忍的文化或群體狀態"
-
   Town:
     default: "集鎮"
     senses:
@@ -9545,7 +9020,6 @@ contextual:
         when: "指遊戲中的聚落或地點等級 Town"
       - zh: "城鎮"
         when: "指一般地理、聚落或敘事語境中的 town"
-
   Trent:
     default: "特利騰"
     senses:
@@ -9553,7 +9027,6 @@ contextual:
         when: "指 Council of Trent、宗教會議或教會史語境"
       - zh: "特倫托"
         when: "明確指現代城市 Trento 或義大利地名語境"
-
   Tribe:
     default: "部落"
     senses:
@@ -9561,7 +9034,6 @@ contextual:
         when: "指遊戲中的 Tribe 政體、國家或部落機制"
       - zh: "部族"
         when: "指一般歷史、族群或文化敘事中的 tribe"
-
   Tribes:
     default: "部落"
     senses:
@@ -9569,7 +9041,6 @@ contextual:
         when: "指遊戲中的多個 Tribe 政體、國家或部落機制"
       - zh: "部族"
         when: "指一般歷史、族群或文化敘事中的 tribes"
-
   Tributary:
     default: "朝貢國"
     senses:
@@ -9577,7 +9048,6 @@ contextual:
         when: "指作為附庸或外交主體的 tributary 國家"
       - zh: "朝貢"
         when: "指朝貢關係、朝貢身分或朝貢行為"
-
   Turkic:
     default: "突厥的"
     senses:
@@ -9587,7 +9057,6 @@ contextual:
         when: "指突厥人、突厥族群或突厥部族"
       - zh: "突厥語"
         when: "指突厥語或突厥語族語言"
-
   Tēcuilhuitōntli:
     default: "小貴族宴節"
     senses:
@@ -9595,7 +9064,6 @@ contextual:
         when: "一般 UI、事件標題或需要玩家快速理解時，使用意譯"
       - zh: "特奎爾維通特利"
         when: "明確需要保留阿茲特克文化原名、音譯或原名辨識時"
-
   Tōzōztōntli:
     default: "小守夜節"
     senses:
@@ -9603,7 +9071,6 @@ contextual:
         when: "一般 UI、事件標題或需要玩家快速理解時，使用意譯"
       - zh: "托索斯通特利"
         when: "明確需要保留阿茲特克文化原名、音譯或原名辨識時"
-
   Union:
     default: "共主邦聯"
     senses:
@@ -9611,7 +9078,6 @@ contextual:
         when: "指遊戲中的共主邦聯或王朝聯合機制"
       - zh: "聯盟"
         when: "指船名 Union 或一般聯盟名稱"
-
   Varangian:
     default: "瓦良格"
     senses:
@@ -9619,7 +9085,6 @@ contextual:
         when: "作形容詞或文化、傳統相關名稱"
       - zh: "瓦良格人"
         when: "指瓦良格人或瓦良格族群"
-
   Vedic:
     default: "吠陀的"
     senses:
@@ -9627,7 +9092,6 @@ contextual:
         when: "作形容詞，修飾吠陀教義、傳統、文化或相關事物"
       - zh: "吠陀經"
         when: "明確指吠陀經典或經書"
-
   Venetian:
     default: "威尼斯"
     senses:
@@ -9635,7 +9099,6 @@ contextual:
         when: "作形容詞，修飾地區、文化、勢力或事物"
       - zh: "威尼斯人"
         when: "指人或族群"
-
   Welsh:
     default: "威爾斯"
     senses:
@@ -9645,7 +9108,6 @@ contextual:
         when: "指人或族群"
       - zh: "威爾斯語"
         when: "指語言"
-
   Xocotl Huetzi:
     default: "索科特爾落下節"
     senses:
@@ -9653,7 +9115,6 @@ contextual:
         when: "一般 UI、事件標題或需要玩家快速理解時，使用意譯"
       - zh: "索科特爾·韋齊"
         when: "明確需要保留阿茲特克文化原名、音譯或原名辨識時"
-
   Yamashiro:
     default: "山城"
     senses:
@@ -9663,7 +9124,6 @@ contextual:
         when: "指日本歷史上的山城國、相關省份或政體"
       - zh: "山城氏"
         when: "指 Yamashiro 家族或王朝名稱"
-
   Zealots:
     default: "狂熱者"
     senses:
@@ -9671,7 +9131,6 @@ contextual:
         when: "指一般宗教狂熱分子或宗教叛軍"
       - zh: "狂熱派"
         when: "指歷史上的 Zealots 等特定政治或宗教派系"
-
   Zoroastrian:
     default: "祆教的"
     senses:
@@ -9689,7 +9148,6 @@ reference_terms:
       - "夢"
       - "夢境"
     note: "依完整片語與上下文判斷，不得機械套用固定譯名"
-
   March:
     suggestions:
       - "三月"
@@ -9698,7 +9156,6 @@ reference_terms:
       - "邊區"
       - "馬爾奇"
     note: "依完整片語與上下文判斷，不得機械套用固定譯名"
-
   Paper:
     suggestions:
       - "紙"

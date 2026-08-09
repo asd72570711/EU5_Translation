@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 PATH = Path("translation_glossary.yml")
-SECTION_NAMES = {"fixed", "aliases", "contextual"}
+SECTION_NAMES = {"fixed", "aliases", "contextual", "reference_terms"}
 ENTRY_RE = re.compile(r"^  (?! )([^:#][^:]*):")
 
 
@@ -92,7 +92,13 @@ def sort_aliases(lines: list[str]) -> list[str]:
 def sort_contextual(lines: list[str]) -> list[str]:
     blocks = [clean_block(block) for block in split_blocks(lines)]
     blocks.sort(key=lambda block: entry_name(block).casefold())
-    return [line for index, block in enumerate(blocks) for line in (block + ([""] if index < len(blocks) - 1 else []))]
+    return [line for block in blocks for line in block]
+
+
+def sort_reference_terms(lines: list[str]) -> list[str]:
+    blocks = [clean_block(block) for block in split_blocks(lines)]
+    blocks.sort(key=lambda block: entry_name(block).casefold())
+    return [line for block in blocks for line in block]
 
 
 def main() -> None:
@@ -115,10 +121,15 @@ def main() -> None:
     while prefix and not prefix[-1].strip():
         prefix.pop()
     output = prefix + [""]
-    for name, sorter in (("fixed", sort_fixed), ("aliases", sort_aliases), ("contextual", sort_contextual)):
+    for name, sorter in (
+        ("fixed", sort_fixed),
+        ("aliases", sort_aliases),
+        ("contextual", sort_contextual),
+        ("reference_terms", sort_reference_terms),
+    ):
         output.append(f"{name}:")
         output.extend(sorter(sections[name]))
-        if name != "contextual":
+        if name != "reference_terms":
             output.append("")
     new_text = "\n".join(output).rstrip() + "\n"
     if new_text == original:
