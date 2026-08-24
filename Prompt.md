@@ -366,7 +366,7 @@ work/glossary_review/review.json
 
 四、review 清理
 
-處理完成後：
+glossary_refs 更新並成功完成後：
 
 - 移除已匯入的 todo。
 - 移除已確認並匯入的 ai。
@@ -376,8 +376,29 @@ work/glossary_review/review.json
 
 五、glossary_refs 更新
 
-所有匯入與移除完成後，使用最新的 translation_glossary.yml，
-更新 review.json 中仍保留項目的 glossary_refs。
+所有已確認項目完成匯入 translation_glossary.yml 後，
+必須先使用最新的 translation_glossary.yml 更新 review.json，
+再進行 review 清理。
+
+必須實際執行以下腳本，不得只在回覆中描述「已更新 refs」：
+
+```powershell
+python scripts/update_review_glossary_refs.py --review work/glossary_review/review.json --glossary translation_glossary.yml --max-refs 12 --core-max-refs 3 --write
+```
+
+執行順序必須是：
+
+1. 完成已確認的 todo 與 cont 匯入。
+2. 執行上述腳本，更新所有項目的 glossary_refs。
+3. 確認腳本成功完成後，再移除已匯入項目與 skip。
+4. 若腳本執行失敗，不得宣稱 glossary_refs 更新完成，必須回報錯誤。
+
+更新範圍包括所有尚未移除的項目：
+
+- todo
+- ai
+- cont
+- skip
 
 比對範圍包括：
 
@@ -390,29 +411,36 @@ work/glossary_review/review.json
 
 - 保留仍存在且仍相關的既有 glossary_refs。
 - 移除已不存在或明確不相關的 refs。
-- 每個 review 項目最多保留 8 筆 refs；少於 8 筆時不要強行補足。
+- 每個 review 項目最多保留 12 筆 refs；少於 12 筆時不要強行補足。
+- 同一共享核心詞（例如 `Levies`、`Sofa`、`Groschen`）最多保留 3 筆相關 refs，避免單一詞族占滿名額。
+- 若超過 12 筆，只保留優先度最高且符合上述核心詞上限的項目。
 - 候選優先順序：
   1. exact match
   2. aliases 或拼寫變體
   3. 最長完整詞組
   4. 同一 lemma 的單複數、時態或分詞變化
   5. 明確的專名派生形式
-  6. 具有直接語意關聯的 fixed 或 contextual term
-  7. reference_terms
-- 比對時應忽略大小寫、重音符號、標點與所有格差異。
+  6. 國名、地名、文化名與居民／族群派生形式
+  7. 具有直接語意關聯的 fixed 或 contextual term
+  8. reference_terms
+- 比對時應忽略大小寫、重音符號、標點、連字號、空格與所有格差異。
 - 必須辨識高信心的詞形變化，例如：
   - Garrisons → Garrison
   - Bishoprics → Bishopric
   - Assimilated → Assimilate
+- 必須辨識相關完整詞組，例如：
+  - Prague Groschen → Meißner Groschen
 - 必須辨識明確的專名派生，例如：
-  - Croatia → Croatian
-  - Abkhazia → Abkhazian
+  - Italy → Italian → Italians
+  - Croatia → Croatian → Croatians
+  - Abkhazia → Abkhazian → Abkhazians
   - Catalonia → Catalan
   - Venice → Venetian
+- 若 review term 是國名、地名、文化名或政體名的形容詞、居民、族群或語言派生形式，必須加入其基本專名作為 glossary_ref。
 - 不得只依賴字面包含或共享普通單字；Sea、Cost、Type、Treaty、System 等泛用字不要任意加入。
 - 無法高信心確認為同一 lemma、派生詞或直接相關詞條時，不要加入。
 - reference_terms 只能作為翻譯參考，不得當作強制固定譯名。
-- 不要修改 term、translation、status、keys、note 或上下文。
+- 不得修改 term、translation、status、keys、note 或上下文。
 - 若 glossary_ref 來自 contextual，translation 必須列出該 contextual
   的所有 `senses[].zh`，依原順序以「、」合併在同一字串中。
 - contextual 的 `default` 若已包含在 senses 中，不要重複列出。
@@ -421,6 +449,7 @@ work/glossary_review/review.json
   German → "德意志的、德意志人、德意志語"
 - aliases glossary_ref 使用該 aliases 群組的 `zh` 翻譯。
 - reference_terms 可列出其 suggestions，並以「、」合併；仍只能作為參考。
+- 完成後必須回報腳本輸出的 `items`、`updated_refs` 與 `max_refs`。
 
 六、Glossary 排序規則
 
