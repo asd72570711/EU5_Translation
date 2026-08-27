@@ -21,4 +21,5 @@ work/glossary_review/review.json
 
 請不要修改來源檔、不要修改 glossary，也不要翻譯內容。
 已有 glossary 的詞不要列入 review。
+已列在根目錄 `glossary_drop_terms.yml` 的完整 term 也不要列入 review；例如清單中的 `Edict` 不應排除 `Edict of Worms`。
 請保留上下文與 glossary_refs。

@@ -8,8 +8,8 @@ from pathlib import Path
 
 
 DEFAULT_REVIEW = Path("work/glossary_review/review.json")
-VALID_STATUSES = {"todo", "ai", "cont", "skip"}
-CONTROL_VALUES = {"ai", "cont", "skip"}
+VALID_STATUSES = {"todo", "ai", "cont", "skip", "drop"}
+CONTROL_VALUES = {"ai", "cont", "skip", "drop"}
 
 
 def main() -> int:

@@ -16,6 +16,10 @@ work/glossary_review/review.json
 
 status: skip 項目只允許在「glossary_refs 更新」階段更新 refs，不得重新分類或翻譯。
 
+`status: drop` 表示使用者已確認該完整 term 永久排除。不要翻譯、不要加入 glossary，
+只在本次審查中將它加入根目錄的 `glossary_drop_terms.yml`，再從 review 移除。
+`drop` 不等同於 `skip`：`skip` 只代表本次審查略過，`drop` 則會影響未來掃描。
+
 ## 二、cont 處理
 
 處理 cont 時：
@@ -54,6 +58,7 @@ glossary_refs 更新並成功完成後：
 - 移除已匯入的 todo。
 - 移除已確認並匯入的 ai。
 - 移除 skip。
+- 將 `status: drop` 的完整 term 加入 `glossary_drop_terms.yml` 後移除。
 - 保留尚未確認的 todo、ai 與 cont。
 - 不要因為更新 glossary_refs 而刪除尚未確認的項目。
 
@@ -97,16 +102,21 @@ work/glossary_review/coverage_audit.json
 必須實際執行以下腳本，不得只在回覆中描述「已更新 refs」：
 
 ```powershell
+python scripts/import_glossary_review.py --review work/glossary_review/review.json --glossary translation_glossary.yml --drop-terms glossary_drop_terms.yml --resolved-only --include-cont --keep-review --write
+
 python scripts/update_review_glossary_refs.py --review work/glossary_review/review.json --glossary translation_glossary.yml --max-refs 12 --core-max-refs 3 --write
+
+python scripts/import_glossary_review.py --review work/glossary_review/review.json --glossary translation_glossary.yml --drop-terms glossary_drop_terms.yml --resolved-only --include-cont --write
 ```
 
 執行順序必須是：
 
-1. 完成已確認的 todo 與 cont 匯入。
-2. 執行「來源覆蓋率檢查」，處理報告中的疑似漏收候選。
-3. 執行上述腳本，更新所有項目的 glossary_refs。
-4. 確認上述腳本成功完成後，再移除已匯入項目與 skip。
-5. 若任一腳本執行失敗，不得宣稱來源覆蓋率或 glossary_refs 更新完成，必須回報錯誤。
+1. 先將 `status: drop` 的 term 寫入 `glossary_drop_terms.yml`，確認成功後從 review 移除；不得加入 glossary 或 refs。
+2. 完成已確認的 todo 與 cont 匯入，並保留 review 供後續 refs 更新。
+3. 執行「來源覆蓋率檢查」，處理報告中的疑似漏收候選。
+4. 執行上述 refs 腳本，更新仍在 review 中的項目之 `glossary_refs`。
+5. 確認 refs 腳本成功完成後，再移除已匯入項目與 skip。
+6. 若任一腳本執行失敗，不得宣稱來源覆蓋率或 glossary_refs 更新完成，必須回報錯誤。
 
 更新範圍包括所有尚未移除的項目：
 
@@ -153,6 +163,8 @@ python scripts/update_review_glossary_refs.py --review work/glossary_review/revi
   - Venice → Venetian
 - 若 review term 是國名、地名、文化名或政體名的形容詞、居民、族群或語言派生形式，必須加入其基本專名作為 glossary_ref。
 - 不得只依賴字面包含或共享普通單字；Sea、Cost、Type、Treaty、System 等泛用字不要任意加入。
+- `glossary_drop_terms.yml` 只排除完整 term；例如 `Edict` 不得排除 `Edict of Worms`。
+- 比對 drop 清單時忽略大小寫、重音符號、標點、連字號、空格與所有格差異，但仍須是完整 term 吻合。
 - 無法高信心確認為同一 lemma、派生詞或直接相關詞條時，不要加入。
 - reference_terms 只能作為翻譯參考，不得當作強制固定譯名。
 - 不得修改 term、translation、status、keys、note 或上下文。

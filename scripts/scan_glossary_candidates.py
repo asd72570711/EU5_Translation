@@ -81,6 +81,7 @@ REFERENCE_DOMAIN_WORDS = {
     "militia", "monastery", "mosque", "parliament", "patriarchate", "regiment",
     "republic", "school", "temple", "university", "workshop",
 }
+DEFAULT_DROP_TERMS = Path("glossary_drop_terms.yml")
 # These words are often generic heads of a larger named institution or
 # building. Do not emit them as standalone embedded candidates when they
 # merely prefix a proper name, e.g. "Chateau d'Ainay-le-Vieil".
@@ -377,6 +378,30 @@ def glossary_entries(glossary_path: Path) -> dict[str, str]:
     flush_alias()
     flush_contextual()
     return entries
+
+
+def drop_terms(drop_path: Path) -> set[str]:
+    """Load user-confirmed whole-term exclusions from a small YAML list."""
+    if not drop_path.exists():
+        return set()
+
+    terms: set[str] = set()
+    in_drop_terms = False
+    for line in read_text(drop_path).splitlines():
+        if line.strip() == "drop_terms:":
+            in_drop_terms = True
+            continue
+        if in_drop_terms and line and not line.startswith((" ", "\t", "#")):
+            in_drop_terms = False
+        if not in_drop_terms:
+            continue
+        match = re.match(r'^\s*-\s*(?:"([^"]*)"|\'([^\']*)\'|([^#]+?))\s*(?:#.*)?$', line)
+        if match:
+            value = next((part for part in match.groups() if part is not None), "")
+            normalized = normalized_reference_term(value.strip())
+            if normalized:
+                terms.add(normalized)
+    return terms
 
 
 def alias_group_key(term: str) -> str:
@@ -931,7 +956,9 @@ def write_review_json(
             "Status values: todo=fill translation manually, "
             "ai=let Codex suggest translation in review.json, "
             "cont=have Codex propose a contextual glossary rule from source contexts, "
-            "skip=ignore. glossary_refs are references only."
+            "skip=leave this review item out, "
+            "drop=add the exact term to glossary_drop_terms.yml and remove it. "
+            "glossary_refs are references only."
         ),
         "items": sorted(merged_items.values(), key=lambda item: str(item.get("term", "")).lower()),
     }
@@ -943,6 +970,7 @@ def main() -> int:
     parser.add_argument("--file", required=True, action="append")
     parser.add_argument("--source-root", default="source/english")
     parser.add_argument("--glossary", default="translation_glossary.yml")
+    parser.add_argument("--drop-terms", default=str(DEFAULT_DROP_TERMS))
     parser.add_argument("--review-only", action="store_true")
     parser.add_argument("--write-review", action="store_true")
     parser.add_argument("--review-output", default="work/glossary_review/review.json")
@@ -951,6 +979,7 @@ def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8")
 
     glossary_path = Path(args.glossary)
+    dropped = drop_terms(Path(args.drop_terms))
     glossary = glossary_entries(glossary_path)
     alias_groups = glossary_alias_groups(glossary_path)
     reference_glossary = reference_entries(glossary_path)
@@ -976,6 +1005,8 @@ def main() -> int:
             relative = path.relative_to(source_root).as_posix()
             scanned_files.append(relative)
             for term, keys in candidates(parse_entries(path)).items():
+                if normalized_reference_term(term) in dropped:
+                    continue
                 candidate_terms.setdefault(term, []).extend(keys)
 
     rows = []

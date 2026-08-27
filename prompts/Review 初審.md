@@ -19,6 +19,11 @@ work/glossary_review/review.json
 
 已有 status: skip 的項目不要重新判斷或修改。
 
+已有 status: drop 的項目不要重新判斷或修改；它們會由「Review 審查」加入永久排除清單。
+
+若使用者確認某個完整 term 永久不需要加入 glossary，可將該項目的 status 手動改為 `drop`；
+不要填寫 translation，也不要直接刪除該項目。
+
 只允許：
 
 - 更新既有項目的 status
@@ -263,7 +268,36 @@ status: skip
 後續處理 cont 時，再由 AI 根據上下文判斷應建立 fixed、
 contextual，或繼續保留 cont。
 
-## 八之一、skip 二次複核
+## 八之一、既有 glossary 詞形變化
+
+若 todo 或 cont 項目只是 translation_glossary.yml 已有 term 的高信心詞形變化，
+且不需要不同的中文譯法，應標記為 status: skip，交由 Review 審查移除。
+這類項目不要加入 drop 清單，也不要修改 translation。
+
+請優先檢查：
+
+- 規則複數：`-s`、`-es`
+- `子音+y` 變為 `-ies`，例如 `Country` → `Countries`
+- 所有格：`'s`、`s'`
+- 複合詞中任一詞的上述詞形變化，例如 `Sofa Levy` → `Sofa Levies`
+- 高信心的不規則複數，例如 `Person` → `People`
+- 部分高信心的拉丁或希臘複數，例如 `Bishopric` → `Bishoprics`
+- 明確只是大小寫、重音符號、連字號或空格差異的同一 term
+
+例如 glossary 已有 `Huguenot`，候選 `Huguenots` 若上下文只是該術語的複數，
+應標記為 `skip`，不必再次建立 glossary 詞條。
+
+上述判斷必須依 term、source key 與上下文確認，不得只依字尾機械分類。
+例如 `Worms` 可能是 `Worm` 的複數，也可能是地名；無法確認時應保留原本的 todo 或 cont。
+
+以下通常不是可直接跳過的詞形變化，應保留給 AI 或 glossary 判斷：
+
+- 國名與形容詞、居民或語言派生，例如 `Germany` → `German`、`Italy` → `Italian`
+- `-ian`、`-an`、`-ese`、`-ish`、`-ic`、`-al` 等語意派生
+- `-ism` 與 `-ist`
+- `-ed`、`-ing` 等可能改變詞性或語意的形式
+
+## 八之二、skip 二次複核
 
 完成第一輪分類後，對所有準備標記為 skip 的項目再複核一次。
 優先複核短詞、只出現一次的詞、Title Case 詞、縮寫、頭銜、

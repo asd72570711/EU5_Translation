@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any
 
 
-VALID_STATUSES = {"todo", "ai", "cont", "skip"}
+VALID_STATUSES = {"todo", "ai", "cont", "skip", "drop"}
 REQUIRED_ITEM_FIELDS = {
     "term",
     "translation",

@@ -50,6 +50,8 @@ Codex 會先比對 `translation_glossary.yml`，再將尚未收錄且具有專�
 對照 glossary 與 review 項目，產生 `work/glossary_review/coverage_audit.json`，
 用來發現掃描或初審階段可能漏掉的候選；確認後才移除已標記為 `skip` 的項目，並更新仍保留項目的 `glossary_refs`。
 這一步也可在後續術語確認期間視需要重複執行，以減少 review 檔案內容。
+使用者若將項目標記為 `drop`，Review 審查會把完整 term 加入根目錄的 `glossary_drop_terms.yml`，
+之後掃描時永久排除該完整 term，但不會排除包含它的較長詞組。
 
 ### 4. 確認 review 術語
 

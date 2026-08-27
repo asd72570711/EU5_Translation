@@ -1,0 +1,5 @@
+# User-confirmed terms that should not be added to review.
+drop_terms:
+  - "Edict"
+  - "Education"
+  - "Language"
