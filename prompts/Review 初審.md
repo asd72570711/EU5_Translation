@@ -1,0 +1,347 @@
+# Review 初審
+
+請對 work/glossary_review/review.json 做 AI 預審。
+
+請以 AI 語意與語法判斷執行預審。
+不要依賴固定動詞清單，也不要要求事先列出所有可能的動詞。
+
+本次語意與詞性判斷必須由 AI 完成。
+scripts/prescreen_glossary_review.py 不得作為語意分類依據，
+也不要使用會自行修改 status 的 `--write` 模式。
+
+直接檢查並更新：
+
+work/glossary_review/review.json
+
+## 一、預審範圍
+
+請檢查所有現有 status: todo 與 status: cont 的項目。
+
+已有 status: skip 的項目不要重新判斷或修改。
+
+只允許：
+
+- 更新既有項目的 status
+- 依照專有名詞拆分規則新增 review 項目
+
+不要修改既有項目的：
+
+- term
+- translation
+- keys
+- note
+- 上下文
+- glossary_refs
+
+## 一之一、必要時查閱來源上下文
+
+先使用 review.json 已提供的 term、source key 與上下文判斷。
+若上下文不足，或 term 可能同時是普通用語與固定術語，
+請依 source_file 到 source/english/ 搜尋該 term，
+只讀取命中行及前後短片段，不要讀取或輸出完整來源檔。
+
+若在來源片段中發現尚未收錄的人名、地名、組織名、制度名、
+宗教概念、作品名、歷史名詞或可重複使用術語，
+應新增獨立 review 項目，使用 status: todo，
+保留原始 key、上下文與 glossary_refs，且 translation 保持空白。
+
+不得因掃描器原本沒有建立候選，就直接認定來源中沒有需要收錄的術語。
+若需要執行來源掃描，先確認實際命中的檔案清單；
+若指定路徑沒有命中檔案，應先回報並停止，不得寫入 review.json。
+不得掃描 Full/ 或其他非指定來源目錄，
+review.json 的 source_file 只記錄實際成功掃描的來源檔案。
+
+## 二、標記為 skip 的項目
+
+將明顯不是固定遊戲術語、專有名詞、歷史名詞、
+人名、地名、制度名或可重複使用術語的項目標記為：
+
+status: skip
+
+請不要直接刪除項目，使用 status: skip 保留審查紀錄。
+
+可標記為 skip 的項目包括：
+
+- 一般單獨動詞
+- 一般單獨形容詞
+- 一般代名詞、介系詞或功能詞
+- 一般 V+N 片語
+- 一般 V+介系詞+N 片語
+- 一般 N+V 片語
+- 一般 N+過去分詞片語
+- 一般 N+形容詞化過去分詞片語
+- 動詞加 UI 或遊戲對象的片語
+- 完整敘事句
+- 一次性事件標題
+- 一次性成就標題
+- 教學文字
+- 按鈕操作指示
+- 普通敘事或一般描述
+- 沒有可重複使用價值的 Title Case 片語
+- 只在單一事件或單一成就中使用的一般片語
+- 事件結果、通知或狀態描述片語
+
+不要因為普通單字採 Title Case 或大寫開頭，
+就將它列為 glossary 候選。
+
+## 三、動詞片語與結果狀態片語
+
+請根據完整 term、source key 與上下文，
+自行判斷片語的語法結構。
+
+不要依賴預先列出的動詞清單。
+
+以下類型的完整片語，
+即使是遊戲操作、UI 指示或遊戲機制名稱，
+完整片語一律標記為：
+
+status: skip
+
+包括：
+
+- V+N
+- V+介系詞+N
+- N+V
+- N+過去分詞
+- N+形容詞化過去分詞
+- 動詞加 UI 或遊戲對象
+- 事件結果或狀態描述
+
+例如：
+
+- Declare War
+- Form Government
+- Establish Colony
+- Improve Relations
+- Rescind the Ban
+- Sound Toll Exempted
+- Administrative Autonomy Returned
+- Province Integrated
+- Trade Route Established
+- Claim Territory
+- Clear Region
+
+完整片語不需要作為 glossary 詞條固定收錄，
+交由翻譯 AI 根據完整上下文翻譯。
+
+固定遊戲機制或正式 UI term 的單一 term 可以保留，
+但完整 V+N、N+V 或結果狀態片語仍依本節標記為 skip。
+
+## 四、必須保留的項目
+
+以下類型不要標記為 skip：
+
+- 人名
+- 地名
+- 國名
+- 族群名
+- 語言名
+- 組織名
+- 制度名
+- 頭銜與職位
+- 歷史事件
+- 戰役
+- 戰爭
+- 條約
+- 會議
+- 宗教概念
+- 神祇與神祇稱號
+- 作品名
+- 固定遊戲機制的單一 term
+- 正式 UI term 的單一 term
+- 可重複使用的遊戲術語
+- 其他具有明確專有名詞特徵的項目
+
+即使上述項目只出現一次，也必須保留。
+不得以出現次數作為排除理由。
+
+頭銜加姓名、全大寫縮寫與小寫語言粒子開頭的名稱，
+不要因格式特殊或詞很短就標記為 skip。
+例如 `Sultan Suleiman` 可分別檢查完整人物名、`Suleiman` 與 `Sultan`；
+`al-Andalus`、`ibn Khaldun`、`de Medici` 等也應視為可能的完整專有名詞。
+`HRE`、`MING`、`EU4` 等縮寫則應依上下文判斷是否為組織、政體、文化或遊戲術語。
+
+## 五、一次性標題與敘事中的專有名詞
+
+若一次性事件標題、成就標題、
+完整敘事句或一般片語中包含專有名詞：
+
+1. 外層完整片語可以標記為 skip。
+2. 必須拆出其中的人名、地名、組織名、制度名、
+   歷史名詞、宗教概念或作品名。
+3. 專有名詞必須獨立保留為 review 項目。
+4. 新項目使用 status: todo。
+5. translation 必須保持空白。
+6. 保留原始 key、上下文與 glossary_refs。
+
+例如：
+
+Saladin's Legacy
+
+應處理為：
+
+- Saladin's Legacy → skip
+- Saladin → todo
+
+又例如：
+
+Affirm the Confession of Biljno Polje
+
+應處理為：
+
+- Affirm the Confession of Biljno Polje → skip
+- Confession of Biljno Polje → todo
+- Biljno Polje → todo
+
+完整詞組與子詞條都不得重複建立。
+
+若拆出的完整專有名詞中還包含更小的獨立人名、
+地名或其他專有名詞，可以同時建立完整詞組與獨立子詞條。
+
+## 六、完整敘事句與普通敘事
+
+以下類型通常標記為 skip：
+
+- Give Me Back My Legions
+- What the Lord Giveth
+- It's Just Business
+- A New Beginning
+- A Difficult Decision
+- The Situation Changes
+- Our Enemies Are Weak
+
+但若其中包含歷史事件、作品名、人物、地名、
+制度、組織或宗教概念，必須依第五節拆出並保留專有名詞。
+
+## 七、按鈕與教學指示
+
+以下類型通常標記為 skip：
+
+- Begin
+- Continue
+- Open the Country Tab
+- Click the Improve Opinion
+- Close the Hints Panel
+- Read Later
+- Skip Lesson
+- Tell Me More
+- Next
+- Repeat
+
+若其中包含正式且可重複使用的 UI term，
+只保留該 UI term，不保留整句操作指示。
+
+## 八、cont 項目規則
+
+預審時也要檢查原本 status: cont 的項目。
+
+若 cont 項目明顯只是：
+
+- 一般動詞片語
+- V+N
+- V+介系詞+N
+- N+V
+- N+過去分詞
+- N+形容詞化過去分詞
+- 按鈕指示
+- 事件結果
+- 狀態描述
+- 普通敘事片語
+
+可以標記為：
+
+status: skip
+
+若 cont 項目可能是固定遊戲機制、
+正式 UI term、制度名、歷史名詞或專有名詞，
+則保留原本 status: cont。
+
+若無法確定，不要標記為 skip，
+保留原本 status: cont。
+
+不要修改 cont 項目的 translation。
+後續處理 cont 時，再由 AI 根據上下文判斷應建立 fixed、
+contextual，或繼續保留 cont。
+
+## 八之一、skip 二次複核
+
+完成第一輪分類後，對所有準備標記為 skip 的項目再複核一次。
+優先複核短詞、只出現一次的詞、Title Case 詞、縮寫、頭銜、
+含重音符號的詞，以及可能是人名或地名的項目。
+
+若複核時發現它可能是人名、地名、組織名、制度名、歷史名詞、
+宗教概念、作品名、頭銜、正式 UI term 或固定遊戲術語，
+不得標記為 skip；無法確定時保留原本的 todo 或 cont。
+
+只有確認為普通用語、一般敘事、操作指示或一次性描述，
+且沒有獨立的專有名詞或固定術語意義時，才可維持 skip。
+
+## 九、保留疑義項目
+
+無法確定是否為固定術語、專有名詞、
+歷史名詞或可重複使用術語時：
+
+- todo 項目保留 status: todo
+- cont 項目保留 status: cont
+- 不要填寫或修改 translation
+- 不要自行加入 translation_glossary.yml
+- 不要修改來源檔
+- 不要修改 term、keys、note 或上下文
+- 保留既有 glossary_refs
+
+若 term 可能是專有名詞、歷史名詞、制度名、宗教概念、
+固定遊戲術語或正式 UI term，即使只出現一次、很短、採普通單字形式，
+也不要因為不確定而標記為 skip；應保留 todo 或 cont。
+
+只有在確認它是普通用語、一般敘事、操作指示或一次性描述，
+且沒有獨立的專有名詞或固定術語意義時，才標記為 skip。
+
+## 十、檔案限制
+
+- 不要修改 source/english/ 下的來源檔。
+- 不要修改 translation_glossary.yml。
+- 不要修改任何翻譯檔。
+- 不要翻譯或填寫 translation。
+- 只允許更新既有項目的 status。
+- 依照專有名詞拆分規則，可以新增 review 項目。
+- 新增候選必須使用 status: todo。
+- 新增候選的 translation 必須保持空白。
+- 新增候選必須保留來源 key、上下文與 glossary_refs。
+- 不得建立重複的 term。
+- 不得刪除 review 項目。
+
+## 十一、完成後驗證
+
+完成 AI 判斷並更新 review.json 後，
+只能使用下列腳本驗證 JSON 結構與欄位完整性：
+
+```powershell
+python scripts/prescreen_glossary_review.py --review work/glossary_review/review.json
+```
+
+這個腳本只做結構驗證，不會進行語意分類或寫入檔案。
+不得使用 `--write`，也不得執行其他會依固定規則修改 status 的命令：
+
+```powershell
+python scripts/prescreen_glossary_review.py --write
+```
+
+初審時必須逐一檢查所有 status: todo 與 status: cont，
+不可只依賴固定單字清單。像 Then、There 這類單獨普通功能詞，
+若上下文沒有專有名詞或固定術語意義，應標記為 skip；
+若屬於專有名詞或固定片語的一部分，則保留。
+
+驗證完成後回報：
+
+- 原始項目數
+- 標記為 skip 的項目數
+- 其中原本 todo 被標記為 skip 的數量
+- 其中原本 cont 被標記為 skip 的數量
+- 保留 todo 的項目數
+- 保留 cont 的項目數
+- 新增專有名詞候選數量
+- JSON 格式驗證結果
+- 是否有重複 term
+- source/english/ 是否未被修改
+- translation_glossary.yml 是否未被修改
+- 翻譯檔是否未被修改

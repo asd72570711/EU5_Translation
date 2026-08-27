@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import glob
 import json
 import re
 import sys
@@ -24,6 +25,50 @@ LATIN_LETTER = (
 )
 APOSTROPHE = r"'\u2019"
 QUOTE_CHARS = "\"'\u201c\u201d"
+NAME_PARTICLE = (
+    rf"(?:al|el|wal|ibn|bin|bint|abu|umm|as|ad|an|ar|ash|at|az)-"
+    rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+"
+)
+NAME_TITLE_PREFIXES = {
+    "amir",
+    "baron",
+    "baroness",
+    "bey",
+    "caliph",
+    "count",
+    "countess",
+    "czar",
+    "doge",
+    "duke",
+    "emir",
+    "emperor",
+    "empress",
+    "hetman",
+    "imam",
+    "king",
+    "khan",
+    "lady",
+    "malik",
+    "maharaja",
+    "marquis",
+    "marquise",
+    "pasha",
+    "prince",
+    "princess",
+    "raja",
+    "rajah",
+    "shah",
+    "shahanshah",
+    "sapa",
+    "sultan",
+    "tsar",
+    "vizier",
+    "voivode",
+    "wazir",
+}
+LOWERCASE_NAME_PARTICLES = (
+    "al|abu|ad|an|ar|ash|as|at|az|bin|bint|d|da|de|del|der|di|do|dos|du|el|ibn|i|l|la|le|ten|ter|umm|van|von|wal"
+)
 
 REFERENCE_GENERIC_WORDS = {
     "a", "an", "and", "at", "by", "cost", "country", "countries", "detail",
@@ -35,6 +80,22 @@ REFERENCE_DOMAIN_WORDS = {
     "church", "commune", "groschen", "infantry", "marquis", "marquisate",
     "militia", "monastery", "mosque", "parliament", "patriarchate", "regiment",
     "republic", "school", "temple", "university", "workshop",
+}
+# These words are often generic heads of a larger named institution or
+# building. Do not emit them as standalone embedded candidates when they
+# merely prefix a proper name, e.g. "Chateau d'Ainay-le-Vieil".
+EMBEDDED_GENERIC_HEADS = {
+    "chateau",
+    "château",
+    "college",
+    "collège",
+    "ecole",
+    "école",
+    "etablissement",
+    "établissement",
+    "etablissements",
+    "établissements",
+    "palais",
 }
 PROPER_DERIVATION_PAIRS = {
     "abkhazia": {"abkhazian", "abkhazians"},
@@ -72,11 +133,25 @@ WORD_RE = re.compile(r"[^\W\d_][\w'._-]*", re.UNICODE)
 TITLE_CASE_RE = re.compile(
     rf"\b[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+"
     rf"(?:\s+(?:of|de|del|da|di|du|von|van|the|and|la|le|des|"
+    rf"{NAME_PARTICLE}|"
     rf"d[{APOSTROPHE}][{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+|"
     rf"l[{APOSTROPHE}][{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+|"
     rf"d[{APOSTROPHE}]|"
     r"I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII|"
     rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+))*\b"
+)
+LOWERCASE_NAME_RE = re.compile(
+    rf"\b(?:{LOWERCASE_NAME_PARTICLES})[-{APOSTROPHE}]"
+    rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+"
+    rf"(?:\s+(?:{LOWERCASE_NAME_PARTICLES})[-{APOSTROPHE}]?"
+    rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+)*\b|"
+    rf"\b(?:{LOWERCASE_NAME_PARTICLES})(?:\s+(?:{LOWERCASE_NAME_PARTICLES}))*\s+"
+    rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+"
+    rf"(?:\s+(?:{LOWERCASE_NAME_PARTICLES})\s+"
+    rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+)*\b"
+)
+ACRONYM_RE = re.compile(
+    r"(?<![\w])(?:[A-Z]{2,}[A-Z0-9]*(?:[-/][A-Z0-9]+)*|[A-Z][A-Z0-9]*\d[A-Z0-9]*)(?![\w])"
 )
 ENTITY_HEAD_RE = re.compile(
     rf"\b(?:Board|Corps|Order|Company|League|Treaty|Academy|University|"
@@ -90,6 +165,7 @@ POSSESSIVE_NAME_RE = re.compile(
     rf"\b([{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+"
     rf"(?:\s+[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+){{0,3}})[{APOSTROPHE}]s\b"
 )
+POSSESSIVE_SUFFIX_RE = re.compile(r"(?:['\u2019]s|s['\u2019])$", re.IGNORECASE)
 CONNECTOR_NAME_RE = re.compile(
     rf"\b(?:of|de|del|da|di|du|von|van)\s+"
     rf"([{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+)\b"
@@ -102,49 +178,28 @@ CONNECTOR_PHRASE_RE = re.compile(
     rf"(?:\s+[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+){{0,3}})\b"
 )
 
+# Only suppress standalone function words that cannot carry glossary meaning.
+# Domain terms, proper names, titles, and religious terms remain candidates and
+# are filtered later by glossary matching or AI review.
 IGNORE_TERMS = {
     "A",
-    "Air",
     "All",
     "And",
     "As",
     "Can",
-    "Christ",
-    "Christian",
-    "Christianity",
-    "Christendom",
-    "Church",
-    "Earth",
-    "England",
-    "English",
     "For",
-    "French",
-    "German",
-    "God",
-    "Great Spirit",
-    "Greeks",
     "Here",
     "If",
     "In",
-    "Italian",
-    "King",
-    "Latins",
-    "Lord",
-    "Man",
     "No",
     "Nothing",
     "On",
     "Or",
     "Our",
-    "Papal",
-    "Pope",
     "Rather",
-    "Spanish",
-    "Spaniard",
     "The",
     "These",
     "Those",
-    "Turkish",
     "What",
 }
 
@@ -167,6 +222,39 @@ TRAILING_CONNECTORS = {
 
 def read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8-sig")
+
+
+def resolve_source_files(source_root: Path, requested: str) -> list[Path]:
+    """Resolve a file, directory, or glob without leaving source_root."""
+    root = source_root.resolve()
+    requested_path = Path(requested)
+    if requested_path.is_absolute():
+        pattern = requested_path
+    elif requested_path.exists():
+        pattern = requested_path
+    else:
+        pattern = root / requested_path
+
+    has_glob = any(char in str(pattern) for char in "*?[")
+    if has_glob:
+        paths = [Path(path) for path in glob.glob(str(pattern), recursive=True)]
+    elif pattern.is_dir():
+        paths = list(pattern.rglob("*.yml"))
+    elif pattern.is_file():
+        paths = [pattern]
+    else:
+        paths = []
+
+    resolved: list[Path] = []
+    for path in paths:
+        path = path.resolve()
+        try:
+            path.relative_to(root)
+        except ValueError as exc:
+            raise ValueError(f"source path is outside source root: {path}") from exc
+        if path.is_file() and path.suffix.lower() == ".yml":
+            resolved.append(path)
+    return sorted(set(resolved))
 
 
 def parse_entries(path: Path) -> list[tuple[str, str]]:
@@ -374,7 +462,7 @@ def candidates(entries: list[tuple[str, str]]) -> dict[str, set[str]]:
             lambda match: PROTECTED_SEPARATOR * len(match.group(0)), value
         )
         matches: list[tuple[str, re.Match[str], str]] = []
-        for pattern in (TITLE_CASE_RE, ENTITY_HEAD_RE):
+        for pattern in (TITLE_CASE_RE, LOWERCASE_NAME_RE, ACRONYM_RE, ENTITY_HEAD_RE):
             for match in pattern.finditer(clean):
                 term = normalize_candidate(match.group(0))
                 if term:
@@ -403,14 +491,43 @@ def embedded_candidates(term: str) -> set[str]:
         found.add(match.group(1))
     for match in CONNECTOR_PHRASE_RE.finditer(term):
         found.add(match.group(1))
-    for word in re.findall(rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+", term):
-        if any(ord(char) > 127 for char in word):
+    parts = term.split()
+    if (
+        len(parts) >= 2
+        and parts[0].casefold() in NAME_TITLE_PREFIXES
+        and parts[1].casefold() not in TRAILING_CONNECTORS
+    ):
+        # Keep both the titled form and the personal name, e.g. the full
+        # name plus "Jalalat al-Duniya wal-Din".
+        found.add(parts[0])
+        found.add(" ".join(parts[1:]))
+    words_in_term = re.findall(
+        rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+", term
+    )
+    for index, word in enumerate(words_in_term):
+        if not any(ord(char) > 127 for char in word):
+            continue
+        if index == 0 and word.casefold() in EMBEDDED_GENERIC_HEADS:
+            continue
+        # Keep adjacent diacritic-bearing words together as a likely
+        # multiword name, such as "Chế Mô" or "Hồ Quý Ly".
+        previous_has_diacritic = (
+            index > 0 and any(ord(char) > 127 for char in words_in_term[index - 1])
+        )
+        next_has_diacritic = (
+            index + 1 < len(words_in_term)
+            and any(ord(char) > 127 for char in words_in_term[index + 1])
+        )
+        if not previous_has_diacritic and not next_has_diacritic:
             found.add(word)
     return found
 
 
 def normalize_candidate(term: str) -> str | None:
     term = term.strip(f" ,.;:!?{QUOTE_CHARS}()[]")
+    # Keep possessive forms inside named phrases, but canonicalize a possessive
+    # candidate that ends at the owner's name (for example "Gaunt's" -> "Gaunt").
+    term = POSSESSIVE_SUFFIX_RE.sub("", term).rstrip()
     parts = term.split()
     while parts and parts[-1].lower() in TRAILING_CONNECTORS:
         parts.pop()
@@ -841,11 +958,22 @@ def main() -> int:
     known = set(glossary_for_refs)
     candidate_terms: dict[str, list[str]] = {}
     scanned_files: list[str] = []
+    scanned_paths: set[Path] = set()
+    source_root = Path(args.source_root).resolve()
     for source_file in args.file:
-        source_path = Path(args.source_root) / source_file
-        paths = sorted(source_path.rglob("*.yml")) if source_path.is_dir() else [source_path]
+        try:
+            paths = resolve_source_files(source_root, source_file)
+        except ValueError as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 2
+        if not paths:
+            print(f"error: no source files matched: {source_file}", file=sys.stderr)
+            return 2
         for path in paths:
-            relative = path.relative_to(Path(args.source_root)).as_posix()
+            if path in scanned_paths:
+                continue
+            scanned_paths.add(path)
+            relative = path.relative_to(source_root).as_posix()
             scanned_files.append(relative)
             for term, keys in candidates(parse_entries(path)).items():
                 candidate_terms.setdefault(term, []).extend(keys)
@@ -859,6 +987,7 @@ def main() -> int:
         rows.append((status, term, sorted(keys)))
 
     if args.write_review:
+        print(f"files: {', '.join(scanned_files)}")
         review_rows = [row for row in rows if row[0] == "review"]
         write_review_json(
             Path(args.review_output),

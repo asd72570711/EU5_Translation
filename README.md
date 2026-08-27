@@ -46,7 +46,10 @@ Codex 會先比對 `translation_glossary.yml`，再將尚未收錄且具有專�
 
 ### 3. Review 審查
 
-初審後執行「Review 審查」，移除已標記為 `skip` 的項目，並更新仍保留項目的 `glossary_refs`。這一步也可在後續術語確認期間視需要重複執行，以減少 review 檔案內容。
+初審後執行「Review 審查」。清理前會先重新掃描 `review.json` 指定的來源檔，
+對照 glossary 與 review 項目，產生 `work/glossary_review/coverage_audit.json`，
+用來發現掃描或初審階段可能漏掉的候選；確認後才移除已標記為 `skip` 的項目，並更新仍保留項目的 `glossary_refs`。
+這一步也可在後續術語確認期間視需要重複執行，以減少 review 檔案內容。
 
 ### 4. 確認 review 術語
 
@@ -103,13 +106,12 @@ python scripts\scan_glossary_candidates.py `
 
 `work/glossary_review/review.json` 中的 `todo` 項目等待確認譯名，`cont` 項目表示核心譯名已填寫但可能需要依語境分流，`ai` 項目則需要使用者確認 AI 建議。
 
-預審腳本可協助檢查 review 的欄位與資料完整性；語意分類仍應依完整上下文判斷：
+預審由 AI 依完整上下文進行語意分類。預審腳本現在只驗證 review 的欄位與資料完整性，
+不會自行分類、修改 status 或寫入檔案：
 
 ```powershell
 python scripts\prescreen_glossary_review.py `
-  --review work\glossary_review\review.json `
-  --existing-only `
-  --write
+  --review work\glossary_review\review.json
 ```
 
 只匯入已確認的項目：

@@ -9,6 +9,9 @@ __pycache__/
 output/traditional_chinese/
 source/
 Full/
+/Prompt.md
+/character_names_dynamic_translation_batch_plan_v1_zh_tw.md
 character_names_translation_batch_plan_v2.md
 scripts/import_glossary_review.py
 翻譯記錄.txt
+翻譯記錄II.txt
