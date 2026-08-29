@@ -701,7 +701,14 @@ def generated_proper_derivations(base: str) -> set[str]:
     """Generate conservative country/region adjective forms for known pairs."""
     if " " in base or "-" in base or len(base) < 4:
         return set()
-    candidates = {base + "ian", base + "ese", base + "ish", base + "i"}
+    candidates = {
+        base + "an",
+        base + "ian",
+        base + "ese",
+        base + "ish",
+        base + "i",
+        base + "ic",
+    }
     if base.endswith("ia"):
         candidates.add(base[:-1] + "an")
     if base.endswith("a"):

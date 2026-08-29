@@ -370,6 +370,17 @@ longest match first 只用於決定優先檢查的 term，
 
 檢查後，請直接套用高信心的建議：
 
+### 術語保全防線
+
+整理前先建立 fixed、aliases、contextual、reference_terms 的英文 term 清單，
+整理後再次比對。任何 term 不得在沒有明確理由的情況下消失：
+
+* 若只是純 morphology 重複，刪除前必須確認 canonical term 仍保留且中文翻譯決策相同。
+* 若是異名、拼寫變體或轉寫形式，必須移入 aliases 或由其他保留結構明確涵蓋。
+* 若 term 具有獨立語意、專有名詞或遊戲術語價值，不能只因為相似或中文相同而刪除。
+* 每個從原區域移除或刪除的 term，都必須在完成報告列出原位置、去向與理由。
+* 若無法確認 term 有等價替代或合理去向，保留原條目，不要刪除。
+
 * 將確定可合併的真正異名整理為 aliases。
 * 刪除純 morphology 的重複 fixed 條目。
 * 刪除只用來保存單複數、時態、分詞等普通 morphology 的 aliases。

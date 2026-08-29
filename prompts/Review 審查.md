@@ -34,7 +34,16 @@ status: skip 項目只允許在「glossary_refs 更新」階段更新 refs，不
 - 不同語境需要不同譯法：建立 contextual。
 - 無法確定：保留 cont，不要匯入 glossary。
 
-不要因為 status: cont 就一律建立 contextual。
+有 translation 的 `status: cont` 一律建立 `contextual`；只有沒有 translation
+或上下文不足以判斷時，才保留 `cont`。
+
+`status: cont` 的項目若已有 `translation`，完成審查後一律以 `contextual` 方式匯入，
+不得因為 term 未列在腳本內建清單而直接匯入 `fixed`。
+`translation` 中以「、」、中文或英文逗號、分號分隔的每個譯名，都是至少要保留的
+`contextual` `senses[].zh`；AI 判斷出其他必要語境時，可以在不刪除原有譯名的前提下補充回 `translation`。
+以上拆分規則只適用於 `status: cont`；`todo`、`ai` 或其他一般翻譯中的「、」
+不應被當成 contextual senses 分隔符，必須保留為完整譯名，例如
+`Left and Right Chancellor: 左、右丞相`。
 
 完成後列出所有 cont 的：
 
@@ -161,6 +170,8 @@ python scripts/import_glossary_review.py --review work/glossary_review/review.js
   - Abkhazia → Abkhazian → Abkhazians
   - Catalonia → Catalan
   - Venice → Venetian
+  - Iceland → Icelandic
+  - Europe → European
 - 若 review term 是國名、地名、文化名或政體名的形容詞、居民、族群或語言派生形式，必須加入其基本專名作為 glossary_ref。
 - 不得只依賴字面包含或共享普通單字；Sea、Cost、Type、Treaty、System 等泛用字不要任意加入。
 - `glossary_drop_terms.yml` 只排除完整 term；例如 `Edict` 不得排除 `Edict of Worms`。

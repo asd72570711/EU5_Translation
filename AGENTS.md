@@ -122,9 +122,9 @@
 - 未收錄的候選 term 可寫入固定臨時檔 `work/glossary_review/review.json`，讓使用者手動填入 `translation`。
 - `review.json` 中的候選項應盡量附上 `glossary_refs`，列出既有 glossary 中可能相關的完整詞組或部分詞組，供使用者避免譯名不一致。
 - `review.json` 的 `status` 使用短值：`todo` 表示等待使用者填寫 `translation`，`ai` 表示請 Codex 先把建議譯名填回 `review.json` 供使用者檢查，`skip` 表示忽略且不收錄。
-- `review.json` 的 `status: cont` 表示使用者已填入核心譯名，但該 term 可能需依語境採用不同譯法。處理 `cont` 時，Codex 必須先讀取 review 提供的來源 key 與上下文，由 AI 自行判斷，不要求使用者再次確認；不可因為 `cont` 就機械建立 `contextual`。
+- `review.json` 的 `status: cont` 表示使用者已填入核心譯名，且希望保留依語境分流的可能。處理 `cont` 時，Codex 必須先讀取 review 提供的來源 key 與上下文，由 AI 自行判斷，不要求使用者再次確認；只要項目有已確認的 `translation`，匯入時一律建立 `contextual`，不可因為 term 未列在腳本清單就落入 `fixed`。
 - 若現有上下文不足以判斷，或 term 可能有多重詞義、普通用法與遊戲術語可能混淆，或可能與其他遊戲機制產生不同譯法，才搜尋 `source/english/` 下該 term 的其他用法；搜尋時只讀取命中行與前後短片段，不讀取或輸出完整檔案。
-- `cont` 項目的 `translation` 是使用者確認的核心用法，不一定是 glossary 的 default。若所有相關用法都能使用同一譯名，匯入 `fixed`；若不同語境需要不同譯法，才建立 `contextual`；若無法確定，保留 `cont` 並回報原因。
+- `cont` 項目的 `translation` 是使用者確認的至少一組譯名，不一定是 glossary 的 default。只有 `status: cont` 才將「、」、中文或英文逗號、分號視為 contextual senses 的分隔符；其他 status 的翻譯必須保留完整原文。AI 判斷出的其他必要語境可在不刪除原有譯名的前提下補充。若尚未有 translation 或上下文不足以判斷，才保留 `cont` 並回報原因。
 - 處理 `cont` 後，必須列出所有判定為 `fixed` 或 `contextual` 並匯入的項目、譯名與理由，以及仍保留 `cont` 的項目與原因。
 - review 項目的 `note` 是長期翻譯理由。匯入 fixed 或 contextual glossary 時，應以 term 上方的 YAML 註解保留 note。
 - 預審時應同時檢查 `todo` 與 `cont`；若 `cont` 明顯只是一般動詞片語、結果狀態片語或按鈕指示，仍可標記為 `skip`，例如 `Subject Owned`。
