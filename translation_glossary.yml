@@ -43,7 +43,6 @@ fixed:
   Abitibi: "阿比蒂比"
   Abitibi Uplands: "阿比蒂比高地"
   Abkhazia: "阿布哈茲"
-  Abkhazians: "阿布哈茲人"
   Ablaq Palace: "阿卜拉克宮"
   Abraham: "亞伯拉罕"
   Abrahamic Communities: "亞伯拉罕諸教社群"
@@ -734,7 +733,6 @@ fixed:
   Bertrand du Guesclin: "貝特朗·杜·蓋克蘭"
   Betsimisaraka: "貝齊米薩拉卡"
   Betsimisaraka Coast Sea: "貝齊米薩拉卡沿岸海域"
-  Betsimisarakan: "貝齊米薩拉卡"
   Bey: "貝伊"
   Bey Fortress: "貝伊要塞"
   Bhattara Saptaprabhu: "王室七長老會議"
@@ -871,7 +869,6 @@ fixed:
   Burghers Rebellion: "市民叛亂"
   Burgos: "布爾戈斯"
   Burguesía: "布爾格西亞"
-  Burgunds: "勃艮地人"  # 應該是官方拼錯？
   Burgundy: "勃艮地"
   Bursa: "布爾薩"
   Buru: "布魯"
@@ -889,7 +886,6 @@ fixed:
   Byzantine Empire: "拜占庭帝國"
   Byzantine Military Studies: "拜占庭式軍事學習"
   Byzantine Succession: "拜占庭繼承制"
-  Byzantines: "拜占庭人"
   Byzantium: "拜占庭"
   Bárangoi Phýlakes: "瓦良格衛隊"
   Bárbaroi: "巴爾巴羅伊"
@@ -1010,7 +1006,6 @@ fixed:
   Centeōtl: "森特奧特爾"  # 繁中維基為森特奧托
   Central Adamawa: "中阿達馬瓦"
   Central Africa: "中非"
-  Central African: "中非"
   Central Algonquian: "中阿爾岡昆"
   Central America: "中美"
   Central Asia: "中亞"
@@ -1057,7 +1052,7 @@ fixed:
   Chen-Sui: "陳隋"
   Chernobyl: "車諾比"
   Chhinnamasta Temple: "欽納瑪斯塔神廟"
-  Chichimec: "奇奇梅克人"
+  Chichimec: "奇奇梅克"
   Chicōmecōātl: "奇科梅科瓦特爾"
   Chieftains: "酋長"
   Chiemsee: "基姆湖"
@@ -1510,7 +1505,6 @@ fixed:
   Dynastic Cognatic Primogeniture: "王朝男性優先長子繼承制"
   Dynastic Elective Succession: "王朝選舉繼承制"
   Dynatoí: "迪納托伊"
-  Dzimmi: "齊米"
   Dàténg Xiá: "大藤峽"
   Dàxué: "大嶨"
   Dāna: "佈施"
@@ -1552,7 +1546,6 @@ fixed:
   Eastern Coalitions: "東國聯合"
   Eastern Depot: "東廠"
   Eastern Europe: "東歐"
-  Eastern European: "東歐"
   Eastern Gulf Coast: "東部灣岸"
   Eastern Koryak: "東科里亞克"
   Eastern Roman Empire: "東羅馬帝國"
@@ -1657,7 +1650,6 @@ fixed:
   Europa Universalis: "《歐陸風雲》"
   Europa Universalis V: "《歐陸風雲V》"
   Europe: "歐洲"
-  Europeans: "歐洲人"
   Europedia: "歐陸百科"
   Event Window Input Lock: "事件視窗輸入鎖定"
   Event Windows: "事件視窗"
@@ -2241,7 +2233,6 @@ fixed:
   Hussars: "驃騎兵"
   Hussein: "侯賽因"
   Hussite Wars: "胡斯戰爭"
-  Hussites: "胡斯派信徒"
   Husuni Kubwa: "胡蘇尼庫布瓦宮"
   Huángdì: "皇帝"
   Huēhuehteōtl: "韋韋特奧特爾"
@@ -3114,7 +3105,6 @@ fixed:
   Maya: "馬雅"
   Mayan Holy Site: "馬雅聖地"
   Mazovia: "馬佐維亞"
-  Mazovians: "馬佐維亞人"
   Meadow: "草甸"
   Mearim: "梅阿林"
   Mearim Coastal Sea: "梅阿林沿岸海域"
@@ -3308,7 +3298,7 @@ fixed:
   Moravia: "摩拉維亞"
   Moray: "摩瑞"
   Morgarten: "莫爾加滕"
-  Moriscos: "摩里斯科人"
+  Morisco: "摩里斯科"
   Morocco: "摩洛哥"
   Moscow: "莫斯科"
   Moscow Artillery Yard: "莫斯科鑄砲場"
@@ -4217,7 +4207,6 @@ fixed:
   Rus: "羅斯"
   Russia: "俄羅斯"
   Ruthenia: "魯塞尼亞"
-  Ruthenians: "魯塞尼亞人"
   Ruvuma Coast Sea: "魯伍馬沿岸海域"
   Ruvuma-Lurio: "魯伍馬-盧里奧"
   Rwanda: "盧安達"
@@ -4444,7 +4433,6 @@ fixed:
   Signoria Council: "九人執政團"  # 採用官方中文翻譯
   Signoria of Venice: "威尼斯最高執政團"
   Signoria Selection: "執政團選任制"
-  Sikhs: "錫克教徒"
   Silesia: "西里西亞"
   Silk: "絲綢"
   Silk Cloth Manufactories: "絲綢工場"
@@ -5298,7 +5286,6 @@ fixed:
   Western Africa: "西非"
   Western Depot: "西廠"
   Western Europe: "西歐"
-  Western European: "西歐"
   Western India: "西印度"
   Western Koryak: "西科里亞克"
   Western Mediterranean: "西地中海"
@@ -5421,7 +5408,6 @@ fixed:
   Zealot: "狂熱者"
   Zeeland: "澤蘭"
   Zeeland Admiralty: "澤蘭海軍部"
-  Zemmī: "齊米"
   Zeus: "宙斯"
   Zhào Fū: "趙輔"
   Zhānyì: "霑益"
@@ -6058,7 +6044,7 @@ fixed:
   Lotus Sutra: "《妙法蓮華經》"
   Loyola: "羅耀拉"
   Luke the Evangelist: "聖史路加"
-  Lusitanians: "盧西塔尼亞人"
+  Lusitania: "盧西塔尼亞"
   Os Lusíadas: "《盧濟塔尼亞人之歌》"
   Lèshān Giant Buddha: "樂山大佛"
   Lìbù: "吏部"
@@ -7675,7 +7661,6 @@ fixed:
   Kèlè-Bolo: "凱萊博洛"
   Mainzer Königreich: "美因茨王國"
   Kārimī: "卡里米"
-  Kārimī Merchants: "卡里米商人"
   Kāshif: "卡希夫"
   L'Académia di Incaminè: "啟程者學院"
   L'Adizión Erculéa: "埃爾科萊新區"
@@ -10738,10 +10723,6 @@ aliases:
     also:
       - Work of Art
       - Works Of Art
-  Zimmî:
-    zh: "齊米"
-    also:
-      - Zimmī
   Amir:
     zh: "埃米爾"
     also:
@@ -11096,7 +11077,7 @@ contextual:
       - zh: "布列塔尼人"
         when: "指人或族群"
   British:
-    default: "英國"
+    default: "不列顛"
     senses:
       - zh: "不列顛"
         when: "指不列顛群島、大不列顛地區、古代或中世紀地理／文化概念"
@@ -11346,22 +11327,16 @@ contextual:
     senses:
       - zh: "秘密"
         when: "作形容詞，修飾地區、文化、勢力或事物"
-      - zh: "秘密人"
-        when: "指人或族群"
   Crypto-Catholicism:
     default: "秘密天主教"
     senses:
       - zh: "秘密天主教"
         when: "作形容詞，修飾地區、文化、勢力或事物"
-      - zh: "秘密天主教人"
-        when: "指人或族群"
   Curia:
     default: "教廷"
     senses:
       - zh: "教廷"
         when: "作形容詞，修飾地區、文化、勢力或事物"
-      - zh: "教廷人"
-        when: "指人或族群"
   Current:
     default: "目前"
     senses:
@@ -11427,8 +11402,6 @@ contextual:
     senses:
       - zh: "丁"
         when: "作形容詞，修飾地區、文化、勢力或事物"
-      - zh: "丁人"
-        when: "指人或族群"
   Discipline:
     default: "訓練度"
     senses:
@@ -11674,8 +11647,6 @@ contextual:
     senses:
       - zh: "地獄"
         when: "作形容詞，修飾地區、文化、勢力或事物"
-      - zh: "地獄人"
-        when: "指人或族群"
   Hellenic:  # 指古希臘文化、宗教或歷史脈絡時依完整詞組判斷
     default: "希臘"
     senses:
@@ -11745,7 +11716,7 @@ contextual:
     senses:
       - zh: "胡斯派"
         when: "作形容詞，修飾地區、文化、勢力或事物"
-      - zh: "胡斯派人"
+      - zh: "胡斯派信徒"
         when: "指人或族群"
   Huēyi Tēcuilhuitōntli:
     default: "大貴族宴節"
@@ -11789,8 +11760,6 @@ contextual:
     senses:
       - zh: "伊兒汗國的"
         when: "作形容詞，修飾伊兒汗國的政權、文化、地區或相關事物"
-      - zh: "伊兒汗國人"
-        when: "明確指伊兒汗國人或其族群"
       - zh: "伊兒汗國"
         when: "名詞直接指伊兒汗國政權"
   Imperial:
@@ -12275,8 +12244,6 @@ contextual:
     senses:
       - zh: "政策"
         when: "作形容詞，修飾地區、文化、勢力或事物"
-      - zh: "政策人"
-        when: "指人或族群"
   Polish:
     default: "波蘭的"
     senses:
@@ -12425,29 +12392,25 @@ contextual:
     senses:
       - zh: "什葉派"
         when: "作形容詞，修飾地區、文化、勢力或事物"
-      - zh: "什葉派人"
+      - zh: "什葉派信徒"
         when: "指人或族群"
   Shias:
     default: "什葉派教徒"
     senses:
       - zh: "什葉派教徒"
         when: "作形容詞，修飾地區、文化、勢力或事物"
-      - zh: "什葉派教徒人"
-        when: "指人或族群"
   Shiite:
     default: "什葉派"
     senses:
       - zh: "什葉派"
         when: "作形容詞，修飾地區、文化、勢力或事物"
-      - zh: "什葉派人"
+      - zh: "什葉派信徒"
         when: "指人或族群"
   Shiites:
     default: "什葉派教徒"
     senses:
       - zh: "什葉派教徒"
         when: "作形容詞，修飾地區、文化、勢力或事物"
-      - zh: "什葉派教徒人"
-        when: "指人或族群"
   Shock:
     default: "衝擊"
     senses:
@@ -12464,8 +12427,6 @@ contextual:
     senses:
       - zh: "謝赫"
         when: "作形容詞，修飾地區、文化、勢力或事物"
-      - zh: "謝赫人"
-        when: "指人或族群"
   Siberian:
     default: "西伯利亞"
     senses:
@@ -12482,9 +12443,9 @@ contextual:
     senses:
       - zh: "錫克教"
         when: "指宗教或信仰分類"
-      - zh: "錫克人的"
+      - zh: "錫克教的"
         when: "作形容詞修飾文化、人物或事物"
-      - zh: "錫克人"
+      - zh: "錫克教徒"
         when: "指人或族群"
   Sinicized:
     default: "漢化的"
@@ -14630,7 +14591,7 @@ contextual:
     senses:
       - zh: "慕尼黑的"
         when: "作形容詞，指與慕尼黑或其政體相關的事物"
-      - zh: "慕尼黑人"
+      - zh: "慕尼黑居民"
         when: "指慕尼黑居民或族群"
   Occitan:
     default: "奧克的"
@@ -14657,9 +14618,9 @@ contextual:
         when: "作人物姓名，而非王侯頭銜"
 
   Simeon:
-    default: "西緩"
+    default: "西緬"
     senses:
-      - zh: "西緩"
+      - zh: "西緬"
         when: "作巴爾干歷史人物或東歐歷史譯名"
       - zh: "西美昂"
         when: "作希臘語或其他譯名語境的人名"
@@ -14810,8 +14771,6 @@ contextual:
     senses:
       - zh: "朝聖者"
         when: "指前往宗教聖地朝聖的人或群體"
-      - zh: "朝聖先輩"
-        when: "指北美殖民史中前往普利茅斯的 Pilgrims"
   Kami:
     default: "神"
     senses:

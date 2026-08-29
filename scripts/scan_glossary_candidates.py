@@ -934,30 +934,35 @@ def write_review_json(
     alias_groups: dict[str, str] | None = None,
 ) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    existing_data: dict[str, Any] = {}
-    if output_path.exists():
-        existing_text = output_path.read_text(encoding="utf-8") if output_path.exists() else ""
-        existing_data = json.loads(existing_text) if existing_text.strip() else {"files": []}
-    known_terms = set(known_glossary if known_glossary is not None else glossary)
+    known_terms = {
+        normalized
+        for term in (known_glossary if known_glossary is not None else glossary)
+        if (normalized := normalize_candidate(term))
+    }
     existing_items = {
-        term: item
+        normalized: item
         for term, item in existing_review_items(output_path).items()
-        if term not in known_terms
+        if (normalized := normalize_candidate(item["term"]))
+        and normalized not in known_terms
     }
     new_items = []
     for status, term, keys in rows:
         if status != "review":
             continue
-        item = build_review_item(term, keys, glossary, existing_items.get(term), alias_groups=alias_groups)
+        item = build_review_item(
+            term,
+            keys,
+            glossary,
+            existing_items.get(normalize_candidate(term) or term),
+            alias_groups=alias_groups,
+        )
         new_items.append(item)
     merged_items = dict(existing_items)
     for item in new_items:
-        merged_items[item["term"]] = item
-    existing_source_files = existing_data.get("source_file", [])
-    if not isinstance(existing_source_files, list):
-        existing_source_files = []
+        normalized = normalize_candidate(item["term"]) or item["term"]
+        merged_items[normalized] = item
     review = {
-        "source_file": sorted(set(existing_source_files) | set(source_file)),
+        "source_file": sorted(set(source_file)),
         "status": "todo",
         "instructions": (
             "Status values: todo=fill translation manually, "

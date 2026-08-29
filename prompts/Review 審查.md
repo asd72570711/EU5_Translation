@@ -45,6 +45,14 @@ status: skip 項目只允許在「glossary_refs 更新」階段更新 refs，不
 不應被當成 contextual senses 分隔符，必須保留為完整譯名，例如
 `Left and Right Chancellor: 左、右丞相`。
 
+不得僅因 term 看起來像地名派生詞、族群名、宗教名或語言名，
+就自動補上「人」或「語」。只有 review translation 明確提供，或來源上下文
+明確指向人物、居民、族群或語言時，才建立對應 sense；沒有充分證據時省略該 sense。
+匯入腳本不得改寫 review translation，也不得用預設規則覆蓋使用者提供的第一個譯名。
+匯入腳本只負責寫入 review 已確認的值：`todo`/`ai` 原樣進入 `fixed`，
+`cont` 僅依 review translation 中明確使用的分隔符建立 contextual senses；
+不得依英文 term、詞性、字尾或內建詞表自行新增、刪除、翻譯或改寫任何 sense。
+
 完成後列出所有 cont 的：
 
 - 判定結果
