@@ -262,6 +262,7 @@ def apply_import(
         term = item["term"]
         if term in existing:
             skipped_existing += 1
+            imported_terms.add(term)
             continue
         contextual_lines.extend(
             contextual_block(
@@ -280,6 +281,7 @@ def apply_import(
         translation = item["translation"]
         if term in existing:
             skipped_existing += 1
+            imported_terms.add(term)
             continue
         fixed_items.append((term, translation, item.get("note", "").strip()))
         existing.add(term)
