@@ -69,6 +69,31 @@ NAME_TITLE_PREFIXES = {
 LOWERCASE_NAME_PARTICLES = (
     "al|abu|ad|an|ar|ash|as|at|az|bin|bint|d|da|de|del|der|di|do|dos|du|el|ibn|i|l|la|le|ten|ter|umm|van|von|wal"
 )
+ARABIC_NAME_PARTICLE_WORDS = {
+    "abu",
+    "ad",
+    "al",
+    "an",
+    "ar",
+    "ash",
+    "as",
+    "at",
+    "az",
+    "bin",
+    "bint",
+    "el",
+    "ibn",
+    "umm",
+    "wal",
+}
+ARABIC_NAME_WORD = rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]*[{LATIN_LETTER}{APOSTROPHE}]"
+ARABIC_NAME_PARTICLE = (
+    rf"(?:{LOWERCASE_NAME_PARTICLES})-[{LATIN_UPPER}]"
+    rf"[{LATIN_LETTER}{APOSTROPHE}.-]*[{LATIN_LETTER}{APOSTROPHE}]"
+)
+ARABIC_NAME_PARTICLE_PHRASE = (
+    rf"(?:{LOWERCASE_NAME_PARTICLES})\s+{ARABIC_NAME_WORD}"
+)
 
 REFERENCE_GENERIC_WORDS = {
     "a", "an", "and", "at", "by", "cost", "country", "countries", "detail",
@@ -127,14 +152,30 @@ ENTRY_RE = re.compile(r'^\s*([^#\s][^:]*):\s*"(.*)"\s*(?:#.*)?$')
 PROTECTED_RE = re.compile(
     r"\$[^$]+\$|\[[^\]]+\]|#\w+|#!|\\n|@[A-Za-z0-9_]+!|<[^>]+>"
 )
+TITLE_SPAN_RE = re.compile(
+    r"'([^'\r\n]+)'|"
+    r'"((?:\\.|[^"\r\n])+?)"|'
+    r"\u201c([^\u201d\r\n]+)\u201d|"
+    r"#italic\s+(.+?)#!",
+    re.IGNORECASE,
+)
 # Keep protected fragments out of candidate text without turning them into
 # ordinary whitespace that could join words across a placeholder or \n.
 PROTECTED_SEPARATOR = "\uE000"
 WORD_RE = re.compile(r"[^\W\d_][\w'._-]*", re.UNICODE)
+ARABIC_NAME_RE = re.compile(
+    rf"\b(?:Abu|Abū|Abd|Abdul|Ibn|Bin|Bint|Umm|Muhammad)"
+    rf"(?:\s+(?:{ARABIC_NAME_PARTICLE}|{ARABIC_NAME_PARTICLE_PHRASE}|"
+    rf"{ARABIC_NAME_WORD}))+\b|"
+    rf"\bAn-{ARABIC_NAME_WORD}"
+    rf"(?:\s+(?:{ARABIC_NAME_PARTICLE}|{ARABIC_NAME_PARTICLE_PHRASE}|"
+    rf"{ARABIC_NAME_WORD}))*\b"
+)
 TITLE_CASE_RE = re.compile(
     rf"\b[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+"
     rf"(?:\s+(?:of|de|del|da|di|du|von|van|the|and|la|le|des|"
     rf"{NAME_PARTICLE}|"
+    rf"(?:{LOWERCASE_NAME_PARTICLES})\s+[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+|"
     rf"d[{APOSTROPHE}][{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+|"
     rf"l[{APOSTROPHE}][{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+|"
     rf"d[{APOSTROPHE}]|"
@@ -480,22 +521,42 @@ def reference_entries(glossary_path: Path) -> dict[str, str]:
 
 def candidates(entries: list[tuple[str, str]]) -> dict[str, set[str]]:
     found: dict[str, set[str]] = {}
-    prepared: list[tuple[str, str, str, list[tuple[str, re.Match[str], str]]]] = []
+    prepared: list[
+        tuple[
+            str,
+            str,
+            str,
+            list[tuple[str, re.Match[str], str]],
+            list[tuple[int, int, str]],
+        ]
+    ] = []
 
     for key, value in entries:
         clean = PROTECTED_RE.sub(
             lambda match: PROTECTED_SEPARATOR * len(match.group(0)), value
         )
+        title_spans = extract_title_spans(value)
         matches: list[tuple[str, re.Match[str], str]] = []
-        for pattern in (TITLE_CASE_RE, LOWERCASE_NAME_RE, ACRONYM_RE, ENTITY_HEAD_RE):
+        for pattern in (
+            ARABIC_NAME_RE,
+            TITLE_CASE_RE,
+            LOWERCASE_NAME_RE,
+            ACRONYM_RE,
+            ENTITY_HEAD_RE,
+        ):
             for match in pattern.finditer(clean):
                 term = normalize_candidate(match.group(0))
                 if term:
                     matches.append((pattern.pattern, match, term))
-        prepared.append((key, clean, value, matches))
+        matches = suppress_arabic_name_fragments(matches)
+        matches = suppress_elision_fragments(matches, clean)
+        matches = suppress_titled_fragments(matches, title_spans)
+        prepared.append((key, clean, value, matches, title_spans))
 
 
-    for key, clean, value, matches in prepared:
+    for key, clean, value, matches, title_spans in prepared:
+        for _, _, term in title_spans:
+            found.setdefault(term, set()).add(key)
         for _, match, term in matches:
             if is_sentence_fragment(term):
                 continue
@@ -505,6 +566,106 @@ def candidates(entries: list[tuple[str, str]]) -> dict[str, set[str]]:
                 if embedded_term:
                     found.setdefault(embedded_term, set()).add(key)
     return found
+
+
+def extract_title_spans(text: str) -> list[tuple[int, int, str]]:
+    """Keep complete quoted or italicized work titles as single candidates."""
+    spans: list[tuple[int, int, str]] = []
+    for match in TITLE_SPAN_RE.finditer(text):
+        content = next((group for group in match.groups() if group is not None), "")
+        content = PROTECTED_RE.sub(" ", content).strip()
+        term = normalize_candidate(content)
+        if not term or len(term.split()) < 2:
+            continue
+        if any(mark in term for mark in ".!?"):
+            continue
+        first_word = term.split()[0]
+        if not re.match(rf"^[{LATIN_UPPER}]", first_word):
+            continue
+        content_start, content_end = next(
+            span for index in range(1, 5) if (span := match.span(index))[0] >= 0
+        )
+        spans.append((content_start, content_end, term))
+    return spans
+
+
+def suppress_titled_fragments(
+    matches: list[tuple[str, re.Match[str], str]],
+    title_spans: list[tuple[int, int, str]],
+) -> list[tuple[str, re.Match[str], str]]:
+    """Suppress regex matches that are only fragments inside a full title."""
+    retained = []
+    for candidate in matches:
+        _, match, _ = candidate
+        start, end = match.span()
+        if any(title_start <= start and end <= title_end for title_start, title_end, _ in title_spans):
+            continue
+        retained.append(candidate)
+    return retained
+
+
+def suppress_arabic_name_fragments(
+    matches: list[tuple[str, re.Match[str], str]],
+) -> list[tuple[str, re.Match[str], str]]:
+    """Keep full Arabic name chains instead of particle-led suffixes."""
+    retained = []
+    for candidate in matches:
+        _, match, term = candidate
+        parts = term.split()
+        first = parts[0].casefold() if parts else ""
+        is_particle_led = (
+            first in ARABIC_NAME_PARTICLE_WORDS
+            or any(
+                first.startswith(f"{particle}-")
+                for particle in ARABIC_NAME_PARTICLE_WORDS
+            )
+        )
+        if is_particle_led:
+            start, end = match.span()
+            for _, longer_match, longer_term in matches:
+                if longer_match is match:
+                    continue
+                longer_start, longer_end = longer_match.span()
+                if (
+                    longer_start < start
+                    and longer_end >= end
+                    and len(longer_term.split()) > len(parts)
+                    and not is_sentence_fragment(longer_term)
+                ):
+                    break
+            else:
+                retained.append(candidate)
+        else:
+            retained.append(candidate)
+    return retained
+
+
+def suppress_elision_fragments(
+    matches: list[tuple[str, re.Match[str], str]],
+    text: str,
+) -> list[tuple[str, re.Match[str], str]]:
+    """Suppress French elision fragments contained in a longer candidate."""
+    retained = []
+    for candidate in matches:
+        _, match, _ = candidate
+        start, end = match.span()
+        starts_with_elision = text[start:end].casefold().startswith(("l'", "l\u2019", "d'", "d\u2019"))
+        starts_after_elision = start >= 2 and text[start - 2 : start].casefold() in {"l'", "l\u2019", "d'", "d\u2019"}
+        if not (starts_with_elision or starts_after_elision):
+            retained.append(candidate)
+            continue
+
+        contained = any(
+            other_match is not match
+            and other_match.start() < start
+            and other_match.end() >= end
+            and (other_match.end() - other_match.start()) > (end - start)
+            and not is_sentence_fragment(other_term)
+            for _, other_match, other_term in matches
+        )
+        if not contained:
+            retained.append(candidate)
+    return retained
 
 
 def embedded_candidates(term: str) -> set[str]:
@@ -894,7 +1055,7 @@ def existing_review_items(path: Path) -> dict[str, dict[str, Any]]:
         return {}
     data = json.loads(text)
     return {
-        normalize_candidate(item["term"]) or item["term"]: item
+        (normalize_candidate(item["term"]) or item["term"]).casefold(): item
         for item in data.get("items", [])
         if isinstance(item, dict) and item.get("term")
     }
@@ -920,6 +1081,8 @@ def build_review_item(
         for field in ("translation", "category", "status", "note"):
             if field in existing:
                 item[field] = existing[field]
+        if "glossary_refs" in existing:
+            item["glossary_refs"] = existing["glossary_refs"]
         if "keys" in existing:
             item["keys"] = sorted(set(existing["keys"]) | set(keys))
     return item
@@ -935,15 +1098,15 @@ def write_review_json(
 ) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     known_terms = {
-        normalized
+        normalized.casefold()
         for term in (known_glossary if known_glossary is not None else glossary)
         if (normalized := normalize_candidate(term))
     }
     existing_items = {
-        normalized: item
+        normalized.casefold(): item
         for term, item in existing_review_items(output_path).items()
         if (normalized := normalize_candidate(item["term"]))
-        and normalized not in known_terms
+        and normalized.casefold() not in known_terms
     }
     new_items = []
     for status, term, keys in rows:
@@ -953,14 +1116,20 @@ def write_review_json(
             term,
             keys,
             glossary,
-            existing_items.get(normalize_candidate(term) or term),
+            existing_items.get((normalize_candidate(term) or term).casefold()),
             alias_groups=alias_groups,
         )
         new_items.append(item)
     merged_items = dict(existing_items)
     for item in new_items:
-        normalized = normalize_candidate(item["term"]) or item["term"]
-        merged_items[normalized] = item
+        normalized = (normalize_candidate(item["term"]) or item["term"]).casefold()
+        if normalized in merged_items:
+            merged_items[normalized]["keys"] = sorted(
+                set(merged_items[normalized].get("keys", []))
+                | set(item.get("keys", []))
+            )
+        else:
+            merged_items[normalized] = item
     review = {
         "source_file": sorted(set(source_file)),
         "status": "todo",
@@ -996,7 +1165,7 @@ def main() -> int:
     alias_groups = glossary_alias_groups(glossary_path)
     reference_glossary = reference_entries(glossary_path)
     glossary_for_refs = {**glossary, **reference_glossary}
-    known = set(glossary_for_refs)
+    known = {term.casefold() for term in glossary_for_refs}
     candidate_terms: dict[str, list[str]] = {}
     scanned_files: list[str] = []
     scanned_paths: set[Path] = set()
@@ -1024,7 +1193,7 @@ def main() -> int:
     rows = []
     for term, keys in sorted(candidate_terms.items(), key=lambda x: x[0].lower()):
         keys = sorted(set(keys))
-        status = "known" if term in known else "review"
+        status = "known" if term.casefold() in known else "review"
         if args.review_only and status == "known":
             continue
         rows.append((status, term, sorted(keys)))

@@ -28,29 +28,38 @@ status: skip 項目只允許在「glossary_refs 更新」階段更新 refs，不
 2. 只有在 term 可能有多重詞義、普通用法與遊戲術語可能混淆，或可能與其他遊戲機制產生不同譯法時，才搜尋 source/english/ 下該 term 的其他用法。
 3. 搜尋時只讀取命中行及前後短片段，不要讀取或輸出完整檔案。
 
-請根據實際語境判斷：
+請將 `status: cont` 視為「要求 AI 重新複核」，不是預先決定必須建立
+`contextual`。請根據 source key、完整上下文與必要的其他用法判斷：
 
-- 所有用法都能使用同一譯名：匯入 fixed。
-- 不同語境需要不同譯法：建立 contextual。
-- 無法確定：保留 cont，不要匯入 glossary。
+- 所有實際用法都能明確使用同一譯名，且沒有需要保留語境彈性的理由：將 status 改為 `fixed`，保留使用者已填的 translation。
+- 不同實際用法需要不同譯法，或 AI 判斷保留語境彈性較安全：保留 status `cont`，建立 `contextual`。
+- 上下文不足或無法高信心判斷：保留 status `cont`，不要匯入 glossary。
 
-有 translation 的 `status: cont` 一律建立 `contextual`；只有沒有 translation
-或上下文不足以判斷時，才保留 `cont`。
+對每個有 translation 的 `cont`，必須先回答「它真的需要 contextual 嗎？」：
 
-`status: cont` 的項目若已有 `translation`，完成審查後一律以 `contextual` 方式匯入，
-不得因為 term 未列在腳本內建清單而直接匯入 `fixed`。
-`translation` 中以「、」、中文或英文逗號、分號分隔的每個譯名，都是至少要保留的
-`contextual` `senses[].zh`；AI 判斷出其他必要語境時，可以在不刪除原有譯名的前提下補充回 `translation`。
-以上拆分規則只適用於 `status: cont`；`todo`、`ai` 或其他一般翻譯中的「、」
-不應被當成 contextual senses 分隔符，必須保留為完整譯名，例如
+1. 使用者提供的 translation 是至少要保留的譯義，不是完整答案。
+2. AI 必須檢查來源上下文、同一 term 的其他用法，以及詞性、專名派生或遊戲機制差異，
+   自行判斷是否存在其他實際需要的譯義。
+3. 若確認需要 contextual，除了保留使用者提供的譯義外，補上 AI 根據實際語境高信心判斷出的其他譯義；
+   不要只因字典列有可能意思就任意擴充。
+4. 若所有已確認用法其實是同一意思，且沒有合理的語境不確定性，即使 translation 中有多個同義譯名，
+   也改為 `fixed`，不要為了保留多個同義詞而建立 contextual。
+5. 即使目前只有一種 translation，只要 term 仍可能因詞性、專名派生、頭銜或遊戲語境而產生不同譯法，
+   AI 可以判斷保留 `cont` 較安全；此時建立只有一個 sense 的 `contextual` 也是有效結果，不必為了湊出多個譯義而擴充。
+6. 若沒有 translation，或資料不足以判斷，保留 `cont`，不得自行填寫翻譯。
+
+不得因為 term 未列在腳本內建清單而直接判定為 `fixed` 或 `contextual`。
+只有 `status: cont` 的 translation 才能依語意將「、」、中文或英文逗號、分號視為多個 contextual senses；
+其他 status 的翻譯必須保留完整原文。不要機械拆分本身就是單一譯名的標點內容，例如
 `Left and Right Chancellor: 左、右丞相`。
 
 不得僅因 term 看起來像地名派生詞、族群名、宗教名或語言名，
 就自動補上「人」或「語」。只有 review translation 明確提供，或來源上下文
 明確指向人物、居民、族群或語言時，才建立對應 sense；沒有充分證據時省略該 sense。
-匯入腳本不得改寫 review translation，也不得用預設規則覆蓋使用者提供的第一個譯名。
-匯入腳本只負責寫入 review 已確認的值：`todo`/`ai` 原樣進入 `fixed`，
-`cont` 僅依 review translation 中明確使用的分隔符建立 contextual senses；
+AI 完成上述 `cont` 複核後，才可更新該 `cont` 的 status 與 translation；不得修改其他受保護欄位。
+匯入腳本不得再改寫 review translation，也不得用預設規則覆蓋 AI 或使用者確認的內容。
+匯入腳本只負責寫入 review 最終確認的值：`todo`/`ai` 原樣進入 `fixed`，
+`cont` 依 AI 最終保留的 status 與 translation 建立 `fixed` 或 `contextual`；
 不得依英文 term、詞性、字尾或內建詞表自行新增、刪除、翻譯或改寫任何 sense。
 
 完成後列出所有 cont 的：
@@ -186,7 +195,8 @@ python scripts/import_glossary_review.py --review work/glossary_review/review.js
 - 比對 drop 清單時忽略大小寫、重音符號、標點、連字號、空格與所有格差異，但仍須是完整 term 吻合。
 - 無法高信心確認為同一 lemma、派生詞或直接相關詞條時，不要加入。
 - reference_terms 只能作為翻譯參考，不得當作強制固定譯名。
-- 不得修改 term、translation、status、keys、note 或上下文。
+- 在 glossary_refs 更新階段，不得修改 term、translation、status、keys、note 或上下文；
+  `cont` 的 status 與 translation 只能在前面的 AI 語意複核階段依本節規則更新。
 - 若 glossary_ref 來自 contextual，translation 必須列出該 contextual
   的所有 `senses[].zh`，依原順序以「、」合併在同一字串中。
 - contextual 的 `default` 若已包含在 senses 中，不要重複列出。

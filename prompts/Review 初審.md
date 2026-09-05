@@ -89,6 +89,28 @@ status: skip
 不要因為普通單字採 Title Case 或大寫開頭，
 就將它列為 glossary 候選。
 
+### 一般單字判斷
+
+請依完整上下文判斷，不要因為 Title Case 或大寫開頭就保留候選。
+
+若單獨出現的詞只是一般語言，且不是專有名詞、歷史名詞、固定遊戲機制或正式 UI term，應標記為 `skip`，包括：
+
+- 一般副詞：Historically、Recently、Currently、Eventually、Originally、Then、There、Thus
+- 一般名詞：History、Services、Actions、Benefits、Response、Treatment
+- 一般動詞及其高信心的時態、分詞或第三人稱變化：Hire、Hired、Hiring、Hires、Recall 等
+- 一般形容詞及其普通派生形式：Setting、Sellout 等
+
+例如：
+
+- `Historically` → `skip`
+- `History` → 通常 `skip`；只有明確指向固定 UI、遊戲機制或正式系統名稱時才保留
+- `Services` → 通常 `skip`；只有明確是固定遊戲制度或 UI term 時才保留
+- `Hire`、`Hired` → 通常 `skip`；只有明確是固定職位、招募機制或正式 UI term 時才保留
+
+不要建立龐大的固定排除清單，應由 AI 根據詞性、上下文、source key 與是否具備可重複使用價值判斷。
+
+若無法確定是否為固定術語，則保留 `todo` 或 `cont`，不要自行標記為 `skip`。
+
 ## 三、動詞片語與結果狀態片語
 
 請根據完整 term、source key 與上下文，
@@ -125,6 +147,13 @@ status: skip
 - Trade Route Established
 - Claim Territory
 - Clear Region
+
+介系詞、連接詞或時間副詞開頭的普通敘事片段，若沒有形成正式名稱或固定術語，也應標記為 `skip`。
+例如 `After Maximilian` 若只是上下文中的時間片段，應標記為 `skip`；
+但 `After the Battle of Ukmergė` 若指向歷史事件，則保留歷史事件或拆出其中的專有名詞。
+
+`Adopted Nordic Culture` 這類完整的 V+N 或結果描述片語應標記為 `skip`；
+只有其中另含明確且可獨立重複使用的專有名詞、制度名或固定遊戲術語時，才依專有名詞拆分規則另行保留子詞條。
 
 完整片語不需要作為 glossary 詞條固定收錄，
 交由翻譯 AI 根據完整上下文翻譯。
@@ -270,6 +299,15 @@ contextual，或繼續保留 cont。
 
 ## 八之一、既有 glossary 詞形變化
 
+### 既有姓名加頭銜
+
+若完整候選只是「一般頭銜／職稱 + 已收錄的完整人名或專名」，
+且上下文中的頭銜只是描述身分，不是名稱本身的一部分，應標記為 `skip`。
+例如 glossary 已有 `Ferdinand III` 時，`Emperor Ferdinand III` 應標記為 `skip`。
+只有移除頭銜後與既有 glossary term 完全吻合時才適用；
+若頭銜是正式名稱的一部分、用來區分不同人物，或完整詞組本身是獨立歷史名稱，
+則保留給 AI 判斷，不得僅因包含既有姓名就跳過。
+
 若 todo 或 cont 項目只是 translation_glossary.yml 已有 term 的高信心詞形變化，
 且不需要不同的中文譯法，應標記為 status: skip，交由 Review 審查移除。
 這類項目不要加入 drop 清單，也不要修改 translation。
@@ -283,19 +321,45 @@ contextual，或繼續保留 cont。
 - 高信心的不規則複數，例如 `Person` → `People`
 - 部分高信心的拉丁或希臘複數，例如 `Bishopric` → `Bishoprics`
 - 明確只是大小寫、重音符號、連字號或空格差異的同一 term
+- 只有句尾標點或多餘空白差異的同一 term，例如 `Corsica.` → `Corsica`
 
 例如 glossary 已有 `Huguenot`，候選 `Huguenots` 若上下文只是該術語的複數，
 應標記為 `skip`，不必再次建立 glossary 詞條。
 
+若 glossary 已有基本 term，且候選只是該 term 的高信心詞形變化、
+不需要新的中文翻譯決策，也應標記為 `skip`。例如：
+
+- `Ottoman` → `Ottomans`
+- `Huguenot` → `Huguenots`
+- `Akritai` → `Akritais`
+- `Bishopric` → `Bishoprics`
+- `Road` → `Roads`
+- `Country` → `Countries`
+- `Person` → `People`
+- `Hire` → `Hired`、`Hiring`
+
+上述規則也適用於複合詞中任一詞的詞形變化。
+但 `Ottoman Empire`、`Ottoman Turks` 等完整複合詞不可只因含有 `Ottoman` 就排除；
+只有完整 term 本身確認只是既有詞條的詞形變化時，才可標記為 `skip`。
+
 上述判斷必須依 term、source key 與上下文確認，不得只依字尾機械分類。
 例如 `Worms` 可能是 `Worm` 的複數，也可能是地名；無法確認時應保留原本的 todo 或 cont。
+
+若候選 term 去除句尾的 `.`, `,`, `;`, `:`, `!`, `?` 與多餘空白後，
+與既有 glossary term 完全相同，且標點不是名稱本身的一部分，
+應標記為 `skip`。不得修改 review 中原本保留的 term。
+
+例如 `Corsica.`、`Tsushima.`、`Vienna.` 應分別視為既有
+`Corsica`、`Tsushima`、`Vienna` 的表面標點差異。
+但 `St. Louis`、`U.S.` 等標點屬於名稱本身，或去除標點後可能造成歧義時，
+應保留給 AI 判斷。
 
 以下通常不是可直接跳過的詞形變化，應保留給 AI 或 glossary 判斷：
 
 - 國名與形容詞、居民或語言派生，例如 `Germany` → `German`、`Italy` → `Italian`
 - `-ian`、`-an`、`-ese`、`-ish`、`-ic`、`-al` 等語意派生
 - `-ism` 與 `-ist`
-- `-ed`、`-ing` 等可能改變詞性或語意的形式
+- `-ed`、`-ing` 等可能改變詞性或語意的形式；只有已確認是單純詞形變化、且不需要新中文決策時，才可依上述規則標記為 `skip`
 
 ## 八之二、skip 二次複核
 

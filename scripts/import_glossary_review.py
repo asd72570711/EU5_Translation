@@ -156,6 +156,15 @@ def importable_items(
             # an unlisted cont silently fall back to fixed.
             contextual_items.append(item)
             continue
+        if status == "fixed":
+            if not translation:
+                if resolved_only:
+                    continue
+                raise ValueError(f"Missing translation for {item.get('term')}")
+            # A cont may be promoted to fixed after AI confirms that one
+            # translation works for every relevant context.
+            items.append(item)
+            continue
         if status not in {"todo", "ai"}:
             if resolved_only:
                 # Keep malformed or user-entered statuses for manual repair.
@@ -199,7 +208,12 @@ def remove_processed_items(
         if item.get("status") == "drop":
             removed_drop += 1
             continue
-        if item.get("term") in imported_terms and item.get("status") in {"todo", "ai", "cont"}:
+        if item.get("term") in imported_terms and item.get("status") in {
+            "todo",
+            "ai",
+            "cont",
+            "fixed",
+        }:
             removed_imported += 1
             continue
         retained.append(item)
