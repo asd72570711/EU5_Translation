@@ -52,7 +52,7 @@ def validate_review(review: Any) -> list[str]:
             else:
                 seen_terms[term_key] = index
 
-        for field in ("translation", "category", "note"):
+        for field in ("translation", "category", "note", "review_comment"):
             if field in item and not isinstance(item[field], str):
                 errors.append(f"{label}.{field} must be a string")
 

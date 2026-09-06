@@ -75,7 +75,8 @@ AI 完成上述 `cont` 複核後，才可更新該 `cont` 的 status 與 transla
 - ai 項目只有在使用者確認 translation 後，才能匯入 glossary。
 - 尚未確認的 todo 或 ai 必須保留。
 - 不要自行填寫或修改尚未確認項目的 translation。
-- 匯入 contextual 時，保留 review note 作為 glossary 註解。
+- 匯入 fixed 或 contextual 時，只匯入 term 與 translation；不要將 review 的 `note` 或可選 `review_comment` 複製成 glossary 註解。
+- `note` 保留為既有 review 欄位以維持格式相容；若需要留下審查說明，可使用可選的 `review_comment` 欄位，但該欄位也不得匯入 glossary。
 
 ## 四、review 清理
 
@@ -106,15 +107,18 @@ work/glossary_review/coverage_audit.json
 
 腳本只產生報告，不會修改 `review.json`、glossary、來源檔或翻譯檔。
 
-請先檢查報告中的 `high` 信心候選：
+若需要為新增候選或審查結果留下說明，使用可選的 `review_comment` 欄位；
+`note` 與 `review_comment` 都只屬於 review metadata，任何匯入流程都不得將它們寫入 glossary。
 
-- 若確認是應保留的專有名詞、制度名、宗教概念、人物、作品名或可重複使用術語，
-  讀取來源檔命中行及前後短片段，新增獨立 `todo` review 項目。
-- 新增項目必須保留來源 key、短上下文與可取得的 `glossary_refs`，
-  `translation` 保持空白，不得直接匯入 glossary。
-- 若確認只是一般語言或一次性片語，才可在報告處理後標記為 `skip`。
-- `normal` 信心候選需依上下文判斷；無法確定時保留在 review，不能直接刪除。
-- 處理報告候選後可重新執行覆蓋率檢查，確認新增項目已被 review 覆蓋。
+請檢查報告中的 `high` 與 `normal` 信心候選，僅在審查報告中列出判斷結果，
+不要因覆蓋率檢查自動新增、修改或刪除 `review.json` 項目。
+
+若發現可能漏收的專有名詞、制度名、宗教概念、人物、作品名或可重複使用術語，
+只報告 term、來源 key、判斷理由與建議處理方式；是否新增 review 項目，
+由使用者另行執行 Scan 或明確要求後處理。
+
+若候選只是一般語言或一次性片語，也只在報告中標記為疑似可忽略，
+不得直接改成 `skip`。
 
 不要因為候選只出現一次、位於句首、含縮寫、頭銜、重音符號或小寫姓名片段，
 就直接判定為漏收或 `skip`。
@@ -139,7 +143,7 @@ python scripts/import_glossary_review.py --review work/glossary_review/review.js
 
 1. 先將 `status: drop` 的 term 寫入 `glossary_drop_terms.yml`，確認成功後從 review 移除；不得加入 glossary 或 refs。
 2. 完成已確認的 todo 與 cont 匯入，並保留 review 供後續 refs 更新。
-3. 執行「來源覆蓋率檢查」，處理報告中的疑似漏收候選。
+3. 執行「來源覆蓋率檢查」，只報告疑似漏收候選，不修改 review。
 4. 執行上述 refs 腳本，更新仍在 review 中的項目之 `glossary_refs`。
 5. 確認 refs 腳本成功完成後，再移除已匯入項目與 skip。
 6. 若任一腳本執行失敗，不得宣稱來源覆蓋率或 glossary_refs 更新完成，必須回報錯誤。
@@ -223,5 +227,5 @@ python scripts/import_glossary_review.py --review work/glossary_review/review.js
 - 不要修改任何翻譯檔。
 - 只在明確需要時修改 translation_glossary.yml。
 - 不要修改尚未確認項目的 translation。
-- 不要修改 review 項目的 term、keys、note 或上下文。
+- 不要修改 review 項目的 term、keys、note、review_comment 或上下文。
 - glossary_refs 可依第五節規則更新，包含 status: skip 項目。

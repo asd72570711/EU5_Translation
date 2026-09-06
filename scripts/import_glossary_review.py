@@ -225,10 +225,6 @@ def remove_processed_items(
     }
 
 
-def yaml_inline_comment(note: str) -> str:
-    return " / ".join(line.strip() for line in note.splitlines() if line.strip())
-
-
 def split_contextual_translations(
     translation: str, split_senses: bool
 ) -> list[str]:
@@ -244,11 +240,9 @@ def split_contextual_translations(
 
 
 def contextual_block(
-    term: str, translation: str, note: str, split_senses: bool = False
+    term: str, translation: str, split_senses: bool = False
 ) -> list[str]:
     heading = f"  {term}:"
-    if note:
-        heading += f"  # {yaml_inline_comment(note)}"
     provided = split_contextual_translations(translation, split_senses)
     senses = [(value, WHEN_CONTEXTUAL) for value in provided]
     if not senses and translation.strip():
@@ -267,7 +261,7 @@ def apply_import(
     contextual_items: list[dict[str, Any]],
 ) -> tuple[str, dict[str, Any], set[str]]:
     existing = glossary_terms(glossary_text)
-    fixed_items: list[tuple[str, str, str]] = []
+    fixed_items: list[tuple[str, str]] = []
     contextual_lines: list[str] = []
     imported_terms: set[str] = set()
     skipped_existing = 0
@@ -282,7 +276,6 @@ def apply_import(
             contextual_block(
                 term,
                 item["translation"],
-                item.get("note", "").strip(),
                 split_senses=True,
             )
         )
@@ -297,7 +290,7 @@ def apply_import(
             skipped_existing += 1
             imported_terms.add(term)
             continue
-        fixed_items.append((term, translation, item.get("note", "").strip()))
+        fixed_items.append((term, translation))
         existing.add(term)
         imported_terms.add(term)
 
@@ -305,10 +298,8 @@ def apply_import(
     if fixed_items:
         fixed_lines: list[str] = []
         # Preserve review order; glossary sorting is an explicit separate operation.
-        for term, translation, note in fixed_items:
+        for term, translation in fixed_items:
             line = f"  {term}: {yaml_quote(translation)}"
-            if note:
-                line += f"  # {yaml_inline_comment(note)}"
             fixed_lines.append(line)
         aliases_index = next(i for i, line in enumerate(lines) if line.startswith("aliases:"))
         lines[aliases_index:aliases_index] = fixed_lines + [""]
