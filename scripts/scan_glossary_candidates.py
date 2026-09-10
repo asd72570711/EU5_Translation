@@ -163,6 +163,19 @@ TITLE_SPAN_RE = re.compile(
 # ordinary whitespace that could join words across a placeholder or \n.
 PROTECTED_SEPARATOR = "\uE000"
 WORD_RE = re.compile(r"[^\W\d_][\w'._-]*", re.UNICODE)
+
+
+def yaml_key(raw: str) -> str:
+    """Decode a simple YAML mapping key without retaining YAML quote syntax."""
+    value = raw.strip()
+    if len(value) >= 2 and value[0] == value[-1] == '"':
+        try:
+            return json.loads(value)
+        except json.JSONDecodeError:
+            return value[1:-1]
+    if len(value) >= 2 and value[0] == value[-1] == "'":
+        return value[1:-1].replace("''", "'")
+    return value
 ARABIC_NAME_RE = re.compile(
     rf"\b(?:Abu|Abū|Abd|Abdul|Ibn|Bin|Bint|Umm|Muhammad)"
     rf"(?:\s+(?:{ARABIC_NAME_PARTICLE}|{ARABIC_NAME_PARTICLE_PHRASE}|"
@@ -372,7 +385,7 @@ def glossary_entries(glossary_path: Path) -> dict[str, str]:
             alias = re.match(r"^  (?! )([^:#][^:]+):\s*$", line)
             if alias:
                 flush_alias()
-                alias_term = alias.group(1).strip()
+                alias_term = yaml_key(alias.group(1))
                 alias_translation = None
                 alias_names = []
                 continue
@@ -389,7 +402,7 @@ def glossary_entries(glossary_path: Path) -> dict[str, str]:
             block = re.match(r"^  (?! )([^:#][^:]+):(?:\s+#.*)?\s*$", line)
             if block:
                 flush_contextual()
-                contextual_term = block.group(1).strip()
+                contextual_term = yaml_key(block.group(1))
                 continue
             default = re.match(r'^    default:\s*"([^"]*)"', line)
             if default and contextual_term:
@@ -402,13 +415,13 @@ def glossary_entries(glossary_path: Path) -> dict[str, str]:
 
         scalar = re.match(r'^  (?! )([^:#][^:]+):\s*"([^"]*)"', line)
         if scalar:
-            entries[scalar.group(1).strip()] = scalar.group(2)
+            entries[yaml_key(scalar.group(1))] = scalar.group(2)
             current_term = None
             continue
 
         block = re.match(r"^  (?! )([^:#][^:]+):(?:\s+#.*)?\s*$", line)
         if block:
-            current_term = block.group(1).strip()
+            current_term = yaml_key(block.group(1))
             continue
 
         if current_term:
@@ -482,7 +495,7 @@ def glossary_alias_groups(glossary_path: Path) -> dict[str, str]:
         block = re.match(r"^  (?! )([^:#][^:]+):\s*$", line)
         if block:
             flush()
-            canonical = block.group(1).strip()
+            canonical = yaml_key(block.group(1))
             aliases = []
             continue
         also = re.match(r"^      -\s+(.+?)\s*$", line)
@@ -510,7 +523,7 @@ def reference_entries(glossary_path: Path) -> dict[str, str]:
 
         term = re.match(r"^  (?! )([^:#][^:]+):(?:\s+#.*)?$", line)
         if term:
-            current_term = term.group(1).strip()
+            current_term = yaml_key(term.group(1))
             continue
         suggestion = re.match(r'^\s{6,8}-\s*"([^"]*)"', line)
         if suggestion and current_term and current_term not in entries:
