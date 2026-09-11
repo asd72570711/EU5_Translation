@@ -232,4 +232,5 @@ python scripts/import_glossary_review.py --review work/glossary_review/review.js
 - 只在明確需要時修改 translation_glossary.yml。
 - 不要修改尚未確認項目的 translation。
 - 不要修改 review 項目的 term、keys、note、review_comment 或上下文。
+- `category` 是舊版 review metadata；不要修改既有項目的 `category`，新增候選時也不要建立 `category` 或 `category: unknown`。
 - glossary_refs 可依第五節規則更新，包含 status: skip 項目。

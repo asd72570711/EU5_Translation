@@ -37,6 +37,11 @@ work/glossary_review/review.json
 - note
 - 上下文
 - glossary_refs
+- category
+
+`category` 僅是舊版 review metadata，現在不再使用。新增的 review 項目不要建立
+`category` 欄位，也不要填寫 `category: unknown`；既有項目的 `category` 保持原樣，
+本次預審不要批量刪除或修改。
 
 ## 一之一、必要時查閱來源上下文
 

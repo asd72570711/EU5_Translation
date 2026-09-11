@@ -20,7 +20,6 @@ fixed:
   Abatis Line: "鹿砦防線"
   Abau: "阿包"
   Abazin: "阿巴扎"
-  Abbas: "阿拔斯"
   Abbasid: "阿拔斯"
   Abbasids: "阿拔斯王朝"
   Abbess: "女隱修院院長"
@@ -69,13 +68,10 @@ fixed:
   Abyssinia: "阿比西尼亞"
   Abī: "阿比"
   Abū: "阿布"
-  Abū al-Qāsim al-Zahrāwī: "阿布·卡塞姆·宰赫拉威"
   Abū Zayd: "阿布·宰德"
   Academia de Artillería de Segovia: "塞哥維亞砲兵學院"
   Academia Istropolitana: "伊斯特羅波利塔納學院"
   Academia Real de Fortificação, Artilharia e Desenho: "皇家築城、炮術與製圖學院"
-  Academie Francaise: "法蘭西學術院"
-  Academie Française: "法蘭西學術院"
   Academy of Administration: "行政學院"
   Academy of Arts: "藝術學院"
   Academy of Fine Arts: "美術學院"
@@ -85,7 +81,6 @@ fixed:
   Acadia: "阿卡迪亞"
   Acadia Coast Sea: "阿卡迪亞沿岸海域"
   Académia: "學院"
-  Académie Française: "法蘭西學術院"
   Acamama: "阿卡馬馬"
   Acarau: "阿卡勞"
   Acatic: "阿卡蒂克"
@@ -201,7 +196,6 @@ fixed:
   Advisor: "顧問"
   Aegean: "愛琴海"
   Aegean Sea: "愛琴海"
-  Aesir: "亞薩神族"
   Afar: "阿法爾"
   Affects Country: "影響國家"
   Affects Province: "影響省份"
@@ -358,7 +352,6 @@ fixed:
   Al-Zakāh: "天課"
   Al-Zakāh Wājib: "天課為義務"
   Al-Šūrā: "舒拉"
-  Alaaddin: "阿拉丁"
   Alaaddin Mosque: "阿拉丁清真寺"
   Alan Paganism: "阿蘭多神教"
   Alarde: "阿拉德徵召制"
@@ -401,7 +394,6 @@ fixed:
   Algunas Obras: "《若干作品》"
   Alhambra Decree: "《阿罕布拉法令》"
   Alhóndigas: "阿隆迪加斯"
-  Ali: "阿里"
   Ali'i: "阿利伊"
   Aligned Legislature: "統一立法"
   Allegretti: "阿萊格雷蒂"
@@ -557,7 +549,6 @@ fixed:
   Annales Bojorum: "《巴伐利亞編年史》"
   Annales Ianuenses: "《熱那亞編年史》"
   Annals: "編年史"
-  Annals of Poland: "《波蘭編年史》"
   Anne Boleyn: "安妮·博林"
   Anne Greene: "安妮·格林"
   Anne Robert Jacques Turgot: "安·羅伯特·雅克·杜閣"
@@ -637,9 +628,6 @@ fixed:
   Arabia Felix: "阿拉伯福地"
   Arabian Horses: "阿拉伯馬"
   Arabian Peninsula: "阿拉伯半島"
-  Aragon: "亞拉岡"
-  Aragó: "亞拉岡"
-  Aragón: "亞拉岡"
   Arakhan: "若開"
   Arakhan Coast Sea: "若開沿岸海域"
   Aranmula: "阿蘭穆拉"
@@ -1054,10 +1042,8 @@ fixed:
   Barter Exchange: "以物易物"
   Bartholomew: "巴索羅繆"
   Bartholomew Roberts: "巴索羅繆·羅伯茨"
-  Bartolome de Medina: "巴托洛梅·德·梅迪納"
   Bartolomeo Platina: "巴托洛米奧·普拉蒂納"
   Bartolomé: "巴托洛梅"
-  Bartolomé de Medina: "巴托洛梅·德·梅迪納"
   Bartolomé Esteban Murillo: "巴托洛梅·埃斯特萬·牟利羅"
   Bartolus: "巴托魯斯"
   Bartolus de Saxoferrato: "巴托魯斯·德·薩索費拉托"
@@ -1083,8 +1069,6 @@ fixed:
   Basilikon Doron: "《君王之贈》"
   Basra: "巴斯拉"
   Bastar: "巴斯塔"
-  Bastard of Orleans: "奧爾良的私生子"
-  Bastard of Orléans: "奧爾良的私生子"
   Bastille: "巴士底"
   Bastion: "稜堡"
   Bastion Synthesis: "稜堡融合體系"
@@ -1140,7 +1124,6 @@ fixed:
   Behavioral Modifiers: "行為修正"
   Behetrías: "擇主領地"
   Behn: "貝恩"
-  Beijing: "北京"
   Bektashi: "拜克塔什教團"
   Belforti: "貝爾福爾蒂"
   Belfry of Bruges: "布魯日鐘樓"
@@ -1186,8 +1169,6 @@ fixed:
   Bertel Thorvaldsen: "貝特爾·托瓦爾森"
   Berthel Thorvaldsen: "貝特爾·托瓦爾森"
   Bertrand: "貝特朗"
-  Bertrand du Guesclin: "貝特朗·杜·蓋克蘭"
-  Bertrand Du Guesclin: "貝特朗·杜·蓋克蘭"
   Bertrand Guesclin: "貝特朗·蓋克蘭"
   Berwick-Upon-Tweed: "特威德河畔伯里克"
   Besa: "貝薩誓約"
@@ -1301,9 +1282,7 @@ fixed:
   Bonuses: "加成"
   Book of Common Prayer: "《公禱書》"
   Book of Genesis: "《創世記》"
-  Book of Hunting: "《狩獵之書》"
   Book of Kells: "《凱爾經》"
-  Book of the Consulate of the Sea: "《海上領事館法典》"
   Book of the Duchess: "《公爵夫人之書》"
   Book of Victories: "《勝利之書》"
   Books of the Basiliká: "《巴西利卡法典》"
@@ -1353,10 +1332,8 @@ fixed:
   Braganza: "布拉干薩"
   Bragança: "布拉干薩"
   Brahe: "布拉赫"
-  Brahma: "梵天"
   Brahman: "梵"
   Brahminism: "婆羅門主義"
-  Brahmā: "梵天"
   Brandenburg: "布蘭登堡"
   Brandenburg an der Havel,: "哈非爾河畔布蘭登堡"
   Brandenburg Gate: "布蘭登堡門"
@@ -1497,7 +1474,6 @@ fixed:
   Bön: "苯教"
   Bāla: "波羅"
   Bāla Tripurasundarī: "童女三城美神"
-  Běijīng: "北京"
   Bīngbù: "兵部"
   Břevnov: "布日夫諾夫"
   Břevnov Monastery: "布日夫諾夫修道院"
@@ -1646,8 +1622,6 @@ fixed:
   Cartes de Cassini: "卡西尼地圖"
   Carthage: "迦太基"
   Cartographer: "製圖師"
-  Casa de Contratacion: "貿易廳"
-  Casa de Contratación: "貿易廳"
   Casa di San Giorgio: "聖喬治銀行"
   Casa Gioiosa: "歡樂之家"
   Casa Gonzaga: "貢扎加家族"
@@ -1829,7 +1803,6 @@ fixed:
   Chartres: "夏特"
   Chasqui: "查斯基"
   Chasseurs: "法國獵兵"
-  Chateaubriant: "沙托布里揚"
   Chaucer: "喬叟"
   Chausath Yogini Temple: "六十四瑜伽女神廟"
   Checksum: "校驗碼"
@@ -1895,15 +1868,12 @@ fixed:
   Chronica Hungarorum: "《匈牙利人編年史》"
   Chronica Jutensis: "《日德蘭編年史》"
   Chronicle: "編年史"
-  Chronicle of Alfonso XI: "《阿方索十一世編年史》"
-  Chronicle of Aragon: "《亞拉岡編年史》"
   Chronicle of Livonia: "《利沃尼亞編年史》"
   Chronicle of Morea: "《摩里亞編年史》"
   Chronicle of Peru: "《祕魯編年史》"
   Chronicle of Peter IV: "《佩德羅四世編年史》"
   Chronicle Pack: "編年史包"
   Chronicler: "編年史家"
-  Chronicles of Castile: "《卡斯提爾諸王編年史》"
   Chronicon terrae Prussiae: "《普魯士大地編年史》"
   Chronik des Landes Preussen: "《普魯士國土編年史》"
   Chrysanthemum Throne: "菊花王座"
@@ -1921,7 +1891,6 @@ fixed:
   Churruca: "丘魯卡"
   Chán: "禪"
   Château d'Ainay-le-Vieil: "艾奈勒維耶城堡"
-  Châteaubriant: "沙托布里揚"
   Chālchiuhtlicue: "查爾奇烏特利奎"
   Chłopstwo: "赫沃普斯特沃"
   Chōnin: "町人"
@@ -1932,7 +1901,6 @@ fixed:
   Cid: "熙德"
   Cidade Invicta: "不屈之城"
   Cieza: "西耶薩"
-  Cihuacōātl: "西瓦科亞特爾"
   Cihuateotl: "西瓦特奧特爾"
   Cihuateteo: "西瓦特奧眾女神"
   Cilli: "采列"
@@ -2037,7 +2005,6 @@ fixed:
   Cocoliztli: "科科利茲特利"
   Code Civil: "《民法典》"
   Code Louis: "《路易法典》"
-  Code of Justinian: "《查士丁尼法典》"
   Code of Karvuna: "《卡爾武納法典》"
   Code of the Black Mountain: "《黑山法典》"
   Codex Balduini Trevirensis: "《鮑德溫特里爾手抄本》"
@@ -2067,7 +2034,6 @@ fixed:
   Colegio de San Gregorio: "聖額我略學院"
   Collateral Council: "協政議會"
   Collection of Neoclassical Portraits: "《新古典主義肖像畫集》"
-  College de France: "法蘭西公學院"
   College of Cardinals: "樞機團"
   Collegiate Church of Roncesvalles: "龍塞斯瓦列斯協同教堂"
   Collegium Helveticum: "赫爾維蒂亞學院"
@@ -2076,7 +2042,6 @@ fixed:
   Collegium Ragusinum: "拉古薩學院"
   Collegium Trilingue: "三語學院"
   Collegium Trilingue of Louvain: "魯汶三語學院"
-  Collège de France: "法蘭西公學院"
   Cologne: "科隆"
   Cologne Secundogeniture: "科隆次子領"
   Colombia: "哥倫比亞"
@@ -2356,7 +2321,6 @@ fixed:
   Create Supply Depot Cost: "建立補給站花費"
   Creation Date: "建立日期"
   Creator Deity: "創造神"
-  Crecy: "克雷西"
   Creditworthiness: "信用度"
   Creditworthiness Bonus: "信用度加成"
   Cretan Sea: "克里特海"
@@ -2390,12 +2354,8 @@ fixed:
   Crusade: "十字軍"
   Crusade Leader: "十字軍領袖"
   Crusader Sergeants: "十字軍軍士"
-  Crécy: "克雷西"
-  Crónica de Alfonso Onceno: "《阿方索十一世編年史》"
-  Crónica de Aragón: "《亞拉岡編年史》"
   Crónica del Perú: "《秘魯編年史》"
   Crónica Geral de Espanha: "《西班牙總編年史》"
-  Crónicas de los Reyes de Castilla: "《卡斯提爾諸王編年史》"
   Crónicas Reales: "《王室編年史》"
   Cuauhtémoc: "夸烏特莫克"
   Cuba: "古巴"
@@ -2740,7 +2700,6 @@ fixed:
   Drake: "德雷克"
   Drassanes Reials de Barcelona: "巴塞隆納皇家造船廠"
   Drava: "德拉瓦河"
-  Dream of the Red Chamber: "《紅樓夢》"
   Dreams of the Orchard: "《果園之夢》"
   Drepung: "哲蚌寺"
   Dresden: "德勒斯登"
@@ -2807,7 +2766,6 @@ fixed:
   Dàxué: "大嶨"
   Díaz: "迪亞斯"
   Díshù System: "嫡庶制"
-  Dîvân: "底萬"
   Dòta: "博學之城"
   Dù Lìniáng: "杜麗娘"
   Dāna: "佈施"
@@ -2944,7 +2902,6 @@ fixed:
   El Escorial: "埃斯科里亞爾修道院"
   El Gran Capitán: "偉大的隊長"
   El Greco: "埃爾·格列柯"
-  El Tres de Mayo de 1808 en Madrid: "《1808年5月3日的槍殺》"
   Elbe: "易北河"
   Eleanor: "艾莉諾"
   Eleanor Gwyn: "奈爾·圭恩"
@@ -3095,7 +3052,6 @@ fixed:
   Ethiopia: "衣索比亞"
   Ethiopian Orthodox Church: "衣索比亞正統教會"
   Ethnos: "民族共同體"
-  Etienne Marcel: "艾蒂安·馬塞爾"
   Etsi Dominici Gregis: "《主之羊群》"
   Eubean Tidal Mills: "尤比亞潮汐磨坊"
   Euboea: "尤比亞"
@@ -3257,7 +3213,6 @@ fixed:
   Finland: "芬蘭"
   Fiorino d'Oro: "金弗羅林"
   Fire Deity: "火神"
-  Fire Dragon Manual: "《火龍經》"
   Firearms: "火器"
   Firearms Factory: "火器工廠"
   Firearms Guilds: "火器行會"
@@ -3347,7 +3302,6 @@ fixed:
   Fortress Qullqa Granaries: "要塞科爾卡糧倉"
   Fortress Rice Granaries: "要塞稻米糧倉"
   Fortress Sturdy Grain Granaries: "要塞雜穀糧倉"
-  Forts Level: "堡壘等級"
   Fortuna Primigenia: "原初福爾圖娜"
   Forward Depots: "前線補給站"
   Foscari: "福斯卡里"
@@ -3394,8 +3348,6 @@ fixed:
   Francisco Herrera: "法蘭西斯科·埃雷拉"
   Francisco Javier de Balmis: "法蘭西斯科·哈維爾·德·巴爾米斯"
   Francisco Pizarro: "法蘭西斯科·皮薩羅"
-  Francisco Suarez: "法蘭西斯科·蘇亞雷斯"
-  Francisco Suárez: "法蘭西斯科·蘇亞雷斯"
   Franciscus Gomarus: "法蘭西斯庫斯·高馬勒斯"
   Frank: "法蘭克"
   Frankfurt: "法蘭克福"
@@ -3899,7 +3851,6 @@ fixed:
   Gulf of Saint Lawrence: "聖羅倫斯灣"
   Gulf Of Saint Lawrence Sea: "聖羅倫斯灣海域"
   Gulf of Sirte: "蘇爾特灣"
-  Gun Factories: "火砲工廠"
   Gun Factory: "火砲工廠"
   Gun Foundry: "槍砲鑄造廠"
   Gunpowder Foundries: "火藥製造廠"
@@ -3911,12 +3862,10 @@ fixed:
   Gurgaddi: "上師寶座"
   Gurkha: "廓爾喀"
   Gurmukhī Script: "古木基文"
-  Guru: "上師"
   Guru Gaddi: "上師寶座"
   Guru Granth Sahib: "《古魯格蘭特薩希卜》"
   Guru Panth: "上師教團"
   Guruvayur Temple: "古魯瓦尤爾神廟"
-  Gurū: "上師"
   Guslar: "古斯萊"
   Gustavian Infantry: "古斯塔夫步兵"
   Gustavus Adolphus: "古斯塔夫·阿道夫"
@@ -3924,8 +3873,6 @@ fixed:
   Guyana: "圭亞那"
   Guānyīn: "觀音"
   Gwiseon Turtle Ship: "早期龜船"
-  Gyeongguk Daejeon: "《經國大典》"
-  Gyeongje Yukjeon: "《經濟六典》"
   Gymnasium: "文理學院"
   Gymnopaedia Festival: "吉姆諾派迪亞節"
   Gàochéng: "告成"
@@ -3940,7 +3887,6 @@ fixed:
   Habsburg: "哈布斯堡"
   Habsburg Empire: "哈布斯堡帝國"
   Habsburg Union: "哈布斯堡聯盟"
-  Habshi: "哈布希"
   Hachiman: "八幡神"
   Hades: "黑帝斯"
   Hadiach: "哈佳奇"
@@ -4152,7 +4098,6 @@ fixed:
   Historical Subjects: "歷史屬國"
   Historical Tax Base: "歷史稅基"
   Historiography: "史學史"
-  History of Yuán: "《元史》"
   Hittite: "西臺"
   Hobbes: "霍布斯"
   Hobelars: "霍貝拉爾騎兵"
@@ -4286,7 +4231,6 @@ fixed:
   Huēhuehteōtl: "韋韋特奧特爾"
   Huēyi Teōcalli: "大神廟"
   Huīxtohcihuātl: "維什托西瓦特爾"
-  Huǒlóngjīng: "《火龍經》"
   Huế: "順化"
   Hwacha: "火車"
   Hwaeom: "華嚴宗"
@@ -4306,7 +4250,6 @@ fixed:
   Hànlín Academy: "翰林院"
   Hán Yōng: "韓雍"
   Hénán: "河南"
-  Hóng Lóu Mèng: "《紅樓夢》"
   Hóngwǔ Dì: "洪武帝"
   Hóngyípào: "紅夷砲"
   Hīnayāna: "小乘"
@@ -4329,7 +4272,6 @@ fixed:
   Ibn: "伊本"
   Ibn Battuta: "伊本·巴圖塔"
   Ibn Juzayy: "伊本·朱扎伊"
-  Ibn Khaldūn: "伊本·赫勒敦"
   Ibn Sina: "伊本·西那"
   Ibn Yūsuf Mosque: "伊本·優素福清真寺"
   Iboina: "伊博伊納"
@@ -4594,8 +4536,6 @@ fixed:
   Ivan Alexander: "伊凡·亞歷山大"
   Ivan Asen II: "伊凡·阿森二世"
   Ivan IV: "伊凡四世"
-  Ivan Nelipic: "伊萬·內利皮奇"
-  Ivan Nelipić: "伊萬·內利皮奇"
   Ivan Shishman: "伊凡·希什曼"
   Ivan Sratsimir: "伊凡·斯拉齊米爾"
   Ivan the Terrible: "伊凡雷帝"
@@ -4704,8 +4644,6 @@ fixed:
   Jianzhou Confederation: "建州聯盟"
   Jianzhou Jurchens: "建州女真"
   Jigonsaseh: "吉貢薩瑟"
-  Jihad: "吉哈德"
-  Jihād: "吉哈德"
   Jiming Mountain: "雞鳴山"
   Jingūji: "神宮寺"
   Jinnō Shōtōki: "《神皇正統記》"
@@ -4850,7 +4788,6 @@ fixed:
   Justice of the Kings: "《諸王律法》"
   Justicia de Aragón: "亞拉岡司法官"
   Justinian: "查士丁尼"
-  Justinian Code: "《查士丁尼法典》"
   Justinian I: "查士丁尼一世"
   Jutland: "日德蘭"
   Jutland Peninsula: "日德蘭半島"
@@ -4897,7 +4834,6 @@ fixed:
   Kalaram Temple: "黑羅摩神廟"
   Kalari: "卡拉里武館"
   Kalaripayattu: "卡拉里帕亞特"
-  Kali: "迦梨"
   Kali Yuga: "爭鬥時"
   Kalicha: "卡利哈"
   Kalighat Kali Temple: "卡利加特迦梨神廟"
@@ -4942,7 +4878,6 @@ fixed:
   Karanbük: "卡拉比克"
   Karavasta Lagoon: "卡拉瓦斯塔潟湖"
   Karelia: "卡累利阿"
-  Karimi: "卡里米"
   Karlowitz: "卡洛維茨"
   Karlsöarna: "卡爾斯群島"
   Karma: "業力"
@@ -4980,8 +4915,6 @@ fixed:
   Kelantan Coast Sea: "吉蘭丹沿岸海域"
   Kells: "凱爾斯"
   Kenya: "肯亞"
-  Kephale: "凱法利"
-  Kephalē: "凱法利"
   Kepler: "克卜勒"
   Kerema: "凱里馬"
   Kerema Coastal Sea: "凱里馬沿岸海域"
@@ -4992,8 +4925,6 @@ fixed:
   Khabzeism: "哈布澤信仰"
   Khafre: "卡夫拉"
   Khalifatabad: "哈利法塔巴德"
-  Khalji: "卡爾吉"
-  Khaljī: "卡爾吉"
   Khalsa: "卡爾薩"
   Khalsa Fauj: "卡爾薩軍"
   Khammash: "哈馬什"
@@ -5113,7 +5044,6 @@ fixed:
   Kronan: "克魯南"
   Kronborg: "克隆堡"
   Kronika Galla Anonima: "《加盧斯無名氏編年史》"
-  Kronika Polski: "《波蘭編年史》"
   Krstjani: "克爾斯特亞尼"
   Kruna: "克魯納"
   Ktistes: "建城者"
@@ -5156,9 +5086,7 @@ fixed:
   Kuskatan: "庫斯卡坦"
   Kuskatan Coast Sea: "庫斯卡坦沿岸海域"
   Kusumba Mosque: "庫松巴清真寺"
-  Kutna Hora: "庫特納荷拉"
   Kutnohorian Deal: "庫特納霍拉和約"
-  Kutná Hora: "庫特納荷拉"
   Kutubiyya Mosque: "庫圖比亞清真寺"
   Kwerba: "奎爾巴"
   Kwerba Coastal Sea: "奎爾巴沿岸海域"
@@ -5183,8 +5111,6 @@ fixed:
   Kāfir: "卡菲勒"
   Kālacakra: "時輪"
   Kālacakra Tantra: "時輪怛特羅"
-  Kālī: "迦梨"
-  Kārimī: "卡里米"
   Kāshif: "卡希夫"
   Kāẓimiyya: "卡濟米耶"
   Kējǔ: "科舉"
@@ -5382,7 +5308,6 @@ fixed:
   Les Établissements de Saint Louis: "《聖路易法令集》"
   Letter of Marque: "私掠許可證"
   Letters Concerning the English Nation: "《英國書簡》"
-  Letters of Marque: "私掠許可證"
   Levant: "黎凡特"
   Levant Coast Sea: "黎凡特沿岸海域"
   Levas: "徵召部隊"
@@ -5420,7 +5345,6 @@ fixed:
   Libro d'Argento: "白銀名冊"
   Libro d'Oro: "黃金名冊"
   Libro de Buen Amor: "《正愛集》"
-  Libro de la Montería: "《狩獵之書》"
   Libro de los Juegos: "《遊戲之書》"
   Libros del Saber de Astrología: "《占星學知識之書》"
   Licentia Populandi: "招民墾殖特許"
@@ -5489,7 +5413,6 @@ fixed:
   Ljekaruše: "醫方書"
   Ljubljana: "盧比安納"
   Llewelyn: "盧埃林"
-  Llibre del Consolat de Mar: "《海上領事館法典》"
   Llullaillaco: "尤耶亞科山"
   Lluoedd: "徵召部隊"
   Llywelyn: "盧埃林"
@@ -5525,7 +5448,6 @@ fixed:
   Locke: "洛克"
   Lockean Proviso: "洛克條件"
   Lodge Warriors: "會堂勇士"
-  Lodi: "洛迪"
   Logistics Corps: "後勤部隊"
   Logothetes: "書記"
   Lohacharya: "嚧訶阿闍梨"
@@ -5551,7 +5473,6 @@ fixed:
   Lorenz van Steenwinckell: "洛倫茨·范·史汀溫克爾"
   Lorenzo: "羅倫佐"
   Loreta Church: "羅瑞塔教堂"
-  Los fusilamientos del tres de mayo: "《1808年5月3日的槍殺》"
   Lotharingia: "洛塔林吉亞"
   Lottery Election: "抽籤選舉制"
   Lotus School: "法華宗"
@@ -5642,7 +5563,6 @@ fixed:
   Lübeck: "呂貝克"
   Lüneburg: "呂訥堡"
   Lützen: "呂岑"
-  Lōdī: "洛迪"
   Lōdī Gardens: "洛迪花園"
   Lǐ Jiǎ: "里甲"
   Lǐ Zìchéng: "李自成"
@@ -5683,7 +5603,6 @@ fixed:
   Magatama: "勾玉"
   Magdeburg: "馬格德堡"
   Magdeburg Law: "馬格德堡法"
-  Magdeburg Laws: "馬格德堡法"
   Magellan: "麥哲倫"
   Maghreb: "馬格里布"
   Maghreb Coastal Sea: "馬格里布沿岸海域"
@@ -6001,11 +5920,7 @@ fixed:
   Megalopolis: "大都會"
   Mehmed II: "穆罕默德二世"
   Mehmed IV: "穆罕默德四世"
-  Meissen: "邁森"  # 採用官中翻譯
-  Meißen: "邁森"
   Meißen Lion: "邁森雄獅"
-  Meissner: "邁森"
-  Meißner: "邁森"
   Meißner Groschen: "邁森格羅申"
   Mekong Coast Sea: "湄公沿岸海域"
   Mekongga: "梅公加"
@@ -6102,7 +6017,6 @@ fixed:
   Mevlânâ: "梅夫拉納"
   Mewe: "梅韋"
   Mexica: "墨西加"
-  Mexico: "墨西哥"
   Mexico City: "墨西哥城"
   Mexihcah: "墨西加"
   Mezquita: "科爾多瓦大清真寺"
@@ -6215,8 +6129,6 @@ fixed:
   Mission Tree: "任務樹"
   Mission Tree Family: "任務樹組"
   Mit'a: "米塔制"
-  Mit'a System: "米塔徭役制"
-  Mita System: "米塔徭役制"
   Mitchell: "米契爾"
   Mithraic Mysteries: "密特拉秘儀"
   Mithridates: "米特里達梯"
@@ -6434,7 +6346,6 @@ fixed:
   Myzeqe: "米澤切"
   Mégas Doméstikos: "大統軍"
   Mégas Doméstikos Command: "大統軍統帥制"
-  México: "墨西哥"
   Mézières: "梅濟耶爾"
   Míng: "明"
   Míng Dynasty: "明朝"
@@ -6519,7 +6430,6 @@ fixed:
   National Institutions: "國家機構"
   Native American: "美洲原住民"
   Native Policy: "原住民政策"
-  Natives Policy: "原住民政策"
   Natural Philosophy: "自然哲學"
   Nauplia: "瑙普利亞"
   Nauru: "諾魯"
@@ -6623,7 +6533,6 @@ fixed:
   New Granada: "新格拉納達"
   New Guinea: "新幾內亞"
   New Hampshire: "新罕布夏"
-  New Haven: "紐哈芬"
   New Jersey: "紐澤西"
   New Model Army: "新模範軍"
   New Orleans: "紐奧良"
@@ -6636,7 +6545,6 @@ fixed:
   New Zealand: "紐西蘭"
   Newcastle: "紐卡索"
   Newfoundland: "紐芬蘭"
-  Newhaven: "紐哈芬"
   Newton: "牛頓"
   Nezahualcoyōtl: "內薩瓦爾科約特爾"
   Ngai: "恩蓋"
@@ -6895,7 +6803,6 @@ fixed:
   Omen Length: "神諭持續時間"
   On the Corruption of Morals: "《論風俗敗壞》"
   On the Fates of Famous Men: "《論名人的命運》"
-  On the Revolutions of the Heavenly Spheres: "《天體運行論》"
   On the True Significance of Comets against the Vanity of Astrologers: "《論彗星的真正意義：駁占星家之虛妄》"
   Onbashira-matsuri: "御柱祭"
   Onciario Cadastre: "盎司稅籍冊"
@@ -6930,8 +6837,6 @@ fixed:
   Order of the Dragon: "龍騎士團"
   Order of the Ermine: "白鼬騎士團"
   Order of the Garter: "嘉德騎士團"
-  Order of the Swan: "天鵝騎士團"
-  Order of The Swan: "天鵝騎士團"
   Order of the White Eagle: "白鷹勳章"
   Order Sergeants: "騎士團軍士"
   Order Stronghold: "騎士團要塞"
@@ -6964,8 +6869,6 @@ fixed:
   Orissan Elephant Cavalry: "奧里薩象騎兵"
   Orissan War Elephant: "奧里薩戰象"
   Orlando Furioso: "《瘋狂奧蘭多》"
-  Orleans: "奧爾良"
-  Orléans: "奧爾良"
   Oroonoque: "奧里諾科"
   Orpheus: "俄耳甫斯"  # 採用簡中翻譯
   Orry: "奧里"
@@ -6996,8 +6899,6 @@ fixed:
   Outside Naval Range: "超出海軍範圍"
   Overseas Trade Routes: "海外貿易路線"
   Overseas Trading Post: "海外商館"
-  Owain Glyndwr: "歐文·格林杜爾"
-  Owain Glyndŵr: "歐文·格林杜爾"
   Oxen Road: "運牛古道"
   Oxford: "牛津"
   Oxford Castle: "牛津城堡"
@@ -7032,8 +6933,6 @@ fixed:
   Palaiológian Hereditary Prónoia: "巴列奧略世襲普羅尼亞制"
   Palais des Papes: "教宗宮"
   Palaiyakkarar: "帕萊亞卡拉爾"
-  Palamas: "帕拉瑪斯"
-  Palamâs: "帕拉瑪斯"
   Palatinate: "普法爾茨"
   Palatine: "宮廷伯爵"
   Palatine Chapel: "帕拉丁禮拜堂"
@@ -7204,8 +7103,6 @@ fixed:
   Peasants Estate: "農民階層"
   Peasants Hunting Grounds: "農民狩獵場"
   Peasants Training Grounds: "農民訓練場"
-  Peasants War: "農民戰爭"
-  Peasants' War: "農民戰爭"
   Pechersk Lavra: "洞窟修道院"
   Peder Griffenfeld: "佩德爾·葛列芬菲"
   Peder Oxe: "佩德爾·奧克塞"
@@ -7217,8 +7114,6 @@ fixed:
   Pedro Gómez Barroso: "佩德羅·戈梅斯·巴羅索"
   Pedro I: "佩德羅一世"
   Pedro López de Ayala: "佩德羅·洛佩斯·德·阿亞拉"
-  Pedro Rodriguez: "佩德羅·羅德里格斯"
-  Pedro Rodríguez: "佩德羅·羅德里格斯"
   Peel Tower: "邊境塔堡"
   Pelagian: "伯拉糾派"
   Pelebegu: "佩勒貝古信仰"
@@ -7257,12 +7152,10 @@ fixed:
   Persian Gulf: "波斯灣"
   Personal Union: "共主邦聯"
   Perth: "伯斯"
-  Peru: "祕魯"
   Perugia: "佩魯賈"
   Perugino: "佩魯吉諾"
   Peruke: "假髮"
   Peruzzi: "佩魯齊"
-  Perú: "祕魯"
   Pescatarianism: "魚素主義"
   Peshwa: "佩什瓦"
   Pessagno: "佩薩尼奧"
@@ -7280,7 +7173,6 @@ fixed:
   Peuplierung: "移民墾殖"
   Pfalz: "法爾茲"
   Pforta: "普福塔"
-  Phaedon: "《斐多》"
   Phanar: "法那爾"
   Phanariot District: "法那爾人街區"
   Phanariots: "法那爾人"
@@ -7319,12 +7211,9 @@ fixed:
   Phrai Luang: "王室役民"
   Phrai Thaan: "軍役民"
   Physiocracy: "重農主義"
-  Phädon: "《斐多》"
   Piacentine: "皮亞琴察"
   Piacenza: "皮亞琴察"
   Piagnoni: "哭泣派"
-  Pianura Padana: "波河平原"
-  Pianüra Padâna: "波河平原"
   Piassafòrt: "要塞城市"  # 採用官方中文翻譯
   Piast: "皮雅斯特"
   Piazza del Campo: "田野廣場"
@@ -7402,7 +7291,6 @@ fixed:
   Po Plain: "波河平原"
   Poblet Abbey: "波夫萊特修道院"
   Pocahontas: "寶嘉康蒂"
-  Pochtēcah: "波奇特卡"
   Poděbrady: "波傑布拉迪"
   Poggio: "波吉歐"
   Poikilia: "繁采美學"
@@ -7679,11 +7567,9 @@ fixed:
   Pārvatī: "雪山神女"
   Pātāla: "波吒羅"
   Pīpiltin: "皮皮爾廷"
-  Pōchtēcah: "波奇特卡"
   Pōchtēcayōtl: "波奇特卡制度"  # 波奇特卡（Pōchtēcah）是阿茲特克的專業長途商人，而 Pōchtēcayōtl 是由此形成的抽象名詞，可指其商人身分、職業／商業制度
   Pǔtuó Shān: "普陀山"
   Q'uq'umatz: "古庫馬茲"
-  Qadiri: "卡迪里教團"
   Qal'at al-Mashwār: "馬什瓦爾宮堡"
   Qalāwūn: "嘉拉溫"
   Qalāwūn Complex: "嘉拉溫建築群"
@@ -7726,7 +7612,6 @@ fixed:
   Qā'id: "卡伊德"
   Qādir: "卡迪爾"
   Qādir Suhrawardī: "卡迪爾·蘇赫拉瓦迪"
-  Qādirī: "卡迪里教團"
   Qāsim: "卡西姆"
   Qāḍī: "卡迪"
   Qīng: "清"
@@ -8176,7 +8061,6 @@ fixed:
   Saint Andrew: "聖安得烈"
   Saint Anthony: "聖安多尼"
   Saint Augustine: "聖奧古斯丁"
-  Saint Augustine Gospels: "《聖奧古斯丁福音書》"
   Saint Bartholomew's Day Massacre: "聖巴多羅買大屠殺"
   Saint Blaise: "聖伯拉削"
   Saint Catherine of the Wheel: "車輪聖加大肋納"
@@ -8293,9 +8177,7 @@ fixed:
   Sangmin: "常民"
   Sankar-Zouma: "桑卡爾-祖馬"
   Sankin-kōtai: "參勤交代"
-  Sankore: "桑科雷"
   Sankore Madrasa: "桑科雷伊斯蘭學校"
-  Sankoré: "桑科雷"
   Sankoré Madrasah: "桑科雷伊斯蘭學校"
   Sankoré Mosque: "桑科雷清真寺"
   Sanneck: "桑內克"
@@ -8380,7 +8262,6 @@ fixed:
   School of Painting: "繪畫學派"
   School of Theology: "神學院"
   Schumacher: "舒馬赫"
-  Schwanenorden: "天鵝騎士團"
   Schwaz: "施瓦茨"
   Schwerin: "施威林"
   Schönbrunn: "美泉宮"
@@ -8407,10 +8288,8 @@ fixed:
   Scutage: "軍役代金"
   Scythia: "斯基泰"
   Scythians: "斯基泰人"
-  Sea Ban: "海禁"
   Sea Beggars: "海上丐軍"
   Sea Current: "洋流"
-  Seaban: "海禁"
   Seahawks: "海鷹"
   Seasonal Economy: "季節性經濟"
   Seazone: "海域"
@@ -8489,7 +8368,6 @@ fixed:
   Seville: "塞維亞"
   Seville Bullfighting School: "塞維亞鬥牛學校"
   Sforza: "斯福爾扎"
-  Shah: "沙阿"
   Shaiva: "濕婆"
   Shaivism: "濕婆派"
   Shakespeare: "莎士比亞"
@@ -8549,7 +8427,6 @@ fixed:
   Shwedagon Pagoda: "雪德宮大金塔"
   Shàngdì: "上帝"
   Shāfi'ī: "沙斐儀派"
-  Shāh: "沙阿"
   Shāhanshāh: "萬王之王"
   Shāhbandar: "沙班達爾"
   Shānxī: "山西"
@@ -8562,9 +8439,7 @@ fixed:
   Siberian Frontier: "西伯利亞拓荒區"
   Sicily: "西西里"
   Sicut Malefici Aegyptii: "如同埃及巫士"
-  Siddhartha Gautama: "悉達多·喬達摩"
   Siddhārtha: "悉達多"
-  Siddhārtha Gautama: "悉達多·喬達摩"
   Siege Accumulation: "圍城累積值"
   Siege Cannons: "攻城火砲"
   Siege Engineers: "攻城工程師"
@@ -8636,7 +8511,6 @@ fixed:
   Situation Modifiers: "局勢修正"
   Sivas: "錫瓦斯"
   Six Boards: "六部"
-  Six Codes of Governance: "《經濟六典》"
   Six Edicts: "六道敕令"
   Six Ministries: "六部"
   Six-Mile Wall: "六里牆"
@@ -8792,7 +8666,6 @@ fixed:
   Srikula: "吉祥派"
   Sringeri Sharadamba Temple: "斯林蓋里夏拉達女神廟"
   Srirangam: "斯里蘭甘"
-  St Augustine Gospels: "《聖奧古斯丁福音書》"
   St Basil's Cathedral: "聖巴西爾大教堂"
   St George's Day: "聖喬治日"
   St Julian: "聖朱利安"
@@ -8873,10 +8746,8 @@ fixed:
   Stranger Knights: "外籍騎士"
   Strasbourg: "史特拉斯堡"
   Strategic Value: "戰略價值"
-  Strategikon: "《戰略書》"
   Strategós: "軍區長官"
   Stratioti Levies: "斯特拉迪奧特徵召兵"
-  Stratēgikòn: "《戰略書》"  # 這裡是指書名
   Stratēgikòn Hippikoû: "《騎兵戰略書》"
   Stratēgikòn Pezikoû: "《步兵戰略書》"
   Stratēgikòn Synórōn: "《邊境戰略書》"
@@ -9178,7 +9049,6 @@ fixed:
   Tenka Fubu: "天下布武"
   Tennō: "天皇"
   Tenochtitlán: "特諾奇提特蘭"
-  Teotl: "特奧特爾"
   Tepeu: "特佩烏"
   Terakoya: "寺子屋"
   Tercenas: "特塞納船廠"
@@ -9212,7 +9082,6 @@ fixed:
   Textile Manufactory: "紡織工場"
   Textile Mill: "紡織廠"
   Teōpixqueh: "特奧皮什克"
-  Teōtl: "特奧特爾"
   Thai: "泰"
   Thaler: "塔勒"
   Thames: "泰晤士"
@@ -9223,7 +9092,6 @@ fixed:
   Theatine Order: "泰阿蒂尼司鐸會"
   Theatinerkirche: "戴蒂尼會教堂"
   Thebes: "底比斯"
-  Themata: "軍區"
   Theme System: "軍區制"
   Theocratic Elective: "神權選舉制"
   Theocratic Monarchy: "神權君主制"
@@ -9290,7 +9158,6 @@ fixed:
   Thuringia: "圖林根"
   Thuận Thiên: "順天"
   Théma: "軍區"
-  Thémata: "軍區"
   Théodicée: "《神義論》"
   Thābit: "薩比特"
   Tibet: "吐蕃"
@@ -9576,7 +9443,6 @@ fixed:
   Tungusic Shamanism: "通古斯薩滿信仰"
   Tunupa: "圖努帕"
   Tupac Amaru: "圖帕克·阿馬魯"
-  Tupac Amaru II: "圖帕克·阿馬魯二世"
   Tupchi: "圖普奇砲兵"
   Tupiniquim: "圖皮尼金"
   Tupiniquim Coastal Sea: "圖皮尼金沿岸海域"
@@ -9619,7 +9485,6 @@ fixed:
   Tèra Crûda: "夯土工事"
   Téng Wáng Pavilion: "滕王閣"
   Tìfāyìfú: "剃髮易服"
-  Túpac Amaru II: "圖帕克·阿馬魯二世"
   Tübingen: "圖賓根"
   Týr: "提爾"
   Tā Moko: "塔莫科紋面"
@@ -9802,7 +9667,6 @@ fixed:
   Valley of Mexico: "墨西哥谷"
   Valois-Anjou: "瓦盧瓦-安茹"
   Valstiečiai: "瓦爾斯蒂耶恰伊"
-  Vamana: "筏摩那"
   Vamana Temple: "筏摩那神廟"
   Van Dyck: "范·戴克"
   Vanir: "華納神族"
@@ -9811,7 +9675,6 @@ fixed:
   Vanuatu: "萬那杜"
   Vanuatu Coastal Sea: "萬那杜沿岸海域"
   Vanuatu Sea: "萬那杜海"
-  Varaha: "婆羅訶"
   Varaha Lakshmi Narasimha Temple: "婆羅訶吉祥天女那羅辛哈神廟"
   Varaha Temple: "婆羅訶神廟"
   Varahaswamy Temple: "婆羅訶神廟"
@@ -9822,7 +9685,6 @@ fixed:
   Vardar: "瓦爾達爾"
   Vardzia: "瓦爾齊亞"
   Varna: "瓦爾納"
-  Varāha: "婆羅訶"
   Vasco Da Gama: "瓦斯科·達·伽馬"
   Vasily II: "瓦西里二世"
   Vasily Yuryevich: "瓦西里·尤里耶維奇"
@@ -9899,7 +9761,6 @@ fixed:
   Vienna: "維也納"
   Viennese Classicism: "維也納古典樂派"
   Vientiane: "永珍"
-  Vietnam: "越南"
   Vijayanagar: "毗奢耶那伽羅"
   Vijayanagara: "毗奢耶那伽羅"
   Viking: "維京"
@@ -9952,7 +9813,6 @@ fixed:
   Vizcaya: "比斯開"
   Vizier: "維齊爾"
   Vizovice: "維佐維采"
-  Việt Nam: "越南"
   Vlach: "弗拉赫"
   Vlach Law: "弗拉赫法"
   Vlachs: "弗拉赫人"
@@ -9987,7 +9847,6 @@ fixed:
   Vélez-Málaga: "貝萊斯-馬拉加"
   Vézelay: "韋茲萊"
   Vézelay Abbey: "韋茲萊隱修院"
-  Vāmana: "筏摩那"
   Waaq: "瓦克"
   Waaqeffanna: "瓦克法納信仰"
   Wagadou: "瓦加杜"
@@ -10138,13 +9997,11 @@ fixed:
   White Angel: "《白天使》"
   White Company: "白色傭兵團"
   White Elephant: "白象"
-  White Hall: "白廳"
   White Monastery: "白色修道院"
   White Mountain: "白山"
   White Peace: "無條件和平"
   White Sea: "白海"
   White Tiger: "白虎"
-  Whitehall: "白廳"
   Whitehall Palace: "白廳宮"
   Whitsun: "聖靈降臨節"
   Wicked Bible: "《邪惡聖經》"
@@ -10208,7 +10065,6 @@ fixed:
   Wool Textile Mills: "羊毛紡織廠"
   Wool Weavers Guild: "羊毛織工行會"
   Wool Weavers Workshops: "羊毛織工作坊"
-  Work Of Art: "藝術品"
   Works of Art Tab: "藝術品分頁"
   Workshop: "工作坊"
   World Map: "世界地圖"
@@ -10304,7 +10160,6 @@ fixed:
   Yuriev Monastery: "尤里耶夫修道院"
   Yury Dmitrievich: "尤里·德米特里耶維奇"
   Yuán: "元"
-  Yuán Shǐ: "《元史》"
   Yuánmíngyuán: "圓明園"
   Yáng: "陽"
   Yùn Shòupíng: "惲壽平"
@@ -10319,7 +10174,6 @@ fixed:
   Zadar: "扎達爾"
   Zadužbina: "宗教捐建"
   Zafarnāma: "《勝利之書》"
-  Zagan: "札甘"
   Zagreb: "薩格勒布"
   Zagros: "札格洛斯"
   Zagros Mountains: "札格洛斯山脈"
@@ -10400,7 +10254,6 @@ fixed:
   Álvarez: "阿爾瓦雷斯"
   Álvaro de Bazán: "阿爾瓦羅·德·巴贊"
   Âyan: "阿揚"
-  Æsir: "亞薩神族"
   Çobandede Bridge: "喬班德德橋"
   École: "學校"
   École Militaire: "軍事學校"
@@ -10408,7 +10261,6 @@ fixed:
   Éméi Shān: "峨眉山"
   Étienne: "艾蒂安"
   Étienne de Vesc: "艾蒂安·德·維斯克"
-  Étienne Marcel: "艾蒂安·馬塞爾"
   Íñigo: "伊尼戈"
   Íñigo Arista: "伊尼戈·阿里斯塔"
   Ñusta: "紐斯塔"
@@ -10440,7 +10292,6 @@ fixed:
   Țara Românească: "羅馬尼亞之地"
   Ḏimmī: "齊米"
   Ḡālib: "加利卜"
-  Ḥabshī: "哈布希"
   Ḥasan Buzurg: "大哈散"
   Ḥisba: "希斯巴"
   Ḥiṣār-e-Fīrūzā: "菲羅茲堡"
@@ -10449,9 +10300,7 @@ fixed:
   Ṣāḥib Qirān: "吉星交會之主"
   Ṭawāf al-Ifadah: "朝覲主巡遊"
 
-  Abbās: "阿拔斯"
   Abbās-e Bozorg: "阿拔斯大帝"
-  Abu al-Qasim al-Zahrawi: "阿布·卡塞姆·宰赫拉威"
   Abu al-Walid ibn Rushd: "阿布·瓦利德·伊本·魯世德"
   Abu Bakr ibn Tufail: "阿布·巴克爾·伊本·圖費勒"
   Academy of Culture: "文化學院"
@@ -10481,11 +10330,9 @@ fixed:
   Algirdas: "阿爾吉爾達斯"
   Ali Bey: "阿里·貝伊"
   Alsace: "阿爾薩斯"
-  Alī: "阿里"
   Amor Electis, Iniustis Ordinor Ultor: "為選者所愛，受命懲治不義者"
   An-Najaf al-Ashraf: "尊貴的納傑夫"
   Andalus: "安達盧斯"
-  Andrea: "安德烈亞、安德烈、安卓、安德肋、安德莉亞、安德烈婭"
   András Hess: "安德拉什·赫斯"
   Angkor: "吳哥"
   Annals of King Seongjong: "《成宗實錄》"
@@ -10585,7 +10432,6 @@ fixed:
   Castello: "卡斯泰洛"
   Castiglione: "卡斯蒂廖內"
   Cathedral of Graz: "格拉茲主教座堂"
-  Celestine: "雷定、塞萊斯廷"
   Celestine Order: "雷定會"
   Charles VI: "查理六世"
   Chief State Councilor: "領議政"
@@ -10712,7 +10558,6 @@ fixed:
   Eskandar Beg Munshi: "伊斯坎達爾·貝格·蒙希"
   Lodomeria: "洛多梅里亞"
   Esterházy: "艾斯特哈茲"
-  Eugene: "尤金、歐仁、歐根"
   Eugene of Savoy: "薩伏依的歐根"
   Flax: "亞麻"
   Fluitschip: "弗勒伊特帆船"
@@ -10730,7 +10575,6 @@ fixed:
   Qizilbash: "奇茲爾巴什"
   Joseph II: "約瑟夫二世"
   Rudolf IV: "魯道夫四世"
-  Rákóczi: "拉科齊"
   Speyer: "斯派爾"
   von Dietrichstein: "馮·迪特里希施泰因"
   König Ottokars Glück und Ende: "《奧托卡王的盛衰》"  # 戲劇作品名，保留完整原名供確認。
@@ -10770,7 +10614,6 @@ fixed:
   Gomarus: "高馬勒斯"
   Gongmin: "恭愍"
   Goyang: "高陽"
-  Goštautai: "戈什陶泰"
   Grand Marshal: "大元帥"
   Great Pensioner: "大議長"
   Great Surgun: "大流徙"
@@ -10783,7 +10626,6 @@ fixed:
   Gundakar: "貢達卡爾"
   Gundakar von Liechtenstein: "貢達卡爾·馮·列支敦斯登"
   Gwan-Hak: "官學派"  # 朝鮮初期的政治/儒學派系
-  Gyeongguk Daejon: "《經國大典》"
   Göllersdorf: "格勒爾斯多夫"
   Haengju: "幸州"
   Halicarnassus: "哈利卡那索斯"
@@ -10828,7 +10670,6 @@ fixed:
   Qom: "庫母"
   Jadwiga: "雅德維加"
   Questenberg: "奎斯滕貝格"
-  Raadpensionaris: "大議長"
   Tannstetter: "坦施泰特"
   Theophrastus von Hohenheim: "德奧弗拉斯特·馮·霍恩海姆"
   Treaty of Gyehae: "癸亥條約"
@@ -11022,10 +10863,7 @@ fixed:
   Qâjâr: "卡加"
   Qâsem: "卡塞姆"
   Raabization: "拉布土地改革"
-  Raad Pensionaris: "大議長"
   Radvila Astikas: "拉德維拉·阿斯蒂卡斯"
-  Radziwill: "拉齊維烏"
-  Radziwiłł: "拉齊維烏"
   Rangaku: "蘭學"
   Ratssendeboten: "市議會使節"
   Siebenbürger: "齊本比爾格"
@@ -11054,19 +10892,16 @@ fixed:
   Âqâ Mohammad Xân-e Qâjâr: "阿迦·穆罕默德·汗·卡加"
 
   Kuruc: "庫魯茨"
-  Hajj: "朝覲"
   Reichsbank: "德意志帝國銀行"
   Reichshofrat: "帝國宮廷法院"
   Reichstürkenhilfe: "帝國抗鄂圖曼援助"
   Zaghawa: "扎加瓦"
   Remonstrants: "抗辯派"
   Ashikaga Gakko Academy: "足利學校"
-  Gostautai: "戈什陶泰"
   Musha'sha'iyyah: "穆沙沙伊耶"
   Rudolf: "魯道夫"
   Rudolf II: "魯道夫二世"
   Rudolfine House Rules: "《魯道夫家族規約》"
-  Rákoczi: "拉科齊"
   Saba: "薩巴"
   Saint Christopher: "聖克里斯多福"
   Saint Croix: "聖克羅伊島"
@@ -11103,8 +10938,6 @@ fixed:
   Spinola Bank: "斯皮諾拉銀行"
   Spinoza: "史賓諾沙"
   Stadtluft macht frei: "城市空氣使人自由"
-  Statuta Gazariae: "《加扎里亞法規》"
-  Statuta Gazerie: "《加扎里亞法規》"
   Statuta Valachorum: "《弗拉赫人法規》"
   Sternberg: "施特恩貝格"
   Stevin: "斯泰芬"
@@ -11156,14 +10989,11 @@ fixed:
   West India Trade Company: "西印度貿易公司"
   Wiener Stadtbank: "維也納市立銀行"
   Wiener Zeitung: "《維也納報》"
-  Wiennerische Diarium: "《維也納日報》"
-  Wiennerisches Diarium: "《維也納日報》"
   William III: "威廉三世"
   Yamana: "山名"
   Yi Sun Sin: "李舜臣"
   Zaccaria: "扎卡里亞"
   Čârbâğ: "四分園"
-  Ḥajj: "朝覲"
   Ṣafawiyya: "薩法維耶教團"
   Ṣāfī ad-Dīn Isḥāq Ardabīlī: "薩菲丁·伊沙克·阿爾達比里"
   Kingdom of Galicia-Lodomeria: "加利西亞-洛多梅里亞王國"
@@ -11207,7 +11037,6 @@ fixed:
   Algarve: "阿爾加維"
   Alhambra: "阿罕布拉"
   Aljubarrota: "阿爾茹巴羅塔"
-  Alā' ad-Dīn: "阿拉丁"
   Ambon: "安汶"
   Amen: "阿們"
   Anastasia: "安娜塔西亞"
@@ -11237,7 +11066,6 @@ fixed:
   Ark of Saint Peter Martyr: "聖伯多祿殉道者墓龕"
   Arkhangelsk Decree: "阿爾漢格爾斯克敕令"
   Arnstadt: "阿恩施塔特"
-  Ibn Khaldun: "伊本·赫勒敦"
   Artillery Maestro: "砲術大師"
   Nizwa: "尼茲瓦"
   Asqalānī: "阿斯卡拉尼"
@@ -11386,7 +11214,6 @@ fixed:
   Crimean Tatar: "克里米亞韃靼"
   Dal Verme: "達爾·韋爾梅"
   Daugava: "道加瓦河"
-  De revolutionibus orbium coelestium: "《天體運行論》"
   Deacon: "執事"
   Decembrist Movement: "十二月黨人運動"
   Decembrist Revolt: "十二月黨人起義"
@@ -11419,15 +11246,12 @@ fixed:
   Courland: "庫爾蘭"
   Semigalia: "瑟米加利亞"
   Magnus I: "馬格努斯一世"
-  Żagań: "札甘"
   Dukhobors: "杜霍波爾派"
   Duomo di Milano: "米蘭主教座堂"
   Dutch Republic: "荷蘭共和國"
   Maria Josepha: "瑪麗亞·約瑟法"
   Frederick August I: "腓特烈·奧古斯特一世"
   Frederick August II: "腓特烈·奧古斯特二世"
-  Gdansk: "格但斯克"
-  Gdańsk: "格但斯克"
   Glandèves: "格朗代夫"
   Borghese: "波格賽"
   Inês de Castro: "伊內斯·德·卡斯楚"
@@ -11461,6 +11285,177 @@ fixed:
   Zhèng Chénggōng: "鄭成功"
   Ösel: "厄塞爾"
   Danes: "丹麥人"
+
+  Conventiones Particulares: "特別議會"
+  Cort Adeler: "科特·阿德勒"
+  Ericeira: "埃里塞拉"
+  Court of the Vicar: "代理官法院"
+  Dvina: "德維納"
+  Dvina River: "德維納河"
+  Grand Court of the Vicar: "大代理官法院"
+  Mercantilist Ideals: "重商主義理念"
+  Orkney Islands: "奧克尼群島"
+  Orkney Isles: "奧克尼群島"
+  Orkney: "奧克尼"
+  Ottoman Sultan: "鄂圖曼蘇丹"
+  Our Lady of Kazan: "《喀山聖母像》"
+  Our Lady of the Sign: "《徵兆之母聖像畫》"
+
+  East Java: "東爪哇"
+  Eastern Ganga Kings: "東恆伽王朝"
+  Eck: "埃克"
+  Egidian Constitutions: "《埃吉迪烏斯法規》"
+  Elba: "厄爾巴島"
+  Elbe River: "易北河"
+  Eleanor Glinski: "埃莉諾·格林斯基"
+  Elective Monarchy: "選舉君主制"
+  Frederick the Wise: "「智者」腓特烈"
+  Charles III Philip: "查理三世·菲利普"
+  Elena Glinskaya: "葉連娜·格林斯卡婭"
+  Elmina Castle: "埃爾米納城堡"
+  Elzéar: "埃爾澤阿爾"
+  Sabran: "薩布朗"
+  Emelian Pugatchev: "葉梅利揚·普加喬夫"
+  Emperor Akbar: "阿克巴大帝"
+  Epistola de Victoria Contra Infideles: "《戰勝異教徒書》"
+  Ernest von Biron: "恩斯特·馮·比隆"
+  Ernestine Electorate: "恩斯特系選帝侯國"
+  Ernst Johan von Biron: "恩斯特·約翰·馮·比隆"
+  Eugene IV: "安日納四世"
+  Evreux: "埃夫勒"
+  Timbuktu: "廷布克圖"
+  Feast of Saints Peter and Paul: "聖伯多祿及聖保祿宗徒節"
+  Feodor III: "費奧多爾三世"
+  Feodor Romanov: "費奧多爾·羅曼諾夫"
+  Fernão: "費爾南"
+  Fernão Lopes: "費爾南·洛佩斯"
+  Finnmark: "芬馬克"
+  Vedomosti: "《新聞報》"
+  Forty Conspirators: "四十密謀者"
+  Fosen: "福森"
+  Fountain of the Four Rivers: "四水噴泉"
+  Fra Angelico: "安傑利柯修士"
+  Francesco Bartolomeo Rastrelli: "法蘭切斯科·巴爾托洛梅奧·拉斯特雷利"
+  Rieti: "列蒂"
+  Francesco Rastrelli: "法蘭切斯科·拉斯特雷利"
+  Francesco Sforza: "法蘭切斯科·斯福爾扎"
+  Francis Rastrelli: "法蘭西斯·拉斯特雷利"
+  Francois Marie Voltaire: "法蘭索瓦·馬里·伏爾泰"
+  Frankincense: "乳香"
+  François Le Fort: "法蘭索瓦·勒福爾"
+  Fraticelli: "小兄弟派"
+  Frederick Coyett: "弗雷德里克·揆一"
+  Freiberger Berggeschrey: "弗賴貝格銀礦熱潮"
+  Friar: "修士"
+  Friar Jorge Vogado: "若熱·沃加多修士"
+  Wettin: "韋廷"
+  Friedrich the Quarrelsome: "好鬥的腓特烈"
+  Friedrichsburg: "弗里德里希斯堡"
+  Frosta: "弗羅斯塔"
+  Sunnmøre: "松默勒"
+  Funchal: "豐沙爾"
+  Fustat: "福斯塔特"
+  Fyodor Baikov: "費奧多爾·拜科夫"
+  Fyodor I: "費奧多爾一世"
+  Gajah Mada: "加查·馬達"
+  Galeazzo II: "加萊亞佐二世"
+  Galeazzo II Visconti: "加萊亞佐二世·維斯孔蒂"
+  Galvano Fiamma: "加爾瓦諾·菲亞馬"
+  Gannibal: "加尼巴爾"
+  Gaspar da India: "加斯帕爾·達·印度"
+  Gazette: "公報"
+  Gemäldegalerie: "畫廊"
+  Gemäldegalerie Alte Meister: "歷代大師畫廊"
+  Georg Bartisch: "格奧爾格·巴爾蒂施"
+  George Felten: "喬治·費爾滕"
+  al-Iḥāṭa fī akhbār Gharnāṭa: "《格拉納達史事全錄》"
+  Gian Lorenzo Bernini: "吉安·洛倫佐·貝尼尼"
+  Gioco del Ponte: "橋之競賽"
+  Giordano Bruno: "焦爾達諾·布魯諾"
+  Glinsky: "格林斯基"
+  Gotthard Ketler: "戈特哈德·克特勒"
+  Martim Afonso de Sousa: "馬爾廷·阿豐索·德·索薩"
+  Gracia Mendes Nasi: "格拉西亞·門德斯·納西"
+  Aleksandras: "亞歷山德拉斯"
+  Grand Master: "大團長"
+  Vasily III: "瓦西里三世"
+  Oslo: "奧斯陸"
+  Great Northern War: "大北方戰爭"
+  Greater Poland: "大波蘭"
+  Gregory Orlov: "格里戈里·奧爾洛夫"
+  Grigory Orlov: "格里戈里·奧爾洛夫"
+  Gutenberg: "古騰堡"
+  Hammer of the Witches: "《女巫之槌》"
+  Peterhof: "彼得霍夫"
+  Dyah Pitaloka: "迪亞·皮塔洛卡"
+  Haymarket Theater: "乾草市場劇院"
+  Heinrich Kramer: "海因里希·克雷默"
+  Heinrich von Brühl: "海因里希·馮·布呂爾"
+  Henrique: "恩里克"
+  Savvatiy: "薩瓦提"
+  Hieronim Pinocci: "希耶羅尼姆·皮諾奇"
+  Neptunism: "水成論"
+  Hollendertiden: "荷蘭時代"
+  Holy League: "神聖同盟"
+  Holy Scripture: "《聖經》"
+  Horb: "霍爾布"
+  Hålogaland: "哈洛加蘭"
+  Stjørdal: "斯徹達爾"
+  Selbu: "塞爾布"
+  Herjedalen: "海里耶達倫"
+  Iacopo Bussolari: "雅科波·布索拉里"
+  Ibn Hajar al-Asqalani: "伊本·哈哲爾·阿斯格拉尼"
+  Ibn Iyās: "伊本·伊亞斯"
+  Ibn Taghribirdi: "伊本·塔格里比爾迪"
+  Ibn Ḥajar: "伊本·哈哲爾"
+  Idrisid Shurfā: "伊德里斯系舒爾法"
+  Ignazio Danti: "伊尼亞齊奧·丹蒂"
+  Ilyna Street: "伊利納街"
+  Indium: "銦"
+  Germanium: "鍺"
+  Ingerd Ottesdatter: "英格爾德·奧特斯達特"
+  Inquisição Portuguesa: "葡萄牙宗教裁判所"
+  Instruction on Laws: "《法律訓令》"
+  Inês: "伊內斯"
+  Inān Fāris: "伊南·法里斯"
+  Iron Maiden: "鐵處女"
+  Istoriya Rossiyskaya: "《俄羅斯史》"
+  Ivan Betskoy: "伊凡·貝茨科伊"
+  Ivan Fyodorov: "伊凡·費奧多羅夫"
+  Ivan Gramotin: "伊凡·格拉莫京"
+  Ivan I: "伊凡一世"
+  Ivan III: "伊凡三世"
+  Jadaka al-Ghaithu: "《願甘霖惠澤於你》"
+  Johan Gutenberg: "約翰·古騰堡"
+  Johann Eck: "約翰·埃克"
+  Andreas Karlstadt: "安德烈亞斯·卡爾施塔特"
+  John Gramotin: "約翰·格拉莫京"
+  Judaizers: "猶太化派"
+  Kramer: "克雷默"
+  Kuzma: "庫茲馬"
+  Kuzma Minin: "庫茲馬·米寧"
+  Lamma Bada Yatathanna: "《當伊人翩然現身》"
+  Longchamp: "隆尚"
+  Magalhães: "馬加良斯"
+  Yury Felten: "尤里·費爾滕"
+  Moskovskiye Vedomosti: "《莫斯科公報》"
+  Moulay: "穆萊"
+  Nakaz Pravilnosti: "《規範訓令》"
+  Nicetas Minin: "尼塞塔斯·米寧"
+  Peter I: "彼得一世"
+  Peter III: "彼得三世"
+  Peter the Great: "彼得大帝"
+  Prato: "普拉托"
+  Muscovy: "莫斯科"
+  Wattasids: "瓦塔斯王朝"
+  Romsdal: "羅姆斯達爾"
+  Edøy: "埃德伊"
+  Societas Jesu: "耶穌會"
+  Sophia Palaiologina: "索菲婭·巴列奧略"
+  St Petersburg: "聖彼得堡"
+  Summis desiderantes affectibus: "《懷著至高熱忱》"
+  Valois: "瓦盧瓦"
+  Vardøhus: "瓦爾德胡斯"
 
 aliases:
   Aberffraw:
@@ -11810,6 +11805,339 @@ aliases:
     also:
       - Work of Art
       - Works Of Art
+  Abu al-Qasim al-Zahrawi:
+    zh: "阿布·卡塞姆·宰赫拉威"
+    also:
+      - Abū al-Qāsim al-Zahrāwī
+  Aragon:
+    zh: "亞拉岡"
+    also:
+      - Aragó
+      - Aragón
+  Bartolomé de Medina:
+    zh: "巴托洛梅·德·梅迪納"
+    also:
+      - Bartolome de Medina
+  Brahma:
+    zh: "梵天"
+    also:
+      - Brahmā
+  Casa de Contratación:
+    zh: "貿易廳"
+    also:
+      - Casa de Contratacion
+  Code of Justinian:
+    zh: "《查士丁尼法典》"
+    also:
+      - Justinian Code
+  Crécy:
+    zh: "克雷西"
+    also:
+      - Crecy
+  Étienne Marcel:
+    zh: "艾蒂安·馬塞爾"
+    also:
+      - Etienne Marcel
+  Francisco Suárez:
+    zh: "法蘭西斯科·蘇亞雷斯"
+    also:
+      - Francisco Suarez
+  Gdańsk:
+    zh: "格但斯克"
+    also:
+      - Gdansk
+  Guru:
+    zh: "上師"
+    also:
+      - Gurū
+  Gyeongguk Daejeon:
+    zh: "《經國大典》"
+    also:
+      - Gyeongguk Daejon
+  Ibn Khaldun:
+    zh: "伊本·赫勒敦"
+    also:
+      - Ibn Khaldūn
+  Ivan Nelipić:
+    zh: "伊萬·內利皮奇"
+    also:
+      - Ivan Nelipic
+  Jihad:
+    zh: "吉哈德"
+    also:
+      - Jihād
+  Kutná Hora:
+    zh: "庫特納荷拉"
+    also:
+      - Kutna Hora
+  Mexico:
+    zh: "墨西哥"
+    also:
+      - México
+  Orléans:
+    zh: "奧爾良"
+    also:
+      - Orleans
+  Pedro Rodríguez:
+    zh: "佩德羅·羅德里格斯"
+    also:
+      - Pedro Rodriguez
+  Peru:
+    zh: "祕魯"
+    also:
+      - Perú
+  Phaedon:
+    zh: "《斐多》"
+    also:
+      - Phädon
+  Rákóczi:
+    zh: "拉科齊"
+    also:
+      - Rákoczi
+  Radziwiłł:
+    zh: "拉齊維烏"
+    also:
+      - Radziwill
+  Saint Augustine Gospels:
+    zh: "《聖奧古斯丁福音書》"
+    also:
+      - St Augustine Gospels
+  Sankoré:
+    zh: "桑科雷"
+    also:
+      - Sankore
+  Strategikon:  # 這裡是指書名
+    zh: "《戰略書》"
+    also:
+      - Stratēgikòn
+  Túpac Amaru II:
+    zh: "圖帕克·阿馬魯二世"
+    also:
+      - Tupac Amaru II
+  Annals of Poland:
+    zh: "《波蘭編年史》"
+    also:
+      - Kronika Polski
+  Book of Hunting:
+    zh: "《狩獵之書》"
+    also:
+      - Libro de la Montería
+  Book of the Consulate of the Sea:
+    zh: "《海上領事館法典》"
+    also:
+      - Llibre del Consolat de Mar
+  Chronicle of Alfonso XI:
+    zh: "《阿方索十一世編年史》"
+    also:
+      - Crónica de Alfonso Onceno
+  Chronicle of Aragon:
+    zh: "《亞拉岡編年史》"
+    also:
+      - Crónica de Aragón
+  Chronicles of Castile:
+    zh: "《卡斯提爾諸王編年史》"
+    also:
+      - Crónicas de los Reyes de Castilla
+  Dream of the Red Chamber:
+    zh: "《紅樓夢》"
+    also:
+      - Hóng Lóu Mèng
+  El Tres de Mayo de 1808 en Madrid:
+    zh: "《1808年5月3日的槍殺》"
+    also:
+      - Los fusilamientos del tres de mayo
+  Fire Dragon Manual:
+    zh: "《火龍經》"
+    also:
+      - Huǒlóngjīng
+  Gyeongje Yukjeon:
+    zh: "《經濟六典》"
+    also:
+      - Six Codes of Governance
+  History of Yuán:
+    zh: "《元史》"
+    also:
+      - Yuán Shǐ
+  On the Revolutions of the Heavenly Spheres:
+    zh: "《天體運行論》"
+    also:
+      - De revolutionibus orbium coelestium
+  Statuta Gazariae:
+    zh: "《加扎里亞法規》"
+    also:
+      - Statuta Gazerie
+  Wiennerisches Diarium:
+    zh: "《維也納日報》"
+    also:
+      - Wiennerische Diarium
+  Abbas:
+    zh: "阿拔斯"
+    also:
+      - Abbās
+  Académie Française:
+    zh: "法蘭西學術院"
+    also:
+      - Academie Francaise
+      - Academie Française
+  Aesir:
+    zh: "亞薩神族"
+    also:
+      - Æsir
+  Alā' ad-Dīn:
+    zh: "阿拉丁"
+    also:
+      - Alaaddin
+  Ali:
+    zh: "阿里"
+    also:
+      - Alī
+  Bastard of Orléans:
+    zh: "奧爾良的私生子"
+    also:
+      - Bastard of Orleans
+  Beijing:
+    zh: "北京"
+    also:
+      - Běijīng
+  Bertrand du Guesclin:
+    zh: "貝特朗·杜·蓋克蘭"
+    also:
+      - Bertrand Du Guesclin
+  Châteaubriant:
+    zh: "沙托布里揚"
+    also:
+      - Chateaubriant
+  Collège de France:
+    zh: "法蘭西公學院"
+    also:
+      - College de France
+  Dīwān:
+    zh: "底萬"
+    also:
+      - Dîvân
+      - Divan
+      - Diwan
+  Goštautai:
+    zh: "戈什陶泰"
+    also:
+      - Gostautai
+  Habshi:
+    zh: "哈布希"
+    also:
+      - Ḥabshī
+  Hajj:
+    zh: "朝覲"
+    also:
+      - Ḥajj
+  Kali:
+    zh: "迦梨"
+    also:
+      - Kālī
+  Karimi:
+    zh: "卡里米"
+    also:
+      - Kārimī
+  Kephale:
+    zh: "凱法利"
+    also:
+      - Kephalē
+  Khalji:
+    zh: "卡爾吉"
+    also:
+      - Khaljī
+  Lodi:
+    zh: "洛迪"
+    also:
+      - Lōdī
+  Mit'a System:
+    zh: "米塔徭役制"
+    also:
+      - Mita System
+  New Haven:
+    zh: "紐哈芬"
+    also:
+      - Newhaven
+  Order of the Swan:
+    zh: "天鵝騎士團"
+    also:
+      - Order of The Swan
+      - Schwanenorden
+  Owain Glyndŵr:
+    zh: "歐文·格林杜爾"
+    also:
+      - Owain Glyndwr
+  Palamas:
+    zh: "帕拉瑪斯"
+    also:
+      - Palamâs
+  Peasants' War:
+    zh: "農民戰爭"
+    also:
+      - Peasants War
+  Pianura Padana:
+    zh: "波河平原"
+    also:
+      - Pianüra Padâna
+  Pōchtēcah:
+    zh: "波奇特卡"
+    also:
+      - Pochtēcah
+  Qadiri:
+    zh: "卡迪里教團"
+    also:
+      - Qādirī
+  Raadpensionaris:
+    zh: "大議長"
+    also:
+      - Raad Pensionaris
+  Sea Ban:
+    zh: "海禁"
+    also:
+      - Seaban
+  Shah:
+    zh: "沙阿"
+    also:
+      - Shāh
+  Siddhartha Gautama:
+    zh: "悉達多·喬達摩"
+    also:
+      - Siddhārtha Gautama
+  Teotl:
+    zh: "特奧特爾"
+    also:
+      - Teōtl
+  Themata:
+    zh: "軍區"
+    also:
+      - Thémata
+  Vamana:
+    zh: "筏摩那"
+    also:
+      - Vāmana
+  Varaha:
+    zh: "婆羅訶"
+    also:
+      - Varāha
+  Vietnam:
+    zh: "越南"
+    also:
+      - Việt Nam
+  Whitehall:
+    zh: "白廳"
+    also:
+      - White Hall
+  Żagań:
+    zh: "札甘"
+    also:
+      - Zagan
+  Meissen:  # 採用官中翻譯
+    zh: "邁森"
+    also:
+      - Meißen
+  Meissner:
+    zh: "邁森"
+    also:
+      - Meißner
 
 contextual:
   Aachener:
@@ -16018,6 +16346,74 @@ contextual:
         when: "作形容詞，表示與賽普勒斯相關"
       - zh: "賽普勒斯人"
         when: "作名詞，指賽普勒斯人"
+  Maronite:
+    default: "馬龍尼"
+    senses:
+      - zh: "馬龍尼"
+        when: "依完整上下文判斷該譯名的適用語境"
+      - zh: "馬龍尼人"
+        when: "依完整上下文判斷該譯名的適用語境"
+      - zh: "馬龍尼派"
+        when: "依完整上下文判斷該譯名的適用語境"
+  Eugene:
+    default: "尤金"
+    senses:
+      - zh: "尤金"
+        when: "英語人名或採英語慣用譯名時"
+      - zh: "歐仁"
+        when: "法語人名或採法語慣用譯名時"
+      - zh: "歐根"
+        when: "德語人名或採德語慣用譯名時"
+      - zh: "安日納"
+        when: "人物已有安日納的慣用譯名時"
+  Andrea:
+    default: "安德烈亞"
+    senses:
+      - zh: "安德烈亞"
+        when: "義大利語男性人名或採義大利語慣用譯名時"
+      - zh: "安德烈"
+        when: "男性人名採一般音譯時"
+      - zh: "安卓"
+        when: "人物已有安卓的慣用譯名時"
+      - zh: "安德肋"
+        when: "天主教人物或採天主教傳統譯名時"
+      - zh: "安德莉亞"
+        when: "女性人名採安德莉亞的慣用譯名時"
+      - zh: "安德烈婭"
+        when: "女性人名採安德烈婭的慣用譯名時"
+  Celestine:
+    default: "雷定"
+    senses:
+      - zh: "雷定"
+        when: "教宗名號或採天主教傳統譯名時"
+      - zh: "塞萊斯廷"
+        when: "一般人名、團體名稱或採音譯時"
+
+  Freemason:
+    default: "自由石匠"
+    senses:
+      - zh: "自由石匠"
+        when: "依完整上下文判斷該譯名的適用語境"
+      - zh: "共濟會會員"
+        when: "依完整上下文判斷該譯名的適用語境"
+      - zh: "共濟會"
+        when: "依完整上下文判斷該譯名的適用語境"
+  Herman:
+    default: "赫爾曼"
+    senses:
+      - zh: "赫爾曼"
+        when: "依完整上下文判斷該譯名的適用語境"
+      - zh: "革爾曼"
+        when: "依完整上下文判斷該譯名的適用語境"
+  Ibrahim:
+    default: "易卜拉欣"
+    senses:
+      - zh: "易卜拉欣"
+        when: "依完整上下文判斷該譯名的適用語境"
+      - zh: "依布拉欣"
+        when: "依完整上下文判斷該譯名的適用語境"
+      - zh: "伊布拉欣"
+        when: "依完整上下文判斷該譯名的適用語境"
 reference_terms:
   Dream:
     suggestions:

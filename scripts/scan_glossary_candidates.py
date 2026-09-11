@@ -25,9 +25,16 @@ LATIN_LETTER = (
 )
 APOSTROPHE = r"'\u2019"
 QUOTE_CHARS = "\"'\u201c\u201d"
+TITLE_ABBREVIATION = r"(?:St|Dr|Mr|Mrs|Ms|Sr|Jr)\."
+# A period may occur inside a name (for example "A.E.I.O.U"), but an
+# ordinary title-case word must not consume the period ending a sentence.
+TITLE_WORD = (
+    rf"(?:{TITLE_ABBREVIATION}|"
+    rf"[{LATIN_UPPER}](?:[{LATIN_LETTER}{APOSTROPHE}-]|\.(?=[{LATIN_LETTER}]))+)"
+)
 NAME_PARTICLE = (
     rf"(?:al|el|wal|ibn|bin|bint|abu|umm|as|ad|an|ar|ash|at|az)-"
-    rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+"
+    rf"{TITLE_WORD}"
 )
 NAME_TITLE_PREFIXES = {
     "amir",
@@ -86,7 +93,7 @@ ARABIC_NAME_PARTICLE_WORDS = {
     "umm",
     "wal",
 }
-ARABIC_NAME_WORD = rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]*[{LATIN_LETTER}{APOSTROPHE}]"
+ARABIC_NAME_WORD = TITLE_WORD
 ARABIC_NAME_PARTICLE = (
     rf"(?:{LOWERCASE_NAME_PARTICLES})-[{LATIN_UPPER}]"
     rf"[{LATIN_LETTER}{APOSTROPHE}.-]*[{LATIN_LETTER}{APOSTROPHE}]"
@@ -185,15 +192,15 @@ ARABIC_NAME_RE = re.compile(
     rf"{ARABIC_NAME_WORD}))*\b"
 )
 TITLE_CASE_RE = re.compile(
-    rf"\b[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+"
+    rf"\b{TITLE_WORD}"
     rf"(?:\s+(?:of|de|del|da|di|du|von|van|the|and|la|le|des|"
     rf"{NAME_PARTICLE}|"
-    rf"(?:{LOWERCASE_NAME_PARTICLES})\s+[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+|"
-    rf"d[{APOSTROPHE}][{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+|"
-    rf"l[{APOSTROPHE}][{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+|"
+    rf"(?:{LOWERCASE_NAME_PARTICLES})\s+{TITLE_WORD}|"
+    rf"d[{APOSTROPHE}]{TITLE_WORD}|"
+    rf"l[{APOSTROPHE}]{TITLE_WORD}|"
     rf"d[{APOSTROPHE}]|"
     r"I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII|"
-    rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+))*\b"
+    rf"{TITLE_WORD}))*\b"
 )
 LOWERCASE_NAME_RE = re.compile(
     rf"\b(?:{LOWERCASE_NAME_PARTICLES})[-{APOSTROPHE}]"
@@ -231,6 +238,10 @@ CONNECTOR_PHRASE_RE = re.compile(
     rf"\s+(?:of|de|del|da|di|du|von|van)\s+"
     rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+"
     rf"(?:\s+[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+){{0,3}})\b"
+)
+COORDINATED_TITLE_RE = re.compile(
+    rf"^({TITLE_WORD}(?:\s+{TITLE_WORD})*)\s+and\s+"
+    rf"({TITLE_WORD}(?:\s+{TITLE_WORD})*)$"
 )
 
 # Only suppress standalone function words that cannot carry glossary meaning.
@@ -574,7 +585,12 @@ def candidates(entries: list[tuple[str, str]]) -> dict[str, set[str]]:
             if is_sentence_fragment(term):
                 continue
             found.setdefault(term, set()).add(key)
-            for embedded in embedded_candidates(match.group(0)):
+            for embedded in embedded_candidates(
+                match.group(0),
+                split_coordinated=is_comma_list_context(
+                    clean, match.start(), match.end()
+                ),
+            ):
                 embedded_term = normalize_candidate(embedded)
                 if embedded_term:
                     found.setdefault(embedded_term, set()).add(key)
@@ -681,7 +697,19 @@ def suppress_elision_fragments(
     return retained
 
 
-def embedded_candidates(term: str) -> set[str]:
+def is_comma_list_context(text: str, start: int, end: int) -> bool:
+    """Return whether a candidate is part of a comma-separated clause."""
+    sentence_start = max(text.rfind(mark, 0, start) for mark in ".!?;")
+    sentence_ends = [
+        position
+        for mark in ".!?;"
+        if (position := text.find(mark, end)) >= 0
+    ]
+    sentence_end = min(sentence_ends, default=len(text))
+    return "," in text[sentence_start + 1 : start] or "," in text[end:sentence_end]
+
+
+def embedded_candidates(term: str, split_coordinated: bool = False) -> set[str]:
     """Return likely named subterms hidden inside a larger title or phrase."""
     found: set[str] = set()
     for match in POSSESSIVE_NAME_RE.finditer(term):
@@ -690,6 +718,12 @@ def embedded_candidates(term: str) -> set[str]:
         found.add(match.group(1))
     for match in CONNECTOR_PHRASE_RE.finditer(term):
         found.add(match.group(1))
+    if split_coordinated:
+        coordinated = COORDINATED_TITLE_RE.fullmatch(
+            normalize_candidate(term) or ""
+        )
+        if coordinated:
+            found.update(coordinated.groups())
     parts = term.split()
     if (
         len(parts) >= 2
@@ -741,7 +775,12 @@ def normalize_candidate(term: str) -> str | None:
 
 
 def is_sentence_fragment(term: str) -> bool:
-    return bool(re.search(r"\.\s+[A-Z]", term))
+    without_abbreviations = re.sub(
+        rf"\b{TITLE_ABBREVIATION}(?=\s+[{LATIN_UPPER}])",
+        lambda match: match.group(0)[:-1],
+        term,
+    )
+    return bool(re.search(rf"\.\s+[{LATIN_UPPER}]", without_abbreviations))
 
 
 @lru_cache(maxsize=20000)

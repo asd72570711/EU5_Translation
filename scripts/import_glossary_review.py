@@ -376,11 +376,22 @@ def main() -> int:
             print(f"wrote: {glossary_path}")
         else:
             print(f"unchanged: {glossary_path}")
-        if (args.resolved_only and not args.keep_review) or pending_drop_items:
+        if args.resolved_only and not args.keep_review:
             cleanup = remove_processed_items(
                 review,
                 imported_terms,
-                remove_skip=args.resolved_only and not args.keep_review,
+                remove_skip=True,
+            )
+            review_path.write_text(
+                json.dumps(review, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            print(json.dumps(cleanup, ensure_ascii=False, indent=2))
+        elif pending_drop_items:
+            cleanup = remove_processed_items(
+                review,
+                set(),
+                remove_skip=False,
             )
             review_path.write_text(
                 json.dumps(review, ensure_ascii=False, indent=2) + "\n",
