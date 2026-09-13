@@ -12,6 +12,7 @@ from typing import Any
 DEFAULT_REVIEW = Path("work/glossary_review/review.json")
 DEFAULT_GLOSSARY = Path("translation_glossary.yml")
 DEFAULT_DROP_TERMS = Path("glossary_drop_terms.yml")
+DEFAULT_SKIP_HISTORY = Path("work/glossary_review/skip_history.json")
 
 WHEN_CONTEXTUAL = "\u4f9d\u5b8c\u6574\u4e0a\u4e0b\u6587\u5224\u65b7\u8a72\u8b6f\u540d\u7684\u9069\u7528\u8a9e\u5883"
 CONTROL_VALUES = {"ai", "cont", "drop", "skip"}
@@ -82,6 +83,64 @@ def add_drop_terms(path: Path, terms: list[str]) -> dict[str, int]:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(output, encoding="utf-8")
     return {"drop_added": len(additions)}
+
+
+def load_skip_history(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        return {"version": 1, "items": []}
+    data = json.loads(read_text(path))
+    if not isinstance(data, dict) or not isinstance(data.get("items"), list):
+        raise ValueError(f"Invalid skip history: {path}")
+    return data
+
+
+def add_skip_history(
+    path: Path, skipped_items: list[dict[str, Any]]
+) -> dict[str, int]:
+    history = load_skip_history(path)
+    history_items = history["items"]
+    indexed: dict[str, dict[str, Any]] = {}
+    for item in history_items:
+        if not isinstance(item, dict) or not isinstance(item.get("term"), str):
+            continue
+        indexed[item["term"].strip().casefold()] = item
+
+    terms_added = 0
+    keys_added = 0
+    for skipped in skipped_items:
+        term = str(skipped.get("term", "")).strip()
+        if not term:
+            continue
+        keys = [
+            key
+            for key in skipped.get("keys", [])
+            if isinstance(key, str) and key
+        ]
+        normalized = term.casefold()
+        entry = indexed.get(normalized)
+        if entry is None:
+            entry = {"term": term, "keys": []}
+            history_items.append(entry)
+            indexed[normalized] = entry
+            terms_added += 1
+        existing_keys = {
+            key for key in entry.get("keys", []) if isinstance(key, str)
+        }
+        new_keys = sorted(set(keys) - existing_keys)
+        if new_keys:
+            entry["keys"] = list(entry.get("keys", [])) + new_keys
+            keys_added += len(new_keys)
+
+    if terms_added or keys_added:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(
+            json.dumps(history, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+    return {
+        "skip_history_terms_added": terms_added,
+        "skip_history_keys_added": keys_added,
+    }
 
 
 def yaml_quote(value: str) -> str:
@@ -189,6 +248,14 @@ def drop_items(review: dict[str, Any]) -> list[dict[str, Any]]:
         item
         for item in review.get("items", [])
         if item.get("status") == "drop" and item.get("term")
+    ]
+
+
+def skip_items(review: dict[str, Any]) -> list[dict[str, Any]]:
+    return [
+        item
+        for item in review.get("items", [])
+        if item.get("status") == "skip" and item.get("term")
     ]
 
 
@@ -323,6 +390,7 @@ def main() -> int:
     parser.add_argument("--review", default=str(DEFAULT_REVIEW))
     parser.add_argument("--glossary", default=str(DEFAULT_GLOSSARY))
     parser.add_argument("--drop-terms", default=str(DEFAULT_DROP_TERMS))
+    parser.add_argument("--skip-history", default=str(DEFAULT_SKIP_HISTORY))
     parser.add_argument(
         "--resolved-only",
         action="store_true",
@@ -346,9 +414,11 @@ def main() -> int:
     review_path = Path(args.review)
     glossary_path = Path(args.glossary)
     drop_path = Path(args.drop_terms)
+    skip_history_path = Path(args.skip_history)
     review = json.loads(review_path.read_text(encoding="utf-8"))
     glossary_text = read_text(glossary_path)
     pending_drop_items = drop_items(review)
+    pending_skip_items = skip_items(review)
     items, contextual_items = importable_items(
         review,
         args.resolved_only,
@@ -363,6 +433,7 @@ def main() -> int:
     stats["contextual_terms"] = [item.get("term") for item in contextual_items]
     stats["drop_items"] = len(pending_drop_items)
     stats["drop_terms"] = [item.get("term") for item in pending_drop_items]
+    stats["skip_items"] = len(pending_skip_items)
     stats["resolved_only"] = args.resolved_only
     print(json.dumps(stats, ensure_ascii=False, indent=2))
     if args.write:
@@ -377,6 +448,8 @@ def main() -> int:
         else:
             print(f"unchanged: {glossary_path}")
         if args.resolved_only and not args.keep_review:
+            history_stats = add_skip_history(skip_history_path, pending_skip_items)
+            print(json.dumps(history_stats, ensure_ascii=False, indent=2))
             cleanup = remove_processed_items(
                 review,
                 imported_terms,

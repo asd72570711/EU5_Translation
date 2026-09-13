@@ -14,6 +14,16 @@ main_menu\localization\english\events\DHE\flavor_[mnopqr]*_l_english.yml
 若沒有命中任何檔案，應先回報並停止，不要寫入 review.json。
 只允許掃描 `source/english/` 下指定的來源檔案，不要掃描 `Full/`。
 
+正式寫入新的 `review.json` 時，掃描指令必須加入：
+
+```text
+--skip-history work/glossary_review/skip_history.json --reset-skip-history
+```
+
+只有來源檔成功掃描且 `review.json` 成功寫入後，才將
+`work/glossary_review/skip_history.json` 重設為空。dry-run、找不到來源檔
+或掃描失敗時不得清除；新的 Scan 視為新一輪審查，因此不沿用上一輪的 skip 歷史。
+
 
 先比對 translation_glossary.yml，將尚未收錄的專有名詞、宗教概念、神祇稱號、人物、作品名、制度名與可重複使用術語整理到：
 

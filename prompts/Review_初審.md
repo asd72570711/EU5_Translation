@@ -237,6 +237,21 @@ Affirm the Confession of Biljno Polje
 若拆出的完整專有名詞中還包含更小的獨立人名、
 地名或其他專有名詞，可以同時建立完整詞組與獨立子詞條。
 
+## 五之一、並列專名片語
+
+若候選為 `A and B`、`A or B` 或相似的並列結構：
+
+- 若完整片語只是列舉兩個以上的獨立專名，且各部分都已收錄於 glossary，
+  將外層完整片語標記為 `skip`，例如 `Prussia and Russia`、
+  `Milan and Venice`。
+- 若其中有尚未收錄、但應獨立保留的專名，先依第五節新增該專名的
+  `todo` 項目，再將單純並列的外層片語標記為 `skip`。
+- 若完整片語是正式國名、組織名、制度名、建築名、作品名、條約、
+  戰爭、歷史事件或其他不可拆分名稱，必須保留，例如
+  `Trinidad and Tobago`、`Peter and Paul Fortress`。
+- 必須依 source key 與上下文判斷它是單純並列還是完整名稱，
+  不得只因含有 `and` 或 `or` 就自動標記為 `skip`。
+
 ## 六、完整敘事句與普通敘事
 
 以下類型通常標記為 skip：
@@ -359,12 +374,27 @@ contextual，或繼續保留 cont。
 但 `St. Louis`、`U.S.` 等標點屬於名稱本身，或去除標點後可能造成歧義時，
 應保留給 AI 判斷。
 
-以下通常不是可直接跳過的詞形變化，應保留給 AI 或 glossary 判斷：
+若 glossary 已收錄基本國名、地名、文化名或政體名，而候選只是其高信心、
+語意透明的形容詞、居民、族群或語言派生形式，且不需要新的中文專名決策，
+可標記為 `skip`，交由翻譯 AI 依上下文補成「……的」、「……人」或「……語」。
 
-- 國名與形容詞、居民或語言派生，例如 `Germany` → `German`、`Italy` → `Italian`
-- `-ian`、`-an`、`-ese`、`-ish`、`-ic`、`-al` 等語意派生
-- `-ism` 與 `-ist`
-- `-ed`、`-ing` 等可能改變詞性或語意的形式；只有已確認是單純詞形變化、且不需要新中文決策時，才可依上述規則標記為 `skip`
+例如：
+
+- `Prussia` → `Prussian`
+- `Russia` → `Russian`
+- `Croatia` → `Croatian`、`Croatians`
+- `Sardinia` → `Sardinian`
+- `Venice` → `Venetian`
+- `Iceland` → `Icelandic`
+- `Portugal` → `Portuguese`
+
+常見的 `-ian`、`-an`、`-n`、`-i`、`-ese`、`-ish`、`-ic`、`-al`
+及其複數形式可以作為派生線索，但不得只憑字尾自動判定；必須確認基本專名
+確實存在於 glossary，且 source key 與上下文中的候選沒有獨立專名或特殊術語意義。
+
+若派生關係不明確、中文名稱不能由基本專名穩定判斷、候選具有獨立歷史／制度意義，
+或可能需要專案固定不同譯名，則保留 `todo` 或 `cont`。`-ism` 與 `-ist`，以及
+可能改變詞性或語意的 `-ed`、`-ing`，也只有在確認不需要新的翻譯決策時才能標記為 `skip`。
 
 ## 八之二、skip 二次複核
 

@@ -88,7 +88,8 @@ glossary_refs 更新並成功完成後：
 
 - 移除已匯入的 todo。
 - 移除已確認並匯入的 ai。
-- 移除 skip。
+- 移除 skip 前，先將每筆 skip 的 `term` 與 `keys` 寫入
+  `work/glossary_review/skip_history.json`，再移除 skip。
 - 將 `status: drop` 的完整 term 加入 `glossary_drop_terms.yml` 後移除。
 - 保留尚未確認的 todo、ai 與 cont。
 - 不要因為更新 glossary_refs 而刪除尚未確認的項目。
@@ -98,7 +99,7 @@ glossary_refs 更新並成功完成後：
 在移除 `skip` 前，必須先執行來源覆蓋率檢查：
 
 ```powershell
-python scripts/audit_glossary_review_coverage.py --review work/glossary_review/review.json --glossary translation_glossary.yml --source-root source/english --write-report
+python scripts/audit_glossary_review_coverage.py --review work/glossary_review/review.json --glossary translation_glossary.yml --source-root source/english --skip-history work/glossary_review/skip_history.json --write-report
 ```
 
 此腳本會使用 `review.json` 的 `source_file` 清單，重新掃描實際來源檔，
@@ -110,6 +111,11 @@ work/glossary_review/coverage_audit.json
 ```
 
 腳本只產生報告，不會修改 `review.json`、glossary、來源檔或翻譯檔。
+
+覆蓋率檢查必須使用 `skip_history.json`：相同 term 在已記錄的相同來源 key
+再次出現時，不列為疑似漏收；若同一 term 出現在尚未審查的新 key，仍須回報，
+而且報告中只保留尚未審查的 keys。`skip_history` 不得影響一般 Scan，
+也不等同於全域排除 term 的 `drop`。
 
 若需要為新增候選或審查結果留下說明，使用可選的 `review_comment` 欄位；
 `note` 與 `review_comment` 都只屬於 review metadata，任何匯入流程都不得將它們寫入 glossary。
@@ -136,11 +142,11 @@ work/glossary_review/coverage_audit.json
 必須實際執行以下腳本，不得只在回覆中描述「已更新 refs」：
 
 ```powershell
-python scripts/import_glossary_review.py --review work/glossary_review/review.json --glossary translation_glossary.yml --drop-terms glossary_drop_terms.yml --resolved-only --include-cont --keep-review --write
+python scripts/import_glossary_review.py --review work/glossary_review/review.json --glossary translation_glossary.yml --drop-terms glossary_drop_terms.yml --skip-history work/glossary_review/skip_history.json --resolved-only --include-cont --keep-review --write
 
 python scripts/update_review_glossary_refs.py --review work/glossary_review/review.json --glossary translation_glossary.yml --max-refs 12 --core-max-refs 3 --write
 
-python scripts/import_glossary_review.py --review work/glossary_review/review.json --glossary translation_glossary.yml --drop-terms glossary_drop_terms.yml --resolved-only --include-cont --write
+python scripts/import_glossary_review.py --review work/glossary_review/review.json --glossary translation_glossary.yml --drop-terms glossary_drop_terms.yml --skip-history work/glossary_review/skip_history.json --resolved-only --include-cont --write
 ```
 
 執行順序必須是：
@@ -149,7 +155,8 @@ python scripts/import_glossary_review.py --review work/glossary_review/review.js
 2. 完成已確認的 todo 與 cont 匯入，並保留 review 供後續 refs 更新。
 3. 執行「來源覆蓋率檢查」，只報告疑似漏收候選，不修改 review。
 4. 執行上述 refs 腳本，更新仍在 review 中的項目之 `glossary_refs`。
-5. 確認 refs 腳本成功完成後，再移除已匯入項目與 skip。
+5. 確認 refs 腳本成功完成後，先把 skip 的 term 與 keys 合併寫入
+   `skip_history.json`，成功後再移除已匯入項目與 skip。
 6. 若任一腳本執行失敗，不得宣稱來源覆蓋率或 glossary_refs 更新完成，必須回報錯誤。
 
 更新範圍包括所有尚未移除的項目：
@@ -214,6 +221,8 @@ python scripts/import_glossary_review.py --review work/glossary_review/review.js
 - aliases glossary_ref 使用該 aliases 群組的 `zh` 翻譯。
 - reference_terms 可列出其 suggestions，並以「、」合併；仍只能作為參考。
 - 完成後必須回報腳本輸出的 `items`、`updated_refs` 與 `max_refs`。
+- 同時回報 `skip_history_terms_added`、`skip_history_keys_added`、
+  `skip_history_filtered_candidates` 與 `skip_history_filtered_keys`。
 
 ## 六、Glossary 排序規則
 

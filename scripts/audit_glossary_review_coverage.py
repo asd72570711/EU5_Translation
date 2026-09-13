@@ -24,6 +24,29 @@ DEFAULT_REVIEW = "work/glossary_review/review.json"
 DEFAULT_GLOSSARY = "translation_glossary.yml"
 DEFAULT_SOURCE_ROOT = "source/english"
 DEFAULT_REPORT = "work/glossary_review/coverage_audit.json"
+DEFAULT_SKIP_HISTORY = "work/glossary_review/skip_history.json"
+
+
+def load_skip_history(path: Path | None) -> dict[str, set[str]]:
+    if path is None or not path.exists():
+        return {}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(data, dict) or not isinstance(data.get("items"), list):
+        raise ValueError(f"invalid skip history: {path}")
+
+    history: dict[str, set[str]] = {}
+    for item in data["items"]:
+        if not isinstance(item, dict) or not item.get("term"):
+            continue
+        normalized = normalized_reference_term(str(item["term"]))
+        if not normalized:
+            continue
+        history.setdefault(normalized, set()).update(
+            key
+            for key in item.get("keys", [])
+            if isinstance(key, str) and key
+        )
+    return history
 
 
 def resolve_review_sources(source_root: Path, source_files: list[str]) -> list[Path]:
@@ -60,7 +83,12 @@ def candidate_confidence(term: str) -> tuple[str, str]:
     return "normal", "single-word candidate requiring AI review"
 
 
-def audit(review_path: Path, glossary_path: Path, source_root: Path) -> dict[str, object]:
+def audit(
+    review_path: Path,
+    glossary_path: Path,
+    source_root: Path,
+    skip_history_path: Path | None = None,
+) -> dict[str, object]:
     review = json.loads(review_path.read_text(encoding="utf-8"))
     glossary = glossary_entries(glossary_path)
     glossary.update(reference_entries(glossary_path))
@@ -74,6 +102,7 @@ def audit(review_path: Path, glossary_path: Path, source_root: Path) -> dict[str
         normalized_reference_term(term) for term in glossary if term
     }
     covered_terms = glossary_terms | review_terms
+    skip_history = load_skip_history(skip_history_path)
 
     source_files = review.get("source_file", [])
     if not isinstance(source_files, list) or not all(
@@ -86,14 +115,20 @@ def audit(review_path: Path, glossary_path: Path, source_root: Path) -> dict[str
 
     found: dict[str, set[str]] = {}
     found_files: dict[str, set[str]] = {}
+    found_key_files: dict[str, dict[str, set[str]]] = {}
     for path in paths:
         relative = path.relative_to(source_root).as_posix()
         for term, keys in candidates(parse_entries(path)).items():
             found.setdefault(term, set()).update(keys)
             found_files.setdefault(term, set()).add(relative)
+            key_files = found_key_files.setdefault(term, {})
+            for key in keys:
+                key_files.setdefault(key, set()).add(relative)
 
     missing: list[dict[str, object]] = []
     covered = 0
+    skip_history_filtered_candidates = 0
+    skip_history_filtered_keys = 0
     for term, keys in found.items():
         normalized = normalized_reference_term(term)
         is_covered = any(
@@ -103,12 +138,25 @@ def audit(review_path: Path, glossary_path: Path, source_root: Path) -> dict[str
         if is_covered:
             covered += 1
             continue
+        skipped_keys = skip_history.get(normalized, set())
+        remaining_keys = keys - skipped_keys
+        filtered_key_count = len(keys) - len(remaining_keys)
+        skip_history_filtered_keys += filtered_key_count
+        if not remaining_keys:
+            covered += 1
+            skip_history_filtered_candidates += 1
+            continue
         confidence, reason = candidate_confidence(term)
+        remaining_files = {
+            source_file
+            for key in remaining_keys
+            for source_file in found_key_files.get(term, {}).get(key, set())
+        }
         missing.append(
             {
                 "term": term,
-                "keys": sorted(keys),
-                "source_files": sorted(found_files[term]),
+                "keys": sorted(remaining_keys),
+                "source_files": sorted(remaining_files or found_files[term]),
                 "confidence": confidence,
                 "reason": reason,
             }
@@ -124,6 +172,9 @@ def audit(review_path: Path, glossary_path: Path, source_root: Path) -> dict[str
         "covered_candidates": covered,
         "missing_candidates": len(missing),
         "high_confidence_missing": high_confidence,
+        "skip_history_items": len(skip_history),
+        "skip_history_filtered_candidates": skip_history_filtered_candidates,
+        "skip_history_filtered_keys": skip_history_filtered_keys,
         "missing": missing,
         "writes_review": False,
     }
@@ -137,13 +188,19 @@ def main() -> int:
     parser.add_argument("--glossary", default=DEFAULT_GLOSSARY)
     parser.add_argument("--source-root", default=DEFAULT_SOURCE_ROOT)
     parser.add_argument("--report", default=DEFAULT_REPORT)
+    parser.add_argument("--skip-history", default=DEFAULT_SKIP_HISTORY)
     parser.add_argument("--write-report", action="store_true")
     parser.add_argument("--summary", action="store_true")
     args = parser.parse_args()
 
     sys.stdout.reconfigure(encoding="utf-8")
     try:
-        report = audit(Path(args.review), Path(args.glossary), Path(args.source_root).resolve())
+        report = audit(
+            Path(args.review),
+            Path(args.glossary),
+            Path(args.source_root).resolve(),
+            Path(args.skip_history),
+        )
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         print(json.dumps({"audit": "failed", "error": str(exc)}, ensure_ascii=False))
         return 1
@@ -166,6 +223,9 @@ def main() -> int:
                 "covered_candidates",
                 "missing_candidates",
                 "high_confidence_missing",
+                "skip_history_items",
+                "skip_history_filtered_candidates",
+                "skip_history_filtered_keys",
             )
         }
         if "report" in report:

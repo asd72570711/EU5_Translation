@@ -76,6 +76,9 @@ NAME_TITLE_PREFIXES = {
 LOWERCASE_NAME_PARTICLES = (
     "al|abu|ad|an|ar|ash|as|at|az|bin|bint|d|da|de|del|der|di|do|dos|du|el|ibn|i|l|la|le|ten|ter|umm|van|von|wal"
 )
+SPACED_NAME_PARTICLES = (
+    "al|abu|bin|bint|d|da|de|del|der|di|do|dos|du|el|ibn|i|l|la|le|ten|ter|umm|van|von|wal"
+)
 ARABIC_NAME_PARTICLE_WORDS = {
     "abu",
     "ad",
@@ -93,13 +96,22 @@ ARABIC_NAME_PARTICLE_WORDS = {
     "umm",
     "wal",
 }
+NAME_PREFIX_WORDS = frozenset(LOWERCASE_NAME_PARTICLES.split("|")) | {
+    "abd",
+    "abdul",
+    "abu",
+    "bin",
+    "bint",
+    "ibn",
+    "umm",
+}
 ARABIC_NAME_WORD = TITLE_WORD
 ARABIC_NAME_PARTICLE = (
     rf"(?:{LOWERCASE_NAME_PARTICLES})-[{LATIN_UPPER}]"
     rf"[{LATIN_LETTER}{APOSTROPHE}.-]*[{LATIN_LETTER}{APOSTROPHE}]"
 )
 ARABIC_NAME_PARTICLE_PHRASE = (
-    rf"(?:{LOWERCASE_NAME_PARTICLES})\s+{ARABIC_NAME_WORD}"
+    rf"(?:{SPACED_NAME_PARTICLES})\s+{ARABIC_NAME_WORD}"
 )
 
 REFERENCE_GENERIC_WORDS = {
@@ -114,6 +126,7 @@ REFERENCE_DOMAIN_WORDS = {
     "republic", "school", "temple", "university", "workshop",
 }
 DEFAULT_DROP_TERMS = Path("glossary_drop_terms.yml")
+DEFAULT_SKIP_HISTORY = Path("work/glossary_review/skip_history.json")
 # These words are often generic heads of a larger named institution or
 # building. Do not emit them as standalone embedded candidates when they
 # merely prefix a proper name, e.g. "Chateau d'Ainay-le-Vieil".
@@ -195,7 +208,7 @@ TITLE_CASE_RE = re.compile(
     rf"\b{TITLE_WORD}"
     rf"(?:\s+(?:of|de|del|da|di|du|von|van|the|and|la|le|des|"
     rf"{NAME_PARTICLE}|"
-    rf"(?:{LOWERCASE_NAME_PARTICLES})\s+{TITLE_WORD}|"
+    rf"(?:{SPACED_NAME_PARTICLES})\s+{TITLE_WORD}|"
     rf"d[{APOSTROPHE}]{TITLE_WORD}|"
     rf"l[{APOSTROPHE}]{TITLE_WORD}|"
     rf"d[{APOSTROPHE}]|"
@@ -207,9 +220,9 @@ LOWERCASE_NAME_RE = re.compile(
     rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+"
     rf"(?:\s+(?:{LOWERCASE_NAME_PARTICLES})[-{APOSTROPHE}]?"
     rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+)*\b|"
-    rf"\b(?:{LOWERCASE_NAME_PARTICLES})(?:\s+(?:{LOWERCASE_NAME_PARTICLES}))*\s+"
+    rf"\b(?:{SPACED_NAME_PARTICLES})(?:\s+(?:{SPACED_NAME_PARTICLES}))*\s+"
     rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+"
-    rf"(?:\s+(?:{LOWERCASE_NAME_PARTICLES})\s+"
+    rf"(?:\s+(?:{SPACED_NAME_PARTICLES})\s+"
     rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+)*\b"
 )
 ACRONYM_RE = re.compile(
@@ -393,7 +406,7 @@ def glossary_entries(glossary_path: Path) -> dict[str, str]:
             alias_names = []
 
         if in_aliases:
-            alias = re.match(r"^  (?! )([^:#][^:]+):\s*$", line)
+            alias = re.match(r"^  (?! )([^:#][^:]+):(?:\s+#.*)?\s*$", line)
             if alias:
                 flush_alias()
                 alias_term = yaml_key(alias.group(1))
@@ -503,7 +516,7 @@ def glossary_alias_groups(glossary_path: Path) -> dict[str, str]:
             aliases = []
         if not in_aliases:
             continue
-        block = re.match(r"^  (?! )([^:#][^:]+):\s*$", line)
+        block = re.match(r"^  (?! )([^:#][^:]+):(?:\s+#.*)?\s*$", line)
         if block:
             flush()
             canonical = yaml_key(block.group(1))
@@ -572,7 +585,7 @@ def candidates(entries: list[tuple[str, str]]) -> dict[str, set[str]]:
                 term = normalize_candidate(match.group(0))
                 if term:
                     matches.append((pattern.pattern, match, term))
-        matches = suppress_arabic_name_fragments(matches)
+        matches = suppress_name_prefix_fragments(matches)
         matches = suppress_elision_fragments(matches, clean)
         matches = suppress_titled_fragments(matches, title_spans)
         prepared.append((key, clean, value, matches, title_spans))
@@ -633,10 +646,10 @@ def suppress_titled_fragments(
     return retained
 
 
-def suppress_arabic_name_fragments(
+def suppress_name_prefix_fragments(
     matches: list[tuple[str, re.Match[str], str]],
 ) -> list[tuple[str, re.Match[str], str]]:
-    """Keep full Arabic name chains instead of particle-led suffixes."""
+    """Keep complete names instead of suffixes made by dropping name particles."""
     retained = []
     for candidate in matches:
         _, match, term = candidate
@@ -649,21 +662,28 @@ def suppress_arabic_name_fragments(
                 for particle in ARABIC_NAME_PARTICLE_WORDS
             )
         )
-        if is_particle_led:
-            start, end = match.span()
-            for _, longer_match, longer_term in matches:
-                if longer_match is match:
-                    continue
-                longer_start, longer_end = longer_match.span()
-                if (
-                    longer_start < start
-                    and longer_end >= end
-                    and len(longer_term.split()) > len(parts)
-                    and not is_sentence_fragment(longer_term)
-                ):
-                    break
-            else:
-                retained.append(candidate)
+        start, end = match.span()
+        for _, longer_match, longer_term in matches:
+            if longer_match is match:
+                continue
+            longer_start, longer_end = longer_match.span()
+            if not (
+                longer_start < start
+                and longer_end >= end
+                and not is_sentence_fragment(longer_term)
+            ):
+                continue
+
+            omitted_prefix = match.string[longer_start:start]
+            prefix_words = {
+                normalize_word_token(word)
+                for word in re.findall(r"[^\W\d_]+", omitted_prefix, re.UNICODE)
+            }
+            dropped_name_prefix = bool(prefix_words) and prefix_words.issubset(
+                NAME_PREFIX_WORDS
+            )
+            if is_particle_led or dropped_name_prefix:
+                break
         else:
             retained.append(candidate)
     return retained
@@ -711,6 +731,9 @@ def is_comma_list_context(text: str, start: int, end: int) -> bool:
 
 def embedded_candidates(term: str, split_coordinated: bool = False) -> set[str]:
     """Return likely named subterms hidden inside a larger title or phrase."""
+    if starts_with_name_prefix(term):
+        return set()
+
     found: set[str] = set()
     for match in POSSESSIVE_NAME_RE.finditer(term):
         found.add(match.group(1))
@@ -754,6 +777,17 @@ def embedded_candidates(term: str, split_coordinated: bool = False) -> set[str]:
         if not previous_has_diacritic and not next_has_diacritic:
             found.add(word)
     return found
+
+
+def starts_with_name_prefix(term: str) -> bool:
+    """Return whether a complete name starts with a structural name prefix."""
+    match = re.match(
+        rf"^\s*([{LATIN_LETTER}]+)(?:[-{APOSTROPHE}]|\s+)",
+        term,
+    )
+    return bool(
+        match and normalize_word_token(match.group(1)) in NAME_PREFIX_WORDS
+    )
 
 
 def normalize_candidate(term: str) -> str | None:
@@ -936,14 +970,27 @@ def generated_proper_derivations(base: str) -> set[str]:
 
 
 def generated_concept_derivations(base: str) -> set[str]:
-    """Generate conservative -ist/-ism concept pairs."""
+    """Generate refs-only candidates across -ist/-ic/-ism concept families."""
     if len(base) < 6:
         return set()
+    candidates: set[str] = set()
     if base.endswith("ist"):
-        return {base[:-3] + "ism"}
+        stem = base[:-3]
+        candidates.update({stem + "ism", stem + "ic"})
+        if stem.endswith("ic"):
+            candidates.add(stem)
     if base.endswith("ism"):
-        return {base[:-3] + "ist"}
-    return set()
+        stem = base[:-3]
+        candidates.update({stem + "ist", stem + "ic"})
+        if stem.endswith("ic"):
+            candidates.add(stem)
+    if base.endswith("ic"):
+        stem = base[:-2]
+        candidates.update({stem + "ist", stem + "ism", base + "ist", base + "ism"})
+        if stem.endswith("ist") and len(stem) > 6:
+            root = stem[:-3]
+            candidates.update({stem, root + "ism"})
+    return candidates
 
 
 def proper_derivation_match(first: str, second: str) -> bool:
@@ -1198,12 +1245,22 @@ def write_review_json(
     output_path.write_text(json.dumps(review, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def reset_skip_history(path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        json.dumps({"version": 1, "items": []}, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--file", required=True, action="append")
     parser.add_argument("--source-root", default="source/english")
     parser.add_argument("--glossary", default="translation_glossary.yml")
     parser.add_argument("--drop-terms", default=str(DEFAULT_DROP_TERMS))
+    parser.add_argument("--skip-history", default=str(DEFAULT_SKIP_HISTORY))
+    parser.add_argument("--reset-skip-history", action="store_true")
     parser.add_argument("--review-only", action="store_true")
     parser.add_argument("--write-review", action="store_true")
     parser.add_argument("--review-output", default="work/glossary_review/review.json")
@@ -1263,6 +1320,9 @@ def main() -> int:
         )
         print(f"wrote: {args.review_output}")
         print(f"review_items: {len(review_rows)}")
+        if args.reset_skip_history:
+            reset_skip_history(Path(args.skip_history))
+            print(f"reset: {args.skip_history}")
         return 0
 
     print(f"files: {', '.join(scanned_files)}")
