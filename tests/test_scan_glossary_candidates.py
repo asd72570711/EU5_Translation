@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 
 from scripts.scan_glossary_candidates import (
+    build_review_item,
     candidates,
     glossary_alias_groups,
     glossary_entries,
@@ -18,6 +19,30 @@ SCRIPT = ROOT / "scripts" / "scan_glossary_candidates.py"
 
 
 class ScanGlossaryCandidatesTests(unittest.TestCase):
+    def test_new_review_item_omits_legacy_category(self) -> None:
+        item = build_review_item("New Term", ["example"], {}, None)
+
+        self.assertNotIn("category", item)
+
+    def test_existing_review_item_preserves_legacy_category(self) -> None:
+        item = build_review_item(
+            "Existing Term",
+            ["new.key"],
+            {},
+            {
+                "term": "Existing Term",
+                "translation": "",
+                "status": "todo",
+                "category": "person_or_place",
+                "keys": ["old.key"],
+                "note": "",
+                "glossary_refs": [],
+            },
+        )
+
+        self.assertEqual(item["category"], "person_or_place")
+        self.assertEqual(item["keys"], ["new.key", "old.key"])
+
     def test_alias_entry_allows_trailing_comment(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             glossary = Path(directory) / "glossary.yml"
@@ -72,6 +97,21 @@ class ScanGlossaryCandidatesTests(unittest.TestCase):
         self.assertIn(
             {"term": "Neoplatonic", "translation": "Neoplatonic ZH"},
             glossary_refs("Neoplatonist", adjective_glossary),
+        )
+
+    def test_links_ist_and_ism_forms_to_bare_concept_root(self) -> None:
+        glossary = {
+            "Tsar": "Tsar ZH",
+            "Art": "Art ZH",
+        }
+        tsar_ref = {"term": "Tsar", "translation": "Tsar ZH"}
+
+        for term in ("Tsarist", "Tsarists", "Tsarism"):
+            self.assertIn(tsar_ref, glossary_refs(term, glossary))
+
+        self.assertNotIn(
+            {"term": "Art", "translation": "Art ZH"},
+            glossary_refs("Artist", glossary),
         )
 
     def test_keeps_names_at_end_of_comma_list(self) -> None:

@@ -1,7 +1,7 @@
 # Scan
 
 請掃描：
-main_menu\localization\english\events\DHE\flavor_[mnopqr]*_l_english.yml
+main_menu\localization\english\events\DHE\flavor_[stuvwxyz]*_l_english.yml
 
 路徑使用標準 glob 語法：
 

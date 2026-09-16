@@ -323,7 +323,22 @@ contextual，或繼續保留 cont。
 
 若完整候選只是「一般頭銜／職稱 + 已收錄的完整人名或專名」，
 且上下文中的頭銜只是描述身分，不是名稱本身的一部分，應標記為 `skip`。
-例如 glossary 已有 `Ferdinand III` 時，`Emperor Ferdinand III` 應標記為 `skip`。
+判斷時先移除候選開頭的一般身分頭銜；若剩餘部分與 glossary 的完整 term
+完全吻合，即使翻譯時通常會省略、改序或依中文習慣處理該頭銜，完整候選仍應
+標記為 `skip`，不必為同一人物另建帶頭銜的 glossary 詞條。
+
+例如：
+
+- glossary 已有 `Paul I`：`Tsar Paul I` → `skip`
+- glossary 已有 `Henry IV`：`King Henry IV` → `skip`
+- glossary 已有 `Ferdinand III`：`Emperor Ferdinand III` → `skip`
+- glossary 已有 `Paul III`：`Pope Paul III` → `skip`
+- glossary 已有 `Mehmed II`：`Sultan Mehmed II` → `skip`
+
+此規則適用於 `Tsar`、`King`、`Queen`、`Emperor`、`Empress`、`Pope`、
+`Sultan`、`Prince`、`Princess`、`Duke` 等一般身分頭銜，但不要把這份例子
+當作封閉清單；應依語法與上下文辨識其他同類頭銜。
+
 只有移除頭銜後與既有 glossary term 完全吻合時才適用；
 若頭銜是正式名稱的一部分、用來區分不同人物，或完整詞組本身是獨立歷史名稱，
 則保留給 AI 判斷，不得僅因包含既有姓名就跳過。

@@ -13,7 +13,6 @@ REQUIRED_ITEM_FIELDS = {
     "term",
     "translation",
     "status",
-    "category",
     "keys",
     "note",
     "glossary_refs",

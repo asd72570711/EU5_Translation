@@ -977,11 +977,15 @@ def generated_concept_derivations(base: str) -> set[str]:
     if base.endswith("ist"):
         stem = base[:-3]
         candidates.update({stem + "ism", stem + "ic"})
+        if len(stem) >= 4:
+            candidates.add(stem)
         if stem.endswith("ic"):
             candidates.add(stem)
     if base.endswith("ism"):
         stem = base[:-3]
         candidates.update({stem + "ist", stem + "ic"})
+        if len(stem) >= 4:
+            candidates.add(stem)
         if stem.endswith("ic"):
             candidates.add(stem)
     if base.endswith("ic"):
@@ -1000,17 +1004,34 @@ def proper_derivation_match(first: str, second: str) -> bool:
         return True
     first_forms = word_forms(first)
     second_forms = word_forms(second)
+    first_concept_forms = {
+        candidate
+        for form in first_forms
+        for candidate in generated_concept_derivations(form)
+    }
+    second_concept_forms = {
+        candidate
+        for form in second_forms
+        for candidate in generated_concept_derivations(form)
+    }
     return bool(
         generated_proper_derivations(first).intersection(second_forms)
         or generated_proper_derivations(second).intersection(first_forms)
-        or generated_concept_derivations(first).intersection(second_forms)
-        or generated_concept_derivations(second).intersection(first_forms)
+        or first_concept_forms.intersection(second_forms)
+        or second_concept_forms.intersection(first_forms)
     )
 
 
 _REFERENCE_PROFILE_CACHE: dict[
-    tuple[int, int], tuple[list[tuple[str, str, str, set[str], set[str], str | None]], set[str]]
+    tuple[int, int],
+    tuple[
+        dict[str, str],
+        dict[str, str],
+        list[tuple[str, str, str, set[str], set[str], str | None]],
+        set[str],
+    ],
 ] = {}
+_EMPTY_ALIAS_GROUPS: dict[str, str] = {}
 
 
 def glossary_refs(
@@ -1025,10 +1046,15 @@ def glossary_refs(
     term_words = words(term)
     term_head = term_normalized.split()[0] if term_normalized else ""
     refs: list[tuple[int, int, int, str, str, set[str], str | None]] = []
-    alias_groups = alias_groups or {}
+    if alias_groups is None:
+        alias_groups = _EMPTY_ALIAS_GROUPS
     cache_key = (id(glossary), id(alias_groups))
     cached = _REFERENCE_PROFILE_CACHE.get(cache_key)
-    if cached is None:
+    if (
+        cached is None
+        or cached[0] is not glossary
+        or cached[1] is not alias_groups
+    ):
         known_profiles = [
             (
                 known_term,
@@ -1048,9 +1074,9 @@ def glossary_refs(
                     if word not in REFERENCE_GENERIC_WORDS:
                         family_counts[word] = family_counts.get(word, 0) + 1
         family_cores = {word for word, count in family_counts.items() if count >= 2}
-        cached = (known_profiles, family_cores)
+        cached = (glossary, alias_groups, known_profiles, family_cores)
         _REFERENCE_PROFILE_CACHE[cache_key] = cached
-    known_profiles, family_cores = cached
+    _, _, known_profiles, family_cores = cached
     for known_term, translation, known_normalized, known_forms, known_words, alias_group in known_profiles:
         score = 0
         if known_normalized == term_normalized:
@@ -1171,7 +1197,6 @@ def build_review_item(
         "term": term,
         "translation": "",
         "status": "todo",
-        "category": guess_category(term),
         "keys": keys,
         "note": "",
         "glossary_refs": glossary_refs(term, glossary, alias_groups=alias_groups),
@@ -1194,7 +1219,7 @@ def write_review_json(
     glossary: dict[str, str],
     known_glossary: dict[str, str] | None = None,
     alias_groups: dict[str, str] | None = None,
-) -> None:
+) -> int:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     known_terms = {
         normalized.casefold()
@@ -1243,6 +1268,7 @@ def write_review_json(
         "items": sorted(merged_items.values(), key=lambda item: str(item.get("term", "")).lower()),
     }
     output_path.write_text(json.dumps(review, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return len(review["items"])
 
 
 def reset_skip_history(path: Path) -> None:
@@ -1310,7 +1336,7 @@ def main() -> int:
     if args.write_review:
         print(f"files: {', '.join(scanned_files)}")
         review_rows = [row for row in rows if row[0] == "review"]
-        write_review_json(
+        written_items = write_review_json(
             Path(args.review_output),
             scanned_files,
             review_rows,
@@ -1319,7 +1345,7 @@ def main() -> int:
             alias_groups=alias_groups,
         )
         print(f"wrote: {args.review_output}")
-        print(f"review_items: {len(review_rows)}")
+        print(f"review_items: {written_items}")
         if args.reset_skip_history:
             reset_skip_history(Path(args.skip_history))
             print(f"reset: {args.skip_history}")
