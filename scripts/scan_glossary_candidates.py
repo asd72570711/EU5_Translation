@@ -37,16 +37,25 @@ NAME_PARTICLE = (
     rf"{TITLE_WORD}"
 )
 NAME_TITLE_PREFIXES = {
+    "admiral",
     "amir",
+    "archbishop",
+    "archduchess",
+    "archduke",
     "baron",
     "baroness",
     "bey",
+    "bishop",
     "caliph",
+    "captain",
+    "cardinal",
     "count",
     "countess",
     "czar",
     "doge",
+    "duchess",
     "duke",
+    "elector",
     "emir",
     "emperor",
     "empress",
@@ -55,13 +64,18 @@ NAME_TITLE_PREFIXES = {
     "king",
     "khan",
     "lady",
+    "lord",
     "malik",
     "maharaja",
+    "margrave",
     "marquis",
     "marquise",
     "pasha",
+    "patriarch",
+    "pope",
     "prince",
     "princess",
+    "queen",
     "raja",
     "rajah",
     "shah",
@@ -72,6 +86,12 @@ NAME_TITLE_PREFIXES = {
     "vizier",
     "voivode",
     "wazir",
+}
+NAME_TITLE_PREFIX_PHRASES = {
+    ("grand", "duchess"),
+    ("grand", "duke"),
+    ("grand", "prince"),
+    ("grand", "princess"),
 }
 LOWERCASE_NAME_PARTICLES = (
     "al|abu|ad|an|ar|ash|as|at|az|bin|bint|d|da|de|del|der|di|do|dos|du|el|ibn|i|l|la|le|ten|ter|umm|van|von|wal"
@@ -118,6 +138,13 @@ REFERENCE_GENERIC_WORDS = {
     "a", "an", "and", "at", "by", "cost", "country", "countries", "detail",
     "for", "from", "in", "of", "on", "or", "sea", "state", "system", "the",
     "to", "treaty", "type", "types", "war", "with",
+}
+# Inflection rules may occasionally strip a proper noun into an unrelated
+# function word (for example Andes -> and). Keep the original token eligible,
+# but never use a generated function word as a reference form.
+INFLECTION_FUNCTION_WORDS = {
+    "a", "an", "and", "at", "by", "for", "from", "in", "of", "on", "or",
+    "the", "to", "with",
 }
 REFERENCE_DOMAIN_WORDS = {
     "academy", "artillery", "bishop", "bishopric", "cathedral", "cavalry",
@@ -748,15 +775,33 @@ def embedded_candidates(term: str, split_coordinated: bool = False) -> set[str]:
         if coordinated:
             found.update(coordinated.groups())
     parts = term.split()
+    folded_parts = tuple(part.casefold() for part in parts)
+    title_length = next(
+        (
+            len(prefix)
+            for prefix in sorted(
+                NAME_TITLE_PREFIX_PHRASES,
+                key=len,
+                reverse=True,
+            )
+            if len(parts) > len(prefix)
+            and folded_parts[: len(prefix)] == prefix
+            and folded_parts[len(prefix)] not in TRAILING_CONNECTORS
+        ),
+        0,
+    )
     if (
-        len(parts) >= 2
-        and parts[0].casefold() in NAME_TITLE_PREFIXES
-        and parts[1].casefold() not in TRAILING_CONNECTORS
+        not title_length
+        and len(parts) >= 2
+        and folded_parts[0] in NAME_TITLE_PREFIXES
+        and folded_parts[1] not in TRAILING_CONNECTORS
     ):
+        title_length = 1
+    if title_length:
         # Keep both the titled form and the personal name, e.g. the full
         # name plus "Jalalat al-Duniya wal-Din".
-        found.add(parts[0])
-        found.add(" ".join(parts[1:]))
+        found.add(" ".join(parts[:title_length]))
+        found.add(" ".join(parts[title_length:]))
     words_in_term = re.findall(
         rf"[{LATIN_UPPER}][{LATIN_LETTER}{APOSTROPHE}.-]+", term
     )
@@ -877,26 +922,31 @@ def normalize_word_token(token: str) -> str:
 @lru_cache(maxsize=20000)
 def word_forms(word: str) -> set[str]:
     variants = {word}
+
+    def add_variant(variant: str) -> None:
+        if variant not in INFLECTION_FUNCTION_WORDS:
+            variants.add(variant)
+
     # Some Greek/Byzantine transliterations use -ai/-ais as a plural-like
     # pair, for example Akritai/Akritais. Only an exact glossary counterpart
     # can consume this conservative variant during reference matching.
     if word.endswith("ais") and len(word) > 4:
-        variants.add(word[:-1])
+        add_variant(word[:-1])
     if word.endswith("ies") and len(word) > 4:
-        variants.add(word[:-3] + "y")
+        add_variant(word[:-3] + "y")
     if word.endswith("es") and len(word) > 3:
-        variants.add(word[:-2])
+        add_variant(word[:-2])
     if word.endswith("s") and not word.endswith(("ss", "us", "is")) and len(word) > 3:
-        variants.add(word[:-1])
+        add_variant(word[:-1])
     if word.endswith("ied") and len(word) > 4:
-        variants.add(word[:-3] + "y")
+        add_variant(word[:-3] + "y")
     if word.endswith("ed") and len(word) > 4:
-        variants.add(word[:-1])
-        variants.add(word[:-2])
+        add_variant(word[:-1])
+        add_variant(word[:-2])
     if word.endswith("ing") and len(word) > 5:
         stem = word[:-3]
-        variants.add(stem)
-        variants.add(stem + "e")
+        add_variant(stem)
+        add_variant(stem + "e")
     return variants
 
 

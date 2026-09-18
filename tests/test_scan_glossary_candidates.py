@@ -8,9 +8,11 @@ from pathlib import Path
 from scripts.scan_glossary_candidates import (
     build_review_item,
     candidates,
+    embedded_candidates,
     glossary_alias_groups,
     glossary_entries,
     glossary_refs,
+    word_forms,
 )
 
 
@@ -114,6 +116,19 @@ class ScanGlossaryCandidatesTests(unittest.TestCase):
             glossary_refs("Artist", glossary),
         )
 
+    def test_inflection_does_not_turn_proper_noun_into_function_word(self) -> None:
+        self.assertNotIn("and", word_forms("andes"))
+        self.assertNotIn(
+            {"term": "Andes", "translation": "Andes ZH"},
+            glossary_refs("France and Scotland", {"Andes": "Andes ZH"}),
+        )
+
+    def test_inflection_still_links_regular_plural_forms(self) -> None:
+        self.assertIn(
+            {"term": "Bishopric", "translation": "Bishopric ZH"},
+            glossary_refs("Bishoprics", {"Bishopric": "Bishopric ZH"}),
+        )
+
     def test_keeps_names_at_end_of_comma_list(self) -> None:
         text = (
             "Properties include Fosen, Frosta, Stjørdal, Sunnmøre, Romsdal, "
@@ -195,6 +210,21 @@ class ScanGlossaryCandidatesTests(unittest.TestCase):
         found = candidates([("example", "The church of St. Peter is renowned.")])
 
         self.assertIn("St. Peter", found)
+
+    def test_extracts_common_titles_and_untitled_names(self) -> None:
+        examples = {
+            "Queen Anne": {"Queen", "Anne"},
+            "Pope Urban II": {"Pope", "Urban II"},
+            "Archduchess Maria Theresa": {"Archduchess", "Maria Theresa"},
+            "Grand Duke Ivan III": {"Grand Duke", "Ivan III"},
+            "Grand Princess Olga": {"Grand Princess", "Olga"},
+        }
+
+        for term, expected in examples.items():
+            with self.subTest(term=term):
+                self.assertTrue(expected.issubset(embedded_candidates(term)))
+
+        self.assertNotIn("Grand", embedded_candidates("Grand Duke Ivan III"))
 
     def test_skip_history_resets_only_after_review_is_written(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

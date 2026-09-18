@@ -2,6 +2,7 @@
 work/reports/
 work/glossary_review/
 work/translations/
+/work/session_handoff.md
 __pycache__/
 *.tmp
 *.bak
